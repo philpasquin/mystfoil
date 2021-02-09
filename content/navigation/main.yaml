@@ -1,0 +1,5 @@
+title: Main
+collections:
+  - pages
+  - products
+root: true

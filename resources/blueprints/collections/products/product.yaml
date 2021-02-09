@@ -18,27 +18,29 @@ sections:
         field:
           type: money
           display: Price
-          required: true
           listable: true
           validate:
-            - min:0
+            - required
+            - 'min:0'
           width: '25'
       -
         handle: tax_id
         field:
           display: Tax
           type: tax
-          required: true
           listable: false
           width: '25'
+          validate:
+            - required
       -
         handle: shipping_profile_slug
         field:
           display: Shipping
           type: shipping
-          required: true
           listable: false
           width: '25'
+          validate:
+            - required
       -
         handle: images
         field:
@@ -121,3 +123,28 @@ sections:
           validate:
             - required
             - boolean
+  programs:
+    display: Programs
+    fields:
+      -
+        handle: which_class
+        field:
+          inline: true
+          options:
+            '4.7': 'Laser 4.7'
+            Radial: 'Laser Radial'
+            'Full Rig': 'Laser Full Rig'
+            Kite: Kite
+            Foil: Foil
+          display: 'Which class'
+          type: checkboxes
+          icon: checkboxes
+          listable: hidden
+      -
+        handle: coach
+        field:
+          mode: select
+          display: Coach
+          type: users
+          icon: users
+          listable: hidden

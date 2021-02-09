@@ -11,13 +11,13 @@ return [
      *
      * Put your shop information here. Those information will be usedby templates for the shop and emails.
      */
-    'name'     => 'Statamic Butik', // Whats the name of your Shop?
-    'address1' => '132 Main Street',
-    'address2' => 'Sea view, Fahrensodde', // can be left empty
-    'zip_city' => '24937 Flensburg',
-    'country'  => 'DE', // Set your default country
-    'phone'    => '+49 1294 238474934',
-    'mail'     => 'butik@shop.com',
+    'name'     => 'Montreal Youth Sailing Team', // Whats the name of your Shop?
+    'address1' => '9784 boul LaSalle',
+    'address2' => 'Montreal, Quebec', // can be left empty
+    'zip_city' => 'H8R 2N3 Canada',
+    'country'  => 'CA', // Set your default country
+    'phone'    => '+1 (514) 770-8577',
+    'mail'     => 'coach@mystsailing.com',
 
     /**
      * Shop overview
@@ -38,16 +38,16 @@ return [
      *
      * Butik will send one confirmation email for every sold product to this address.
      */
-    'order-confirmations' => 'your_mail@butik.com',
+    'order-confirmations' => 'coach@mystsailing.com',
 
     /**
      * CURRENCY
      *
      * Define your shops currency
      */
-    'currency_name'      => 'Euro',
-    'currency_isoCode'   => 'EUR', // Make sure to use ISO_4217 https://en.wikipedia.org/wiki/ISO_4217
-    'currency_symbol'    => '€',
+    'currency_name'      => 'CAD',
+    'currency_isoCode'   => 'CAD', // Make sure to use ISO_4217 https://en.wikipedia.org/wiki/ISO_4217
+    'currency_symbol'    => '$',
     'currency_delimiter' => ',',
 
     /**
@@ -67,12 +67,12 @@ return [
     'product_route_active'  => true, // default: true. Set to false to deactive this route.
     'category_route_active' => true, // default: true. Set to false to deactive this route.
 
-    'route_shop-prefix'       => 'shop',                       // yourshop.com/shop/
-    'route_cart'              => 'cart',                       // yourshop.com/shop/cart
-    'route_category'          => 'category/{category}',         // yourshop.com/shop/category/xxxxx
-    'route_checkout-delivery' => 'checkout/delivery',           // yourshop.com/shop/checkout/delivery
-    'route_checkout-payment'  => 'checkout/payment',            // yourshop.com/shop/checkout/payment
-    'route_payment-receipt'   => 'payment/{order}/receipt',     // yourshop.com/shop/payment/xxxxx/receipt
+    'route_shop-prefix'       => 'join',                       // yourshop.com/join/
+    'route_cart'              => 'cart',                       // yourshop.com/join/cart
+    'route_category'          => 'category/{category}',         // yourshop.com/join/category/xxxxx
+    'route_checkout-delivery' => 'checkout/delivery',           // yourshop.com/join/checkout/delivery
+    'route_checkout-payment'  => 'checkout/payment',            // yourshop.com/join/checkout/payment
+    'route_payment-receipt'   => 'payment/{order}/receipt',     // yourshop.com/join/payment/xxxxx/receipt
 
     /**
      * TEMPLATES

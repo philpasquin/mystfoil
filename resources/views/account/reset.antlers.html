@@ -1,0 +1,92 @@
+<div class="bg-gray-900">
+    {{ partial:components/nav/main }}
+    <div class="min-h-screen bg-white flex">
+        <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24" x-data="{
+            openDiv: 'login',
+        }">
+            <!-- /Login -->
+            {{ user:reset_password_form }}
+            {{ if success }}
+
+            <p class="alert alert-success">Password has been reset.</p>
+
+            {{ elseif url_invalid }}
+
+            <p class="alert alert-danger">This reset URL is invalid.</p>
+
+            {{ else }}
+
+            {{ if errors }}
+            <div class="alert alert-danger">
+                {{ errors }}
+                {{ value }}<br>
+                {{ /errors }}
+            </div>
+            {{ /if }}
+            <div class="mx-auto w-full max-w-sm lg:w-96">
+                <div>
+
+                    <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+                        Forgot your password?
+                    </h2>
+                    <p class="mt-2 text-sm text-gray-600 max-w">
+                        Please enter your email so we can send you a reset link
+                    </p>
+                </div>
+
+                <div class="mt-6">
+
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">
+                            Email address
+                        </label>
+                        <div class="mt-1">
+                            <input id="email" name="email" type="email" autocomplete="email" value="{{ old:email }}"
+                                required
+                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">
+                            Password
+                        </label>
+                        <div class="mt-1">
+                            <input id="password" name="password" type="password" required
+                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="passwordConfirmation" class="block text-sm font-medium text-gray-700">
+                            Password Confirmation
+                        </label>
+                        <div class="mt-1">
+                            <input id="passwordConfirmation" name="password_confirmation" type="password" required
+                                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm">
+                        </div>
+                    </div>
+
+
+                    <div class="mt-10">
+                        <button type="submit"
+                            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                            Reset password
+                        </button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            {{ /user:reset_password_form }}
+            <!-- forgot-->
+        </div>
+        <div class="hidden lg:block relative w-0 flex-1">
+            {{ get_content from="/" }}
+            <img class="absolute inset-0 h-full w-full object-cover rounded-tl-3xl" src="{{ image_background }}" alt="">
+            {{ /get_content }}
+        </div>
+
+    </div>
+</div>

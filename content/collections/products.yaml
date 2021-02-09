@@ -1,5 +1,25 @@
 title: Products
+sites:
+  - english
+  - francais
+template: default
+layout: layout
 revisions: false
+route: 'join/{slug}'
+sort_dir: asc
 date_behavior:
   past: public
   future: private
+structure:
+  root: false
+  tree:
+    english:
+      -
+        entry: 5032a983-cbd7-47dd-863e-3d8c44366fd1
+      -
+        entry: fd32dbe9-a27e-4281-adfb-e2a3057b0880
+      -
+        entry: ef6f66e4-baf2-4fda-b4fd-12890dc68284
+      -
+        entry: 81f532a7-68e0-40a3-90e9-6b7f762a5b3a
+    francais: {  }

@@ -1,4 +1,7 @@
 title: Pages
+sites:
+  - english
+  - francais
 template: default
 layout: layout
 revisions: false
@@ -7,9 +10,13 @@ sort_dir: asc
 structure:
   root: true
   tree:
-    -
-      entry: home
-    -
-      entry: b68ca33c-f307-423f-b3f0-ff59581f4713
-    -
-      entry: 3e8c009d-680d-4b01-91e8-401955e990ff
+    english:
+      -
+        entry: 5211b585-8e6d-4d4c-9c06-bba949c8bb9c
+      -
+        entry: b68ca33c-f307-423f-b3f0-ff59581f4713
+      -
+        entry: 3e8c009d-680d-4b01-91e8-401955e990ff
+    francais:
+      -
+        entry: 7d387703-fab0-4c53-949b-38b00e6fbac5

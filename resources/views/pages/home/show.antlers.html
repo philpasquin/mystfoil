@@ -1,0 +1,21 @@
+{{ user }}
+
+<div class="bg-white">
+    <div class="relative overflow-hidden">
+        <main>
+            <div class="bg-gray-900">
+                {{ partial:pages/home/hero_screenshot }}
+            </div>
+            <!-- New listings -->
+            {{ partial:pages/home/programs }}
+            <div class="mt-12 lg:mx-40 lg:max-w-none h-screen ">
+
+                <div id="calendar"></div>
+            </div>
+
+            <!-- End of New Listings-->
+        </main>
+        {{ partial:components/nav/footer }}
+    </div>
+</div>
+{{ /user }}

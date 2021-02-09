@@ -1,0 +1,159 @@
+<div>
+
+    <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+        Sign in to your account
+    </h2>
+    <p class="mt-2 text-sm text-gray-600 max-w">
+        Don't have an account?
+        <a href="#" class="font-medium text-primary-600 hover:text-primary-500">
+            Signup
+        </a>
+    </p>
+</div>
+
+<div class="mt-8">
+    <div>
+        <div>
+            <p class="text-sm font-medium text-gray-700">
+                Sign in with
+            </p>
+
+            <div class="mt-1 grid grid-cols-3 gap-3">
+                <div>
+                    <a href="{{ oauth:facebook }}"
+                        class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Sign in with Facebook</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="{{ oauth:google }}"
+                        class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Sign in with Google</span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12,6c1,0,1.941,0.247,2.769,0.681c0.79,0.414,1.75,0.301,2.381-0.33l0,0	c0.945-0.945,0.72-2.545-0.459-3.176C15.293,2.426,13.697,2,12,2C8.163,2,4.834,4.164,3.157,7.337L6.458,9.7	C7.361,7.528,9.501,6,12,6z"
+                                opacity=".35" />
+                            <path
+                                d="M6,12c0-0.815,0.164-1.591,0.458-2.3L3.157,7.337C2.421,8.73,2,10.315,2,12c0,1.642,0.403,3.187,1.104,4.554l3.248-2.542	C6.128,13.382,6,12.707,6,12z" />
+                            <path
+                                d="M12,18c-2.607,0-4.819-1.666-5.647-3.989l-3.248,2.542C4.762,19.784,8.119,22,12,22	c2.579,0,4.922-0.984,6.695-2.587l-3.111-2.614C14.584,17.549,13.347,18,12,18z"
+                                opacity=".35" />
+                            <path
+                                d="M22,12c0-0.671-0.069-1.325-0.195-1.958L21.795,10H21h-7c-1.105,0-2,0.895-2,2v0c0,1.105,0.895,2,2,2h3.651	c-0.399,1.127-1.129,2.095-2.067,2.799l3.111,2.614C20.72,17.583,22,14.944,22,12z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="{{ oauth:github }}"
+                        class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                        <span class="sr-only">Sign in with GitHub</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 relative">
+            <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="w-full border-t border-gray-300"></div>
+            </div>
+            <div class="relative flex justify-center text-sm">
+                <span class="px-2 bg-white text-gray-500">
+                    Or continue with
+                </span>
+            </div>
+        </div>
+    </div>
+    {{ user:login_form redirect="/account" }}
+    {{ if errors }}
+    <div class="rounded-md bg-blue-50 p-4">
+        <div class="flex">
+            <div class="flex-shrink-0">
+                <!-- Heroicon name: solid/information-circle -->
+                <svg class="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <div class="ml-3 flex-1 md:flex md:justify-between">
+                {{ errors }}
+                <p class="text-sm text-red-400">
+                    {{ value }}
+                </p>
+                {{ /errors }}
+                <p class="mt-3 text-sm md:mt-0 md:ml-6">
+                    <a href="#" class="whitespace-nowrap font-medium text-white-700 hover:text-red-300"><a
+                            href="mailto@{{configuration:email}}?subject{{title}}">Reach out
+                        </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    {{ /if }}
+    <div class="mt-6 space-y-6">
+
+        <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">
+                Email address
+            </label>
+            <div class="mt-1">
+                <input id="email" name="email" type="email" autocomplete="email" value="{{ old:email }}" required
+                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm">
+            </div>
+        </div>
+
+        <div class="space-y-1">
+            <label for="password" class="block text-sm font-medium text-gray-700">
+                Password
+            </label>
+            <div class="mt-1">
+                <input id="password" name="password" type="password" value="{{ old:password }}"
+                    autocomplete="current-password" required
+                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm">
+            </div>
+        </div>
+        <div class="mt-10">
+            <button type="submit"
+                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                Sign in
+            </button>
+        </div>
+
+        <div class="flex items-center justify-between mt-10">
+            <div class="flex items-center">
+                <input id="remember_me" name="remember_me" type="checkbox"
+                    class="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded">
+                <label for="remember_me" class="ml-2 block text-sm text-gray-900">
+                    Remember me
+                </label>
+            </div>
+
+            <div class="text-sm">
+                <a href="#" class="font-medium text-primary-600 hover:text-primary-500"
+                    @click.prevent="openDiv = 'password'">
+                    Forgot your password?
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    {{ /user:login_form }}
+</div>

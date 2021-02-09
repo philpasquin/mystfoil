@@ -1,0 +1,17 @@
+<!-- Mobile menu -->
+<div class="w-full lg:hidden">
+    <!-- <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> // if shown only tablet/mobile-->
+    <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow">
+        <div id="tabs" class="flex justify-between">
+            {{ nav:mobile }}
+            <a href="{{ url }} "
+                class="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
+                {{ inner_svg }}
+                <span class="tab tab-{{ slug }} block text-xs">{{ title }}</span>
+            </a>
+            {{ /nav:mobile }}
+
+
+        </div>
+    </section>
+</div>

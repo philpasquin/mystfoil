@@ -1,0 +1,172 @@
+title: Home
+sections:
+  home_page:
+    display: 'Home page'
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: hero
+        field:
+          display: Hero
+          type: section
+          icon: section
+          listable: hidden
+      -
+        handle: cta
+        field:
+          display: CTA
+          type: link
+          icon: link
+          width: 33
+          listable: hidden
+      -
+        handle: cta_heading
+        field:
+          input_type: text
+          antlers: false
+          display: 'CTA heading'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+      -
+        handle: cta_text
+        field:
+          input_type: text
+          antlers: true
+          display: 'CTA text'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+      -
+        handle: heading_white
+        field:
+          input_type: text
+          antlers: true
+          display: 'Heading white'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: heading_color
+        field:
+          input_type: text
+          antlers: true
+          display: 'Heading color'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: description
+        field:
+          antlers: true
+          display: Description
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: search_placeholder
+        field:
+          input_type: text
+          antlers: true
+          display: 'Search Placeholder'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: search_button
+        field:
+          input_type: text
+          antlers: false
+          display: 'Search button'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+      -
+        handle: search_text
+        field:
+          antlers: false
+          display: 'Search text'
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: image_background
+        field:
+          mode: grid
+          container: assets
+          folder: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Image background'
+          type: assets
+          icon: assets
+          listable: hidden
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: meta
+        field:
+          type: section
+          instructions: 'This entry''s meta data.'
+          display: Meta
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          generate: true
+          listable: hidden
+          display: Slug
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+      -
+        handle: layout
+        field:
+          hide_partials: false
+          display: Layout
+          type: template
+          icon: template
+          listable: hidden
+  navigation:
+    display: Navigation
+    fields:
+      -
+        handle: inner_svg
+        field:
+          antlers: false
+          display: 'Inner svg'
+          type: textarea
+          icon: textarea
+          listable: hidden

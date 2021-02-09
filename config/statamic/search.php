@@ -28,7 +28,7 @@ return [
         'default' => [
             'driver' => 'local',
             'searchables' => 'all',
-            'fields' => ['title'],
+            'fields' => ['title', 'description', 'collection', ],
         ],
 
         // 'blog' => [
@@ -76,7 +76,7 @@ return [
     */
 
     'defaults' => [
-        'fields' => ['title'],
+        'fields' => ['title', 'description', 'collection', 'location', 'which_class', 'coach', 'variants'],
     ],
 
 ];

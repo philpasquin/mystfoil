@@ -1,0 +1,66 @@
+<div x-data="{show: false}">
+    <form class="p-3" action="/search">
+        <div class="bg-white flex items-center rounded-full shadow-xl">
+            {{ if slug != "home" }}
+            <a href="{{ site:url }} ">
+                <svg class="text-gray-sm h-6 pl-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+            {{ /if }}
+
+            <input class="rounded-l-full w-full py-2 px-6 text-gray-sm leading-tight border-transparent " id="search"
+                name="q" type="search" placeholder="Search" autocomplete="off" @click="show = true">
+            <div class="p-2">
+                <button type="submit"
+                    class="  focus:ring-2 focus:ring-offset-2 focus:ring-yellow-200 rounded-full p-2 hover:bg-green-400 focus:outline-none flex items-center justify-center">
+                    <svg class="text-gray-sm h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black">
+                        <path fill-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </form>
+
+    <!-- Mobile menu -->
+    <div x-show="show" class="lg:hidden fixed inset-0 transition-opacity z-50 overflow-hidden" aria-hidden="true">
+        <div class="absolute inset-0 mt-0 bg-white opacity-100 rounded-t-3xl">
+            <form class="p-3" action="/search">
+                <div class="bg-white flex items-center rounded-full shadow-xl">
+
+
+                    <svg @click="show = false" class="text-gray-sm h-6 pl-2" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+
+
+                    <input
+                        class="rounded-l-full w-full py-2 px-6 text-gray-sm leading-tight focus:outline-none border-none"
+                        id="search" name="q" type="search" placeholder="Search">
+                    <div id="autocomplete"></div>
+                    <div class="p-2">
+                        <button type="submit"
+                            class="  focus:ring-2 focus:ring-offset-2 focus:ring-yellow-200 rounded-full p-2 hover:bg-green-400 focus:outline-none flex items-center justify-center">
+                            <svg class="text-gray-sm h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="black">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          input_type: text
+          antlers: false
+          display: name
+          type: text
+          icon: text
+          localizable: true
+          width: 50
+          listable: hidden
+      -
+        handle: logo
+        field:
+          mode: grid
+          container: assets
+          folder: seo
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          display: Logo
+          type: assets
+          icon: assets
+          listable: hidden

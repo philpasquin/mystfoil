@@ -1,25 +1,24 @@
 <!doctype html>
 <html lang="{{ site:short_locale }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
-        <link rel="stylesheet" href="{{ mix src='css/site.css' }}">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-        <script src="{{ mix src='/js/site.js' }}"></script>
-    </head>
-    <body class="leading-normal" x-data="{ showMobileNav: false }">
 
-        <div class="max-w-6xl mx-auto">
-            {{ partial:header}}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ aardvark-seo:head }}
 
-            <main class="my-8 md:my-12 px-6">
-                {{ template_content }}
-            </main>
+    <link rel="stylesheet" href="{{ mix src='css/site.css' }}">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="{{ mix src='/js/site.js' }}"></script>
 
-        </div>
+</head>
 
-        {{ livewire:scripts }}
-    </body>
+<body>
+    {{ aardvark-seo:body }}
+    {{ template_content }}
+
+
+</body>
+
+
 </html>

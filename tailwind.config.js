@@ -1,34 +1,44 @@
-const butikColors = require('./butikColors')
+//--------------------------------------------------------------------------
+// Tailwind configuration
+//--------------------------------------------------------------------------
+//
+// Use the Tailwind configuration to completely define the current sites
+// design system by adding and extending to Tailwinds default utility
+// classes. Various aspects of the config are split inmultiple files.
+//
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  purge: [],
-  theme: {
-    colors: {
-      dark: butikColors.charcoal[800], // black
-      white: butikColors.white,
-      accent: {
-        default: butikColors.seaGreen[400],
-        dark: butikColors.seaGreen[500],
-      },
-      danger: {
-        light: butikColors.rad[100],
-        default: butikColors.rad[400],
-        dark: butikColors.rad[700],
-      },
-      gray: {
-        lightest: butikColors.charcoal[100],
-        lighter: butikColors.charcoal[200],
-        light: butikColors.charcoal[300],
-        default: butikColors.charcoal[500],
-        dark: butikColors.charcoal[700],
-      },
-    },
-    extend: {
-      borderRadius: {
-        'xl': '12px',
-      }
-    },
+  // The various configurable Tailwind configuration files.
+  presets: [
+    require('tailwindcss/defaultConfig'),
+    require('./tailwind.config.typography.js'),
+    require('./tailwind.config.site.js'),
+     require('@tailwindcss/forms'),
+  ],
+  // Dark mode
+  darkMode: 'media', // or 'class'
+  // Configure Purge CSS.
+  purge: {
+    content: [
+      './resources/views/**/*.html',
+      './resources/js/**/*.js',
+    ],
+    layers: ['components', 'utilities'],
+    options: {
+      // Always remove the following classes during purging.
+      blocklist: ['?',],
+      // Remove unused keyframes during purging.
+      keyframes: true,
+      // Always keep the following classes during purging.
+      safelist: ['size-sm', 'size-md', 'size-lg', 'size-xl', 'js-focus-visible'],
+    }
   },
-  variants: {},
-  plugins: [],
+  // Extend variants.
+  variants: {
+    extend: {
+    }
+  }
 }

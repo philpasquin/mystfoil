@@ -1,0 +1,28 @@
+{{ if logged_in }}
+{{ redirect to="/account " }}
+{{ /if }}
+<div class="bg-gray-900">
+    {{ partial:components/nav/main }}
+    <div class="min-h-screen bg-white flex">
+        <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24" x-data="{
+            openDiv: 'login',
+        }">
+            <!-- /Login -->
+            <div class="mx-auto w-full max-w-sm lg:w-96" x-show="openDiv === 'login'">
+                {{ partial:components/account/login }}
+            </div>
+            <!-- /Login -->
+            <!-- forgot -->
+            <div class=" mx-auto w-full max-w-sm lg:w-96" x-show="openDiv === 'password'">
+                {{ partial:components/account/forgot }}
+            </div>
+            <!-- forgot-->
+        </div>
+        <div class="hidden lg:block relative w-0 flex-1">
+            {{ get_content from="/" }}
+            <img class="absolute inset-0 h-full w-full object-cover rounded-tl-3xl" src="{{ image_background }}" alt="">
+            {{ /get_content }}
+        </div>
+
+    </div>
+</div>

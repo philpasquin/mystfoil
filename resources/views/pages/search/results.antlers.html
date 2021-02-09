@@ -1,0 +1,86 @@
+<div class="bg-gray-900 p-8">
+    {{ partial:components/nav/main }}
+</div>
+<main class="w-screen">
+    {{ search:results as="entries" }}
+    {{ if no_results }}
+    <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl m-10">
+        <div class="">
+            <div class="">
+                <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+                    Ooops... no results matched "{{ get:q }}"
+                </h2>
+                <p class="mt-3 text-xl text-gray-500 sm:mt-4">
+                    Here are some suggestions...
+                </p>
+            </div>
+            <div class="grid grid-cols-4">
+                {{ collection from="*" }}
+                <a href="{{ url }} ">
+                    <div
+                        class="bg-white  rounded-2xl m-4 border-1  border-dashed border-gray-100 shadow-2xl overflow-hidden ">
+                        {{ if images }}
+                        {{ images limit="1" }} <img src="{{ glide:url }}" alt=""
+                            class="w-full h-30v object-cover object-center " />
+                        {{ /images }}
+                        {{ else }}
+                        <img src="{{ company:logo }}" alt="" class="w-full h-30v object-cover object-center " />
+                        {{ /if }}
+                        <div class="p-4">
+                            <span class="text-gray-400">{{ collection:title }} </span>
+                            <h2 class="mb-1 text-gray-900 font-semibold">{{ title }}</h2>
+
+                            <span class="text-gray-700"></span>
+
+
+                        </div>
+                    </div>
+                </a>
+                {{ /collection }}
+            </div>
+        </div>
+    </div>
+    {{ else }}
+    <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl m-10">
+        <div class="">
+            <div class="">
+                <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+                    We found {{ entries | count }} results that matches "{{ get:q }}"
+                </h2>
+
+            </div>
+            <div class="grid grid-cols-4">
+                {{ entries }}
+                <a href="{{ url }} ">
+                    <div
+                        class="bg-white  rounded-2xl m-4 border-1  border-dashed border-gray-100 shadow-2xl overflow-hidden ">
+                        {{ if images }}
+                        {{ images limit="1" }} <img src="{{ glide:url }}" alt=""
+                            class="w-full h-30v object-cover object-center " />
+                        {{ /images }}
+                        {{ else }}
+                        <img src="{{ company:logo }}" alt="" class="w-full h-30v object-cover object-center " />
+                        {{ /if }}
+                        <div class="p-4">
+                            <span class="text-gray-400">{{ collection:title }} </span>
+                            <h2 class="mb-1 text-gray-900 font-semibold">{{ title }}</h2>
+
+                            <span class="text-gray-700"></span>
+
+
+                        </div>
+                    </div>
+                </a>
+                {{ /entries }}
+
+
+
+
+                {{ /if }}
+                {{ /search:results }}
+</main>
+
+
+
+
+{{ partial:components/nav/footer }}

@@ -8,6 +8,12 @@ sections:
         field:
           type: text
           required: true
+          validate:
+            - required
+          localizable: true
+          listable: hidden
+          input_type: text
+          antlers: true
       -
         handle: content
         field:
@@ -20,7 +26,10 @@ sections:
           type: template
           display: Template
           localizable: true
+          listable: hidden
+          hide_partials: true
   sidebar:
+    display: Sidebar
     fields:
       -
         handle: slug
@@ -28,6 +37,8 @@ sections:
           type: slug
           required: true
           localizable: true
+          validate:
+            - required
       -
         handle: parent
         field:
@@ -36,3 +47,4 @@ sections:
             - pages
           max_items: 1
           listable: false
+          localizable: true

@@ -1,1873 +1,21 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ({
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/alpinejs/dist/alpine.js":
 /*!**********************************************!*\
   !*** ./node_modules/alpinejs/dist/alpine.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module) {
 
-(function (global, factory) {
-   true ? module.exports = factory() :
-  undefined;
-}(this, (function () { 'use strict';
-
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
-    }
-
-    return obj;
-  }
-
-  function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-
-    if (Object.getOwnPropertySymbols) {
-      var symbols = Object.getOwnPropertySymbols(object);
-      if (enumerableOnly) symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-      keys.push.apply(keys, symbols);
-    }
-
-    return keys;
-  }
-
-  function _objectSpread2(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i] != null ? arguments[i] : {};
-
-      if (i % 2) {
-        ownKeys(Object(source), true).forEach(function (key) {
-          _defineProperty(target, key, source[key]);
-        });
-      } else if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-      } else {
-        ownKeys(Object(source)).forEach(function (key) {
-          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-      }
-    }
-
-    return target;
-  }
-
-  // Thanks @stimulus:
-  // https://github.com/stimulusjs/stimulus/blob/master/packages/%40stimulus/core/src/application.ts
-  function domReady() {
-    return new Promise(resolve => {
-      if (document.readyState == "loading") {
-        document.addEventListener("DOMContentLoaded", resolve);
-      } else {
-        resolve();
-      }
-    });
-  }
-  function arrayUnique(array) {
-    return Array.from(new Set(array));
-  }
-  function isTesting() {
-    return navigator.userAgent.includes("Node.js") || navigator.userAgent.includes("jsdom");
-  }
-  function warnIfMalformedTemplate(el, directive) {
-    if (el.tagName.toLowerCase() !== 'template') {
-      console.warn(`Alpine: [${directive}] directive should only be added to <template> tags. See https://github.com/alpinejs/alpine#${directive}`);
-    } else if (el.content.childElementCount !== 1) {
-      console.warn(`Alpine: <template> tag with [${directive}] encountered with multiple element roots. Make sure <template> only has a single child node.`);
-    }
-  }
-  function kebabCase(subject) {
-    return subject.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/[_\s]/, '-').toLowerCase();
-  }
-  function walk(el, callback) {
-    if (callback(el) === false) return;
-    let node = el.firstElementChild;
-
-    while (node) {
-      walk(node, callback);
-      node = node.nextElementSibling;
-    }
-  }
-  function debounce(func, wait) {
-    var timeout;
-    return function () {
-      var context = this,
-          args = arguments;
-
-      var later = function later() {
-        timeout = null;
-        func.apply(context, args);
-      };
-
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  }
-  function saferEval(expression, dataContext, additionalHelperVariables = {}) {
-    if (typeof expression === 'function') {
-      return expression.call(dataContext);
-    }
-
-    return new Function(['$data', ...Object.keys(additionalHelperVariables)], `var __alpine_result; with($data) { __alpine_result = ${expression} }; return __alpine_result`)(dataContext, ...Object.values(additionalHelperVariables));
-  }
-  function saferEvalNoReturn(expression, dataContext, additionalHelperVariables = {}) {
-    if (typeof expression === 'function') {
-      return expression.call(dataContext);
-    } // For the cases when users pass only a function reference to the caller: `x-on:click="foo"`
-    // Where "foo" is a function. Also, we'll pass the function the event instance when we call it.
-
-
-    if (Object.keys(dataContext).includes(expression)) {
-      let methodReference = new Function(['dataContext', ...Object.keys(additionalHelperVariables)], `with(dataContext) { return ${expression} }`)(dataContext, ...Object.values(additionalHelperVariables));
-
-      if (typeof methodReference === 'function') {
-        return methodReference.call(dataContext, additionalHelperVariables['$event']);
-      }
-    }
-
-    return new Function(['dataContext', ...Object.keys(additionalHelperVariables)], `with(dataContext) { ${expression} }`)(dataContext, ...Object.values(additionalHelperVariables));
-  }
-  const xAttrRE = /^x-(on|bind|data|text|html|model|if|for|show|cloak|transition|ref|spread)\b/;
-  function isXAttr(attr) {
-    const name = replaceAtAndColonWithStandardSyntax(attr.name);
-    return xAttrRE.test(name);
-  }
-  function getXAttrs(el, component, type) {
-    let directives = Array.from(el.attributes).filter(isXAttr).map(parseHtmlAttribute); // Get an object of directives from x-spread.
-
-    let spreadDirective = directives.filter(directive => directive.type === 'spread')[0];
-
-    if (spreadDirective) {
-      let spreadObject = saferEval(spreadDirective.expression, component.$data); // Add x-spread directives to the pile of existing directives.
-
-      directives = directives.concat(Object.entries(spreadObject).map(([name, value]) => parseHtmlAttribute({
-        name,
-        value
-      })));
-    }
-
-    return directives.filter(i => {
-      // If no type is passed in for filtering, bypass filter
-      if (!type) return true;
-      return i.type === type;
-    });
-  }
-
-  function parseHtmlAttribute({
-    name,
-    value
-  }) {
-    const normalizedName = replaceAtAndColonWithStandardSyntax(name);
-    const typeMatch = normalizedName.match(xAttrRE);
-    const valueMatch = normalizedName.match(/:([a-zA-Z\-:]+)/);
-    const modifiers = normalizedName.match(/\.[^.\]]+(?=[^\]]*$)/g) || [];
-    return {
-      type: typeMatch ? typeMatch[1] : null,
-      value: valueMatch ? valueMatch[1] : null,
-      modifiers: modifiers.map(i => i.replace('.', '')),
-      expression: value
-    };
-  }
-
-  function isBooleanAttr(attrName) {
-    // As per HTML spec table https://html.spec.whatwg.org/multipage/indices.html#attributes-3:boolean-attribute
-    // Array roughly ordered by estimated usage
-    const booleanAttributes = ['disabled', 'checked', 'required', 'readonly', 'hidden', 'open', 'selected', 'autofocus', 'itemscope', 'multiple', 'novalidate', 'allowfullscreen', 'allowpaymentrequest', 'formnovalidate', 'autoplay', 'controls', 'loop', 'muted', 'playsinline', 'default', 'ismap', 'reversed', 'async', 'defer', 'nomodule'];
-    return booleanAttributes.includes(attrName);
-  }
-  function replaceAtAndColonWithStandardSyntax(name) {
-    if (name.startsWith('@')) {
-      return name.replace('@', 'x-on:');
-    } else if (name.startsWith(':')) {
-      return name.replace(':', 'x-bind:');
-    }
-
-    return name;
-  }
-  function convertClassStringToArray(classList, filterFn = Boolean) {
-    return classList.split(' ').filter(filterFn);
-  }
-  function transitionIn(el, show, component, forceSkip = false) {
-    if (forceSkip) return show();
-    const attrs = getXAttrs(el, component, 'transition');
-    const showAttr = getXAttrs(el, component, 'show')[0]; // If this is triggered by a x-show.transition.
-
-    if (showAttr && showAttr.modifiers.includes('transition')) {
-      let modifiers = showAttr.modifiers; // If x-show.transition.out, we'll skip the "in" transition.
-
-      if (modifiers.includes('out') && !modifiers.includes('in')) return show();
-      const settingBothSidesOfTransition = modifiers.includes('in') && modifiers.includes('out'); // If x-show.transition.in...out... only use "in" related modifiers for this transition.
-
-      modifiers = settingBothSidesOfTransition ? modifiers.filter((i, index) => index < modifiers.indexOf('out')) : modifiers;
-      transitionHelperIn(el, modifiers, show); // Otherwise, we can assume x-transition:enter.
-    } else if (attrs.filter(attr => ['enter', 'enter-start', 'enter-end'].includes(attr.value)).length > 0) {
-      transitionClassesIn(el, component, attrs, show);
-    } else {
-      // If neither, just show that damn thing.
-      show();
-    }
-  }
-  function transitionOut(el, hide, component, forceSkip = false) {
-    // We don't want to transition on the initial page load.
-    if (forceSkip) return hide();
-    const attrs = getXAttrs(el, component, 'transition');
-    const showAttr = getXAttrs(el, component, 'show')[0];
-
-    if (showAttr && showAttr.modifiers.includes('transition')) {
-      let modifiers = showAttr.modifiers;
-      if (modifiers.includes('in') && !modifiers.includes('out')) return hide();
-      const settingBothSidesOfTransition = modifiers.includes('in') && modifiers.includes('out');
-      modifiers = settingBothSidesOfTransition ? modifiers.filter((i, index) => index > modifiers.indexOf('out')) : modifiers;
-      transitionHelperOut(el, modifiers, settingBothSidesOfTransition, hide);
-    } else if (attrs.filter(attr => ['leave', 'leave-start', 'leave-end'].includes(attr.value)).length > 0) {
-      transitionClassesOut(el, component, attrs, hide);
-    } else {
-      hide();
-    }
-  }
-  function transitionHelperIn(el, modifiers, showCallback) {
-    // Default values inspired by: https://material.io/design/motion/speed.html#duration
-    const styleValues = {
-      duration: modifierValue(modifiers, 'duration', 150),
-      origin: modifierValue(modifiers, 'origin', 'center'),
-      first: {
-        opacity: 0,
-        scale: modifierValue(modifiers, 'scale', 95)
-      },
-      second: {
-        opacity: 1,
-        scale: 100
-      }
-    };
-    transitionHelper(el, modifiers, showCallback, () => {}, styleValues);
-  }
-  function transitionHelperOut(el, modifiers, settingBothSidesOfTransition, hideCallback) {
-    // Make the "out" transition .5x slower than the "in". (Visually better)
-    // HOWEVER, if they explicitly set a duration for the "out" transition,
-    // use that.
-    const duration = settingBothSidesOfTransition ? modifierValue(modifiers, 'duration', 150) : modifierValue(modifiers, 'duration', 150) / 2;
-    const styleValues = {
-      duration: duration,
-      origin: modifierValue(modifiers, 'origin', 'center'),
-      first: {
-        opacity: 1,
-        scale: 100
-      },
-      second: {
-        opacity: 0,
-        scale: modifierValue(modifiers, 'scale', 95)
-      }
-    };
-    transitionHelper(el, modifiers, () => {}, hideCallback, styleValues);
-  }
-
-  function modifierValue(modifiers, key, fallback) {
-    // If the modifier isn't present, use the default.
-    if (modifiers.indexOf(key) === -1) return fallback; // If it IS present, grab the value after it: x-show.transition.duration.500ms
-
-    const rawValue = modifiers[modifiers.indexOf(key) + 1];
-    if (!rawValue) return fallback;
-
-    if (key === 'scale') {
-      // Check if the very next value is NOT a number and return the fallback.
-      // If x-show.transition.scale, we'll use the default scale value.
-      // That is how a user opts out of the opacity transition.
-      if (!isNumeric(rawValue)) return fallback;
-    }
-
-    if (key === 'duration') {
-      // Support x-show.transition.duration.500ms && duration.500
-      let match = rawValue.match(/([0-9]+)ms/);
-      if (match) return match[1];
-    }
-
-    if (key === 'origin') {
-      // Support chaining origin directions: x-show.transition.top.right
-      if (['top', 'right', 'left', 'center', 'bottom'].includes(modifiers[modifiers.indexOf(key) + 2])) {
-        return [rawValue, modifiers[modifiers.indexOf(key) + 2]].join(' ');
-      }
-    }
-
-    return rawValue;
-  }
-
-  function transitionHelper(el, modifiers, hook1, hook2, styleValues) {
-    // If the user set these style values, we'll put them back when we're done with them.
-    const opacityCache = el.style.opacity;
-    const transformCache = el.style.transform;
-    const transformOriginCache = el.style.transformOrigin; // If no modifiers are present: x-show.transition, we'll default to both opacity and scale.
-
-    const noModifiers = !modifiers.includes('opacity') && !modifiers.includes('scale');
-    const transitionOpacity = noModifiers || modifiers.includes('opacity');
-    const transitionScale = noModifiers || modifiers.includes('scale'); // These are the explicit stages of a transition (same stages for in and for out).
-    // This way you can get a birds eye view of the hooks, and the differences
-    // between them.
-
-    const stages = {
-      start() {
-        if (transitionOpacity) el.style.opacity = styleValues.first.opacity;
-        if (transitionScale) el.style.transform = `scale(${styleValues.first.scale / 100})`;
-      },
-
-      during() {
-        if (transitionScale) el.style.transformOrigin = styleValues.origin;
-        el.style.transitionProperty = [transitionOpacity ? `opacity` : ``, transitionScale ? `transform` : ``].join(' ').trim();
-        el.style.transitionDuration = `${styleValues.duration / 1000}s`;
-        el.style.transitionTimingFunction = `cubic-bezier(0.4, 0.0, 0.2, 1)`;
-      },
-
-      show() {
-        hook1();
-      },
-
-      end() {
-        if (transitionOpacity) el.style.opacity = styleValues.second.opacity;
-        if (transitionScale) el.style.transform = `scale(${styleValues.second.scale / 100})`;
-      },
-
-      hide() {
-        hook2();
-      },
-
-      cleanup() {
-        if (transitionOpacity) el.style.opacity = opacityCache;
-        if (transitionScale) el.style.transform = transformCache;
-        if (transitionScale) el.style.transformOrigin = transformOriginCache;
-        el.style.transitionProperty = null;
-        el.style.transitionDuration = null;
-        el.style.transitionTimingFunction = null;
-      }
-
-    };
-    transition(el, stages);
-  }
-  function transitionClassesIn(el, component, directives, showCallback) {
-    let ensureStringExpression = expression => {
-      return typeof expression === 'function' ? component.evaluateReturnExpression(el, expression) : expression;
-    };
-
-    const enter = convertClassStringToArray(ensureStringExpression((directives.find(i => i.value === 'enter') || {
-      expression: ''
-    }).expression));
-    const enterStart = convertClassStringToArray(ensureStringExpression((directives.find(i => i.value === 'enter-start') || {
-      expression: ''
-    }).expression));
-    const enterEnd = convertClassStringToArray(ensureStringExpression((directives.find(i => i.value === 'enter-end') || {
-      expression: ''
-    }).expression));
-    transitionClasses(el, enter, enterStart, enterEnd, showCallback, () => {});
-  }
-  function transitionClassesOut(el, component, directives, hideCallback) {
-    const leave = convertClassStringToArray((directives.find(i => i.value === 'leave') || {
-      expression: ''
-    }).expression);
-    const leaveStart = convertClassStringToArray((directives.find(i => i.value === 'leave-start') || {
-      expression: ''
-    }).expression);
-    const leaveEnd = convertClassStringToArray((directives.find(i => i.value === 'leave-end') || {
-      expression: ''
-    }).expression);
-    transitionClasses(el, leave, leaveStart, leaveEnd, () => {}, hideCallback);
-  }
-  function transitionClasses(el, classesDuring, classesStart, classesEnd, hook1, hook2) {
-    const originalClasses = el.__x_original_classes || [];
-    const stages = {
-      start() {
-        el.classList.add(...classesStart);
-      },
-
-      during() {
-        el.classList.add(...classesDuring);
-      },
-
-      show() {
-        hook1();
-      },
-
-      end() {
-        // Don't remove classes that were in the original class attribute.
-        el.classList.remove(...classesStart.filter(i => !originalClasses.includes(i)));
-        el.classList.add(...classesEnd);
-      },
-
-      hide() {
-        hook2();
-      },
-
-      cleanup() {
-        el.classList.remove(...classesDuring.filter(i => !originalClasses.includes(i)));
-        el.classList.remove(...classesEnd.filter(i => !originalClasses.includes(i)));
-      }
-
-    };
-    transition(el, stages);
-  }
-  function transition(el, stages) {
-    stages.start();
-    stages.during();
-    requestAnimationFrame(() => {
-      // Note: Safari's transitionDuration property will list out comma separated transition durations
-      // for every single transition property. Let's grab the first one and call it a day.
-      let duration = Number(getComputedStyle(el).transitionDuration.replace(/,.*/, '').replace('s', '')) * 1000;
-
-      if (duration === 0) {
-        duration = Number(getComputedStyle(el).animationDuration.replace('s', '')) * 1000;
-      }
-
-      stages.show();
-      requestAnimationFrame(() => {
-        stages.end(); // Assign current transition to el in case we need to force it.
-
-        setTimeout(() => {
-          stages.hide(); // Adding an "isConnected" check, in case the callback
-          // removed the element from the DOM.
-
-          if (el.isConnected) {
-            stages.cleanup();
-          }
-        }, duration);
-      });
-    });
-  }
-  function isNumeric(subject) {
-    return !isNaN(subject);
-  }
-
-  function handleForDirective(component, templateEl, expression, initialUpdate, extraVars) {
-    warnIfMalformedTemplate(templateEl, 'x-for');
-    let iteratorNames = typeof expression === 'function' ? parseForExpression(component.evaluateReturnExpression(templateEl, expression)) : parseForExpression(expression);
-    let items = evaluateItemsAndReturnEmptyIfXIfIsPresentAndFalseOnElement(component, templateEl, iteratorNames, extraVars); // As we walk the array, we'll also walk the DOM (updating/creating as we go).
-
-    let currentEl = templateEl;
-    items.forEach((item, index) => {
-      let iterationScopeVariables = getIterationScopeVariables(iteratorNames, item, index, items, extraVars());
-      let currentKey = generateKeyForIteration(component, templateEl, index, iterationScopeVariables);
-      let nextEl = lookAheadForMatchingKeyedElementAndMoveItIfFound(currentEl.nextElementSibling, currentKey); // If we haven't found a matching key, insert the element at the current position.
-
-      if (!nextEl) {
-        nextEl = addElementInLoopAfterCurrentEl(templateEl, currentEl); // And transition it in if it's not the first page load.
-
-        transitionIn(nextEl, () => {}, component, initialUpdate);
-        nextEl.__x_for = iterationScopeVariables;
-        component.initializeElements(nextEl, () => nextEl.__x_for); // Otherwise update the element we found.
-      } else {
-        // Temporarily remove the key indicator to allow the normal "updateElements" to work.
-        delete nextEl.__x_for_key;
-        nextEl.__x_for = iterationScopeVariables;
-        component.updateElements(nextEl, () => nextEl.__x_for);
-      }
-
-      currentEl = nextEl;
-      currentEl.__x_for_key = currentKey;
-    });
-    removeAnyLeftOverElementsFromPreviousUpdate(currentEl, component);
-  } // This was taken from VueJS 2.* core. Thanks Vue!
-
-  function parseForExpression(expression) {
-    let forIteratorRE = /,([^,\}\]]*)(?:,([^,\}\]]*))?$/;
-    let stripParensRE = /^\(|\)$/g;
-    let forAliasRE = /([\s\S]*?)\s+(?:in|of)\s+([\s\S]*)/;
-    let inMatch = expression.match(forAliasRE);
-    if (!inMatch) return;
-    let res = {};
-    res.items = inMatch[2].trim();
-    let item = inMatch[1].trim().replace(stripParensRE, '');
-    let iteratorMatch = item.match(forIteratorRE);
-
-    if (iteratorMatch) {
-      res.item = item.replace(forIteratorRE, '').trim();
-      res.index = iteratorMatch[1].trim();
-
-      if (iteratorMatch[2]) {
-        res.collection = iteratorMatch[2].trim();
-      }
-    } else {
-      res.item = item;
-    }
-
-    return res;
-  }
-
-  function getIterationScopeVariables(iteratorNames, item, index, items, extraVars) {
-    // We must create a new object, so each iteration has a new scope
-    let scopeVariables = extraVars ? _objectSpread2({}, extraVars) : {};
-    scopeVariables[iteratorNames.item] = item;
-    if (iteratorNames.index) scopeVariables[iteratorNames.index] = index;
-    if (iteratorNames.collection) scopeVariables[iteratorNames.collection] = items;
-    return scopeVariables;
-  }
-
-  function generateKeyForIteration(component, el, index, iterationScopeVariables) {
-    let bindKeyAttribute = getXAttrs(el, component, 'bind').filter(attr => attr.value === 'key')[0]; // If the dev hasn't specified a key, just return the index of the iteration.
-
-    if (!bindKeyAttribute) return index;
-    return component.evaluateReturnExpression(el, bindKeyAttribute.expression, () => iterationScopeVariables);
-  }
-
-  function evaluateItemsAndReturnEmptyIfXIfIsPresentAndFalseOnElement(component, el, iteratorNames, extraVars) {
-    let ifAttribute = getXAttrs(el, component, 'if')[0];
-
-    if (ifAttribute && !component.evaluateReturnExpression(el, ifAttribute.expression)) {
-      return [];
-    }
-
-    return component.evaluateReturnExpression(el, iteratorNames.items, extraVars);
-  }
-
-  function addElementInLoopAfterCurrentEl(templateEl, currentEl) {
-    let clone = document.importNode(templateEl.content, true);
-    currentEl.parentElement.insertBefore(clone, currentEl.nextElementSibling);
-    return currentEl.nextElementSibling;
-  }
-
-  function lookAheadForMatchingKeyedElementAndMoveItIfFound(nextEl, currentKey) {
-    if (!nextEl) return; // If the the key's DO match, no need to look ahead.
-
-    if (nextEl.__x_for_key === currentKey) return nextEl; // If they don't, we'll look ahead for a match.
-    // If we find it, we'll move it to the current position in the loop.
-
-    let tmpNextEl = nextEl;
-
-    while (tmpNextEl) {
-      if (tmpNextEl.__x_for_key === currentKey) {
-        return tmpNextEl.parentElement.insertBefore(tmpNextEl, nextEl);
-      }
-
-      tmpNextEl = tmpNextEl.nextElementSibling && tmpNextEl.nextElementSibling.__x_for_key !== undefined ? tmpNextEl.nextElementSibling : false;
-    }
-  }
-
-  function removeAnyLeftOverElementsFromPreviousUpdate(currentEl, component) {
-    var nextElementFromOldLoop = currentEl.nextElementSibling && currentEl.nextElementSibling.__x_for_key !== undefined ? currentEl.nextElementSibling : false;
-
-    while (nextElementFromOldLoop) {
-      let nextElementFromOldLoopImmutable = nextElementFromOldLoop;
-      let nextSibling = nextElementFromOldLoop.nextElementSibling;
-      transitionOut(nextElementFromOldLoop, () => {
-        nextElementFromOldLoopImmutable.remove();
-      }, component);
-      nextElementFromOldLoop = nextSibling && nextSibling.__x_for_key !== undefined ? nextSibling : false;
-    }
-  }
-
-  function handleAttributeBindingDirective(component, el, attrName, expression, extraVars, attrType) {
-    var value = component.evaluateReturnExpression(el, expression, extraVars);
-
-    if (attrName === 'value') {
-      // If nested model key is undefined, set the default value to empty string.
-      if (value === undefined && expression.match(/\./).length) {
-        value = '';
-      }
-
-      if (el.type === 'radio') {
-        // Set radio value from x-bind:value, if no "value" attribute exists.
-        // If there are any initial state values, radio will have a correct
-        // "checked" value since x-bind:value is processed before x-model.
-        if (el.attributes.value === undefined && attrType === 'bind') {
-          el.value = value;
-        } else if (attrType !== 'bind') {
-          el.checked = el.value == value;
-        }
-      } else if (el.type === 'checkbox') {
-        // If we are explicitly binding a string to the :value, set the string,
-        // If the value is a boolean, leave it alone, it will be set to "on"
-        // automatically.
-        if (typeof value === 'string' && attrType === 'bind') {
-          el.value = value;
-        } else if (attrType !== 'bind') {
-          if (Array.isArray(value)) {
-            // I'm purposely not using Array.includes here because it's
-            // strict, and because of Numeric/String mis-casting, I
-            // want the "includes" to be "fuzzy".
-            el.checked = value.some(val => val == el.value);
-          } else {
-            el.checked = !!value;
-          }
-        }
-      } else if (el.tagName === 'SELECT') {
-        updateSelect(el, value);
-      } else {
-        if (el.value === value) return;
-        el.value = value;
-      }
-    } else if (attrName === 'class') {
-      if (Array.isArray(value)) {
-        const originalClasses = el.__x_original_classes || [];
-        el.setAttribute('class', arrayUnique(originalClasses.concat(value)).join(' '));
-      } else if (typeof value === 'object') {
-        // Sorting the keys / class names by their boolean value will ensure that
-        // anything that evaluates to `false` and needs to remove classes is run first.
-        const keysSortedByBooleanValue = Object.keys(value).sort((a, b) => value[a] - value[b]);
-        keysSortedByBooleanValue.forEach(classNames => {
-          if (value[classNames]) {
-            convertClassStringToArray(classNames).forEach(className => el.classList.add(className));
-          } else {
-            convertClassStringToArray(classNames).forEach(className => el.classList.remove(className));
-          }
-        });
-      } else {
-        const originalClasses = el.__x_original_classes || [];
-        const newClasses = convertClassStringToArray(value);
-        el.setAttribute('class', arrayUnique(originalClasses.concat(newClasses)).join(' '));
-      }
-    } else {
-      // If an attribute's bound value is null, undefined or false, remove the attribute
-      if ([null, undefined, false].includes(value)) {
-        el.removeAttribute(attrName);
-      } else {
-        isBooleanAttr(attrName) ? setIfChanged(el, attrName, attrName) : setIfChanged(el, attrName, value);
-      }
-    }
-  }
-
-  function setIfChanged(el, attrName, value) {
-    if (el.getAttribute(attrName) != value) {
-      el.setAttribute(attrName, value);
-    }
-  }
-
-  function updateSelect(el, value) {
-    const arrayWrappedValue = [].concat(value).map(value => {
-      return value + '';
-    });
-    Array.from(el.options).forEach(option => {
-      option.selected = arrayWrappedValue.includes(option.value || option.text);
-    });
-  }
-
-  function handleTextDirective(el, output, expression) {
-    // If nested model key is undefined, set the default value to empty string.
-    if (output === undefined && expression.match(/\./)) {
-      output = '';
-    }
-
-    el.innerText = output;
-  }
-
-  function handleHtmlDirective(component, el, expression, extraVars) {
-    el.innerHTML = component.evaluateReturnExpression(el, expression, extraVars);
-  }
-
-  function handleShowDirective(component, el, value, modifiers, initialUpdate = false) {
-    const hide = () => {
-      el.style.display = 'none';
-    };
-
-    const show = () => {
-      if (el.style.length === 1 && el.style.display === 'none') {
-        el.removeAttribute('style');
-      } else {
-        el.style.removeProperty('display');
-      }
-    };
-
-    if (initialUpdate === true) {
-      if (value) {
-        show();
-      } else {
-        hide();
-      }
-
-      return;
-    }
-
-    const handle = resolve => {
-      if (value) {
-        transitionIn(el, () => {
-          show();
-        }, component);
-        resolve(() => {});
-      } else {
-        if (el.style.display !== 'none') {
-          transitionOut(el, () => {
-            resolve(() => {
-              hide();
-            });
-          }, component);
-        } else {
-          resolve(() => {});
-        }
-      }
-    }; // The working of x-show is a bit complex because we need to
-    // wait for any child transitions to finish before hiding
-    // some element. Also, this has to be done recursively.
-    // If x-show.immediate, foregoe the waiting.
-
-
-    if (modifiers.includes('immediate')) {
-      handle(finish => finish());
-      return;
-    } // x-show is encountered during a DOM tree walk. If an element
-    // we encounter is NOT a child of another x-show element we
-    // can execute the previous x-show stack (if one exists).
-
-
-    if (component.showDirectiveLastElement && !component.showDirectiveLastElement.contains(el)) {
-      component.executeAndClearRemainingShowDirectiveStack();
-    }
-
-    component.showDirectiveStack.push(handle);
-    component.showDirectiveLastElement = el;
-  }
-
-  function handleIfDirective(component, el, expressionResult, initialUpdate, extraVars) {
-    warnIfMalformedTemplate(el, 'x-if');
-    const elementHasAlreadyBeenAdded = el.nextElementSibling && el.nextElementSibling.__x_inserted_me === true;
-
-    if (expressionResult && !elementHasAlreadyBeenAdded) {
-      const clone = document.importNode(el.content, true);
-      el.parentElement.insertBefore(clone, el.nextElementSibling);
-      transitionIn(el.nextElementSibling, () => {}, component, initialUpdate);
-      component.initializeElements(el.nextElementSibling, extraVars);
-      el.nextElementSibling.__x_inserted_me = true;
-    } else if (!expressionResult && elementHasAlreadyBeenAdded) {
-      transitionOut(el.nextElementSibling, () => {
-        el.nextElementSibling.remove();
-      }, component, initialUpdate);
-    }
-  }
-
-  function registerListener(component, el, event, modifiers, expression, extraVars = {}) {
-    if (modifiers.includes('away')) {
-      let handler = e => {
-        // Don't do anything if the click came form the element or within it.
-        if (el.contains(e.target)) return; // Don't do anything if this element isn't currently visible.
-
-        if (el.offsetWidth < 1 && el.offsetHeight < 1) return; // Now that we are sure the element is visible, AND the click
-        // is from outside it, let's run the expression.
-
-        runListenerHandler(component, expression, e, extraVars);
-
-        if (modifiers.includes('once')) {
-          document.removeEventListener(event, handler);
-        }
-      }; // Listen for this event at the root level.
-
-
-      document.addEventListener(event, handler);
-    } else {
-      let listenerTarget = modifiers.includes('window') ? window : modifiers.includes('document') ? document : el;
-
-      let handler = e => {
-        // Remove this global event handler if the element that declared it
-        // has been removed. It's now stale.
-        if (listenerTarget === window || listenerTarget === document) {
-          if (!document.body.contains(el)) {
-            listenerTarget.removeEventListener(event, handler);
-            return;
-          }
-        }
-
-        if (isKeyEvent(event)) {
-          if (isListeningForASpecificKeyThatHasntBeenPressed(e, modifiers)) {
-            return;
-          }
-        }
-
-        if (modifiers.includes('prevent')) e.preventDefault();
-        if (modifiers.includes('stop')) e.stopPropagation(); // If the .self modifier isn't present, or if it is present and
-        // the target element matches the element we are registering the
-        // event on, run the handler
-
-        if (!modifiers.includes('self') || e.target === el) {
-          const returnValue = runListenerHandler(component, expression, e, extraVars);
-
-          if (returnValue === false) {
-            e.preventDefault();
-          } else {
-            if (modifiers.includes('once')) {
-              listenerTarget.removeEventListener(event, handler);
-            }
-          }
-        }
-      };
-
-      if (modifiers.includes('debounce')) {
-        let nextModifier = modifiers[modifiers.indexOf('debounce') + 1] || 'invalid-wait';
-        let wait = isNumeric(nextModifier.split('ms')[0]) ? Number(nextModifier.split('ms')[0]) : 250;
-        handler = debounce(handler, wait);
-      }
-
-      listenerTarget.addEventListener(event, handler);
-    }
-  }
-
-  function runListenerHandler(component, expression, e, extraVars) {
-    return component.evaluateCommandExpression(e.target, expression, () => {
-      return _objectSpread2(_objectSpread2({}, extraVars()), {}, {
-        '$event': e
-      });
-    });
-  }
-
-  function isKeyEvent(event) {
-    return ['keydown', 'keyup'].includes(event);
-  }
-
-  function isListeningForASpecificKeyThatHasntBeenPressed(e, modifiers) {
-    let keyModifiers = modifiers.filter(i => {
-      return !['window', 'document', 'prevent', 'stop'].includes(i);
-    });
-
-    if (keyModifiers.includes('debounce')) {
-      let debounceIndex = keyModifiers.indexOf('debounce');
-      keyModifiers.splice(debounceIndex, isNumeric((keyModifiers[debounceIndex + 1] || 'invalid-wait').split('ms')[0]) ? 2 : 1);
-    } // If no modifier is specified, we'll call it a press.
-
-
-    if (keyModifiers.length === 0) return false; // If one is passed, AND it matches the key pressed, we'll call it a press.
-
-    if (keyModifiers.length === 1 && keyModifiers[0] === keyToModifier(e.key)) return false; // The user is listening for key combinations.
-
-    const systemKeyModifiers = ['ctrl', 'shift', 'alt', 'meta', 'cmd', 'super'];
-    const selectedSystemKeyModifiers = systemKeyModifiers.filter(modifier => keyModifiers.includes(modifier));
-    keyModifiers = keyModifiers.filter(i => !selectedSystemKeyModifiers.includes(i));
-
-    if (selectedSystemKeyModifiers.length > 0) {
-      const activelyPressedKeyModifiers = selectedSystemKeyModifiers.filter(modifier => {
-        // Alias "cmd" and "super" to "meta"
-        if (modifier === 'cmd' || modifier === 'super') modifier = 'meta';
-        return e[`${modifier}Key`];
-      }); // If all the modifiers selected are pressed, ...
-
-      if (activelyPressedKeyModifiers.length === selectedSystemKeyModifiers.length) {
-        // AND the remaining key is pressed as well. It's a press.
-        if (keyModifiers[0] === keyToModifier(e.key)) return false;
-      }
-    } // We'll call it NOT a valid keypress.
-
-
-    return true;
-  }
-
-  function keyToModifier(key) {
-    switch (key) {
-      case '/':
-        return 'slash';
-
-      case ' ':
-      case 'Spacebar':
-        return 'space';
-
-      default:
-        return key && kebabCase(key);
-    }
-  }
-
-  function registerModelListener(component, el, modifiers, expression, extraVars) {
-    // If the element we are binding to is a select, a radio, or checkbox
-    // we'll listen for the change event instead of the "input" event.
-    var event = el.tagName.toLowerCase() === 'select' || ['checkbox', 'radio'].includes(el.type) || modifiers.includes('lazy') ? 'change' : 'input';
-    const listenerExpression = `${expression} = rightSideOfExpression($event, ${expression})`;
-    registerListener(component, el, event, modifiers, listenerExpression, () => {
-      return _objectSpread2(_objectSpread2({}, extraVars()), {}, {
-        rightSideOfExpression: generateModelAssignmentFunction(el, modifiers, expression)
-      });
-    });
-  }
-
-  function generateModelAssignmentFunction(el, modifiers, expression) {
-    if (el.type === 'radio') {
-      // Radio buttons only work properly when they share a name attribute.
-      // People might assume we take care of that for them, because
-      // they already set a shared "x-model" attribute.
-      if (!el.hasAttribute('name')) el.setAttribute('name', expression);
-    }
-
-    return (event, currentValue) => {
-      // Check for event.detail due to an issue where IE11 handles other events as a CustomEvent.
-      if (event instanceof CustomEvent && event.detail) {
-        return event.detail;
-      } else if (el.type === 'checkbox') {
-        // If the data we are binding to is an array, toggle its value inside the array.
-        if (Array.isArray(currentValue)) {
-          const newValue = modifiers.includes('number') ? safeParseNumber(event.target.value) : event.target.value;
-          return event.target.checked ? currentValue.concat([newValue]) : currentValue.filter(i => i !== newValue);
-        } else {
-          return event.target.checked;
-        }
-      } else if (el.tagName.toLowerCase() === 'select' && el.multiple) {
-        return modifiers.includes('number') ? Array.from(event.target.selectedOptions).map(option => {
-          const rawValue = option.value || option.text;
-          return safeParseNumber(rawValue);
-        }) : Array.from(event.target.selectedOptions).map(option => {
-          return option.value || option.text;
-        });
-      } else {
-        const rawValue = event.target.value;
-        return modifiers.includes('number') ? safeParseNumber(rawValue) : modifiers.includes('trim') ? rawValue.trim() : rawValue;
-      }
-    };
-  }
-
-  function safeParseNumber(rawValue) {
-    const number = rawValue ? parseFloat(rawValue) : null;
-    return isNumeric(number) ? number : rawValue;
-  }
-
-  /**
-   * Copyright (C) 2017 salesforce.com, inc.
-   */
-  const { isArray } = Array;
-  const { getPrototypeOf, create: ObjectCreate, defineProperty: ObjectDefineProperty, defineProperties: ObjectDefineProperties, isExtensible, getOwnPropertyDescriptor, getOwnPropertyNames, getOwnPropertySymbols, preventExtensions, hasOwnProperty, } = Object;
-  const { push: ArrayPush, concat: ArrayConcat, map: ArrayMap, } = Array.prototype;
-  function isUndefined(obj) {
-      return obj === undefined;
-  }
-  function isFunction(obj) {
-      return typeof obj === 'function';
-  }
-  function isObject(obj) {
-      return typeof obj === 'object';
-  }
-  const proxyToValueMap = new WeakMap();
-  function registerProxy(proxy, value) {
-      proxyToValueMap.set(proxy, value);
-  }
-  const unwrap = (replicaOrAny) => proxyToValueMap.get(replicaOrAny) || replicaOrAny;
-
-  function wrapValue(membrane, value) {
-      return membrane.valueIsObservable(value) ? membrane.getProxy(value) : value;
-  }
-  /**
-   * Unwrap property descriptors will set value on original descriptor
-   * We only need to unwrap if value is specified
-   * @param descriptor external descrpitor provided to define new property on original value
-   */
-  function unwrapDescriptor(descriptor) {
-      if (hasOwnProperty.call(descriptor, 'value')) {
-          descriptor.value = unwrap(descriptor.value);
-      }
-      return descriptor;
-  }
-  function lockShadowTarget(membrane, shadowTarget, originalTarget) {
-      const targetKeys = ArrayConcat.call(getOwnPropertyNames(originalTarget), getOwnPropertySymbols(originalTarget));
-      targetKeys.forEach((key) => {
-          let descriptor = getOwnPropertyDescriptor(originalTarget, key);
-          // We do not need to wrap the descriptor if configurable
-          // Because we can deal with wrapping it when user goes through
-          // Get own property descriptor. There is also a chance that this descriptor
-          // could change sometime in the future, so we can defer wrapping
-          // until we need to
-          if (!descriptor.configurable) {
-              descriptor = wrapDescriptor(membrane, descriptor, wrapValue);
-          }
-          ObjectDefineProperty(shadowTarget, key, descriptor);
-      });
-      preventExtensions(shadowTarget);
-  }
-  class ReactiveProxyHandler {
-      constructor(membrane, value) {
-          this.originalTarget = value;
-          this.membrane = membrane;
-      }
-      get(shadowTarget, key) {
-          const { originalTarget, membrane } = this;
-          const value = originalTarget[key];
-          const { valueObserved } = membrane;
-          valueObserved(originalTarget, key);
-          return membrane.getProxy(value);
-      }
-      set(shadowTarget, key, value) {
-          const { originalTarget, membrane: { valueMutated } } = this;
-          const oldValue = originalTarget[key];
-          if (oldValue !== value) {
-              originalTarget[key] = value;
-              valueMutated(originalTarget, key);
-          }
-          else if (key === 'length' && isArray(originalTarget)) {
-              // fix for issue #236: push will add the new index, and by the time length
-              // is updated, the internal length is already equal to the new length value
-              // therefore, the oldValue is equal to the value. This is the forking logic
-              // to support this use case.
-              valueMutated(originalTarget, key);
-          }
-          return true;
-      }
-      deleteProperty(shadowTarget, key) {
-          const { originalTarget, membrane: { valueMutated } } = this;
-          delete originalTarget[key];
-          valueMutated(originalTarget, key);
-          return true;
-      }
-      apply(shadowTarget, thisArg, argArray) {
-          /* No op */
-      }
-      construct(target, argArray, newTarget) {
-          /* No op */
-      }
-      has(shadowTarget, key) {
-          const { originalTarget, membrane: { valueObserved } } = this;
-          valueObserved(originalTarget, key);
-          return key in originalTarget;
-      }
-      ownKeys(shadowTarget) {
-          const { originalTarget } = this;
-          return ArrayConcat.call(getOwnPropertyNames(originalTarget), getOwnPropertySymbols(originalTarget));
-      }
-      isExtensible(shadowTarget) {
-          const shadowIsExtensible = isExtensible(shadowTarget);
-          if (!shadowIsExtensible) {
-              return shadowIsExtensible;
-          }
-          const { originalTarget, membrane } = this;
-          const targetIsExtensible = isExtensible(originalTarget);
-          if (!targetIsExtensible) {
-              lockShadowTarget(membrane, shadowTarget, originalTarget);
-          }
-          return targetIsExtensible;
-      }
-      setPrototypeOf(shadowTarget, prototype) {
-      }
-      getPrototypeOf(shadowTarget) {
-          const { originalTarget } = this;
-          return getPrototypeOf(originalTarget);
-      }
-      getOwnPropertyDescriptor(shadowTarget, key) {
-          const { originalTarget, membrane } = this;
-          const { valueObserved } = this.membrane;
-          // keys looked up via hasOwnProperty need to be reactive
-          valueObserved(originalTarget, key);
-          let desc = getOwnPropertyDescriptor(originalTarget, key);
-          if (isUndefined(desc)) {
-              return desc;
-          }
-          const shadowDescriptor = getOwnPropertyDescriptor(shadowTarget, key);
-          if (!isUndefined(shadowDescriptor)) {
-              return shadowDescriptor;
-          }
-          // Note: by accessing the descriptor, the key is marked as observed
-          // but access to the value, setter or getter (if available) cannot observe
-          // mutations, just like regular methods, in which case we just do nothing.
-          desc = wrapDescriptor(membrane, desc, wrapValue);
-          if (!desc.configurable) {
-              // If descriptor from original target is not configurable,
-              // We must copy the wrapped descriptor over to the shadow target.
-              // Otherwise, proxy will throw an invariant error.
-              // This is our last chance to lock the value.
-              // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor#Invariants
-              ObjectDefineProperty(shadowTarget, key, desc);
-          }
-          return desc;
-      }
-      preventExtensions(shadowTarget) {
-          const { originalTarget, membrane } = this;
-          lockShadowTarget(membrane, shadowTarget, originalTarget);
-          preventExtensions(originalTarget);
-          return true;
-      }
-      defineProperty(shadowTarget, key, descriptor) {
-          const { originalTarget, membrane } = this;
-          const { valueMutated } = membrane;
-          const { configurable } = descriptor;
-          // We have to check for value in descriptor
-          // because Object.freeze(proxy) calls this method
-          // with only { configurable: false, writeable: false }
-          // Additionally, method will only be called with writeable:false
-          // if the descriptor has a value, as opposed to getter/setter
-          // So we can just check if writable is present and then see if
-          // value is present. This eliminates getter and setter descriptors
-          if (hasOwnProperty.call(descriptor, 'writable') && !hasOwnProperty.call(descriptor, 'value')) {
-              const originalDescriptor = getOwnPropertyDescriptor(originalTarget, key);
-              descriptor.value = originalDescriptor.value;
-          }
-          ObjectDefineProperty(originalTarget, key, unwrapDescriptor(descriptor));
-          if (configurable === false) {
-              ObjectDefineProperty(shadowTarget, key, wrapDescriptor(membrane, descriptor, wrapValue));
-          }
-          valueMutated(originalTarget, key);
-          return true;
-      }
-  }
-
-  function wrapReadOnlyValue(membrane, value) {
-      return membrane.valueIsObservable(value) ? membrane.getReadOnlyProxy(value) : value;
-  }
-  class ReadOnlyHandler {
-      constructor(membrane, value) {
-          this.originalTarget = value;
-          this.membrane = membrane;
-      }
-      get(shadowTarget, key) {
-          const { membrane, originalTarget } = this;
-          const value = originalTarget[key];
-          const { valueObserved } = membrane;
-          valueObserved(originalTarget, key);
-          return membrane.getReadOnlyProxy(value);
-      }
-      set(shadowTarget, key, value) {
-          return false;
-      }
-      deleteProperty(shadowTarget, key) {
-          return false;
-      }
-      apply(shadowTarget, thisArg, argArray) {
-          /* No op */
-      }
-      construct(target, argArray, newTarget) {
-          /* No op */
-      }
-      has(shadowTarget, key) {
-          const { originalTarget, membrane: { valueObserved } } = this;
-          valueObserved(originalTarget, key);
-          return key in originalTarget;
-      }
-      ownKeys(shadowTarget) {
-          const { originalTarget } = this;
-          return ArrayConcat.call(getOwnPropertyNames(originalTarget), getOwnPropertySymbols(originalTarget));
-      }
-      setPrototypeOf(shadowTarget, prototype) {
-      }
-      getOwnPropertyDescriptor(shadowTarget, key) {
-          const { originalTarget, membrane } = this;
-          const { valueObserved } = membrane;
-          // keys looked up via hasOwnProperty need to be reactive
-          valueObserved(originalTarget, key);
-          let desc = getOwnPropertyDescriptor(originalTarget, key);
-          if (isUndefined(desc)) {
-              return desc;
-          }
-          const shadowDescriptor = getOwnPropertyDescriptor(shadowTarget, key);
-          if (!isUndefined(shadowDescriptor)) {
-              return shadowDescriptor;
-          }
-          // Note: by accessing the descriptor, the key is marked as observed
-          // but access to the value or getter (if available) cannot be observed,
-          // just like regular methods, in which case we just do nothing.
-          desc = wrapDescriptor(membrane, desc, wrapReadOnlyValue);
-          if (hasOwnProperty.call(desc, 'set')) {
-              desc.set = undefined; // readOnly membrane does not allow setters
-          }
-          if (!desc.configurable) {
-              // If descriptor from original target is not configurable,
-              // We must copy the wrapped descriptor over to the shadow target.
-              // Otherwise, proxy will throw an invariant error.
-              // This is our last chance to lock the value.
-              // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor#Invariants
-              ObjectDefineProperty(shadowTarget, key, desc);
-          }
-          return desc;
-      }
-      preventExtensions(shadowTarget) {
-          return false;
-      }
-      defineProperty(shadowTarget, key, descriptor) {
-          return false;
-      }
-  }
-  function createShadowTarget(value) {
-      let shadowTarget = undefined;
-      if (isArray(value)) {
-          shadowTarget = [];
-      }
-      else if (isObject(value)) {
-          shadowTarget = {};
-      }
-      return shadowTarget;
-  }
-  const ObjectDotPrototype = Object.prototype;
-  function defaultValueIsObservable(value) {
-      // intentionally checking for null
-      if (value === null) {
-          return false;
-      }
-      // treat all non-object types, including undefined, as non-observable values
-      if (typeof value !== 'object') {
-          return false;
-      }
-      if (isArray(value)) {
-          return true;
-      }
-      const proto = getPrototypeOf(value);
-      return (proto === ObjectDotPrototype || proto === null || getPrototypeOf(proto) === null);
-  }
-  const defaultValueObserved = (obj, key) => {
-      /* do nothing */
-  };
-  const defaultValueMutated = (obj, key) => {
-      /* do nothing */
-  };
-  const defaultValueDistortion = (value) => value;
-  function wrapDescriptor(membrane, descriptor, getValue) {
-      const { set, get } = descriptor;
-      if (hasOwnProperty.call(descriptor, 'value')) {
-          descriptor.value = getValue(membrane, descriptor.value);
-      }
-      else {
-          if (!isUndefined(get)) {
-              descriptor.get = function () {
-                  // invoking the original getter with the original target
-                  return getValue(membrane, get.call(unwrap(this)));
-              };
-          }
-          if (!isUndefined(set)) {
-              descriptor.set = function (value) {
-                  // At this point we don't have a clear indication of whether
-                  // or not a valid mutation will occur, we don't have the key,
-                  // and we are not sure why and how they are invoking this setter.
-                  // Nevertheless we preserve the original semantics by invoking the
-                  // original setter with the original target and the unwrapped value
-                  set.call(unwrap(this), membrane.unwrapProxy(value));
-              };
-          }
-      }
-      return descriptor;
-  }
-  class ReactiveMembrane {
-      constructor(options) {
-          this.valueDistortion = defaultValueDistortion;
-          this.valueMutated = defaultValueMutated;
-          this.valueObserved = defaultValueObserved;
-          this.valueIsObservable = defaultValueIsObservable;
-          this.objectGraph = new WeakMap();
-          if (!isUndefined(options)) {
-              const { valueDistortion, valueMutated, valueObserved, valueIsObservable } = options;
-              this.valueDistortion = isFunction(valueDistortion) ? valueDistortion : defaultValueDistortion;
-              this.valueMutated = isFunction(valueMutated) ? valueMutated : defaultValueMutated;
-              this.valueObserved = isFunction(valueObserved) ? valueObserved : defaultValueObserved;
-              this.valueIsObservable = isFunction(valueIsObservable) ? valueIsObservable : defaultValueIsObservable;
-          }
-      }
-      getProxy(value) {
-          const unwrappedValue = unwrap(value);
-          const distorted = this.valueDistortion(unwrappedValue);
-          if (this.valueIsObservable(distorted)) {
-              const o = this.getReactiveState(unwrappedValue, distorted);
-              // when trying to extract the writable version of a readonly
-              // we return the readonly.
-              return o.readOnly === value ? value : o.reactive;
-          }
-          return distorted;
-      }
-      getReadOnlyProxy(value) {
-          value = unwrap(value);
-          const distorted = this.valueDistortion(value);
-          if (this.valueIsObservable(distorted)) {
-              return this.getReactiveState(value, distorted).readOnly;
-          }
-          return distorted;
-      }
-      unwrapProxy(p) {
-          return unwrap(p);
-      }
-      getReactiveState(value, distortedValue) {
-          const { objectGraph, } = this;
-          let reactiveState = objectGraph.get(distortedValue);
-          if (reactiveState) {
-              return reactiveState;
-          }
-          const membrane = this;
-          reactiveState = {
-              get reactive() {
-                  const reactiveHandler = new ReactiveProxyHandler(membrane, distortedValue);
-                  // caching the reactive proxy after the first time it is accessed
-                  const proxy = new Proxy(createShadowTarget(distortedValue), reactiveHandler);
-                  registerProxy(proxy, value);
-                  ObjectDefineProperty(this, 'reactive', { value: proxy });
-                  return proxy;
-              },
-              get readOnly() {
-                  const readOnlyHandler = new ReadOnlyHandler(membrane, distortedValue);
-                  // caching the readOnly proxy after the first time it is accessed
-                  const proxy = new Proxy(createShadowTarget(distortedValue), readOnlyHandler);
-                  registerProxy(proxy, value);
-                  ObjectDefineProperty(this, 'readOnly', { value: proxy });
-                  return proxy;
-              }
-          };
-          objectGraph.set(distortedValue, reactiveState);
-          return reactiveState;
-      }
-  }
-  /** version: 0.26.0 */
-
-  function wrap(data, mutationCallback) {
-
-    let membrane = new ReactiveMembrane({
-      valueMutated(target, key) {
-        mutationCallback(target, key);
-      }
-
-    });
-    return {
-      data: membrane.getProxy(data),
-      membrane: membrane
-    };
-  }
-  function unwrap$1(membrane, observable) {
-    let unwrappedData = membrane.unwrapProxy(observable);
-    let copy = {};
-    Object.keys(unwrappedData).forEach(key => {
-      if (['$el', '$refs', '$nextTick', '$watch'].includes(key)) return;
-      copy[key] = unwrappedData[key];
-    });
-    return copy;
-  }
-
-  class Component {
-    constructor(el, seedDataForCloning = null) {
-      this.$el = el;
-      const dataAttr = this.$el.getAttribute('x-data');
-      const dataExpression = dataAttr === '' ? '{}' : dataAttr;
-      const initExpression = this.$el.getAttribute('x-init');
-      this.unobservedData = seedDataForCloning ? seedDataForCloning : saferEval(dataExpression, {
-        $el: this.$el
-      });
-      // Construct a Proxy-based observable. This will be used to handle reactivity.
-
-      let {
-        membrane,
-        data
-      } = this.wrapDataInObservable(this.unobservedData);
-      this.$data = data;
-      this.membrane = membrane; // After making user-supplied data methods reactive, we can now add
-      // our magic properties to the original data for access.
-
-      this.unobservedData.$el = this.$el;
-      this.unobservedData.$refs = this.getRefsProxy();
-      this.nextTickStack = [];
-
-      this.unobservedData.$nextTick = callback => {
-        this.nextTickStack.push(callback);
-      };
-
-      this.watchers = {};
-
-      this.unobservedData.$watch = (property, callback) => {
-        if (!this.watchers[property]) this.watchers[property] = [];
-        this.watchers[property].push(callback);
-      };
-
-      this.showDirectiveStack = [];
-      this.showDirectiveLastElement;
-      var initReturnedCallback; // If x-init is present AND we aren't cloning (skip x-init on clone)
-
-      if (initExpression && !seedDataForCloning) {
-        // We want to allow data manipulation, but not trigger DOM updates just yet.
-        // We haven't even initialized the elements with their Alpine bindings. I mean c'mon.
-        this.pauseReactivity = true;
-        initReturnedCallback = this.evaluateReturnExpression(this.$el, initExpression);
-        this.pauseReactivity = false;
-      } // Register all our listeners and set all our attribute bindings.
-
-
-      this.initializeElements(this.$el); // Use mutation observer to detect new elements being added within this component at run-time.
-      // Alpine's just so darn flexible amirite?
-
-      this.listenForNewElementsToInitialize();
-
-      if (typeof initReturnedCallback === 'function') {
-        // Run the callback returned from the "x-init" hook to allow the user to do stuff after
-        // Alpine's got it's grubby little paws all over everything.
-        initReturnedCallback.call(this.$data);
-      }
-    }
-
-    getUnobservedData() {
-      return unwrap$1(this.membrane, this.$data);
-    }
-
-    wrapDataInObservable(data) {
-      var self = this;
-      let updateDom = debounce(function () {
-        self.updateElements(self.$el);
-      }, 0);
-      return wrap(data, (target, key) => {
-        if (self.watchers[key]) {
-          // If there's a watcher for this specific key, run it.
-          self.watchers[key].forEach(callback => callback(target[key]));
-        } else {
-          // Let's walk through the watchers with "dot-notation" (foo.bar) and see
-          // if this mutation fits any of them.
-          Object.keys(self.watchers).filter(i => i.includes('.')).forEach(fullDotNotationKey => {
-            let dotNotationParts = fullDotNotationKey.split('.'); // If this dot-notation watcher's last "part" doesn't match the current
-            // key, then skip it early for performance reasons.
-
-            if (key !== dotNotationParts[dotNotationParts.length - 1]) return; // Now, walk through the dot-notation "parts" recursively to find
-            // a match, and call the watcher if one's found.
-
-            dotNotationParts.reduce((comparisonData, part) => {
-              if (Object.is(target, comparisonData)) {
-                // Run the watchers.
-                self.watchers[fullDotNotationKey].forEach(callback => callback(target[key]));
-              }
-
-              return comparisonData[part];
-            }, self.getUnobservedData());
-          });
-        } // Don't react to data changes for cases like the `x-created` hook.
-
-
-        if (self.pauseReactivity) return;
-        updateDom();
-      });
-    }
-
-    walkAndSkipNestedComponents(el, callback, initializeComponentCallback = () => {}) {
-      walk(el, el => {
-        // We've hit a component.
-        if (el.hasAttribute('x-data')) {
-          // If it's not the current one.
-          if (!el.isSameNode(this.$el)) {
-            // Initialize it if it's not.
-            if (!el.__x) initializeComponentCallback(el); // Now we'll let that sub-component deal with itself.
-
-            return false;
-          }
-        }
-
-        return callback(el);
-      });
-    }
-
-    initializeElements(rootEl, extraVars = () => {}) {
-      this.walkAndSkipNestedComponents(rootEl, el => {
-        // Don't touch spawns from for loop
-        if (el.__x_for_key !== undefined) return false; // Don't touch spawns from if directives
-
-        if (el.__x_inserted_me !== undefined) return false;
-        this.initializeElement(el, extraVars);
-      }, el => {
-        el.__x = new Component(el);
-      });
-      this.executeAndClearRemainingShowDirectiveStack();
-      this.executeAndClearNextTickStack(rootEl);
-    }
-
-    initializeElement(el, extraVars) {
-      // To support class attribute merging, we have to know what the element's
-      // original class attribute looked like for reference.
-      if (el.hasAttribute('class') && getXAttrs(el, this).length > 0) {
-        el.__x_original_classes = convertClassStringToArray(el.getAttribute('class'));
-      }
-
-      this.registerListeners(el, extraVars);
-      this.resolveBoundAttributes(el, true, extraVars);
-    }
-
-    updateElements(rootEl, extraVars = () => {}) {
-      this.walkAndSkipNestedComponents(rootEl, el => {
-        // Don't touch spawns from for loop (and check if the root is actually a for loop in a parent, don't skip it.)
-        if (el.__x_for_key !== undefined && !el.isSameNode(this.$el)) return false;
-        this.updateElement(el, extraVars);
-      }, el => {
-        el.__x = new Component(el);
-      });
-      this.executeAndClearRemainingShowDirectiveStack();
-      this.executeAndClearNextTickStack(rootEl);
-    }
-
-    executeAndClearNextTickStack(el) {
-      // Skip spawns from alpine directives
-      if (el === this.$el && this.nextTickStack.length > 0) {
-        // We run the tick stack after the next frame to allow any
-        // running transitions to pass the initial show stage.
-        requestAnimationFrame(() => {
-          while (this.nextTickStack.length > 0) {
-            this.nextTickStack.shift()();
-          }
-        });
-      }
-    }
-
-    executeAndClearRemainingShowDirectiveStack() {
-      // The goal here is to start all the x-show transitions
-      // and build a nested promise chain so that elements
-      // only hide when the children are finished hiding.
-      this.showDirectiveStack.reverse().map(thing => {
-        return new Promise(resolve => {
-          thing(finish => {
-            resolve(finish);
-          });
-        });
-      }).reduce((nestedPromise, promise) => {
-        return nestedPromise.then(() => {
-          return promise.then(finish => finish());
-        });
-      }, Promise.resolve(() => {})); // We've processed the handler stack. let's clear it.
-
-      this.showDirectiveStack = [];
-      this.showDirectiveLastElement = undefined;
-    }
-
-    updateElement(el, extraVars) {
-      this.resolveBoundAttributes(el, false, extraVars);
-    }
-
-    registerListeners(el, extraVars) {
-      getXAttrs(el, this).forEach(({
-        type,
-        value,
-        modifiers,
-        expression
-      }) => {
-        switch (type) {
-          case 'on':
-            registerListener(this, el, value, modifiers, expression, extraVars);
-            break;
-
-          case 'model':
-            registerModelListener(this, el, modifiers, expression, extraVars);
-            break;
-        }
-      });
-    }
-
-    resolveBoundAttributes(el, initialUpdate = false, extraVars) {
-      let attrs = getXAttrs(el, this);
-
-      if (el.type !== undefined && el.type === 'radio') {
-        // If there's an x-model on a radio input, move it to end of attribute list
-        // to ensure that x-bind:value (if present) is processed first.
-        const modelIdx = attrs.findIndex(attr => attr.type === 'model');
-
-        if (modelIdx > -1) {
-          attrs.push(attrs.splice(modelIdx, 1)[0]);
-        }
-      }
-
-      attrs.forEach(({
-        type,
-        value,
-        modifiers,
-        expression
-      }) => {
-        switch (type) {
-          case 'model':
-            handleAttributeBindingDirective(this, el, 'value', expression, extraVars, type);
-            break;
-
-          case 'bind':
-            // The :key binding on an x-for is special, ignore it.
-            if (el.tagName.toLowerCase() === 'template' && value === 'key') return;
-            handleAttributeBindingDirective(this, el, value, expression, extraVars, type);
-            break;
-
-          case 'text':
-            var output = this.evaluateReturnExpression(el, expression, extraVars);
-            handleTextDirective(el, output, expression);
-            break;
-
-          case 'html':
-            handleHtmlDirective(this, el, expression, extraVars);
-            break;
-
-          case 'show':
-            var output = this.evaluateReturnExpression(el, expression, extraVars);
-            handleShowDirective(this, el, output, modifiers, initialUpdate);
-            break;
-
-          case 'if':
-            // If this element also has x-for on it, don't process x-if.
-            // We will let the "x-for" directive handle the "if"ing.
-            if (attrs.filter(i => i.type === 'for').length > 0) return;
-            var output = this.evaluateReturnExpression(el, expression, extraVars);
-            handleIfDirective(this, el, output, initialUpdate, extraVars);
-            break;
-
-          case 'for':
-            handleForDirective(this, el, expression, initialUpdate, extraVars);
-            break;
-
-          case 'cloak':
-            el.removeAttribute('x-cloak');
-            break;
-        }
-      });
-    }
-
-    evaluateReturnExpression(el, expression, extraVars = () => {}) {
-      return saferEval(expression, this.$data, _objectSpread2(_objectSpread2({}, extraVars()), {}, {
-        $dispatch: this.getDispatchFunction(el)
-      }));
-    }
-
-    evaluateCommandExpression(el, expression, extraVars = () => {}) {
-      return saferEvalNoReturn(expression, this.$data, _objectSpread2(_objectSpread2({}, extraVars()), {}, {
-        $dispatch: this.getDispatchFunction(el)
-      }));
-    }
-
-    getDispatchFunction(el) {
-      return (event, detail = {}) => {
-        el.dispatchEvent(new CustomEvent(event, {
-          detail,
-          bubbles: true
-        }));
-      };
-    }
-
-    listenForNewElementsToInitialize() {
-      const targetNode = this.$el;
-      const observerOptions = {
-        childList: true,
-        attributes: true,
-        subtree: true
-      };
-      const observer = new MutationObserver(mutations => {
-        for (let i = 0; i < mutations.length; i++) {
-          // Filter out mutations triggered from child components.
-          const closestParentComponent = mutations[i].target.closest('[x-data]');
-          if (!(closestParentComponent && closestParentComponent.isSameNode(this.$el))) continue;
-
-          if (mutations[i].type === 'attributes' && mutations[i].attributeName === 'x-data') {
-            const rawData = saferEval(mutations[i].target.getAttribute('x-data'), {
-              $el: this.$el
-            });
-            Object.keys(rawData).forEach(key => {
-              if (this.$data[key] !== rawData[key]) {
-                this.$data[key] = rawData[key];
-              }
-            });
-          }
-
-          if (mutations[i].addedNodes.length > 0) {
-            mutations[i].addedNodes.forEach(node => {
-              if (node.nodeType !== 1 || node.__x_inserted_me) return;
-
-              if (node.matches('[x-data]') && !node.__x) {
-                node.__x = new Component(node);
-                return;
-              }
-
-              this.initializeElements(node);
-            });
-          }
-        }
-      });
-      observer.observe(targetNode, observerOptions);
-    }
-
-    getRefsProxy() {
-      var self = this;
-      var refObj = {};
-      // One of the goals of this is to not hold elements in memory, but rather re-evaluate
-      // the DOM when the system needs something from it. This way, the framework is flexible and
-      // friendly to outside DOM changes from libraries like Vue/Livewire.
-      // For this reason, I'm using an "on-demand" proxy to fake a "$refs" object.
-
-      return new Proxy(refObj, {
-        get(object, property) {
-          if (property === '$isAlpineProxy') return true;
-          var ref; // We can't just query the DOM because it's hard to filter out refs in
-          // nested components.
-
-          self.walkAndSkipNestedComponents(self.$el, el => {
-            if (el.hasAttribute('x-ref') && el.getAttribute('x-ref') === property) {
-              ref = el;
-            }
-          });
-          return ref;
-        }
-
-      });
-    }
-
-  }
-
-  const Alpine = {
-    version: "2.4.1",
-    pauseMutationObserver: false,
-    start: async function start() {
-      if (!isTesting()) {
-        await domReady();
-      }
-
-      this.discoverComponents(el => {
-        this.initializeComponent(el);
-      }); // It's easier and more performant to just support Turbolinks than listen
-      // to MutationObserver mutations at the document level.
-
-      document.addEventListener("turbolinks:load", () => {
-        this.discoverUninitializedComponents(el => {
-          this.initializeComponent(el);
-        });
-      });
-      this.listenForNewUninitializedComponentsAtRunTime(el => {
-        this.initializeComponent(el);
-      });
-    },
-    discoverComponents: function discoverComponents(callback) {
-      const rootEls = document.querySelectorAll('[x-data]');
-      rootEls.forEach(rootEl => {
-        callback(rootEl);
-      });
-    },
-    discoverUninitializedComponents: function discoverUninitializedComponents(callback, el = null) {
-      const rootEls = (el || document).querySelectorAll('[x-data]');
-      Array.from(rootEls).filter(el => el.__x === undefined).forEach(rootEl => {
-        callback(rootEl);
-      });
-    },
-    listenForNewUninitializedComponentsAtRunTime: function listenForNewUninitializedComponentsAtRunTime(callback) {
-      const targetNode = document.querySelector('body');
-      const observerOptions = {
-        childList: true,
-        attributes: true,
-        subtree: true
-      };
-      const observer = new MutationObserver(mutations => {
-        if (this.pauseMutationObserver) return;
-
-        for (let i = 0; i < mutations.length; i++) {
-          if (mutations[i].addedNodes.length > 0) {
-            mutations[i].addedNodes.forEach(node => {
-              // Discard non-element nodes (like line-breaks)
-              if (node.nodeType !== 1) return; // Discard any changes happening within an existing component.
-              // They will take care of themselves.
-
-              if (node.parentElement && node.parentElement.closest('[x-data]')) return;
-              this.discoverUninitializedComponents(el => {
-                this.initializeComponent(el);
-              }, node.parentElement);
-            });
-          }
-        }
-      });
-      observer.observe(targetNode, observerOptions);
-    },
-    initializeComponent: function initializeComponent(el) {
-      if (!el.__x) {
-        // Wrap in a try/catch so that we don't prevent other components
-        // from initializing when one component contains an error.
-        try {
-          el.__x = new Component(el);
-        } catch (error) {
-          setTimeout(() => {
-            throw error;
-          }, 0);
-        }
-      }
-    },
-    clone: function clone(component, newEl) {
-      if (!newEl.__x) {
-        newEl.__x = new Component(newEl, component.getUnobservedData());
-      }
-    }
-  };
-
-  if (!isTesting()) {
-    window.Alpine = Alpine;
-
-    if (window.deferLoadingAlpine) {
-      window.deferLoadingAlpine(function () {
-        window.Alpine.start();
-      });
-    } else {
-      window.Alpine.start();
-    }
-  }
-
-  return Alpine;
-
-})));
-
-
-/***/ }),
-
-/***/ "./resources/css/tailwind.css":
-/*!************************************!*\
-  !*** ./resources/css/tailwind.css ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+eval("(function (global, factory) {\n   true ? module.exports = factory() :\n  0;\n}(this, (function () { 'use strict';\n\n  function _defineProperty(obj, key, value) {\n    if (key in obj) {\n      Object.defineProperty(obj, key, {\n        value: value,\n        enumerable: true,\n        configurable: true,\n        writable: true\n      });\n    } else {\n      obj[key] = value;\n    }\n\n    return obj;\n  }\n\n  function ownKeys(object, enumerableOnly) {\n    var keys = Object.keys(object);\n\n    if (Object.getOwnPropertySymbols) {\n      var symbols = Object.getOwnPropertySymbols(object);\n      if (enumerableOnly) symbols = symbols.filter(function (sym) {\n        return Object.getOwnPropertyDescriptor(object, sym).enumerable;\n      });\n      keys.push.apply(keys, symbols);\n    }\n\n    return keys;\n  }\n\n  function _objectSpread2(target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i] != null ? arguments[i] : {};\n\n      if (i % 2) {\n        ownKeys(Object(source), true).forEach(function (key) {\n          _defineProperty(target, key, source[key]);\n        });\n      } else if (Object.getOwnPropertyDescriptors) {\n        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));\n      } else {\n        ownKeys(Object(source)).forEach(function (key) {\n          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));\n        });\n      }\n    }\n\n    return target;\n  }\n\n  // Thanks @stimulus:\n  // https://github.com/stimulusjs/stimulus/blob/master/packages/%40stimulus/core/src/application.ts\n  function domReady() {\n    return new Promise(resolve => {\n      if (document.readyState == \"loading\") {\n        document.addEventListener(\"DOMContentLoaded\", resolve);\n      } else {\n        resolve();\n      }\n    });\n  }\n  function arrayUnique(array) {\n    return Array.from(new Set(array));\n  }\n  function isTesting() {\n    return navigator.userAgent.includes(\"Node.js\") || navigator.userAgent.includes(\"jsdom\");\n  }\n  function checkedAttrLooseCompare(valueA, valueB) {\n    return valueA == valueB;\n  }\n  function warnIfMalformedTemplate(el, directive) {\n    if (el.tagName.toLowerCase() !== 'template') {\n      console.warn(`Alpine: [${directive}] directive should only be added to <template> tags. See https://github.com/alpinejs/alpine#${directive}`);\n    } else if (el.content.childElementCount !== 1) {\n      console.warn(`Alpine: <template> tag with [${directive}] encountered with multiple element roots. Make sure <template> only has a single child element.`);\n    }\n  }\n  function kebabCase(subject) {\n    return subject.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/[_\\s]/, '-').toLowerCase();\n  }\n  function camelCase(subject) {\n    return subject.toLowerCase().replace(/-(\\w)/g, (match, char) => char.toUpperCase());\n  }\n  function walk(el, callback) {\n    if (callback(el) === false) return;\n    let node = el.firstElementChild;\n\n    while (node) {\n      walk(node, callback);\n      node = node.nextElementSibling;\n    }\n  }\n  function debounce(func, wait) {\n    var timeout;\n    return function () {\n      var context = this,\n          args = arguments;\n\n      var later = function later() {\n        timeout = null;\n        func.apply(context, args);\n      };\n\n      clearTimeout(timeout);\n      timeout = setTimeout(later, wait);\n    };\n  }\n\n  const handleError = (el, expression, error) => {\n    console.warn(`Alpine Error: \"${error}\"\\n\\nExpression: \"${expression}\"\\nElement:`, el);\n\n    if (!isTesting()) {\n      throw error;\n    }\n  };\n\n  function tryCatch(cb, {\n    el,\n    expression\n  }) {\n    try {\n      const value = cb();\n      return value instanceof Promise ? value.catch(e => handleError(el, expression, e)) : value;\n    } catch (e) {\n      handleError(el, expression, e);\n    }\n  }\n\n  function saferEval(el, expression, dataContext, additionalHelperVariables = {}) {\n    return tryCatch(() => {\n      if (typeof expression === 'function') {\n        return expression.call(dataContext);\n      }\n\n      return new Function(['$data', ...Object.keys(additionalHelperVariables)], `var __alpine_result; with($data) { __alpine_result = ${expression} }; return __alpine_result`)(dataContext, ...Object.values(additionalHelperVariables));\n    }, {\n      el,\n      expression\n    });\n  }\n  function saferEvalNoReturn(el, expression, dataContext, additionalHelperVariables = {}) {\n    return tryCatch(() => {\n      if (typeof expression === 'function') {\n        return Promise.resolve(expression.call(dataContext, additionalHelperVariables['$event']));\n      }\n\n      let AsyncFunction = Function;\n      /* MODERN-ONLY:START */\n\n      AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;\n      /* MODERN-ONLY:END */\n      // For the cases when users pass only a function reference to the caller: `x-on:click=\"foo\"`\n      // Where \"foo\" is a function. Also, we'll pass the function the event instance when we call it.\n\n      if (Object.keys(dataContext).includes(expression)) {\n        let methodReference = new Function(['dataContext', ...Object.keys(additionalHelperVariables)], `with(dataContext) { return ${expression} }`)(dataContext, ...Object.values(additionalHelperVariables));\n\n        if (typeof methodReference === 'function') {\n          return Promise.resolve(methodReference.call(dataContext, additionalHelperVariables['$event']));\n        } else {\n          return Promise.resolve();\n        }\n      }\n\n      return Promise.resolve(new AsyncFunction(['dataContext', ...Object.keys(additionalHelperVariables)], `with(dataContext) { ${expression} }`)(dataContext, ...Object.values(additionalHelperVariables)));\n    }, {\n      el,\n      expression\n    });\n  }\n  const xAttrRE = /^x-(on|bind|data|text|html|model|if|for|show|cloak|transition|ref|spread)\\b/;\n  function isXAttr(attr) {\n    const name = replaceAtAndColonWithStandardSyntax(attr.name);\n    return xAttrRE.test(name);\n  }\n  function getXAttrs(el, component, type) {\n    let directives = Array.from(el.attributes).filter(isXAttr).map(parseHtmlAttribute); // Get an object of directives from x-spread.\n\n    let spreadDirective = directives.filter(directive => directive.type === 'spread')[0];\n\n    if (spreadDirective) {\n      let spreadObject = saferEval(el, spreadDirective.expression, component.$data); // Add x-spread directives to the pile of existing directives.\n\n      directives = directives.concat(Object.entries(spreadObject).map(([name, value]) => parseHtmlAttribute({\n        name,\n        value\n      })));\n    }\n\n    if (type) return directives.filter(i => i.type === type);\n    return sortDirectives(directives);\n  }\n\n  function sortDirectives(directives) {\n    let directiveOrder = ['bind', 'model', 'show', 'catch-all'];\n    return directives.sort((a, b) => {\n      let typeA = directiveOrder.indexOf(a.type) === -1 ? 'catch-all' : a.type;\n      let typeB = directiveOrder.indexOf(b.type) === -1 ? 'catch-all' : b.type;\n      return directiveOrder.indexOf(typeA) - directiveOrder.indexOf(typeB);\n    });\n  }\n\n  function parseHtmlAttribute({\n    name,\n    value\n  }) {\n    const normalizedName = replaceAtAndColonWithStandardSyntax(name);\n    const typeMatch = normalizedName.match(xAttrRE);\n    const valueMatch = normalizedName.match(/:([a-zA-Z0-9\\-:]+)/);\n    const modifiers = normalizedName.match(/\\.[^.\\]]+(?=[^\\]]*$)/g) || [];\n    return {\n      type: typeMatch ? typeMatch[1] : null,\n      value: valueMatch ? valueMatch[1] : null,\n      modifiers: modifiers.map(i => i.replace('.', '')),\n      expression: value\n    };\n  }\n  function isBooleanAttr(attrName) {\n    // As per HTML spec table https://html.spec.whatwg.org/multipage/indices.html#attributes-3:boolean-attribute\n    // Array roughly ordered by estimated usage\n    const booleanAttributes = ['disabled', 'checked', 'required', 'readonly', 'hidden', 'open', 'selected', 'autofocus', 'itemscope', 'multiple', 'novalidate', 'allowfullscreen', 'allowpaymentrequest', 'formnovalidate', 'autoplay', 'controls', 'loop', 'muted', 'playsinline', 'default', 'ismap', 'reversed', 'async', 'defer', 'nomodule'];\n    return booleanAttributes.includes(attrName);\n  }\n  function replaceAtAndColonWithStandardSyntax(name) {\n    if (name.startsWith('@')) {\n      return name.replace('@', 'x-on:');\n    } else if (name.startsWith(':')) {\n      return name.replace(':', 'x-bind:');\n    }\n\n    return name;\n  }\n  function convertClassStringToArray(classList, filterFn = Boolean) {\n    return classList.split(' ').filter(filterFn);\n  }\n  const TRANSITION_TYPE_IN = 'in';\n  const TRANSITION_TYPE_OUT = 'out';\n  const TRANSITION_CANCELLED = 'cancelled';\n  function transitionIn(el, show, reject, component, forceSkip = false) {\n    // We don't want to transition on the initial page load.\n    if (forceSkip) return show();\n\n    if (el.__x_transition && el.__x_transition.type === TRANSITION_TYPE_IN) {\n      // there is already a similar transition going on, this was probably triggered by\n      // a change in a different property, let's just leave the previous one doing its job\n      return;\n    }\n\n    const attrs = getXAttrs(el, component, 'transition');\n    const showAttr = getXAttrs(el, component, 'show')[0]; // If this is triggered by a x-show.transition.\n\n    if (showAttr && showAttr.modifiers.includes('transition')) {\n      let modifiers = showAttr.modifiers; // If x-show.transition.out, we'll skip the \"in\" transition.\n\n      if (modifiers.includes('out') && !modifiers.includes('in')) return show();\n      const settingBothSidesOfTransition = modifiers.includes('in') && modifiers.includes('out'); // If x-show.transition.in...out... only use \"in\" related modifiers for this transition.\n\n      modifiers = settingBothSidesOfTransition ? modifiers.filter((i, index) => index < modifiers.indexOf('out')) : modifiers;\n      transitionHelperIn(el, modifiers, show, reject); // Otherwise, we can assume x-transition:enter.\n    } else if (attrs.some(attr => ['enter', 'enter-start', 'enter-end'].includes(attr.value))) {\n      transitionClassesIn(el, component, attrs, show, reject);\n    } else {\n      // If neither, just show that damn thing.\n      show();\n    }\n  }\n  function transitionOut(el, hide, reject, component, forceSkip = false) {\n    // We don't want to transition on the initial page load.\n    if (forceSkip) return hide();\n\n    if (el.__x_transition && el.__x_transition.type === TRANSITION_TYPE_OUT) {\n      // there is already a similar transition going on, this was probably triggered by\n      // a change in a different property, let's just leave the previous one doing its job\n      return;\n    }\n\n    const attrs = getXAttrs(el, component, 'transition');\n    const showAttr = getXAttrs(el, component, 'show')[0];\n\n    if (showAttr && showAttr.modifiers.includes('transition')) {\n      let modifiers = showAttr.modifiers;\n      if (modifiers.includes('in') && !modifiers.includes('out')) return hide();\n      const settingBothSidesOfTransition = modifiers.includes('in') && modifiers.includes('out');\n      modifiers = settingBothSidesOfTransition ? modifiers.filter((i, index) => index > modifiers.indexOf('out')) : modifiers;\n      transitionHelperOut(el, modifiers, settingBothSidesOfTransition, hide, reject);\n    } else if (attrs.some(attr => ['leave', 'leave-start', 'leave-end'].includes(attr.value))) {\n      transitionClassesOut(el, component, attrs, hide, reject);\n    } else {\n      hide();\n    }\n  }\n  function transitionHelperIn(el, modifiers, showCallback, reject) {\n    // Default values inspired by: https://material.io/design/motion/speed.html#duration\n    const styleValues = {\n      duration: modifierValue(modifiers, 'duration', 150),\n      origin: modifierValue(modifiers, 'origin', 'center'),\n      first: {\n        opacity: 0,\n        scale: modifierValue(modifiers, 'scale', 95)\n      },\n      second: {\n        opacity: 1,\n        scale: 100\n      }\n    };\n    transitionHelper(el, modifiers, showCallback, () => {}, reject, styleValues, TRANSITION_TYPE_IN);\n  }\n  function transitionHelperOut(el, modifiers, settingBothSidesOfTransition, hideCallback, reject) {\n    // Make the \"out\" transition .5x slower than the \"in\". (Visually better)\n    // HOWEVER, if they explicitly set a duration for the \"out\" transition,\n    // use that.\n    const duration = settingBothSidesOfTransition ? modifierValue(modifiers, 'duration', 150) : modifierValue(modifiers, 'duration', 150) / 2;\n    const styleValues = {\n      duration: duration,\n      origin: modifierValue(modifiers, 'origin', 'center'),\n      first: {\n        opacity: 1,\n        scale: 100\n      },\n      second: {\n        opacity: 0,\n        scale: modifierValue(modifiers, 'scale', 95)\n      }\n    };\n    transitionHelper(el, modifiers, () => {}, hideCallback, reject, styleValues, TRANSITION_TYPE_OUT);\n  }\n\n  function modifierValue(modifiers, key, fallback) {\n    // If the modifier isn't present, use the default.\n    if (modifiers.indexOf(key) === -1) return fallback; // If it IS present, grab the value after it: x-show.transition.duration.500ms\n\n    const rawValue = modifiers[modifiers.indexOf(key) + 1];\n    if (!rawValue) return fallback;\n\n    if (key === 'scale') {\n      // Check if the very next value is NOT a number and return the fallback.\n      // If x-show.transition.scale, we'll use the default scale value.\n      // That is how a user opts out of the opacity transition.\n      if (!isNumeric(rawValue)) return fallback;\n    }\n\n    if (key === 'duration') {\n      // Support x-show.transition.duration.500ms && duration.500\n      let match = rawValue.match(/([0-9]+)ms/);\n      if (match) return match[1];\n    }\n\n    if (key === 'origin') {\n      // Support chaining origin directions: x-show.transition.top.right\n      if (['top', 'right', 'left', 'center', 'bottom'].includes(modifiers[modifiers.indexOf(key) + 2])) {\n        return [rawValue, modifiers[modifiers.indexOf(key) + 2]].join(' ');\n      }\n    }\n\n    return rawValue;\n  }\n\n  function transitionHelper(el, modifiers, hook1, hook2, reject, styleValues, type) {\n    // clear the previous transition if exists to avoid caching the wrong styles\n    if (el.__x_transition) {\n      el.__x_transition.cancel && el.__x_transition.cancel();\n    } // If the user set these style values, we'll put them back when we're done with them.\n\n\n    const opacityCache = el.style.opacity;\n    const transformCache = el.style.transform;\n    const transformOriginCache = el.style.transformOrigin; // If no modifiers are present: x-show.transition, we'll default to both opacity and scale.\n\n    const noModifiers = !modifiers.includes('opacity') && !modifiers.includes('scale');\n    const transitionOpacity = noModifiers || modifiers.includes('opacity');\n    const transitionScale = noModifiers || modifiers.includes('scale'); // These are the explicit stages of a transition (same stages for in and for out).\n    // This way you can get a birds eye view of the hooks, and the differences\n    // between them.\n\n    const stages = {\n      start() {\n        if (transitionOpacity) el.style.opacity = styleValues.first.opacity;\n        if (transitionScale) el.style.transform = `scale(${styleValues.first.scale / 100})`;\n      },\n\n      during() {\n        if (transitionScale) el.style.transformOrigin = styleValues.origin;\n        el.style.transitionProperty = [transitionOpacity ? `opacity` : ``, transitionScale ? `transform` : ``].join(' ').trim();\n        el.style.transitionDuration = `${styleValues.duration / 1000}s`;\n        el.style.transitionTimingFunction = `cubic-bezier(0.4, 0.0, 0.2, 1)`;\n      },\n\n      show() {\n        hook1();\n      },\n\n      end() {\n        if (transitionOpacity) el.style.opacity = styleValues.second.opacity;\n        if (transitionScale) el.style.transform = `scale(${styleValues.second.scale / 100})`;\n      },\n\n      hide() {\n        hook2();\n      },\n\n      cleanup() {\n        if (transitionOpacity) el.style.opacity = opacityCache;\n        if (transitionScale) el.style.transform = transformCache;\n        if (transitionScale) el.style.transformOrigin = transformOriginCache;\n        el.style.transitionProperty = null;\n        el.style.transitionDuration = null;\n        el.style.transitionTimingFunction = null;\n      }\n\n    };\n    transition(el, stages, type, reject);\n  }\n\n  const ensureStringExpression = (expression, el, component) => {\n    return typeof expression === 'function' ? component.evaluateReturnExpression(el, expression) : expression;\n  };\n\n  function transitionClassesIn(el, component, directives, showCallback, reject) {\n    const enter = convertClassStringToArray(ensureStringExpression((directives.find(i => i.value === 'enter') || {\n      expression: ''\n    }).expression, el, component));\n    const enterStart = convertClassStringToArray(ensureStringExpression((directives.find(i => i.value === 'enter-start') || {\n      expression: ''\n    }).expression, el, component));\n    const enterEnd = convertClassStringToArray(ensureStringExpression((directives.find(i => i.value === 'enter-end') || {\n      expression: ''\n    }).expression, el, component));\n    transitionClasses(el, enter, enterStart, enterEnd, showCallback, () => {}, TRANSITION_TYPE_IN, reject);\n  }\n  function transitionClassesOut(el, component, directives, hideCallback, reject) {\n    const leave = convertClassStringToArray(ensureStringExpression((directives.find(i => i.value === 'leave') || {\n      expression: ''\n    }).expression, el, component));\n    const leaveStart = convertClassStringToArray(ensureStringExpression((directives.find(i => i.value === 'leave-start') || {\n      expression: ''\n    }).expression, el, component));\n    const leaveEnd = convertClassStringToArray(ensureStringExpression((directives.find(i => i.value === 'leave-end') || {\n      expression: ''\n    }).expression, el, component));\n    transitionClasses(el, leave, leaveStart, leaveEnd, () => {}, hideCallback, TRANSITION_TYPE_OUT, reject);\n  }\n  function transitionClasses(el, classesDuring, classesStart, classesEnd, hook1, hook2, type, reject) {\n    // clear the previous transition if exists to avoid caching the wrong classes\n    if (el.__x_transition) {\n      el.__x_transition.cancel && el.__x_transition.cancel();\n    }\n\n    const originalClasses = el.__x_original_classes || [];\n    const stages = {\n      start() {\n        el.classList.add(...classesStart);\n      },\n\n      during() {\n        el.classList.add(...classesDuring);\n      },\n\n      show() {\n        hook1();\n      },\n\n      end() {\n        // Don't remove classes that were in the original class attribute.\n        el.classList.remove(...classesStart.filter(i => !originalClasses.includes(i)));\n        el.classList.add(...classesEnd);\n      },\n\n      hide() {\n        hook2();\n      },\n\n      cleanup() {\n        el.classList.remove(...classesDuring.filter(i => !originalClasses.includes(i)));\n        el.classList.remove(...classesEnd.filter(i => !originalClasses.includes(i)));\n      }\n\n    };\n    transition(el, stages, type, reject);\n  }\n  function transition(el, stages, type, reject) {\n    const finish = once(() => {\n      stages.hide(); // Adding an \"isConnected\" check, in case the callback\n      // removed the element from the DOM.\n\n      if (el.isConnected) {\n        stages.cleanup();\n      }\n\n      delete el.__x_transition;\n    });\n    el.__x_transition = {\n      // Set transition type so we can avoid clearing transition if the direction is the same\n      type: type,\n      // create a callback for the last stages of the transition so we can call it\n      // from different point and early terminate it. Once will ensure that function\n      // is only called one time.\n      cancel: once(() => {\n        reject(TRANSITION_CANCELLED);\n        finish();\n      }),\n      finish,\n      // This store the next animation frame so we can cancel it\n      nextFrame: null\n    };\n    stages.start();\n    stages.during();\n    el.__x_transition.nextFrame = requestAnimationFrame(() => {\n      // Note: Safari's transitionDuration property will list out comma separated transition durations\n      // for every single transition property. Let's grab the first one and call it a day.\n      let duration = Number(getComputedStyle(el).transitionDuration.replace(/,.*/, '').replace('s', '')) * 1000;\n\n      if (duration === 0) {\n        duration = Number(getComputedStyle(el).animationDuration.replace('s', '')) * 1000;\n      }\n\n      stages.show();\n      el.__x_transition.nextFrame = requestAnimationFrame(() => {\n        stages.end();\n        setTimeout(el.__x_transition.finish, duration);\n      });\n    });\n  }\n  function isNumeric(subject) {\n    return !Array.isArray(subject) && !isNaN(subject);\n  } // Thanks @vuejs\n  // https://github.com/vuejs/vue/blob/4de4649d9637262a9b007720b59f80ac72a5620c/src/shared/util.js\n\n  function once(callback) {\n    let called = false;\n    return function () {\n      if (!called) {\n        called = true;\n        callback.apply(this, arguments);\n      }\n    };\n  }\n\n  function handleForDirective(component, templateEl, expression, initialUpdate, extraVars) {\n    warnIfMalformedTemplate(templateEl, 'x-for');\n    let iteratorNames = typeof expression === 'function' ? parseForExpression(component.evaluateReturnExpression(templateEl, expression)) : parseForExpression(expression);\n    let items = evaluateItemsAndReturnEmptyIfXIfIsPresentAndFalseOnElement(component, templateEl, iteratorNames, extraVars); // As we walk the array, we'll also walk the DOM (updating/creating as we go).\n\n    let currentEl = templateEl;\n    items.forEach((item, index) => {\n      let iterationScopeVariables = getIterationScopeVariables(iteratorNames, item, index, items, extraVars());\n      let currentKey = generateKeyForIteration(component, templateEl, index, iterationScopeVariables);\n      let nextEl = lookAheadForMatchingKeyedElementAndMoveItIfFound(currentEl.nextElementSibling, currentKey); // If we haven't found a matching key, insert the element at the current position.\n\n      if (!nextEl) {\n        nextEl = addElementInLoopAfterCurrentEl(templateEl, currentEl); // And transition it in if it's not the first page load.\n\n        transitionIn(nextEl, () => {}, () => {}, component, initialUpdate);\n        nextEl.__x_for = iterationScopeVariables;\n        component.initializeElements(nextEl, () => nextEl.__x_for); // Otherwise update the element we found.\n      } else {\n        // Temporarily remove the key indicator to allow the normal \"updateElements\" to work.\n        delete nextEl.__x_for_key;\n        nextEl.__x_for = iterationScopeVariables;\n        component.updateElements(nextEl, () => nextEl.__x_for);\n      }\n\n      currentEl = nextEl;\n      currentEl.__x_for_key = currentKey;\n    });\n    removeAnyLeftOverElementsFromPreviousUpdate(currentEl, component);\n  } // This was taken from VueJS 2.* core. Thanks Vue!\n\n  function parseForExpression(expression) {\n    let forIteratorRE = /,([^,\\}\\]]*)(?:,([^,\\}\\]]*))?$/;\n    let stripParensRE = /^\\(|\\)$/g;\n    let forAliasRE = /([\\s\\S]*?)\\s+(?:in|of)\\s+([\\s\\S]*)/;\n    let inMatch = expression.match(forAliasRE);\n    if (!inMatch) return;\n    let res = {};\n    res.items = inMatch[2].trim();\n    let item = inMatch[1].trim().replace(stripParensRE, '');\n    let iteratorMatch = item.match(forIteratorRE);\n\n    if (iteratorMatch) {\n      res.item = item.replace(forIteratorRE, '').trim();\n      res.index = iteratorMatch[1].trim();\n\n      if (iteratorMatch[2]) {\n        res.collection = iteratorMatch[2].trim();\n      }\n    } else {\n      res.item = item;\n    }\n\n    return res;\n  }\n\n  function getIterationScopeVariables(iteratorNames, item, index, items, extraVars) {\n    // We must create a new object, so each iteration has a new scope\n    let scopeVariables = extraVars ? _objectSpread2({}, extraVars) : {};\n    scopeVariables[iteratorNames.item] = item;\n    if (iteratorNames.index) scopeVariables[iteratorNames.index] = index;\n    if (iteratorNames.collection) scopeVariables[iteratorNames.collection] = items;\n    return scopeVariables;\n  }\n\n  function generateKeyForIteration(component, el, index, iterationScopeVariables) {\n    let bindKeyAttribute = getXAttrs(el, component, 'bind').filter(attr => attr.value === 'key')[0]; // If the dev hasn't specified a key, just return the index of the iteration.\n\n    if (!bindKeyAttribute) return index;\n    return component.evaluateReturnExpression(el, bindKeyAttribute.expression, () => iterationScopeVariables);\n  }\n\n  function evaluateItemsAndReturnEmptyIfXIfIsPresentAndFalseOnElement(component, el, iteratorNames, extraVars) {\n    let ifAttribute = getXAttrs(el, component, 'if')[0];\n\n    if (ifAttribute && !component.evaluateReturnExpression(el, ifAttribute.expression)) {\n      return [];\n    }\n\n    let items = component.evaluateReturnExpression(el, iteratorNames.items, extraVars); // This adds support for the `i in n` syntax.\n\n    if (isNumeric(items) && items > 0) {\n      items = Array.from(Array(items).keys(), i => i + 1);\n    }\n\n    return items;\n  }\n\n  function addElementInLoopAfterCurrentEl(templateEl, currentEl) {\n    let clone = document.importNode(templateEl.content, true);\n    currentEl.parentElement.insertBefore(clone, currentEl.nextElementSibling);\n    return currentEl.nextElementSibling;\n  }\n\n  function lookAheadForMatchingKeyedElementAndMoveItIfFound(nextEl, currentKey) {\n    if (!nextEl) return; // If we are already past the x-for generated elements, we don't need to look ahead.\n\n    if (nextEl.__x_for_key === undefined) return; // If the the key's DO match, no need to look ahead.\n\n    if (nextEl.__x_for_key === currentKey) return nextEl; // If they don't, we'll look ahead for a match.\n    // If we find it, we'll move it to the current position in the loop.\n\n    let tmpNextEl = nextEl;\n\n    while (tmpNextEl) {\n      if (tmpNextEl.__x_for_key === currentKey) {\n        return tmpNextEl.parentElement.insertBefore(tmpNextEl, nextEl);\n      }\n\n      tmpNextEl = tmpNextEl.nextElementSibling && tmpNextEl.nextElementSibling.__x_for_key !== undefined ? tmpNextEl.nextElementSibling : false;\n    }\n  }\n\n  function removeAnyLeftOverElementsFromPreviousUpdate(currentEl, component) {\n    var nextElementFromOldLoop = currentEl.nextElementSibling && currentEl.nextElementSibling.__x_for_key !== undefined ? currentEl.nextElementSibling : false;\n\n    while (nextElementFromOldLoop) {\n      let nextElementFromOldLoopImmutable = nextElementFromOldLoop;\n      let nextSibling = nextElementFromOldLoop.nextElementSibling;\n      transitionOut(nextElementFromOldLoop, () => {\n        nextElementFromOldLoopImmutable.remove();\n      }, () => {}, component);\n      nextElementFromOldLoop = nextSibling && nextSibling.__x_for_key !== undefined ? nextSibling : false;\n    }\n  }\n\n  function handleAttributeBindingDirective(component, el, attrName, expression, extraVars, attrType, modifiers) {\n    var value = component.evaluateReturnExpression(el, expression, extraVars);\n\n    if (attrName === 'value') {\n      if (Alpine.ignoreFocusedForValueBinding && document.activeElement.isSameNode(el)) return; // If nested model key is undefined, set the default value to empty string.\n\n      if (value === undefined && expression.match(/\\./)) {\n        value = '';\n      }\n\n      if (el.type === 'radio') {\n        // Set radio value from x-bind:value, if no \"value\" attribute exists.\n        // If there are any initial state values, radio will have a correct\n        // \"checked\" value since x-bind:value is processed before x-model.\n        if (el.attributes.value === undefined && attrType === 'bind') {\n          el.value = value;\n        } else if (attrType !== 'bind') {\n          el.checked = checkedAttrLooseCompare(el.value, value);\n        }\n      } else if (el.type === 'checkbox') {\n        // If we are explicitly binding a string to the :value, set the string,\n        // If the value is a boolean, leave it alone, it will be set to \"on\"\n        // automatically.\n        if (typeof value !== 'boolean' && ![null, undefined].includes(value) && attrType === 'bind') {\n          el.value = String(value);\n        } else if (attrType !== 'bind') {\n          if (Array.isArray(value)) {\n            // I'm purposely not using Array.includes here because it's\n            // strict, and because of Numeric/String mis-casting, I\n            // want the \"includes\" to be \"fuzzy\".\n            el.checked = value.some(val => checkedAttrLooseCompare(val, el.value));\n          } else {\n            el.checked = !!value;\n          }\n        }\n      } else if (el.tagName === 'SELECT') {\n        updateSelect(el, value);\n      } else {\n        if (el.value === value) return;\n        el.value = value;\n      }\n    } else if (attrName === 'class') {\n      if (Array.isArray(value)) {\n        const originalClasses = el.__x_original_classes || [];\n        el.setAttribute('class', arrayUnique(originalClasses.concat(value)).join(' '));\n      } else if (typeof value === 'object') {\n        // Sorting the keys / class names by their boolean value will ensure that\n        // anything that evaluates to `false` and needs to remove classes is run first.\n        const keysSortedByBooleanValue = Object.keys(value).sort((a, b) => value[a] - value[b]);\n        keysSortedByBooleanValue.forEach(classNames => {\n          if (value[classNames]) {\n            convertClassStringToArray(classNames).forEach(className => el.classList.add(className));\n          } else {\n            convertClassStringToArray(classNames).forEach(className => el.classList.remove(className));\n          }\n        });\n      } else {\n        const originalClasses = el.__x_original_classes || [];\n        const newClasses = value ? convertClassStringToArray(value) : [];\n        el.setAttribute('class', arrayUnique(originalClasses.concat(newClasses)).join(' '));\n      }\n    } else {\n      attrName = modifiers.includes('camel') ? camelCase(attrName) : attrName; // If an attribute's bound value is null, undefined or false, remove the attribute\n\n      if ([null, undefined, false].includes(value)) {\n        el.removeAttribute(attrName);\n      } else {\n        isBooleanAttr(attrName) ? setIfChanged(el, attrName, attrName) : setIfChanged(el, attrName, value);\n      }\n    }\n  }\n\n  function setIfChanged(el, attrName, value) {\n    if (el.getAttribute(attrName) != value) {\n      el.setAttribute(attrName, value);\n    }\n  }\n\n  function updateSelect(el, value) {\n    const arrayWrappedValue = [].concat(value).map(value => {\n      return value + '';\n    });\n    Array.from(el.options).forEach(option => {\n      option.selected = arrayWrappedValue.includes(option.value || option.text);\n    });\n  }\n\n  function handleTextDirective(el, output, expression) {\n    // If nested model key is undefined, set the default value to empty string.\n    if (output === undefined && expression.match(/\\./)) {\n      output = '';\n    }\n\n    el.textContent = output;\n  }\n\n  function handleHtmlDirective(component, el, expression, extraVars) {\n    el.innerHTML = component.evaluateReturnExpression(el, expression, extraVars);\n  }\n\n  function handleShowDirective(component, el, value, modifiers, initialUpdate = false) {\n    const hide = () => {\n      el.style.display = 'none';\n      el.__x_is_shown = false;\n    };\n\n    const show = () => {\n      if (el.style.length === 1 && el.style.display === 'none') {\n        el.removeAttribute('style');\n      } else {\n        el.style.removeProperty('display');\n      }\n\n      el.__x_is_shown = true;\n    };\n\n    if (initialUpdate === true) {\n      if (value) {\n        show();\n      } else {\n        hide();\n      }\n\n      return;\n    }\n\n    const handle = (resolve, reject) => {\n      if (value) {\n        if (el.style.display === 'none' || el.__x_transition) {\n          transitionIn(el, () => {\n            show();\n          }, reject, component);\n        }\n\n        resolve(() => {});\n      } else {\n        if (el.style.display !== 'none') {\n          transitionOut(el, () => {\n            resolve(() => {\n              hide();\n            });\n          }, reject, component);\n        } else {\n          resolve(() => {});\n        }\n      }\n    }; // The working of x-show is a bit complex because we need to\n    // wait for any child transitions to finish before hiding\n    // some element. Also, this has to be done recursively.\n    // If x-show.immediate, foregoe the waiting.\n\n\n    if (modifiers.includes('immediate')) {\n      handle(finish => finish(), () => {});\n      return;\n    } // x-show is encountered during a DOM tree walk. If an element\n    // we encounter is NOT a child of another x-show element we\n    // can execute the previous x-show stack (if one exists).\n\n\n    if (component.showDirectiveLastElement && !component.showDirectiveLastElement.contains(el)) {\n      component.executeAndClearRemainingShowDirectiveStack();\n    }\n\n    component.showDirectiveStack.push(handle);\n    component.showDirectiveLastElement = el;\n  }\n\n  function handleIfDirective(component, el, expressionResult, initialUpdate, extraVars) {\n    warnIfMalformedTemplate(el, 'x-if');\n    const elementHasAlreadyBeenAdded = el.nextElementSibling && el.nextElementSibling.__x_inserted_me === true;\n\n    if (expressionResult && (!elementHasAlreadyBeenAdded || el.__x_transition)) {\n      const clone = document.importNode(el.content, true);\n      el.parentElement.insertBefore(clone, el.nextElementSibling);\n      transitionIn(el.nextElementSibling, () => {}, () => {}, component, initialUpdate);\n      component.initializeElements(el.nextElementSibling, extraVars);\n      el.nextElementSibling.__x_inserted_me = true;\n    } else if (!expressionResult && elementHasAlreadyBeenAdded) {\n      transitionOut(el.nextElementSibling, () => {\n        el.nextElementSibling.remove();\n      }, () => {}, component, initialUpdate);\n    }\n  }\n\n  function registerListener(component, el, event, modifiers, expression, extraVars = {}) {\n    const options = {\n      passive: modifiers.includes('passive')\n    };\n\n    if (modifiers.includes('camel')) {\n      event = camelCase(event);\n    }\n\n    if (modifiers.includes('away')) {\n      let handler = e => {\n        // Don't do anything if the click came from the element or within it.\n        if (el.contains(e.target)) return; // Don't do anything if this element isn't currently visible.\n\n        if (el.offsetWidth < 1 && el.offsetHeight < 1) return; // Now that we are sure the element is visible, AND the click\n        // is from outside it, let's run the expression.\n\n        runListenerHandler(component, expression, e, extraVars);\n\n        if (modifiers.includes('once')) {\n          document.removeEventListener(event, handler, options);\n        }\n      }; // Listen for this event at the root level.\n\n\n      document.addEventListener(event, handler, options);\n    } else {\n      let listenerTarget = modifiers.includes('window') ? window : modifiers.includes('document') ? document : el;\n\n      let handler = e => {\n        // Remove this global event handler if the element that declared it\n        // has been removed. It's now stale.\n        if (listenerTarget === window || listenerTarget === document) {\n          if (!document.body.contains(el)) {\n            listenerTarget.removeEventListener(event, handler, options);\n            return;\n          }\n        }\n\n        if (isKeyEvent(event)) {\n          if (isListeningForASpecificKeyThatHasntBeenPressed(e, modifiers)) {\n            return;\n          }\n        }\n\n        if (modifiers.includes('prevent')) e.preventDefault();\n        if (modifiers.includes('stop')) e.stopPropagation(); // If the .self modifier isn't present, or if it is present and\n        // the target element matches the element we are registering the\n        // event on, run the handler\n\n        if (!modifiers.includes('self') || e.target === el) {\n          const returnValue = runListenerHandler(component, expression, e, extraVars);\n          returnValue.then(value => {\n            if (value === false) {\n              e.preventDefault();\n            } else {\n              if (modifiers.includes('once')) {\n                listenerTarget.removeEventListener(event, handler, options);\n              }\n            }\n          });\n        }\n      };\n\n      if (modifiers.includes('debounce')) {\n        let nextModifier = modifiers[modifiers.indexOf('debounce') + 1] || 'invalid-wait';\n        let wait = isNumeric(nextModifier.split('ms')[0]) ? Number(nextModifier.split('ms')[0]) : 250;\n        handler = debounce(handler, wait);\n      }\n\n      listenerTarget.addEventListener(event, handler, options);\n    }\n  }\n\n  function runListenerHandler(component, expression, e, extraVars) {\n    return component.evaluateCommandExpression(e.target, expression, () => {\n      return _objectSpread2(_objectSpread2({}, extraVars()), {}, {\n        '$event': e\n      });\n    });\n  }\n\n  function isKeyEvent(event) {\n    return ['keydown', 'keyup'].includes(event);\n  }\n\n  function isListeningForASpecificKeyThatHasntBeenPressed(e, modifiers) {\n    let keyModifiers = modifiers.filter(i => {\n      return !['window', 'document', 'prevent', 'stop'].includes(i);\n    });\n\n    if (keyModifiers.includes('debounce')) {\n      let debounceIndex = keyModifiers.indexOf('debounce');\n      keyModifiers.splice(debounceIndex, isNumeric((keyModifiers[debounceIndex + 1] || 'invalid-wait').split('ms')[0]) ? 2 : 1);\n    } // If no modifier is specified, we'll call it a press.\n\n\n    if (keyModifiers.length === 0) return false; // If one is passed, AND it matches the key pressed, we'll call it a press.\n\n    if (keyModifiers.length === 1 && keyModifiers[0] === keyToModifier(e.key)) return false; // The user is listening for key combinations.\n\n    const systemKeyModifiers = ['ctrl', 'shift', 'alt', 'meta', 'cmd', 'super'];\n    const selectedSystemKeyModifiers = systemKeyModifiers.filter(modifier => keyModifiers.includes(modifier));\n    keyModifiers = keyModifiers.filter(i => !selectedSystemKeyModifiers.includes(i));\n\n    if (selectedSystemKeyModifiers.length > 0) {\n      const activelyPressedKeyModifiers = selectedSystemKeyModifiers.filter(modifier => {\n        // Alias \"cmd\" and \"super\" to \"meta\"\n        if (modifier === 'cmd' || modifier === 'super') modifier = 'meta';\n        return e[`${modifier}Key`];\n      }); // If all the modifiers selected are pressed, ...\n\n      if (activelyPressedKeyModifiers.length === selectedSystemKeyModifiers.length) {\n        // AND the remaining key is pressed as well. It's a press.\n        if (keyModifiers[0] === keyToModifier(e.key)) return false;\n      }\n    } // We'll call it NOT a valid keypress.\n\n\n    return true;\n  }\n\n  function keyToModifier(key) {\n    switch (key) {\n      case '/':\n        return 'slash';\n\n      case ' ':\n      case 'Spacebar':\n        return 'space';\n\n      default:\n        return key && kebabCase(key);\n    }\n  }\n\n  function registerModelListener(component, el, modifiers, expression, extraVars) {\n    // If the element we are binding to is a select, a radio, or checkbox\n    // we'll listen for the change event instead of the \"input\" event.\n    var event = el.tagName.toLowerCase() === 'select' || ['checkbox', 'radio'].includes(el.type) || modifiers.includes('lazy') ? 'change' : 'input';\n    const listenerExpression = `${expression} = rightSideOfExpression($event, ${expression})`;\n    registerListener(component, el, event, modifiers, listenerExpression, () => {\n      return _objectSpread2(_objectSpread2({}, extraVars()), {}, {\n        rightSideOfExpression: generateModelAssignmentFunction(el, modifiers, expression)\n      });\n    });\n  }\n\n  function generateModelAssignmentFunction(el, modifiers, expression) {\n    if (el.type === 'radio') {\n      // Radio buttons only work properly when they share a name attribute.\n      // People might assume we take care of that for them, because\n      // they already set a shared \"x-model\" attribute.\n      if (!el.hasAttribute('name')) el.setAttribute('name', expression);\n    }\n\n    return (event, currentValue) => {\n      // Check for event.detail due to an issue where IE11 handles other events as a CustomEvent.\n      if (event instanceof CustomEvent && event.detail) {\n        return event.detail;\n      } else if (el.type === 'checkbox') {\n        // If the data we are binding to is an array, toggle its value inside the array.\n        if (Array.isArray(currentValue)) {\n          const newValue = modifiers.includes('number') ? safeParseNumber(event.target.value) : event.target.value;\n          return event.target.checked ? currentValue.concat([newValue]) : currentValue.filter(el => !checkedAttrLooseCompare(el, newValue));\n        } else {\n          return event.target.checked;\n        }\n      } else if (el.tagName.toLowerCase() === 'select' && el.multiple) {\n        return modifiers.includes('number') ? Array.from(event.target.selectedOptions).map(option => {\n          const rawValue = option.value || option.text;\n          return safeParseNumber(rawValue);\n        }) : Array.from(event.target.selectedOptions).map(option => {\n          return option.value || option.text;\n        });\n      } else {\n        const rawValue = event.target.value;\n        return modifiers.includes('number') ? safeParseNumber(rawValue) : modifiers.includes('trim') ? rawValue.trim() : rawValue;\n      }\n    };\n  }\n\n  function safeParseNumber(rawValue) {\n    const number = rawValue ? parseFloat(rawValue) : null;\n    return isNumeric(number) ? number : rawValue;\n  }\n\n  /**\n   * Copyright (C) 2017 salesforce.com, inc.\n   */\n  const { isArray } = Array;\n  const { getPrototypeOf, create: ObjectCreate, defineProperty: ObjectDefineProperty, defineProperties: ObjectDefineProperties, isExtensible, getOwnPropertyDescriptor, getOwnPropertyNames, getOwnPropertySymbols, preventExtensions, hasOwnProperty, } = Object;\n  const { push: ArrayPush, concat: ArrayConcat, map: ArrayMap, } = Array.prototype;\n  function isUndefined(obj) {\n      return obj === undefined;\n  }\n  function isFunction(obj) {\n      return typeof obj === 'function';\n  }\n  function isObject(obj) {\n      return typeof obj === 'object';\n  }\n  const proxyToValueMap = new WeakMap();\n  function registerProxy(proxy, value) {\n      proxyToValueMap.set(proxy, value);\n  }\n  const unwrap = (replicaOrAny) => proxyToValueMap.get(replicaOrAny) || replicaOrAny;\n\n  function wrapValue(membrane, value) {\n      return membrane.valueIsObservable(value) ? membrane.getProxy(value) : value;\n  }\n  /**\n   * Unwrap property descriptors will set value on original descriptor\n   * We only need to unwrap if value is specified\n   * @param descriptor external descrpitor provided to define new property on original value\n   */\n  function unwrapDescriptor(descriptor) {\n      if (hasOwnProperty.call(descriptor, 'value')) {\n          descriptor.value = unwrap(descriptor.value);\n      }\n      return descriptor;\n  }\n  function lockShadowTarget(membrane, shadowTarget, originalTarget) {\n      const targetKeys = ArrayConcat.call(getOwnPropertyNames(originalTarget), getOwnPropertySymbols(originalTarget));\n      targetKeys.forEach((key) => {\n          let descriptor = getOwnPropertyDescriptor(originalTarget, key);\n          // We do not need to wrap the descriptor if configurable\n          // Because we can deal with wrapping it when user goes through\n          // Get own property descriptor. There is also a chance that this descriptor\n          // could change sometime in the future, so we can defer wrapping\n          // until we need to\n          if (!descriptor.configurable) {\n              descriptor = wrapDescriptor(membrane, descriptor, wrapValue);\n          }\n          ObjectDefineProperty(shadowTarget, key, descriptor);\n      });\n      preventExtensions(shadowTarget);\n  }\n  class ReactiveProxyHandler {\n      constructor(membrane, value) {\n          this.originalTarget = value;\n          this.membrane = membrane;\n      }\n      get(shadowTarget, key) {\n          const { originalTarget, membrane } = this;\n          const value = originalTarget[key];\n          const { valueObserved } = membrane;\n          valueObserved(originalTarget, key);\n          return membrane.getProxy(value);\n      }\n      set(shadowTarget, key, value) {\n          const { originalTarget, membrane: { valueMutated } } = this;\n          const oldValue = originalTarget[key];\n          if (oldValue !== value) {\n              originalTarget[key] = value;\n              valueMutated(originalTarget, key);\n          }\n          else if (key === 'length' && isArray(originalTarget)) {\n              // fix for issue #236: push will add the new index, and by the time length\n              // is updated, the internal length is already equal to the new length value\n              // therefore, the oldValue is equal to the value. This is the forking logic\n              // to support this use case.\n              valueMutated(originalTarget, key);\n          }\n          return true;\n      }\n      deleteProperty(shadowTarget, key) {\n          const { originalTarget, membrane: { valueMutated } } = this;\n          delete originalTarget[key];\n          valueMutated(originalTarget, key);\n          return true;\n      }\n      apply(shadowTarget, thisArg, argArray) {\n          /* No op */\n      }\n      construct(target, argArray, newTarget) {\n          /* No op */\n      }\n      has(shadowTarget, key) {\n          const { originalTarget, membrane: { valueObserved } } = this;\n          valueObserved(originalTarget, key);\n          return key in originalTarget;\n      }\n      ownKeys(shadowTarget) {\n          const { originalTarget } = this;\n          return ArrayConcat.call(getOwnPropertyNames(originalTarget), getOwnPropertySymbols(originalTarget));\n      }\n      isExtensible(shadowTarget) {\n          const shadowIsExtensible = isExtensible(shadowTarget);\n          if (!shadowIsExtensible) {\n              return shadowIsExtensible;\n          }\n          const { originalTarget, membrane } = this;\n          const targetIsExtensible = isExtensible(originalTarget);\n          if (!targetIsExtensible) {\n              lockShadowTarget(membrane, shadowTarget, originalTarget);\n          }\n          return targetIsExtensible;\n      }\n      setPrototypeOf(shadowTarget, prototype) {\n      }\n      getPrototypeOf(shadowTarget) {\n          const { originalTarget } = this;\n          return getPrototypeOf(originalTarget);\n      }\n      getOwnPropertyDescriptor(shadowTarget, key) {\n          const { originalTarget, membrane } = this;\n          const { valueObserved } = this.membrane;\n          // keys looked up via hasOwnProperty need to be reactive\n          valueObserved(originalTarget, key);\n          let desc = getOwnPropertyDescriptor(originalTarget, key);\n          if (isUndefined(desc)) {\n              return desc;\n          }\n          const shadowDescriptor = getOwnPropertyDescriptor(shadowTarget, key);\n          if (!isUndefined(shadowDescriptor)) {\n              return shadowDescriptor;\n          }\n          // Note: by accessing the descriptor, the key is marked as observed\n          // but access to the value, setter or getter (if available) cannot observe\n          // mutations, just like regular methods, in which case we just do nothing.\n          desc = wrapDescriptor(membrane, desc, wrapValue);\n          if (!desc.configurable) {\n              // If descriptor from original target is not configurable,\n              // We must copy the wrapped descriptor over to the shadow target.\n              // Otherwise, proxy will throw an invariant error.\n              // This is our last chance to lock the value.\n              // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor#Invariants\n              ObjectDefineProperty(shadowTarget, key, desc);\n          }\n          return desc;\n      }\n      preventExtensions(shadowTarget) {\n          const { originalTarget, membrane } = this;\n          lockShadowTarget(membrane, shadowTarget, originalTarget);\n          preventExtensions(originalTarget);\n          return true;\n      }\n      defineProperty(shadowTarget, key, descriptor) {\n          const { originalTarget, membrane } = this;\n          const { valueMutated } = membrane;\n          const { configurable } = descriptor;\n          // We have to check for value in descriptor\n          // because Object.freeze(proxy) calls this method\n          // with only { configurable: false, writeable: false }\n          // Additionally, method will only be called with writeable:false\n          // if the descriptor has a value, as opposed to getter/setter\n          // So we can just check if writable is present and then see if\n          // value is present. This eliminates getter and setter descriptors\n          if (hasOwnProperty.call(descriptor, 'writable') && !hasOwnProperty.call(descriptor, 'value')) {\n              const originalDescriptor = getOwnPropertyDescriptor(originalTarget, key);\n              descriptor.value = originalDescriptor.value;\n          }\n          ObjectDefineProperty(originalTarget, key, unwrapDescriptor(descriptor));\n          if (configurable === false) {\n              ObjectDefineProperty(shadowTarget, key, wrapDescriptor(membrane, descriptor, wrapValue));\n          }\n          valueMutated(originalTarget, key);\n          return true;\n      }\n  }\n\n  function wrapReadOnlyValue(membrane, value) {\n      return membrane.valueIsObservable(value) ? membrane.getReadOnlyProxy(value) : value;\n  }\n  class ReadOnlyHandler {\n      constructor(membrane, value) {\n          this.originalTarget = value;\n          this.membrane = membrane;\n      }\n      get(shadowTarget, key) {\n          const { membrane, originalTarget } = this;\n          const value = originalTarget[key];\n          const { valueObserved } = membrane;\n          valueObserved(originalTarget, key);\n          return membrane.getReadOnlyProxy(value);\n      }\n      set(shadowTarget, key, value) {\n          return false;\n      }\n      deleteProperty(shadowTarget, key) {\n          return false;\n      }\n      apply(shadowTarget, thisArg, argArray) {\n          /* No op */\n      }\n      construct(target, argArray, newTarget) {\n          /* No op */\n      }\n      has(shadowTarget, key) {\n          const { originalTarget, membrane: { valueObserved } } = this;\n          valueObserved(originalTarget, key);\n          return key in originalTarget;\n      }\n      ownKeys(shadowTarget) {\n          const { originalTarget } = this;\n          return ArrayConcat.call(getOwnPropertyNames(originalTarget), getOwnPropertySymbols(originalTarget));\n      }\n      setPrototypeOf(shadowTarget, prototype) {\n      }\n      getOwnPropertyDescriptor(shadowTarget, key) {\n          const { originalTarget, membrane } = this;\n          const { valueObserved } = membrane;\n          // keys looked up via hasOwnProperty need to be reactive\n          valueObserved(originalTarget, key);\n          let desc = getOwnPropertyDescriptor(originalTarget, key);\n          if (isUndefined(desc)) {\n              return desc;\n          }\n          const shadowDescriptor = getOwnPropertyDescriptor(shadowTarget, key);\n          if (!isUndefined(shadowDescriptor)) {\n              return shadowDescriptor;\n          }\n          // Note: by accessing the descriptor, the key is marked as observed\n          // but access to the value or getter (if available) cannot be observed,\n          // just like regular methods, in which case we just do nothing.\n          desc = wrapDescriptor(membrane, desc, wrapReadOnlyValue);\n          if (hasOwnProperty.call(desc, 'set')) {\n              desc.set = undefined; // readOnly membrane does not allow setters\n          }\n          if (!desc.configurable) {\n              // If descriptor from original target is not configurable,\n              // We must copy the wrapped descriptor over to the shadow target.\n              // Otherwise, proxy will throw an invariant error.\n              // This is our last chance to lock the value.\n              // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor#Invariants\n              ObjectDefineProperty(shadowTarget, key, desc);\n          }\n          return desc;\n      }\n      preventExtensions(shadowTarget) {\n          return false;\n      }\n      defineProperty(shadowTarget, key, descriptor) {\n          return false;\n      }\n  }\n  function createShadowTarget(value) {\n      let shadowTarget = undefined;\n      if (isArray(value)) {\n          shadowTarget = [];\n      }\n      else if (isObject(value)) {\n          shadowTarget = {};\n      }\n      return shadowTarget;\n  }\n  const ObjectDotPrototype = Object.prototype;\n  function defaultValueIsObservable(value) {\n      // intentionally checking for null\n      if (value === null) {\n          return false;\n      }\n      // treat all non-object types, including undefined, as non-observable values\n      if (typeof value !== 'object') {\n          return false;\n      }\n      if (isArray(value)) {\n          return true;\n      }\n      const proto = getPrototypeOf(value);\n      return (proto === ObjectDotPrototype || proto === null || getPrototypeOf(proto) === null);\n  }\n  const defaultValueObserved = (obj, key) => {\n      /* do nothing */\n  };\n  const defaultValueMutated = (obj, key) => {\n      /* do nothing */\n  };\n  const defaultValueDistortion = (value) => value;\n  function wrapDescriptor(membrane, descriptor, getValue) {\n      const { set, get } = descriptor;\n      if (hasOwnProperty.call(descriptor, 'value')) {\n          descriptor.value = getValue(membrane, descriptor.value);\n      }\n      else {\n          if (!isUndefined(get)) {\n              descriptor.get = function () {\n                  // invoking the original getter with the original target\n                  return getValue(membrane, get.call(unwrap(this)));\n              };\n          }\n          if (!isUndefined(set)) {\n              descriptor.set = function (value) {\n                  // At this point we don't have a clear indication of whether\n                  // or not a valid mutation will occur, we don't have the key,\n                  // and we are not sure why and how they are invoking this setter.\n                  // Nevertheless we preserve the original semantics by invoking the\n                  // original setter with the original target and the unwrapped value\n                  set.call(unwrap(this), membrane.unwrapProxy(value));\n              };\n          }\n      }\n      return descriptor;\n  }\n  class ReactiveMembrane {\n      constructor(options) {\n          this.valueDistortion = defaultValueDistortion;\n          this.valueMutated = defaultValueMutated;\n          this.valueObserved = defaultValueObserved;\n          this.valueIsObservable = defaultValueIsObservable;\n          this.objectGraph = new WeakMap();\n          if (!isUndefined(options)) {\n              const { valueDistortion, valueMutated, valueObserved, valueIsObservable } = options;\n              this.valueDistortion = isFunction(valueDistortion) ? valueDistortion : defaultValueDistortion;\n              this.valueMutated = isFunction(valueMutated) ? valueMutated : defaultValueMutated;\n              this.valueObserved = isFunction(valueObserved) ? valueObserved : defaultValueObserved;\n              this.valueIsObservable = isFunction(valueIsObservable) ? valueIsObservable : defaultValueIsObservable;\n          }\n      }\n      getProxy(value) {\n          const unwrappedValue = unwrap(value);\n          const distorted = this.valueDistortion(unwrappedValue);\n          if (this.valueIsObservable(distorted)) {\n              const o = this.getReactiveState(unwrappedValue, distorted);\n              // when trying to extract the writable version of a readonly\n              // we return the readonly.\n              return o.readOnly === value ? value : o.reactive;\n          }\n          return distorted;\n      }\n      getReadOnlyProxy(value) {\n          value = unwrap(value);\n          const distorted = this.valueDistortion(value);\n          if (this.valueIsObservable(distorted)) {\n              return this.getReactiveState(value, distorted).readOnly;\n          }\n          return distorted;\n      }\n      unwrapProxy(p) {\n          return unwrap(p);\n      }\n      getReactiveState(value, distortedValue) {\n          const { objectGraph, } = this;\n          let reactiveState = objectGraph.get(distortedValue);\n          if (reactiveState) {\n              return reactiveState;\n          }\n          const membrane = this;\n          reactiveState = {\n              get reactive() {\n                  const reactiveHandler = new ReactiveProxyHandler(membrane, distortedValue);\n                  // caching the reactive proxy after the first time it is accessed\n                  const proxy = new Proxy(createShadowTarget(distortedValue), reactiveHandler);\n                  registerProxy(proxy, value);\n                  ObjectDefineProperty(this, 'reactive', { value: proxy });\n                  return proxy;\n              },\n              get readOnly() {\n                  const readOnlyHandler = new ReadOnlyHandler(membrane, distortedValue);\n                  // caching the readOnly proxy after the first time it is accessed\n                  const proxy = new Proxy(createShadowTarget(distortedValue), readOnlyHandler);\n                  registerProxy(proxy, value);\n                  ObjectDefineProperty(this, 'readOnly', { value: proxy });\n                  return proxy;\n              }\n          };\n          objectGraph.set(distortedValue, reactiveState);\n          return reactiveState;\n      }\n  }\n  /** version: 0.26.0 */\n\n  function wrap(data, mutationCallback) {\n\n    let membrane = new ReactiveMembrane({\n      valueMutated(target, key) {\n        mutationCallback(target, key);\n      }\n\n    });\n    return {\n      data: membrane.getProxy(data),\n      membrane: membrane\n    };\n  }\n  function unwrap$1(membrane, observable) {\n    let unwrappedData = membrane.unwrapProxy(observable);\n    let copy = {};\n    Object.keys(unwrappedData).forEach(key => {\n      if (['$el', '$refs', '$nextTick', '$watch'].includes(key)) return;\n      copy[key] = unwrappedData[key];\n    });\n    return copy;\n  }\n\n  class Component {\n    constructor(el, componentForClone = null) {\n      this.$el = el;\n      const dataAttr = this.$el.getAttribute('x-data');\n      const dataExpression = dataAttr === '' ? '{}' : dataAttr;\n      const initExpression = this.$el.getAttribute('x-init');\n      let dataExtras = {\n        $el: this.$el\n      };\n      let canonicalComponentElementReference = componentForClone ? componentForClone.$el : this.$el;\n      Object.entries(Alpine.magicProperties).forEach(([name, callback]) => {\n        Object.defineProperty(dataExtras, `$${name}`, {\n          get: function get() {\n            return callback(canonicalComponentElementReference);\n          }\n        });\n      });\n      this.unobservedData = componentForClone ? componentForClone.getUnobservedData() : saferEval(el, dataExpression, dataExtras);\n      // Construct a Proxy-based observable. This will be used to handle reactivity.\n\n      let {\n        membrane,\n        data\n      } = this.wrapDataInObservable(this.unobservedData);\n      this.$data = data;\n      this.membrane = membrane; // After making user-supplied data methods reactive, we can now add\n      // our magic properties to the original data for access.\n\n      this.unobservedData.$el = this.$el;\n      this.unobservedData.$refs = this.getRefsProxy();\n      this.nextTickStack = [];\n\n      this.unobservedData.$nextTick = callback => {\n        this.nextTickStack.push(callback);\n      };\n\n      this.watchers = {};\n\n      this.unobservedData.$watch = (property, callback) => {\n        if (!this.watchers[property]) this.watchers[property] = [];\n        this.watchers[property].push(callback);\n      };\n      /* MODERN-ONLY:START */\n      // We remove this piece of code from the legacy build.\n      // In IE11, we have already defined our helpers at this point.\n      // Register custom magic properties.\n\n\n      Object.entries(Alpine.magicProperties).forEach(([name, callback]) => {\n        Object.defineProperty(this.unobservedData, `$${name}`, {\n          get: function get() {\n            return callback(canonicalComponentElementReference, this.$el);\n          }\n        });\n      });\n      /* MODERN-ONLY:END */\n\n      this.showDirectiveStack = [];\n      this.showDirectiveLastElement;\n      componentForClone || Alpine.onBeforeComponentInitializeds.forEach(callback => callback(this));\n      var initReturnedCallback; // If x-init is present AND we aren't cloning (skip x-init on clone)\n\n      if (initExpression && !componentForClone) {\n        // We want to allow data manipulation, but not trigger DOM updates just yet.\n        // We haven't even initialized the elements with their Alpine bindings. I mean c'mon.\n        this.pauseReactivity = true;\n        initReturnedCallback = this.evaluateReturnExpression(this.$el, initExpression);\n        this.pauseReactivity = false;\n      } // Register all our listeners and set all our attribute bindings.\n\n\n      this.initializeElements(this.$el); // Use mutation observer to detect new elements being added within this component at run-time.\n      // Alpine's just so darn flexible amirite?\n\n      this.listenForNewElementsToInitialize();\n\n      if (typeof initReturnedCallback === 'function') {\n        // Run the callback returned from the \"x-init\" hook to allow the user to do stuff after\n        // Alpine's got it's grubby little paws all over everything.\n        initReturnedCallback.call(this.$data);\n      }\n\n      componentForClone || setTimeout(() => {\n        Alpine.onComponentInitializeds.forEach(callback => callback(this));\n      }, 0);\n    }\n\n    getUnobservedData() {\n      return unwrap$1(this.membrane, this.$data);\n    }\n\n    wrapDataInObservable(data) {\n      var self = this;\n      let updateDom = debounce(function () {\n        self.updateElements(self.$el);\n      }, 0);\n      return wrap(data, (target, key) => {\n        if (self.watchers[key]) {\n          // If there's a watcher for this specific key, run it.\n          self.watchers[key].forEach(callback => callback(target[key]));\n        } else if (Array.isArray(target)) {\n          // Arrays are special cases, if any of the items change, we consider the array as mutated.\n          Object.keys(self.watchers).forEach(fullDotNotationKey => {\n            let dotNotationParts = fullDotNotationKey.split('.'); // Ignore length mutations since they would result in duplicate calls.\n            // For example, when calling push, we would get a mutation for the item's key\n            // and a second mutation for the length property.\n\n            if (key === 'length') return;\n            dotNotationParts.reduce((comparisonData, part) => {\n              if (Object.is(target, comparisonData[part])) {\n                self.watchers[fullDotNotationKey].forEach(callback => callback(target));\n              }\n\n              return comparisonData[part];\n            }, self.unobservedData);\n          });\n        } else {\n          // Let's walk through the watchers with \"dot-notation\" (foo.bar) and see\n          // if this mutation fits any of them.\n          Object.keys(self.watchers).filter(i => i.includes('.')).forEach(fullDotNotationKey => {\n            let dotNotationParts = fullDotNotationKey.split('.'); // If this dot-notation watcher's last \"part\" doesn't match the current\n            // key, then skip it early for performance reasons.\n\n            if (key !== dotNotationParts[dotNotationParts.length - 1]) return; // Now, walk through the dot-notation \"parts\" recursively to find\n            // a match, and call the watcher if one's found.\n\n            dotNotationParts.reduce((comparisonData, part) => {\n              if (Object.is(target, comparisonData)) {\n                // Run the watchers.\n                self.watchers[fullDotNotationKey].forEach(callback => callback(target[key]));\n              }\n\n              return comparisonData[part];\n            }, self.unobservedData);\n          });\n        } // Don't react to data changes for cases like the `x-created` hook.\n\n\n        if (self.pauseReactivity) return;\n        updateDom();\n      });\n    }\n\n    walkAndSkipNestedComponents(el, callback, initializeComponentCallback = () => {}) {\n      walk(el, el => {\n        // We've hit a component.\n        if (el.hasAttribute('x-data')) {\n          // If it's not the current one.\n          if (!el.isSameNode(this.$el)) {\n            // Initialize it if it's not.\n            if (!el.__x) initializeComponentCallback(el); // Now we'll let that sub-component deal with itself.\n\n            return false;\n          }\n        }\n\n        return callback(el);\n      });\n    }\n\n    initializeElements(rootEl, extraVars = () => {}) {\n      this.walkAndSkipNestedComponents(rootEl, el => {\n        // Don't touch spawns from for loop\n        if (el.__x_for_key !== undefined) return false; // Don't touch spawns from if directives\n\n        if (el.__x_inserted_me !== undefined) return false;\n        this.initializeElement(el, extraVars);\n      }, el => {\n        el.__x = new Component(el);\n      });\n      this.executeAndClearRemainingShowDirectiveStack();\n      this.executeAndClearNextTickStack(rootEl);\n    }\n\n    initializeElement(el, extraVars) {\n      // To support class attribute merging, we have to know what the element's\n      // original class attribute looked like for reference.\n      if (el.hasAttribute('class') && getXAttrs(el, this).length > 0) {\n        el.__x_original_classes = convertClassStringToArray(el.getAttribute('class'));\n      }\n\n      this.registerListeners(el, extraVars);\n      this.resolveBoundAttributes(el, true, extraVars);\n    }\n\n    updateElements(rootEl, extraVars = () => {}) {\n      this.walkAndSkipNestedComponents(rootEl, el => {\n        // Don't touch spawns from for loop (and check if the root is actually a for loop in a parent, don't skip it.)\n        if (el.__x_for_key !== undefined && !el.isSameNode(this.$el)) return false;\n        this.updateElement(el, extraVars);\n      }, el => {\n        el.__x = new Component(el);\n      });\n      this.executeAndClearRemainingShowDirectiveStack();\n      this.executeAndClearNextTickStack(rootEl);\n    }\n\n    executeAndClearNextTickStack(el) {\n      // Skip spawns from alpine directives\n      if (el === this.$el && this.nextTickStack.length > 0) {\n        // We run the tick stack after the next frame to allow any\n        // running transitions to pass the initial show stage.\n        requestAnimationFrame(() => {\n          while (this.nextTickStack.length > 0) {\n            this.nextTickStack.shift()();\n          }\n        });\n      }\n    }\n\n    executeAndClearRemainingShowDirectiveStack() {\n      // The goal here is to start all the x-show transitions\n      // and build a nested promise chain so that elements\n      // only hide when the children are finished hiding.\n      this.showDirectiveStack.reverse().map(handler => {\n        return new Promise((resolve, reject) => {\n          handler(resolve, reject);\n        });\n      }).reduce((promiseChain, promise) => {\n        return promiseChain.then(() => {\n          return promise.then(finishElement => {\n            finishElement();\n          });\n        });\n      }, Promise.resolve(() => {})).catch(e => {\n        if (e !== TRANSITION_CANCELLED) throw e;\n      }); // We've processed the handler stack. let's clear it.\n\n      this.showDirectiveStack = [];\n      this.showDirectiveLastElement = undefined;\n    }\n\n    updateElement(el, extraVars) {\n      this.resolveBoundAttributes(el, false, extraVars);\n    }\n\n    registerListeners(el, extraVars) {\n      getXAttrs(el, this).forEach(({\n        type,\n        value,\n        modifiers,\n        expression\n      }) => {\n        switch (type) {\n          case 'on':\n            registerListener(this, el, value, modifiers, expression, extraVars);\n            break;\n\n          case 'model':\n            registerModelListener(this, el, modifiers, expression, extraVars);\n            break;\n        }\n      });\n    }\n\n    resolveBoundAttributes(el, initialUpdate = false, extraVars) {\n      let attrs = getXAttrs(el, this);\n      attrs.forEach(({\n        type,\n        value,\n        modifiers,\n        expression\n      }) => {\n        switch (type) {\n          case 'model':\n            handleAttributeBindingDirective(this, el, 'value', expression, extraVars, type, modifiers);\n            break;\n\n          case 'bind':\n            // The :key binding on an x-for is special, ignore it.\n            if (el.tagName.toLowerCase() === 'template' && value === 'key') return;\n            handleAttributeBindingDirective(this, el, value, expression, extraVars, type, modifiers);\n            break;\n\n          case 'text':\n            var output = this.evaluateReturnExpression(el, expression, extraVars);\n            handleTextDirective(el, output, expression);\n            break;\n\n          case 'html':\n            handleHtmlDirective(this, el, expression, extraVars);\n            break;\n\n          case 'show':\n            var output = this.evaluateReturnExpression(el, expression, extraVars);\n            handleShowDirective(this, el, output, modifiers, initialUpdate);\n            break;\n\n          case 'if':\n            // If this element also has x-for on it, don't process x-if.\n            // We will let the \"x-for\" directive handle the \"if\"ing.\n            if (attrs.some(i => i.type === 'for')) return;\n            var output = this.evaluateReturnExpression(el, expression, extraVars);\n            handleIfDirective(this, el, output, initialUpdate, extraVars);\n            break;\n\n          case 'for':\n            handleForDirective(this, el, expression, initialUpdate, extraVars);\n            break;\n\n          case 'cloak':\n            el.removeAttribute('x-cloak');\n            break;\n        }\n      });\n    }\n\n    evaluateReturnExpression(el, expression, extraVars = () => {}) {\n      return saferEval(el, expression, this.$data, _objectSpread2(_objectSpread2({}, extraVars()), {}, {\n        $dispatch: this.getDispatchFunction(el)\n      }));\n    }\n\n    evaluateCommandExpression(el, expression, extraVars = () => {}) {\n      return saferEvalNoReturn(el, expression, this.$data, _objectSpread2(_objectSpread2({}, extraVars()), {}, {\n        $dispatch: this.getDispatchFunction(el)\n      }));\n    }\n\n    getDispatchFunction(el) {\n      return (event, detail = {}) => {\n        el.dispatchEvent(new CustomEvent(event, {\n          detail,\n          bubbles: true\n        }));\n      };\n    }\n\n    listenForNewElementsToInitialize() {\n      const targetNode = this.$el;\n      const observerOptions = {\n        childList: true,\n        attributes: true,\n        subtree: true\n      };\n      const observer = new MutationObserver(mutations => {\n        for (let i = 0; i < mutations.length; i++) {\n          // Filter out mutations triggered from child components.\n          const closestParentComponent = mutations[i].target.closest('[x-data]');\n          if (!(closestParentComponent && closestParentComponent.isSameNode(this.$el))) continue;\n\n          if (mutations[i].type === 'attributes' && mutations[i].attributeName === 'x-data') {\n            const xAttr = mutations[i].target.getAttribute('x-data') || '{}';\n            const rawData = saferEval(this.$el, xAttr, {\n              $el: this.$el\n            });\n            Object.keys(rawData).forEach(key => {\n              if (this.$data[key] !== rawData[key]) {\n                this.$data[key] = rawData[key];\n              }\n            });\n          }\n\n          if (mutations[i].addedNodes.length > 0) {\n            mutations[i].addedNodes.forEach(node => {\n              if (node.nodeType !== 1 || node.__x_inserted_me) return;\n\n              if (node.matches('[x-data]') && !node.__x) {\n                node.__x = new Component(node);\n                return;\n              }\n\n              this.initializeElements(node);\n            });\n          }\n        }\n      });\n      observer.observe(targetNode, observerOptions);\n    }\n\n    getRefsProxy() {\n      var self = this;\n      var refObj = {};\n      // One of the goals of this is to not hold elements in memory, but rather re-evaluate\n      // the DOM when the system needs something from it. This way, the framework is flexible and\n      // friendly to outside DOM changes from libraries like Vue/Livewire.\n      // For this reason, I'm using an \"on-demand\" proxy to fake a \"$refs\" object.\n\n      return new Proxy(refObj, {\n        get(object, property) {\n          if (property === '$isAlpineProxy') return true;\n          var ref; // We can't just query the DOM because it's hard to filter out refs in\n          // nested components.\n\n          self.walkAndSkipNestedComponents(self.$el, el => {\n            if (el.hasAttribute('x-ref') && el.getAttribute('x-ref') === property) {\n              ref = el;\n            }\n          });\n          return ref;\n        }\n\n      });\n    }\n\n  }\n\n  const Alpine = {\n    version: \"2.8.0\",\n    pauseMutationObserver: false,\n    magicProperties: {},\n    onComponentInitializeds: [],\n    onBeforeComponentInitializeds: [],\n    ignoreFocusedForValueBinding: false,\n    start: async function start() {\n      if (!isTesting()) {\n        await domReady();\n      }\n\n      this.discoverComponents(el => {\n        this.initializeComponent(el);\n      }); // It's easier and more performant to just support Turbolinks than listen\n      // to MutationObserver mutations at the document level.\n\n      document.addEventListener(\"turbolinks:load\", () => {\n        this.discoverUninitializedComponents(el => {\n          this.initializeComponent(el);\n        });\n      });\n      this.listenForNewUninitializedComponentsAtRunTime();\n    },\n    discoverComponents: function discoverComponents(callback) {\n      const rootEls = document.querySelectorAll('[x-data]');\n      rootEls.forEach(rootEl => {\n        callback(rootEl);\n      });\n    },\n    discoverUninitializedComponents: function discoverUninitializedComponents(callback, el = null) {\n      const rootEls = (el || document).querySelectorAll('[x-data]');\n      Array.from(rootEls).filter(el => el.__x === undefined).forEach(rootEl => {\n        callback(rootEl);\n      });\n    },\n    listenForNewUninitializedComponentsAtRunTime: function listenForNewUninitializedComponentsAtRunTime() {\n      const targetNode = document.querySelector('body');\n      const observerOptions = {\n        childList: true,\n        attributes: true,\n        subtree: true\n      };\n      const observer = new MutationObserver(mutations => {\n        if (this.pauseMutationObserver) return;\n\n        for (let i = 0; i < mutations.length; i++) {\n          if (mutations[i].addedNodes.length > 0) {\n            mutations[i].addedNodes.forEach(node => {\n              // Discard non-element nodes (like line-breaks)\n              if (node.nodeType !== 1) return; // Discard any changes happening within an existing component.\n              // They will take care of themselves.\n\n              if (node.parentElement && node.parentElement.closest('[x-data]')) return;\n              this.discoverUninitializedComponents(el => {\n                this.initializeComponent(el);\n              }, node.parentElement);\n            });\n          }\n        }\n      });\n      observer.observe(targetNode, observerOptions);\n    },\n    initializeComponent: function initializeComponent(el) {\n      if (!el.__x) {\n        // Wrap in a try/catch so that we don't prevent other components\n        // from initializing when one component contains an error.\n        try {\n          el.__x = new Component(el);\n        } catch (error) {\n          setTimeout(() => {\n            throw error;\n          }, 0);\n        }\n      }\n    },\n    clone: function clone(component, newEl) {\n      if (!newEl.__x) {\n        newEl.__x = new Component(newEl, component);\n      }\n    },\n    addMagicProperty: function addMagicProperty(name, callback) {\n      this.magicProperties[name] = callback;\n    },\n    onComponentInitialized: function onComponentInitialized(callback) {\n      this.onComponentInitializeds.push(callback);\n    },\n    onBeforeComponentInitialized: function onBeforeComponentInitialized(callback) {\n      this.onBeforeComponentInitializeds.push(callback);\n    }\n  };\n\n  if (!isTesting()) {\n    window.Alpine = Alpine;\n\n    if (window.deferLoadingAlpine) {\n      window.deferLoadingAlpine(function () {\n        window.Alpine.start();\n      });\n    } else {\n      window.Alpine.start();\n    }\n  }\n\n  return Alpine;\n\n})));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvYWxwaW5lanMvZGlzdC9hbHBpbmUuanM/ZGYyNCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLEVBQUUsS0FBNEQ7QUFDOUQsRUFBRSxDQUNvRDtBQUN0RCxDQUFDLHFCQUFxQjs7QUFFdEI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxPQUFPO0FBQ1AsS0FBSztBQUNMO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsT0FBTztBQUNQO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBLG1CQUFtQixzQkFBc0I7QUFDekM7O0FBRUE7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNULE9BQU87QUFDUDtBQUNBLE9BQU87QUFDUDtBQUNBO0FBQ0EsU0FBUztBQUNUO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxPQUFPO0FBQ1A7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSwrQkFBK0IsVUFBVSw4RkFBOEYsVUFBVTtBQUNqSixLQUFLO0FBQ0wsbURBQW1ELFVBQVU7QUFDN0Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBLG1DQUFtQyxNQUFNLG9CQUFvQixXQUFXOztBQUV4RTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxHQUFHO0FBQ0g7QUFDQTtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTs7QUFFQSxnRkFBZ0Y7QUFDaEY7QUFDQTtB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QUNBO0FBQ0EsZUFBZTtBQUNmLGFBQWE7QUFDYjtBQUNBO0FBQ0EsT0FBTztBQUNQO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFNBQVM7QUFDVDtBQUNBO0FBQ0EsV0FBVztBQUNYO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLO0FBQ0w7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0EsT0FBTztBQUNQLEtBQUs7QUFDTDtBQUNBO0FBQ0E7O0FBRUE7O0FBRUEsQ0FBQyIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9hbHBpbmVqcy9kaXN0L2FscGluZS5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIihmdW5jdGlvbiAoZ2xvYmFsLCBmYWN0b3J5KSB7XG4gIHR5cGVvZiBleHBvcnRzID09PSAnb2JqZWN0JyAmJiB0eXBlb2YgbW9kdWxlICE9PSAndW5kZWZpbmVkJyA/IG1vZHVsZS5leHBvcnRzID0gZmFjdG9yeSgpIDpcbiAgdHlwZW9mIGRlZmluZSA9PT0gJ2Z1bmN0aW9uJyAmJiBkZWZpbmUuYW1kID8gZGVmaW5lKGZhY3RvcnkpIDpcbiAgKGdsb2JhbCA9IGdsb2JhbCB8fCBzZWxmLCBnbG9iYWwuQWxwaW5lID0gZmFjdG9yeSgpKTtcbn0odGhpcywgKGZ1bmN0aW9uICgpIHsgJ3VzZSBzdHJpY3QnO1xuXG4gIGZ1bmN0aW9uIF9kZWZpbmVQcm9wZXJ0eShvYmosIGtleSwgdmFsdWUpIHtcbiAgICBpZiAoa2V5IGluIG9iaikge1xuICAgICAgT2JqZWN0LmRlZmluZVByb3BlcnR5KG9iaiwga2V5LCB7XG4gICAgICAgIHZhbHVlOiB2YWx1ZSxcbiAgICAgICAgZW51bWVyYWJsZTogdHJ1ZSxcbiAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlLFxuICAgICAgICB3cml0YWJsZTogdHJ1ZVxuICAgICAgfSk7XG4gICAgfSBlbHNlIHtcbiAgICAgIG9ialtrZXldID0gdmFsdWU7XG4gICAgfVxuXG4gICAgcmV0dXJuIG9iajtcbiAgfVxuXG4gIGZ1bmN0aW9uIG93bktleXMob2JqZWN0LCBlbnVtZXJhYmxlT25seSkge1xuICAgIHZhciBrZXlzID0gT2JqZWN0LmtleXMob2JqZWN0KTtcblxuICAgIGlmIChPYmplY3QuZ2V0T3duUHJvcGVydHlTeW1ib2xzKSB7XG4gICAgICB2YXIgc3ltYm9scyA9IE9iamVjdC5nZXRPd25Qcm9wZXJ0eVN5bWJvbHMob2JqZWN0KTtcbiAgICAgIGlmIChlbnVtZXJhYmxlT25seSkgc3ltYm9scyA9IHN5bWJvbHMuZmlsdGVyKGZ1bmN0aW9uIChzeW0pIHtcbiAgICAgICAgcmV0dXJuIE9iamVjdC5nZXRPd25Qcm9wZXJ0eURlc2NyaXB0b3Iob2JqZWN0LCBzeW0pLmVudW1lcmFibGU7XG4gICAgICB9KTtcbiAgICAgIGtleXMucHVzaC5hcHBseShrZXlzLCBzeW1ib2xzKTtcbiAgICB9XG5cbiAgICByZXR1cm4ga2V5cztcbiAgfVxuXG4gIGZ1bmN0aW9uIF9vYmplY3RTcHJlYWQyKHRhcmdldCkge1xuICAgIGZvciAodmFyIGkgPSAxOyBpIDwgYXJndW1lbnRzLmxlbmd0aDsgaSsrKSB7XG4gICAgICB2YXIgc291cmNlID0gYXJndW1lbnRzW2ldICE9IG51bGwgPyBhcmd1bWVudHNbaV0gOiB7fTtcblxuICAgICAgaWYgKGkgJSAyKSB7XG4gICAgICAgIG93bktleXMoT2JqZWN0KHNvdXJjZSksIHRydWUpLmZvckVhY2goZnVuY3Rpb24gKGtleSkge1xuICAgICAgICAgIF9kZWZpbmVQcm9wZXJ0eSh0YXJnZXQsIGtleSwgc291cmNlW2tleV0pO1xuICAgICAgICB9KTtcbiAgICAgIH0gZWxzZSBpZiAoT2JqZWN0LmdldE93blByb3BlcnR5RGVzY3JpcHRvcnMpIHtcbiAgICAgICAgT2JqZWN0LmRlZmluZVByb3BlcnRpZXModGFyZ2V0LCBPYmplY3QuZ2V0T3duUHJvcGVydHlEZXNjcmlwdG9ycyhzb3VyY2UpKTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIG93bktleXMoT2JqZWN0KHNvdXJjZSkpLmZvckVhY2goZnVuY3Rpb24gKGtleSkge1xuICAgICAgICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eSh0YXJnZXQsIGtleSwgT2JqZWN0LmdldE93blByb3BlcnR5RGVzY3JpcHRvcihzb3VyY2UsIGtleSkpO1xuICAgICAgICB9KTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICByZXR1cm4gdGFyZ2V0O1xuICB9XG5cbiAgLy8gVGhhbmtzIEBzdGltdWx1czpcbiAgLy8gaHR0cHM6Ly9naXRodWIuY29tL3N0aW11bHVzanMvc3RpbXVsdXMvYmxvYi9tYXN0ZXIvcGFja2FnZXMvJTQwc3RpbXVsdXMvY29yZS9zcmMvYXBwbGljYXRpb24udHNcbiAgZnVuY3Rpb24gZG9tUmVhZHkoKSB7XG4gICAgcmV0dXJuIG5ldyBQcm9taXNlKHJlc29sdmUgPT4ge1xuICAgICAgaWYgKGRvY3VtZW50LnJlYWR5U3RhdGUgPT0gXCJsb2FkaW5nXCIpIHtcbiAgICAgICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcihcIkRPTUNvbnRlbnRMb2FkZWRcIiwgcmVzb2x2ZSk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICByZXNvbHZlKCk7XG4gICAgICB9XG4gICAgfSk7XG4gIH1cbiAgZnVuY3Rpb24gYXJyYXlVbmlxdWUoYXJyYXkpIHtcbiAgICByZXR1cm4gQXJyYXkuZnJvbShuZXcgU2V0KGFycmF5KSk7XG4gIH1cbiAgZnVuY3Rpb24gaXNUZXN0aW5nKCkge1xuICAgIHJldHVybiBuYXZpZ2F0b3IudXNlckFnZW50LmluY2x1ZGVzKFwiTm9kZS5qc1wiKSB8fCBuYXZpZ2F0b3IudXNlckFnZW50LmluY2x1ZGVzKFwianNkb21cIik7XG4gIH1cbiAgZnVuY3Rpb24gY2hlY2tlZEF0dHJMb29zZUNvbXBhcmUodmFsdWVBLCB2YWx1ZUIpIHtcbiAgICByZXR1cm4gdmFsdWVBID09IHZhbHVlQjtcbiAgfVxuICBmdW5jdGlvbiB3YXJuSWZNYWxmb3JtZWRUZW1wbGF0ZShlbCwgZGlyZWN0aXZlKSB7XG4gICAgaWYgKGVsLnRhZ05hbWUudG9Mb3dlckNhc2UoKSAhPT0gJ3RlbXBsYXRlJykge1xuICAgICAgY29uc29sZS53YXJuKGBBbHBpbmU6IFske2RpcmVjdGl2ZX1dIGRpcmVjdGl2ZSBzaG91bGQgb25seSBiZSBhZGRlZCB0byA8dGVtcGxhdGU+IHRhZ3MuIFNlZSBodHRwczovL2dpdGh1Yi5jb20vYWxwaW5lanMvYWxwaW5lIyR7ZGlyZWN0aXZlfWApO1xuICAgIH0gZWxzZSBpZiAoZWwuY29udGVudC5jaGlsZEVsZW1lbnRDb3VudCAhPT0gMSkge1xuICAgICAgY29uc29sZS53YXJuKGBBbHBpbmU6IDx0ZW1wbGF0ZT4gdGFnIHdpdGggWyR7ZGlyZWN0aXZlfV0gZW5jb3VudGVyZWQgd2l0aCBtdWx0aXBsZSBlbGVtZW50IHJvb3RzLiBNYWtlIHN1cmUgPHRlbXBsYXRlPiBvbmx5IGhhcyBhIHNpbmdsZSBjaGlsZCBlbGVtZW50LmApO1xuICAgIH1cbiAgfVxuICBmdW5jdGlvbiBrZWJhYkNhc2Uoc3ViamVjdCkge1xuICAgIHJldHVybiBzdWJqZWN0LnJlcGxhY2UoLyhbYS16XSkoW0EtWl0pL2csICckMS0kMicpLnJlcGxhY2UoL1tfXFxzXS8sICctJykudG9Mb3dlckNhc2UoKTtcbiAgfVxuICBmdW5jdGlvbiBjYW1lbENhc2Uoc3ViamVjdCkge1xuICAgIHJldHVybiBzdWJqZWN0LnRvTG93ZXJDYXNlKCkucmVwbGFjZSgvLShcXHcpL2csIChtYXRjaCwgY2hhcikgPT4gY2hhci50b1VwcGVyQ2FzZSgpKTtcbiAgfVxuICBmdW5jdGlvbiB3YWxrKGVsLCBjYWxsYmFjaykge1xuICAgIGlmIChjYWxsYmFjayhlbCkgPT09IGZhbHNlKSByZXR1cm47XG4gICAgbGV0IG5vZGUgPSBlbC5maXJzdEVsZW1lbnRDaGlsZDtcblxuICAgIHdoaWxlIChub2RlKSB7XG4gICAgICB3YWxrKG5vZGUsIGNhbGxiYWNrKTtcbiAgICAgIG5vZGUgPSBub2RlLm5leHRFbGVtZW50U2libGluZztcbiAgICB9XG4gIH1cbiAgZnVuY3Rpb24gZGVib3VuY2UoZnVuYywgd2FpdCkge1xuICAgIHZhciB0aW1lb3V0O1xuICAgIHJldHVybiBmdW5jdGlvbiAoKSB7XG4gICAgICB2YXIgY29udGV4dCA9IHRoaXMsXG4gICAgICAgICAgYXJncyA9IGFyZ3VtZW50cztcblxuICAgICAgdmFyIGxhdGVyID0gZnVuY3Rpb24gbGF0ZXIoKSB7XG4gICAgICAgIHRpbWVvdXQgPSBudWxsO1xuICAgICAgICBmdW5jLmFwcGx5KGNvbnRleHQsIGFyZ3MpO1xuICAgICAgfTtcblxuICAgICAgY2xlYXJUaW1lb3V0KHRpbWVvdXQpO1xuICAgICAgdGltZW91dCA9IHNldFRpbWVvdXQobGF0ZXIsIHdhaXQpO1xuICAgIH07XG4gIH1cblxuICBjb25zdCBoYW5kbGVFcnJvciA9IChlbCwgZXhwcmVzc2lvbiwgZXJyb3IpID0+IHtcbiAgICBjb25zb2xlLndhcm4oYEFscGluZSBFcnJvcjogXCIke2Vycm9yfVwiXFxuXFxuRXhwcmVzc2lvbjogXCIke2V4cHJlc3Npb259XCJcXG5FbGVtZW50OmAsIGVsKTtcblxuICAgIGlmICghaXNUZXN0aW5nKCkpIHtcbiAgICAgIHRocm93IGVycm9yO1xuICAgIH1cbiAgfTtcblxuICBmdW5jdGlvbiB0cnlDYXRjaChjYiwge1xuICAgIGVsLFxuICAgIGV4cHJlc3Npb25cbiAgfSkge1xuICAgIHRyeSB7XG4gICAgICBjb25zdCB2YWx1ZSA9IGNiKCk7XG4gICAgICByZXR1cm4gdmFsdWUgaW5zdGFuY2VvZiBQcm9taXNlID8gdmFsdWUuY2F0Y2goZSA9PiBoYW5kbGVFcnJvcihlbCwgZXhwcmVzc2lvbiwgZSkpIDogdmFsdWU7XG4gICAgfSBjYXRjaCAoZSkge1xuICAgICAgaGFuZGxlRXJyb3IoZWwsIGV4cHJlc3Npb24sIGUpO1xuICAgIH1cbiAgfVxuXG4gIGZ1bmN0aW9uIHNhZmVyRXZhbChlbCwgZXhwcmVzc2lvbiwgZGF0YUNvbnRleHQsIGFkZGl0aW9uYWxIZWxwZXJWYXJpYWJsZXMgPSB7fSkge1xuICAgIHJldHVybiB0cnlDYXRjaCgoKSA9PiB7XG4gICAgICBpZiAodHlwZW9mIGV4cHJlc3Npb24gPT09ICdmdW5jdGlvbicpIHtcbiAgICAgICAgcmV0dXJuIGV4cHJlc3Npb24uY2FsbChkYXRhQ29udGV4dCk7XG4gICAgICB9XG5cbiAgICAgIHJldHVybiBuZXcgRnVuY3Rpb24oWyckZGF0YScsIC4uLk9iamVjdC5rZXlzKGFkZGl0aW9uYWxIZWxwZXJWYXJpYWJsZXMpXSwgYHZhciBfX2FscGluZV9yZXN1bHQ7IHdpdGgoJGRhdGEpIHsgX19hbHBpbmVfcmVzdWx0ID0gJHtleHByZXNzaW9ufSB9OyByZXR1cm4gX19hbHBpbmVfcmVzdWx0YCkoZGF0YUNvbnRleHQsIC4uLk9iamVjdC52YWx1ZXMoYWRkaXRpb25hbEhlbHBlclZhcmlhYmxlcykpO1xuICAgIH0sIHtcbiAgICAgIGVsLFxuICAgICAgZXhwcmVzc2lvblxuICAgIH0pO1xuICB9XG4gIGZ1bmN0aW9uIHNhZmVyRXZhbE5vUmV0dXJuKGVsLCBleHByZXNzaW9uLCBkYXRhQ29udGV4dCwgYWRkaXRpb25hbEhlbHBlclZhcmlhYmxlcyA9IHt9KSB7XG4gICAgcmV0dXJuIHRyeUNhdGNoKCgpID0+IHtcbiAgICAgIGlmICh0eXBlb2YgZXhwcmVzc2lvbiA9PT0gJ2Z1bmN0aW9uJykge1xuICAgICAgICByZXR1cm4gUHJvbWlzZS5yZXNvbHZlKGV4cHJlc3Npb24uY2FsbChkYXRhQ29udGV4dCwgYWRkaXRpb25hbEhlbHBlclZhcmlhYmxlc1snJGV2ZW50J10pKTtcbiAgICAgIH1cblxuICAgICAgbGV0IEFzeW5jRnVuY3Rpb24gPSBGdW5jdGlvbjtcbiAgICAgIC8qIE1PREVSTi1PTkxZOlNUQVJUICovXG5cbiAgICAgIEFzeW5jRnVuY3Rpb24gPSBPYmplY3QuZ2V0UHJvdG90eXBlT2YoYXN5bmMgZnVuY3Rpb24gKCkge30pLmNvbnN0cnVjdG9yO1xuICAgICAgLyogTU9ERVJOLU9OTFk6RU5EICovXG4gICAgICAvLyBGb3IgdGhlIGNhc2VzIHdoZW4gdXNlcnMgcGFzcyBvbmx5IGEgZnVuY3Rpb24gcmVmZXJlbmNlIHRvIHRoZSBjYWxsZXI6IGB4LW9uOmNsaWNrPVwiZm9vXCJgXG4gICAgICAvLyBXaGVyZSBcImZvb1wiIGlzIGEgZnVuY3Rpb24uIEFsc28sIHdlJ2xsIHBhc3MgdGhlIGZ1bmN0aW9uIHRoZSBldmVudCBpbnN0YW5jZSB3aGVuIHdlIGNhbGwgaXQuXG5cbiAgICAgIGlmIChPYmplY3Qua2V5cyhkYXRhQ29udGV4dCkuaW5jbHVkZXMoZXhwcmVzc2lvbikpIHtcbiAgICAgICAgbGV0IG1ldGhvZFJlZmVyZW5jZSA9IG5ldyBGdW5jdGlvbihbJ2RhdGFDb250ZXh0JywgLi4uT2JqZWN0LmtleXMoYWRkaXRpb25hbEhlbHBlclZhcmlhYmxlcyldLCBgd2l0aChkYXRhQ29udGV4dCkgeyByZXR1cm4gJHtleHByZXNzaW9ufSB9YCkoZGF0YUNvbnRleHQsIC4uLk9iamVjdC52YWx1ZXMoYWRkaXRpb25hbEhlbHBlclZhcmlhYmxlcykpO1xuXG4gICAgICAgIGlmICh0eXBlb2YgbWV0aG9kUmVmZXJlbmNlID09PSAnZnVuY3Rpb24nKSB7XG4gICAgICAgICAgcmV0dXJuIFByb21pc2UucmVzb2x2ZShtZXRob2RSZWZlcmVuY2UuY2FsbChkYXRhQ29udGV4dCwgYWRkaXRpb25hbEhlbHBlclZhcmlhYmxlc1snJGV2ZW50J10pKTtcbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICByZXR1cm4gUHJvbWlzZS5yZXNvbHZlKCk7XG4gICAgICAgIH1cbiAgICAgIH1cblxuICAgICAgcmV0dXJuIFByb21pc2UucmVzb2x2ZShuZXcgQXN5bmNGdW5jdGlvbihbJ2RhdGFDb250ZXh0JywgLi4uT2JqZWN0LmtleXMoYWRkaXRpb25hbEhlbHBlclZhcmlhYmxlcyldLCBgd2l0aChkYXRhQ29udGV4dCkgeyAke2V4cHJlc3Npb259IH1gKShkYXRhQ29udGV4dCwgLi4uT2JqZWN0LnZhbHVlcyhhZGRpdGlvbmFsSGVscGVyVmFyaWFibGVzKSkpO1xuICAgIH0sIHtcbiAgICAgIGVsLFxuICAgICAgZXhwcmVzc2lvblxuICAgIH0pO1xuICB9XG4gIGNvbnN0IHhBdHRyUkUgPSAvXngtKG9ufGJpbmR8ZGF0YXx0ZXh0fGh0bWx8bW9kZWx8aWZ8Zm9yfHNob3d8Y2xvYWt8dHJhbnNpdGlvbnxyZWZ8c3ByZWFkKVxcYi87XG4gIGZ1bmN0aW9uIGlzWEF0dHIoYXR0cikge1xuICAgIGNvbnN0IG5hbWUgPSByZXBsYWNlQXRBbmRDb2xvbldpdGhTdGFuZGFyZFN5bnRheChhdHRyLm5hbWUpO1xuICAgIHJldHVybiB4QXR0clJFLnRlc3QobmFtZSk7XG4gIH1cbiAgZnVuY3Rpb24gZ2V0WEF0dHJzKGVsLCBjb21wb25lbnQsIHR5cGUpIHtcbiAgICBsZXQgZGlyZWN0aXZlcyA9IEFycmF5LmZyb20oZWwuYXR0cmlidXRlcykuZmlsdGVyKGlzWEF0dHIpLm1hcChwYXJzZUh0bWxBdHRyaWJ1dGUpOyAvLyBHZXQgYW4gb2JqZWN0IG9mIGRpcmVjdGl2ZXMgZnJvbSB4LXNwcmVhZC5cblxuICAgIGxldCBzcHJlYWREaXJlY3RpdmUgPSBkaXJlY3RpdmVzLmZpbHRlcihkaXJlY3RpdmUgPT4gZGlyZWN0aXZlLnR5cGUgPT09ICdzcHJlYWQnKVswXTtcblxuICAgIGlmIChzcHJlYWREaXJlY3RpdmUpIHtcbiAgICAgIGxldCBzcHJlYWRPYmplY3QgPSBzYWZlckV2YWwoZWwsIHNwcmVhZERpcmVjdGl2ZS5leHByZXNzaW9uLCBjb21wb25lbnQuJGRhdGEpOyAvLyBBZGQgeC1zcHJlYWQgZGlyZWN0aXZlcyB0byB0aGUgcGlsZSBvZiBleGlzdGluZyBkaXJlY3RpdmVzLlxuXG4gICAgICBkaXJlY3RpdmVzID0gZGlyZWN0aXZlcy5jb25jYXQoT2JqZWN0LmVudHJpZXMoc3ByZWFkT2JqZWN0KS5tYXAoKFtuYW1lLCB2YWx1ZV0pID0+IHBhcnNlSHRtbEF0dHJpYnV0ZSh7XG4gICAgICAgIG5hbWUsXG4gICAgICAgIHZhbHVlXG4gICAgICB9KSkpO1xuICAgIH1cblxuICAgIGlmICh0eXBlKSByZXR1cm4gZGlyZWN0aXZlcy5maWx0ZXIoaSA9PiBpLnR5cGUgPT09IHR5cGUpO1xuICAgIHJldHVybiBzb3J0RGlyZWN0aXZlcyhkaXJlY3RpdmVzKTtcbiAgfVxuXG4gIGZ1bmN0aW9uIHNvcnREaXJlY3RpdmVzKGRpcmVjdGl2ZXMpIHtcbiAgICBsZXQgZGlyZWN0aXZlT3JkZXIgPSBbJ2JpbmQnLCAnbW9kZWwnLCAnc2hvdycsICdjYXRjaC1hbGwnXTtcbiAgICByZXR1cm4gZGlyZWN0aXZlcy5zb3J0KChhLCBiKSA9PiB7XG4gICAgICBsZXQgdHlwZUEgPSBkaXJlY3RpdmVPcmRlci5pbmRleE9mKGEudHlwZSkgPT09IC0xID8gJ2NhdGNoLWFsbCcgOiBhLnR5cGU7XG4gICAgICBsZXQgdHlwZUIgPSBkaXJlY3RpdmVPcmRlci5pbmRleE9mKGIudHlwZSkgPT09IC0xID8gJ2NhdGNoLWFsbCcgOiBiLnR5cGU7XG4gICAgICByZXR1cm4gZGlyZWN0aXZlT3JkZXIuaW5kZXhPZih0eXBlQSkgLSBkaXJlY3RpdmVPcmRlci5pbmRleE9mKHR5cGVCKTtcbiAgICB9KTtcbiAgfVxuXG4gIGZ1bmN0aW9uIHBhcnNlSHRtbEF0dHJpYnV0ZSh7XG4gICAgbmFtZSxcbiAgICB2YWx1ZVxuICB9KSB7XG4gICAgY29uc3Qgbm9ybWFsaXplZE5hbWUgPSByZXBsYWNlQXRBbmRDb2xvbldpdGhTdGFuZGFyZFN5bnRheChuYW1lKTtcbiAgICBjb25zdCB0eXBlTWF0Y2ggPSBub3JtYWxpemVkTmFtZS5tYXRjaCh4QXR0clJFKTtcbiAgICBjb25zdCB2YWx1ZU1hdGNoID0gbm9ybWFsaXplZE5hbWUubWF0Y2goLzooW2EtekEtWjAtOVxcLTpdKykvKTtcbiAgICBjb25zdCBtb2RpZmllcnMgPSBub3JtYWxpemVkTmFtZS5tYXRjaCgvXFwuW14uXFxdXSsoPz1bXlxcXV0qJCkvZykgfHwgW107XG4gICAgcmV0dXJuIHtcbiAgICAgIHR5cGU6IHR5cGVNYXRjaCA/IHR5cGVNYXRjaFsxXSA6IG51bGwsXG4gICAgICB2YWx1ZTogdmFsdWVNYXRjaCA/IHZhbHVlTWF0Y2hbMV0gOiBudWxsLFxuICAgICAgbW9kaWZpZXJzOiBtb2RpZmllcnMubWFwKGkgPT4gaS5yZXBsYWNlKCcuJywgJycpKSxcbiAgICAgIGV4cHJlc3Npb246IHZhbHVlXG4gICAgfTtcbiAgfVxuICBmdW5jdGlvbiBpc0Jvb2xlYW5BdHRyKGF0dHJOYW1lKSB7XG4gICAgLy8gQXMgcGVyIEhUTUwgc3BlYyB0YWJsZSBodHRwczovL2h0bWwuc3BlYy53aGF0d2cub3JnL211bHRpcGFnZS9pbmRpY2VzLmh0bWwjYXR0cmlidXRlcy0zOmJvb2xlYW4tYXR0cmlidXRlXG4gICAgLy8gQXJyYXkgcm91Z2hseSBvcmRlcmVkIGJ5IGVzdGltYXRlZCB1c2FnZVxuICAgIGNvbnN0IGJvb2xlYW5BdHRyaWJ1dGVzID0gWydkaXNhYmxlZCcsICdjaGVja2VkJywgJ3JlcXVpcmVkJywgJ3JlYWRvbmx5JywgJ2hpZGRlbicsICdvcGVuJywgJ3NlbGVjdGVkJywgJ2F1dG9mb2N1cycsICdpdGVtc2NvcGUnLCAnbXVsdGlwbGUnLCAnbm92YWxpZGF0ZScsICdhbGxvd2Z1bGxzY3JlZW4nLCAnYWxsb3dwYXltZW50cmVxdWVzdCcsICdmb3Jtbm92YWxpZGF0ZScsICdhdXRvcGxheScsICdjb250cm9scycsICdsb29wJywgJ211dGVkJywgJ3BsYXlzaW5saW5lJywgJ2RlZmF1bHQnLCAnaXNtYXAnLCAncmV2ZXJzZWQnLCAnYXN5bmMnLCAnZGVmZXInLCAnbm9tb2R1bGUnXTtcbiAgICByZXR1cm4gYm9vbGVhbkF0dHJpYnV0ZXMuaW5jbHVkZXMoYXR0ck5hbWUpO1xuICB9XG4gIGZ1bmN0aW9uIHJlcGxhY2VBdEFuZENvbG9uV2l0aFN0YW5kYXJkU3ludGF4KG5hbWUpIHtcbiAgICBpZiAobmFtZS5zdGFydHNXaXRoKCdAJykpIHtcbiAgICAgIHJldHVybiBuYW1lLnJlcGxhY2UoJ0AnLCAneC1vbjonKTtcbiAgICB9IGVsc2UgaWYgKG5hbWUuc3RhcnRzV2l0aCgnOicpKSB7XG4gICAgICByZXR1cm4gbmFtZS5yZXBsYWNlKCc6JywgJ3gtYmluZDonKTtcbiAgICB9XG5cbiAgICByZXR1cm4gbmFtZTtcbiAgfVxuICBmdW5jdGlvbiBjb252ZXJ0Q2xhc3NTdHJpbmdUb0FycmF5KGNsYXNzTGlzdCwgZmlsdGVyRm4gPSBCb29sZWFuKSB7XG4gICAgcmV0dXJuIGNsYXNzTGlzdC5zcGxpdCgnICcpLmZpbHRlcihmaWx0ZXJGbik7XG4gIH1cbiAgY29uc3QgVFJBTlNJVElPTl9UWVBFX0lOID0gJ2luJztcbiAgY29uc3QgVFJBTlNJVElPTl9UWVBFX09VVCA9ICdvdXQnO1xuICBjb25zdCBUUkFOU0lUSU9OX0NBTkNFTExFRCA9ICdjYW5jZWxsZWQnO1xuICBmdW5jdGlvbiB0cmFuc2l0aW9uSW4oZWwsIHNob3csIHJlamVjdCwgY29tcG9uZW50LCBmb3JjZVNraXAgPSBmYWxzZSkge1xuICAgIC8vIFdlIGRvbid0IHdhbnQgdG8gdHJhbnNpdGlvbiBvbiB0aGUgaW5pdGlhbCBwYWdlIGxvYWQuXG4gICAgaWYgKGZvcmNlU2tpcCkgcmV0dXJuIHNob3coKTtcblxuICAgIGlmIChlbC5fX3hfdHJhbnNpdGlvbiAmJiBlbC5fX3hfdHJhbnNpdGlvbi50eXBlID09PSBUUkFOU0lUSU9OX1RZUEVfSU4pIHtcbiAgICAgIC8vIHRoZXJlIGlzIGFscmVhZHkgYSBzaW1pbGFyIHRyYW5zaXRpb24gZ29pbmcgb24sIHRoaXMgd2FzIHByb2JhYmx5IHRyaWdnZXJlZCBieVxuICAgICAgLy8gYSBjaGFuZ2UgaW4gYSBkaWZmZXJlbnQgcHJvcGVydHksIGxldCdzIGp1c3QgbGVhdmUgdGhlIHByZXZpb3VzIG9uZSBkb2luZyBpdHMgam9iXG4gICAgICByZXR1cm47XG4gICAgfVxuXG4gICAgY29uc3QgYXR0cnMgPSBnZXRYQXR0cnMoZWwsIGNvbXBvbmVudCwgJ3RyYW5zaXRpb24nKTtcbiAgICBjb25zdCBzaG93QXR0ciA9IGdldFhBdHRycyhlbCwgY29tcG9uZW50LCAnc2hvdycpWzBdOyAvLyBJZiB0aGlzIGlzIHRyaWdnZXJlZCBieSBhIHgtc2hvdy50cmFuc2l0aW9uLlxuXG4gICAgaWYgKHNob3dBdHRyICYmIHNob3dBdHRyLm1vZGlmaWVycy5pbmNsdWRlcygndHJhbnNpdGlvbicpKSB7XG4gICAgICBsZXQgbW9kaWZpZXJzID0gc2hvd0F0dHIubW9kaWZpZXJzOyAvLyBJZiB4LXNob3cudHJhbnNpdGlvbi5vdXQsIHdlJ2xsIHNraXAgdGhlIFwiaW5cIiB0cmFuc2l0aW9uLlxuXG4gICAgICBpZiAobW9kaWZpZXJzLmluY2x1ZGVzKCdvdXQnKSAmJiAhbW9kaWZpZXJzLmluY2x1ZGVzKCdpbicpKSByZXR1cm4gc2hvdygpO1xuICAgICAgY29uc3Qgc2V0dGluZ0JvdGhTaWRlc09mVHJhbnNpdGlvbiA9IG1vZGlmaWVycy5pbmNsdWRlcygnaW4nKSAmJiBtb2RpZmllcnMuaW5jbHVkZXMoJ291dCcpOyAvLyBJZiB4LXNob3cudHJhbnNpdGlvbi5pbi4uLm91dC4uLiBvbmx5IHVzZSBcImluXCIgcmVsYXRlZCBtb2RpZmllcnMgZm9yIHRoaXMgdHJhbnNpdGlvbi5cblxuICAgICAgbW9kaWZpZXJzID0gc2V0dGluZ0JvdGhTaWRlc09mVHJhbnNpdGlvbiA/IG1vZGlmaWVycy5maWx0ZXIoKGksIGluZGV4KSA9PiBpbmRleCA8IG1vZGlmaWVycy5pbmRleE9mKCdvdXQnKSkgOiBtb2RpZmllcnM7XG4gICAgICB0cmFuc2l0aW9uSGVscGVySW4oZWwsIG1vZGlmaWVycywgc2hvdywgcmVqZWN0KTsgLy8gT3RoZXJ3aXNlLCB3ZSBjYW4gYXNzdW1lIHgtdHJhbnNpdGlvbjplbnRlci5cbiAgICB9IGVsc2UgaWYgKGF0dHJzLnNvbWUoYXR0ciA9PiBbJ2VudGVyJywgJ2VudGVyLXN0YXJ0JywgJ2VudGVyLWVuZCddLmluY2x1ZGVzKGF0dHIudmFsdWUpKSkge1xuICAgICAgdHJhbnNpdGlvbkNsYXNzZXNJbihlbCwgY29tcG9uZW50LCBhdHRycywgc2hvdywgcmVqZWN0KTtcbiAgICB9IGVsc2Uge1xuICAgICAgLy8gSWYgbmVpdGhlciwganVzdCBzaG93IHRoYXQgZGFtbiB0aGluZy5cbiAgICAgIHNob3coKTtcbiAgICB9XG4gIH1cbiAgZnVuY3Rpb24gdHJhbnNpdGlvbk91dChlbCwgaGlkZSwgcmVqZWN0LCBjb21wb25lbnQsIGZvcmNlU2tpcCA9IGZhbHNlKSB7XG4gICAgLy8gV2UgZG9uJ3Qgd2FudCB0byB0cmFuc2l0aW9uIG9uIHRoZSBpbml0aWFsIHBhZ2UgbG9hZC5cbiAgICBpZiAoZm9yY2VTa2lwKSByZXR1cm4gaGlkZSgpO1xuXG4gICAgaWYgKGVsLl9feF90cmFuc2l0aW9uICYmIGVsLl9feF90cmFuc2l0aW9uLnR5cGUgPT09IFRSQU5TSVRJT05fVFlQRV9PVVQpIHtcbiAgICAgIC8vIHRoZXJlIGlzIGFscmVhZHkgYSBzaW1pbGFyIHRyYW5zaXRpb24gZ29pbmcgb24sIHRoaXMgd2FzIHByb2JhYmx5IHRyaWdnZXJlZCBieVxuICAgICAgLy8gYSBjaGFuZ2UgaW4gYSBkaWZmZXJlbnQgcHJvcGVydHksIGxldCdzIGp1c3QgbGVhdmUgdGhlIHByZXZpb3VzIG9uZSBkb2luZyBpdHMgam9iXG4gICAgICByZXR1cm47XG4gICAgfVxuXG4gICAgY29uc3QgYXR0cnMgPSBnZXRYQXR0cnMoZWwsIGNvbXBvbmVudCwgJ3RyYW5zaXRpb24nKTtcbiAgICBjb25zdCBzaG93QXR0ciA9IGdldFhBdHRycyhlbCwgY29tcG9uZW50LCAnc2hvdycpWzBdO1xuXG4gICAgaWYgKHNob3dBdHRyICYmIHNob3dBdHRyLm1vZGlmaWVycy5pbmNsdWRlcygndHJhbnNpdGlvbicpKSB7XG4gICAgICBsZXQgbW9kaWZpZXJzID0gc2hvd0F0dHIubW9kaWZpZXJzO1xuICAgICAgaWYgKG1vZGlmaWVycy5pbmNsdWRlcygnaW4nKSAmJiAhbW9kaWZpZXJzLmluY2x1ZGVzKCdvdXQnKSkgcmV0dXJuIGhpZGUoKTtcbiAgICAgIGNvbnN0IHNldHRpbmdCb3RoU2lkZXNPZlRyYW5zaXRpb24gPSBtb2RpZmllcnMuaW5jbHVkZXMoJ2luJykgJiYgbW9kaWZpZXJzLmluY2x1ZGVzKCdvdXQnKTtcbiAgICAgIG1vZGlmaWVycyA9IHNldHRpbmdCb3RoU2lkZXNPZlRyYW5zaXRpb24gPyBtb2RpZmllcnMuZmlsdGVyKChpLCBpbmRleCkgPT4gaW5kZXggPiBtb2RpZmllcnMuaW5kZXhPZignb3V0JykpIDogbW9kaWZpZXJzO1xuICAgICAgdHJhbnNpdGlvbkhlbHBlck91dChlbCwgbW9kaWZpZXJzLCBzZXR0aW5nQm90aFNpZGVzT2ZUcmFuc2l0aW9uLCBoaWRlLCByZWplY3QpO1xuICAgIH0gZWxzZSBpZiAoYXR0cnMuc29tZShhdHRyID0+IFsnbGVhdmUnLCAnbGVhdmUtc3RhcnQnLCAnbGVhdmUtZW5kJ10uaW5jbHVkZXMoYXR0ci52YWx1ZSkpKSB7XG4gICAgICB0cmFuc2l0aW9uQ2xhc3Nlc091dChlbCwgY29tcG9uZW50LCBhdHRycywgaGlkZSwgcmVqZWN0KTtcbiAgICB9IGVsc2Uge1xuICAgICAgaGlkZSgpO1xuICAgIH1cbiAgfVxuICBmdW5jdGlvbiB0cmFuc2l0aW9uSGVscGVySW4oZWwsIG1vZGlmaWVycywgc2hvd0NhbGxiYWNrLCByZWplY3QpIHtcbiAgICAvLyBEZWZhdWx0IHZhbHVlcyBpbnNwaXJlZCBieTogaHR0cHM6Ly9tYXRlcmlhbC5pby9kZXNpZ24vbW90aW9uL3NwZWVkLmh0bWwjZHVyYXRpb25cbiAgICBjb25zdCBzdHlsZVZhbHVlcyA9IHtcbiAgICAgIGR1cmF0aW9uOiBtb2RpZmllclZhbHVlKG1vZGlmaWVycywgJ2R1cmF0aW9uJywgMTUwKSxcbiAgICAgIG9yaWdpbjogbW9kaWZpZXJWYWx1ZShtb2RpZmllcnMsICdvcmlnaW4nLCAnY2VudGVyJyksXG4gICAgICBmaXJzdDoge1xuICAgICAgICBvcGFjaXR5OiAwLFxuICAgICAgICBzY2FsZTogbW9kaWZpZXJWYWx1ZShtb2RpZmllcnMsICdzY2FsZScsIDk1KVxuICAgICAgfSxcbiAgICAgIHNlY29uZDoge1xuICAgICAgICBvcGFjaXR5OiAxLFxuICAgICAgICBzY2FsZTogMTAwXG4gICAgICB9XG4gICAgfTtcbiAgICB0cmFuc2l0aW9uSGVscGVyKGVsLCBtb2RpZmllcnMsIHNob3dDYWxsYmFjaywgKCkgPT4ge30sIHJlamVjdCwgc3R5bGVWYWx1ZXMsIFRSQU5TSVRJT05fVFlQRV9JTik7XG4gIH1cbiAgZnVuY3Rpb24gdHJhbnNpdGlvbkhlbHBlck91dChlbCwgbW9kaWZpZXJzLCBzZXR0aW5nQm90aFNpZGVzT2ZUcmFuc2l0aW9uLCBoaWRlQ2FsbGJhY2ssIHJlamVjdCkge1xuICAgIC8vIE1ha2UgdGhlIFwib3V0XCIgdHJhbnNpdGlvbiAuNXggc2xvd2VyIHRoYW4gdGhlIFwiaW5cIi4gKFZpc3VhbGx5IGJldHRlcilcbiAgICAvLyBIT1dFVkVSLCBpZiB0aGV5IGV4cGxpY2l0bHkgc2V0IGEgZHVyYXRpb24gZm9yIHRoZSBcIm91dFwiIHRyYW5zaXRpb24sXG4gICAgLy8gdXNlIHRoYXQuXG4gICAgY29uc3QgZHVyYXRpb24gPSBzZXR0aW5nQm90aFNpZGVzT2ZUcmFuc2l0aW9uID8gbW9kaWZpZXJWYWx1ZShtb2RpZmllcnMsICdkdXJhdGlvbicsIDE1MCkgOiBtb2RpZmllclZhbHVlKG1vZGlmaWVycywgJ2R1cmF0aW9uJywgMTUwKSAvIDI7XG4gICAgY29uc3Qgc3R5bGVWYWx1ZXMgPSB7XG4gICAgICBkdXJhdGlvbjogZHVyYXRpb24sXG4gICAgICBvcmlnaW46IG1vZGlmaWVyVmFsdWUobW9kaWZpZXJzLCAnb3JpZ2luJywgJ2NlbnRlcicpLFxuICAgICAgZmlyc3Q6IHtcbiAgICAgICAgb3BhY2l0eTogMSxcbiAgICAgICAgc2NhbGU6IDEwMFxuICAgICAgfSxcbiAgICAgIHNlY29uZDoge1xuICAgICAgICBvcGFjaXR5OiAwLFxuICAgICAgICBzY2FsZTogbW9kaWZpZXJWYWx1ZShtb2RpZmllcnMsICdzY2FsZScsIDk1KVxuICAgICAgfVxuICAgIH07XG4gICAgdHJhbnNpdGlvbkhlbHBlcihlbCwgbW9kaWZpZXJzLCAoKSA9PiB7fSwgaGlkZUNhbGxiYWNrLCByZWplY3QsIHN0eWxlVmFsdWVzLCBUUkFOU0lUSU9OX1RZUEVfT1VUKTtcbiAgfVxuXG4gIGZ1bmN0aW9uIG1vZGlmaWVyVmFsdWUobW9kaWZpZXJzLCBrZXksIGZhbGxiYWNrKSB7XG4gICAgLy8gSWYgdGhlIG1vZGlmaWVyIGlzbid0IHByZXNlbnQsIHVzZSB0aGUgZGVmYXVsdC5cbiAgICBpZiAobW9kaWZpZXJzLmluZGV4T2Yoa2V5KSA9PT0gLTEpIHJldHVybiBmYWxsYmFjazsgLy8gSWYgaXQgSVMgcHJlc2VudCwgZ3JhYiB0aGUgdmFsdWUgYWZ0ZXIgaXQ6IHgtc2hvdy50cmFuc2l0aW9uLmR1cmF0aW9uLjUwMG1zXG5cbiAgICBjb25zdCByYXdWYWx1ZSA9IG1vZGlmaWVyc1ttb2RpZmllcnMuaW5kZXhPZihrZXkpICsgMV07XG4gICAgaWYgKCFyYXdWYWx1ZSkgcmV0dXJuIGZhbGxiYWNrO1xuXG4gICAgaWYgKGtleSA9PT0gJ3NjYWxlJykge1xuICAgICAgLy8gQ2hlY2sgaWYgdGhlIHZlcnkgbmV4dCB2YWx1ZSBpcyBOT1QgYSBudW1iZXIgYW5kIHJldHVybiB0aGUgZmFsbGJhY2suXG4gICAgICAvLyBJZiB4LXNob3cudHJhbnNpdGlvbi5zY2FsZSwgd2UnbGwgdXNlIHRoZSBkZWZhdWx0IHNjYWxlIHZhbHVlLlxuICAgICAgLy8gVGhhdCBpcyBob3cgYSB1c2VyIG9wdHMgb3V0IG9mIHRoZSBvcGFjaXR5IHRyYW5zaXRpb24uXG4gICAgICBpZiAoIWlzTnVtZXJpYyhyYXdWYWx1ZSkpIHJldHVybiBmYWxsYmFjaztcbiAgICB9XG5cbiAgICBpZiAoa2V5ID09PSAnZHVyYXRpb24nKSB7XG4gICAgICAvLyBTdXBwb3J0IHgtc2hvdy50cmFuc2l0aW9uLmR1cmF0aW9uLjUwMG1zICYmIGR1cmF0aW9uLjUwMFxuICAgICAgbGV0IG1hdGNoID0gcmF3VmFsdWUubWF0Y2goLyhbMC05XSspbXMvKTtcbiAgICAgIGlmIChtYXRjaCkgcmV0dXJuIG1hdGNoWzFdO1xuICAgIH1cblxuICAgIGlmIChrZXkgPT09ICdvcmlnaW4nKSB7XG4gICAgICAvLyBTdXBwb3J0IGNoYWluaW5nIG9yaWdpbiBkaXJlY3Rpb25zOiB4LXNob3cudHJhbnNpdGlvbi50b3AucmlnaHRcbiAgICAgIGlmIChbJ3RvcCcsICdyaWdodCcsICdsZWZ0JywgJ2NlbnRlcicsICdib3R0b20nXS5pbmNsdWRlcyhtb2RpZmllcnNbbW9kaWZpZXJzLmluZGV4T2Yoa2V5KSArIDJdKSkge1xuICAgICAgICByZXR1cm4gW3Jhd1ZhbHVlLCBtb2RpZmllcnNbbW9kaWZpZXJzLmluZGV4T2Yoa2V5KSArIDJdXS5qb2luKCcgJyk7XG4gICAgICB9XG4gICAgfVxuXG4gICAgcmV0dXJuIHJhd1ZhbHVlO1xuICB9XG5cbiAgZnVuY3Rpb24gdHJhbnNpdGlvbkhlbHBlcihlbCwgbW9kaWZpZXJzLCBob29rMSwgaG9vazIsIHJlamVjdCwgc3R5bGVWYWx1ZXMsIHR5cGUpIHtcbiAgICAvLyBjbGVhciB0aGUgcHJldmlvdXMgdHJhbnNpdGlvbiBpZiBleGlzdHMgdG8gYXZvaWQgY2FjaGluZyB0aGUgd3Jvbmcgc3R5bGVzXG4gICAgaWYgKGVsLl9feF90cmFuc2l0aW9uKSB7XG4gICAgICBlbC5fX3hfdHJhbnNpdGlvbi5jYW5jZWwgJiYgZWwuX194X3RyYW5zaXRpb24uY2FuY2VsKCk7XG4gICAgfSAvLyBJZiB0aGUgdXNlciBzZXQgdGhlc2Ugc3R5bGUgdmFsdWVzLCB3ZSdsbCBwdXQgdGhlbSBiYWNrIHdoZW4gd2UncmUgZG9uZSB3aXRoIHRoZW0uXG5cblxuICAgIGNvbnN0IG9wYWNpdHlDYWNoZSA9IGVsLnN0eWxlLm9wYWNpdHk7XG4gICAgY29uc3QgdHJhbnNmb3JtQ2FjaGUgPSBlbC5zdHlsZS50cmFuc2Zvcm07XG4gICAgY29uc3QgdHJhbnNmb3JtT3JpZ2luQ2FjaGUgPSBlbC5zdHlsZS50cmFuc2Zvcm1PcmlnaW47IC8vIElmIG5vIG1vZGlmaWVycyBhcmUgcHJlc2VudDogeC1zaG93LnRyYW5zaXRpb24sIHdlJ2xsIGRlZmF1bHQgdG8gYm90aCBvcGFjaXR5IGFuZCBzY2FsZS5cblxuICAgIGNvbnN0IG5vTW9kaWZpZXJzID0gIW1vZGlmaWVycy5pbmNsdWRlcygnb3BhY2l0eScpICYmICFtb2RpZmllcnMuaW5jbHVkZXMoJ3NjYWxlJyk7XG4gICAgY29uc3QgdHJhbnNpdGlvbk9wYWNpdHkgPSBub01vZGlmaWVycyB8fCBtb2RpZmllcnMuaW5jbHVkZXMoJ29wYWNpdHknKTtcbiAgICBjb25zdCB0cmFuc2l0aW9uU2NhbGUgPSBub01vZGlmaWVycyB8fCBtb2RpZmllcnMuaW5jbHVkZXMoJ3NjYWxlJyk7IC8vIFRoZXNlIGFyZSB0aGUgZXhwbGljaXQgc3RhZ2VzIG9mIGEgdHJhbnNpdGlvbiAoc2FtZSBzdGFnZXMgZm9yIGluIGFuZCBmb3Igb3V0KS5cbiAgICAvLyBUaGlzIHdheSB5b3UgY2FuIGdldCBhIGJpcmRzIGV5ZSB2aWV3IG9mIHRoZSBob29rcywgYW5kIHRoZSBkaWZmZXJlbmNlc1xuICAgIC8vIGJldHdlZW4gdGhlbS5cblxuICAgIGNvbnN0IHN0YWdlcyA9IHtcbiAgICAgIHN0YXJ0KCkge1xuICAgICAgICBpZiAodHJhbnNpdGlvbk9wYWNpdHkpIGVsLnN0eWxlLm9wYWNpdHkgPSBzdHlsZVZhbHVlcy5maXJzdC5vcGFjaXR5O1xuICAgICAgICBpZiAodHJhbnNpdGlvblNjYWxlKSBlbC5zdHlsZS50cmFuc2Zvcm0gPSBgc2NhbGUoJHtzdHlsZVZhbHVlcy5maXJzdC5zY2FsZSAvIDEwMH0pYDtcbiAgICAgIH0sXG5cbiAgICAgIGR1cmluZygpIHtcbiAgICAgICAgaWYgKHRyYW5zaXRpb25TY2FsZSkgZWwuc3R5bGUudHJhbnNmb3JtT3JpZ2luID0gc3R5bGVWYWx1ZXMub3JpZ2luO1xuICAgICAgICBlbC5zdHlsZS50cmFuc2l0aW9uUHJvcGVydHkgPSBbdHJhbnNpdGlvbk9wYWNpdHkgPyBgb3BhY2l0eWAgOiBgYCwgdHJhbnNpdGlvblNjYWxlID8gYHRyYW5zZm9ybWAgOiBgYF0uam9pbignICcpLnRyaW0oKTtcbiAgICAgICAgZWwuc3R5bGUudHJhbnNpdGlvbkR1cmF0aW9uID0gYCR7c3R5bGVWYWx1ZXMuZHVyYXRpb24gLyAxMDAwfXNgO1xuICAgICAgICBlbC5zdHlsZS50cmFuc2l0aW9uVGltaW5nRnVuY3Rpb24gPSBgY3ViaWMtYmV6aWVyKDAuNCwgMC4wLCAwLjIsIDEpYDtcbiAgICAgIH0sXG5cbiAgICAgIHNob3coKSB7XG4gICAgICAgIGhvb2sxKCk7XG4gICAgICB9LFxuXG4gICAgICBlbmQoKSB7XG4gICAgICAgIGlmICh0cmFuc2l0aW9uT3BhY2l0eSkgZWwuc3R5bGUub3BhY2l0eSA9IHN0eWxlVmFsdWVzLnNlY29uZC5vcGFjaXR5O1xuICAgICAgICBpZiAodHJhbnNpdGlvblNjYWxlKSBlbC5zdHlsZS50cmFuc2Zvcm0gPSBgc2NhbGUoJHtzdHlsZVZhbHVlcy5zZWNvbmQuc2NhbGUgLyAxMDB9KWA7XG4gICAgICB9LFxuXG4gICAgICBoaWRlKCkge1xuICAgICAgICBob29rMigpO1xuICAgICAgfSxcblxuICAgICAgY2xlYW51cCgpIHtcbiAgICAgICAgaWYgKHRyYW5zaXRpb25PcGFjaXR5KSBlbC5zdHlsZS5vcGFjaXR5ID0gb3BhY2l0eUNhY2hlO1xuICAgICAgICBpZiAodHJhbnNpdGlvblNjYWxlKSBlbC5zdHlsZS50cmFuc2Zvcm0gPSB0cmFuc2Zvcm1DYWNoZTtcbiAgICAgICAgaWYgKHRyYW5zaXRpb25TY2FsZSkgZWwuc3R5bGUudHJhbnNmb3JtT3JpZ2luID0gdHJhbnNmb3JtT3JpZ2luQ2FjaGU7XG4gICAgICAgIGVsLnN0eWxlLnRyYW5zaXRpb25Qcm9wZXJ0eSA9IG51bGw7XG4gICAgICAgIGVsLnN0eWxlLnRyYW5zaXRpb25EdXJhdGlvbiA9IG51bGw7XG4gICAgICAgIGVsLnN0eWxlLnRyYW5zaXRpb25UaW1pbmdGdW5jdGlvbiA9IG51bGw7XG4gICAgICB9XG5cbiAgICB9O1xuICAgIHRyYW5zaXRpb24oZWwsIHN0YWdlcywgdHlwZSwgcmVqZWN0KTtcbiAgfVxuXG4gIGNvbnN0IGVuc3VyZVN0cmluZ0V4cHJlc3Npb24gPSAoZXhwcmVzc2lvbiwgZWwsIGNvbXBvbmVudCkgPT4ge1xuICAgIHJldHVybiB0eXBlb2YgZXhwcmVzc2lvbiA9PT0gJ2Z1bmN0aW9uJyA/IGNvbXBvbmVudC5ldmFsdWF0ZVJldHVybkV4cHJlc3Npb24oZWwsIGV4cHJlc3Npb24pIDogZXhwcmVzc2lvbjtcbiAgfTtcblxuICBmdW5jdGlvbiB0cmFuc2l0aW9uQ2xhc3Nlc0luKGVsLCBjb21wb25lbnQsIGRpcmVjdGl2ZXMsIHNob3dDYWxsYmFjaywgcmVqZWN0KSB7XG4gICAgY29uc3QgZW50ZXIgPSBjb252ZXJ0Q2xhc3NTdHJpbmdUb0FycmF5KGVuc3VyZVN0cmluZ0V4cHJlc3Npb24oKGRpcmVjdGl2ZXMuZmluZChpID0+IGkudmFsdWUgPT09ICdlbnRlcicpIHx8IHtcbiAgICAgIGV4cHJlc3Npb246ICcnXG4gICAgfSkuZXhwcmVzc2lvbiwgZWwsIGNvbXBvbmVudCkpO1xuICAgIGNvbnN0IGVudGVyU3RhcnQgPSBjb252ZXJ0Q2xhc3NTdHJpbmdUb0FycmF5KGVuc3VyZVN0cmluZ0V4cHJlc3Npb24oKGRpcmVjdGl2ZXMuZmluZChpID0+IGkudmFsdWUgPT09ICdlbnRlci1zdGFydCcpIHx8IHtcbiAgICAgIGV4cHJlc3Npb246ICcnXG4gICAgfSkuZXhwcmVzc2lvbiwgZWwsIGNvbXBvbmVudCkpO1xuICAgIGNvbnN0IGVudGVyRW5kID0gY29udmVydENsYXNzU3RyaW5nVG9BcnJheShlbnN1cmVTdHJpbmdFeHByZXNzaW9uKChkaXJlY3RpdmVzLmZpbmQoaSA9PiBpLnZhbHVlID09PSAnZW50ZXItZW5kJykgfHwge1xuICAgICAgZXhwcmVzc2lvbjogJydcbiAgICB9KS5leHByZXNzaW9uLCBlbCwgY29tcG9uZW50KSk7XG4gICAgdHJhbnNpdGlvbkNsYXNzZXMoZWwsIGVudGVyLCBlbnRlclN0YXJ0LCBlbnRlckVuZCwgc2hvd0NhbGxiYWNrLCAoKSA9PiB7fSwgVFJBTlNJVElPTl9UWVBFX0lOLCByZWplY3QpO1xuICB9XG4gIGZ1bmN0aW9uIHRyYW5zaXRpb25DbGFzc2VzT3V0KGVsLCBjb21wb25lbnQsIGRpcmVjdGl2ZXMsIGhpZGVDYWxsYmFjaywgcmVqZWN0KSB7XG4gICAgY29uc3QgbGVhdmUgPSBjb252ZXJ0Q2xhc3NTdHJpbmdUb0FycmF5KGVuc3VyZVN0cmluZ0V4cHJlc3Npb24oKGRpcmVjdGl2ZXMuZmluZChpID0+IGkudmFsdWUgPT09ICdsZWF2ZScpIHx8IHtcbiAgICAgIGV4cHJlc3Npb246ICcnXG4gICAgfSkuZXhwcmVzc2lvbiwgZWwsIGNvbXBvbmVudCkpO1xuICAgIGNvbnN0IGxlYXZlU3RhcnQgPSBjb252ZXJ0Q2xhc3NTdHJpbmdUb0FycmF5KGVuc3VyZVN0cmluZ0V4cHJlc3Npb24oKGRpcmVjdGl2ZXMuZmluZChpID0+IGkudmFsdWUgPT09ICdsZWF2ZS1zdGFydCcpIHx8IHtcbiAgICAgIGV4cHJlc3Npb246ICcnXG4gICAgfSkuZXhwcmVzc2lvbiwgZWwsIGNvbXBvbmVudCkpO1xuICAgIGNvbnN0IGxlYXZlRW5kID0gY29udmVydENsYXNzU3RyaW5nVG9BcnJheShlbnN1cmVTdHJpbmdFeHByZXNzaW9uKChkaXJlY3RpdmVzLmZpbmQoaSA9PiBpLnZhbHVlID09PSAnbGVhdmUtZW5kJykgfHwge1xuICAgICAgZXhwcmVzc2lvbjogJydcbiAgICB9KS5leHByZXNzaW9uLCBlbCwgY29tcG9uZW50KSk7XG4gICAgdHJhbnNpdGlvbkNsYXNzZXMoZWwsIGxlYXZlLCBsZWF2ZVN0YXJ0LCBsZWF2ZUVuZCwgKCkgPT4ge30sIGhpZGVDYWxsYmFjaywgVFJBTlNJVElPTl9UWVBFX09VVCwgcmVqZWN0KTtcbiAgfVxuICBmdW5jdGlvbiB0cmFuc2l0aW9uQ2xhc3NlcyhlbCwgY2xhc3Nlc0R1cmluZywgY2xhc3Nlc1N0YXJ0LCBjbGFzc2VzRW5kLCBob29rMSwgaG9vazIsIHR5cGUsIHJlamVjdCkge1xuICAgIC8vIGNsZWFyIHRoZSBwcmV2aW91cyB0cmFuc2l0aW9uIGlmIGV4aXN0cyB0byBhdm9pZCBjYWNoaW5nIHRoZSB3cm9uZyBjbGFzc2VzXG4gICAgaWYgKGVsLl9feF90cmFuc2l0aW9uKSB7XG4gICAgICBlbC5fX3hfdHJhbnNpdGlvbi5jYW5jZWwgJiYgZWwuX194X3RyYW5zaXRpb24uY2FuY2VsKCk7XG4gICAgfVxuXG4gICAgY29uc3Qgb3JpZ2luYWxDbGFzc2VzID0gZWwuX194X29yaWdpbmFsX2NsYXNzZXMgfHwgW107XG4gICAgY29uc3Qgc3RhZ2VzID0ge1xuICAgICAgc3RhcnQoKSB7XG4gICAgICAgIGVsLmNsYXNzTGlzdC5hZGQoLi4uY2xhc3Nlc1N0YXJ0KTtcbiAgICAgIH0sXG5cbiAgICAgIGR1cmluZygpIHtcbiAgICAgICAgZWwuY2xhc3NMaXN0LmFkZCguLi5jbGFzc2VzRHVyaW5nKTtcbiAgICAgIH0sXG5cbiAgICAgIHNob3coKSB7XG4gICAgICAgIGhvb2sxKCk7XG4gICAgICB9LFxuXG4gICAgICBlbmQoKSB7XG4gICAgICAgIC8vIERvbid0IHJlbW92ZSBjbGFzc2VzIHRoYXQgd2VyZSBpbiB0aGUgb3JpZ2luYWwgY2xhc3MgYXR0cmlidXRlLlxuICAgICAgICBlbC5jbGFzc0xpc3QucmVtb3ZlKC4uLmNsYXNzZXNTdGFydC5maWx0ZXIoaSA9PiAhb3JpZ2luYWxDbGFzc2VzLmluY2x1ZGVzKGkpKSk7XG4gICAgICAgIGVsLmNsYXNzTGlzdC5hZGQoLi4uY2xhc3Nlc0VuZCk7XG4gICAgICB9LFxuXG4gICAgICBoaWRlKCkge1xuICAgICAgICBob29rMigpO1xuICAgICAgfSxcblxuICAgICAgY2xlYW51cCgpIHtcbiAgICAgICAgZWwuY2xhc3NMaXN0LnJlbW92ZSguLi5jbGFzc2VzRHVyaW5nLmZpbHRlcihpID0+ICFvcmlnaW5hbENsYXNzZXMuaW5jbHVkZXMoaSkpKTtcbiAgICAgICAgZWwuY2xhc3NMaXN0LnJlbW92ZSguLi5jbGFzc2VzRW5kLmZpbHRlcihpID0+ICFvcmlnaW5hbENsYXNzZXMuaW5jbHVkZXMoaSkpKTtcbiAgICAgIH1cblxuICAgIH07XG4gICAgdHJhbnNpdGlvbihlbCwgc3RhZ2VzLCB0eXBlLCByZWplY3QpO1xuICB9XG4gIGZ1bmN0aW9uIHRyYW5zaXRpb24oZWwsIHN0YWdlcywgdHlwZSwgcmVqZWN0KSB7XG4gICAgY29uc3QgZmluaXNoID0gb25jZSgoKSA9PiB7XG4gICAgICBzdGFnZXMuaGlkZSgpOyAvLyBBZGRpbmcgYW4gXCJpc0Nvbm5lY3RlZFwiIGNoZWNrLCBpbiBjYXNlIHRoZSBjYWxsYmFja1xuICAgICAgLy8gcmVtb3ZlZCB0aGUgZWxlbWVudCBmcm9tIHRoZSBET00uXG5cbiAgICAgIGlmIChlbC5pc0Nvbm5lY3RlZCkge1xuICAgICAgICBzdGFnZXMuY2xlYW51cCgpO1xuICAgICAgfVxuXG4gICAgICBkZWxldGUgZWwuX194X3RyYW5zaXRpb247XG4gICAgfSk7XG4gICAgZWwuX194X3RyYW5zaXRpb24gPSB7XG4gICAgICAvLyBTZXQgdHJhbnNpdGlvbiB0eXBlIHNvIHdlIGNhbiBhdm9pZCBjbGVhcmluZyB0cmFuc2l0aW9uIGlmIHRoZSBkaXJlY3Rpb24gaXMgdGhlIHNhbWVcbiAgICAgIHR5cGU6IHR5cGUsXG4gICAgICAvLyBjcmVhdGUgYSBjYWxsYmFjayBmb3IgdGhlIGxhc3Qgc3RhZ2VzIG9mIHRoZSB0cmFuc2l0aW9uIHNvIHdlIGNhbiBjYWxsIGl0XG4gICAgICAvLyBmcm9tIGRpZmZlcmVudCBwb2ludCBhbmQgZWFybHkgdGVybWluYXRlIGl0LiBPbmNlIHdpbGwgZW5zdXJlIHRoYXQgZnVuY3Rpb25cbiAgICAgIC8vIGlzIG9ubHkgY2FsbGVkIG9uZSB0aW1lLlxuICAgICAgY2FuY2VsOiBvbmNlKCgpID0+IHtcbiAgICAgICAgcmVqZWN0KFRSQU5TSVRJT05fQ0FOQ0VMTEVEKTtcbiAgICAgICAgZmluaXNoKCk7XG4gICAgICB9KSxcbiAgICAgIGZpbmlzaCxcbiAgICAgIC8vIFRoaXMgc3RvcmUgdGhlIG5leHQgYW5pbWF0aW9uIGZyYW1lIHNvIHdlIGNhbiBjYW5jZWwgaXRcbiAgICAgIG5leHRGcmFtZTogbnVsbFxuICAgIH07XG4gICAgc3RhZ2VzLnN0YXJ0KCk7XG4gICAgc3RhZ2VzLmR1cmluZygpO1xuICAgIGVsLl9feF90cmFuc2l0aW9uLm5leHRGcmFtZSA9IHJlcXVlc3RBbmltYXRpb25GcmFtZSgoKSA9PiB7XG4gICAgICAvLyBOb3RlOiBTYWZhcmkncyB0cmFuc2l0aW9uRHVyYXRpb24gcHJvcGVydHkgd2lsbCBsaXN0IG91dCBjb21tYSBzZXBhcmF0ZWQgdHJhbnNpdGlvbiBkdXJhdGlvbnNcbiAgICAgIC8vIGZvciBldmVyeSBzaW5nbGUgdHJhbnNpdGlvbiBwcm9wZXJ0eS4gTGV0J3MgZ3JhYiB0aGUgZmlyc3Qgb25lIGFuZCBjYWxsIGl0IGEgZGF5LlxuICAgICAgbGV0IGR1cmF0aW9uID0gTnVtYmVyKGdldENvbXB1dGVkU3R5bGUoZWwpLnRyYW5zaXRpb25EdXJhdGlvbi5yZXBsYWNlKC8sLiovLCAnJykucmVwbGFjZSgncycsICcnKSkgKiAxMDAwO1xuXG4gICAgICBpZiAoZHVyYXRpb24gPT09IDApIHtcbiAgICAgICAgZHVyYXRpb24gPSBOdW1iZXIoZ2V0Q29tcHV0ZWRTdHlsZShlbCkuYW5pbWF0aW9uRHVyYXRpb24ucmVwbGFjZSgncycsICcnKSkgKiAxMDAwO1xuICAgICAgfVxuXG4gICAgICBzdGFnZXMuc2hvdygpO1xuICAgICAgZWwuX194X3RyYW5zaXRpb24ubmV4dEZyYW1lID0gcmVxdWVzdEFuaW1hdGlvbkZyYW1lKCgpID0+IHtcbiAgICAgICAgc3RhZ2VzLmVuZCgpO1xuICAgICAgICBzZXRUaW1lb3V0KGVsLl9feF90cmFuc2l0aW9uLmZpbmlzaCwgZHVyYXRpb24pO1xuICAgICAgfSk7XG4gICAgfSk7XG4gIH1cbiAgZnVuY3Rpb24gaXNOdW1lcmljKHN1YmplY3QpIHtcbiAgICByZXR1cm4gIUFycmF5LmlzQXJyYXkoc3ViamVjdCkgJiYgIWlzTmFOKHN1YmplY3QpO1xuICB9IC8vIFRoYW5rcyBAdnVlanNcbiAgLy8gaHR0cHM6Ly9naXRodWIuY29tL3Z1ZWpzL3Z1ZS9ibG9iLzRkZTQ2NDlkOTYzNzI2MmE5YjAwNzcyMGI1OWY4MGFjNzJhNTYyMGMvc3JjL3NoYXJlZC91dGlsLmpzXG5cbiAgZnVuY3Rpb24gb25jZShjYWxsYmFjaykge1xuICAgIGxldCBjYWxsZWQgPSBmYWxzZTtcbiAgICByZXR1cm4gZnVuY3Rpb24gKCkge1xuICAgICAgaWYgKCFjYWxsZWQpIHtcbiAgICAgICAgY2FsbGVkID0gdHJ1ZTtcbiAgICAgICAgY2FsbGJhY2suYXBwbHkodGhpcywgYXJndW1lbnRzKTtcbiAgICAgIH1cbiAgICB9O1xuICB9XG5cbiAgZnVuY3Rpb24gaGFuZGxlRm9yRGlyZWN0aXZlKGNvbXBvbmVudCwgdGVtcGxhdGVFbCwgZXhwcmVzc2lvbiwgaW5pdGlhbFVwZGF0ZSwgZXh0cmFWYXJzKSB7XG4gICAgd2FybklmTWFsZm9ybWVkVGVtcGxhdGUodGVtcGxhdGVFbCwgJ3gtZm9yJyk7XG4gICAgbGV0IGl0ZXJhdG9yTmFtZXMgPSB0eXBlb2YgZXhwcmVzc2lvbiA9PT0gJ2Z1bmN0aW9uJyA/IHBhcnNlRm9yRXhwcmVzc2lvbihjb21wb25lbnQuZXZhbHVhdGVSZXR1cm5FeHByZXNzaW9uKHRlbXBsYXRlRWwsIGV4cHJlc3Npb24pKSA6IHBhcnNlRm9yRXhwcmVzc2lvbihleHByZXNzaW9uKTtcbiAgICBsZXQgaXRlbXMgPSBldmFsdWF0ZUl0ZW1zQW5kUmV0dXJuRW1wdHlJZlhJZklzUHJlc2VudEFuZEZhbHNlT25FbGVtZW50KGNvbXBvbmVudCwgdGVtcGxhdGVFbCwgaXRlcmF0b3JOYW1lcywgZXh0cmFWYXJzKTsgLy8gQXMgd2Ugd2FsayB0aGUgYXJyYXksIHdlJ2xsIGFsc28gd2FsayB0aGUgRE9NICh1cGRhdGluZy9jcmVhdGluZyBhcyB3ZSBnbykuXG5cbiAgICBsZXQgY3VycmVudEVsID0gdGVtcGxhdGVFbDtcbiAgICBpdGVtcy5mb3JFYWNoKChpdGVtLCBpbmRleCkgPT4ge1xuICAgICAgbGV0IGl0ZXJhdGlvblNjb3BlVmFyaWFibGVzID0gZ2V0SXRlcmF0aW9uU2NvcGVWYXJpYWJsZXMoaXRlcmF0b3JOYW1lcywgaXRlbSwgaW5kZXgsIGl0ZW1zLCBleHRyYVZhcnMoKSk7XG4gICAgICBsZXQgY3VycmVudEtleSA9IGdlbmVyYXRlS2V5Rm9ySXRlcmF0aW9uKGNvbXBvbmVudCwgdGVtcGxhdGVFbCwgaW5kZXgsIGl0ZXJhdGlvblNjb3BlVmFyaWFibGVzKTtcbiAgICAgIGxldCBuZXh0RWwgPSBsb29rQWhlYWRGb3JNYXRjaGluZ0tleWVkRWxlbWVudEFuZE1vdmVJdElmRm91bmQoY3VycmVudEVsLm5leHRFbGVtZW50U2libGluZywgY3VycmVudEtleSk7IC8vIElmIHdlIGhhdmVuJ3QgZm91bmQgYSBtYXRjaGluZyBrZXksIGluc2VydCB0aGUgZWxlbWVudCBhdCB0aGUgY3VycmVudCBwb3NpdGlvbi5cblxuICAgICAgaWYgKCFuZXh0RWwpIHtcbiAgICAgICAgbmV4dEVsID0gYWRkRWxlbWVudEluTG9vcEFmdGVyQ3VycmVudEVsKHRlbXBsYXRlRWwsIGN1cnJlbnRFbCk7IC8vIEFuZCB0cmFuc2l0aW9uIGl0IGluIGlmIGl0J3Mgbm90IHRoZSBmaXJzdCBwYWdlIGxvYWQuXG5cbiAgICAgICAgdHJhbnNpdGlvbkluKG5leHRFbCwgKCkgPT4ge30sICgpID0+IHt9LCBjb21wb25lbnQsIGluaXRpYWxVcGRhdGUpO1xuICAgICAgICBuZXh0RWwuX194X2ZvciA9IGl0ZXJhdGlvblNjb3BlVmFyaWFibGVzO1xuICAgICAgICBjb21wb25lbnQuaW5pdGlhbGl6ZUVsZW1lbnRzKG5leHRFbCwgKCkgPT4gbmV4dEVsLl9feF9mb3IpOyAvLyBPdGhlcndpc2UgdXBkYXRlIHRoZSBlbGVtZW50IHdlIGZvdW5kLlxuICAgICAgfSBlbHNlIHtcbiAgICAgICAgLy8gVGVtcG9yYXJpbHkgcmVtb3ZlIHRoZSBrZXkgaW5kaWNhdG9yIHRvIGFsbG93IHRoZSBub3JtYWwgXCJ1cGRhdGVFbGVtZW50c1wiIHRvIHdvcmsuXG4gICAgICAgIGRlbGV0ZSBuZXh0RWwuX194X2Zvcl9rZXk7XG4gICAgICAgIG5leHRFbC5fX3hfZm9yID0gaXRlcmF0aW9uU2NvcGVWYXJpYWJsZXM7XG4gICAgICAgIGNvbXBvbmVudC51cGRhdGVFbGVtZW50cyhuZXh0RWwsICgpID0+IG5leHRFbC5fX3hfZm9yKTtcbiAgICAgIH1cblxuICAgICAgY3VycmVudEVsID0gbmV4dEVsO1xuICAgICAgY3VycmVudEVsLl9feF9mb3Jfa2V5ID0gY3VycmVudEtleTtcbiAgICB9KTtcbiAgICByZW1vdmVBbnlMZWZ0T3ZlckVsZW1lbnRzRnJvbVByZXZpb3VzVXBkYXRlKGN1cnJlbnRFbCwgY29tcG9uZW50KTtcbiAgfSAvLyBUaGlzIHdhcyB0YWtlbiBmcm9tIFZ1ZUpTIDIuKiBjb3JlLiBUaGFua3MgVnVlIVxuXG4gIGZ1bmN0aW9uIHBhcnNlRm9yRXhwcmVzc2lvbihleHByZXNzaW9uKSB7XG4gICAgbGV0IGZvckl0ZXJhdG9yUkUgPSAvLChbXixcXH1cXF1dKikoPzosKFteLFxcfVxcXV0qKSk/JC87XG4gICAgbGV0IHN0cmlwUGFyZW5zUkUgPSAvXlxcKHxcXCkkL2c7XG4gICAgbGV0IGZvckFsaWFzUkUgPSAvKFtcXHNcXFNdKj8pXFxzKyg/OmlufG9mKVxccysoW1xcc1xcU10qKS87XG4gICAgbGV0IGluTWF0Y2ggPSBleHByZXNzaW9uLm1hdGNoKGZvckFsaWFzUkUpO1xuICAgIGlmICghaW5NYXRjaCkgcmV0dXJuO1xuICAgIGxldCByZXMgPSB7fTtcbiAgICByZXMuaXRlbXMgPSBpbk1hdGNoWzJdLnRyaW0oKTtcbiAgICBsZXQgaXRlbSA9IGluTWF0Y2hbMV0udHJpbSgpLnJlcGxhY2Uoc3RyaXBQYXJlbnNSRSwgJycpO1xuICAgIGxldCBpdGVyYXRvck1hdGNoID0gaXRlbS5tYXRjaChmb3JJdGVyYXRvclJFKTtcblxuICAgIGlmIChpdGVyYXRvck1hdGNoKSB7XG4gICAgICByZXMuaXRlbSA9IGl0ZW0ucmVwbGFjZShmb3JJdGVyYXRvclJFLCAnJykudHJpbSgpO1xuICAgICAgcmVzLmluZGV4ID0gaXRlcmF0b3JNYXRjaFsxXS50cmltKCk7XG5cbiAgICAgIGlmIChpdGVyYXRvck1hdGNoWzJdKSB7XG4gICAgICAgIHJlcy5jb2xsZWN0aW9uID0gaXRlcmF0b3JNYXRjaFsyXS50cmltKCk7XG4gICAgICB9XG4gICAgfSBlbHNlIHtcbiAgICAgIHJlcy5pdGVtID0gaXRlbTtcbiAgICB9XG5cbiAgICByZXR1cm4gcmVzO1xuICB9XG5cbiAgZnVuY3Rpb24gZ2V0SXRlcmF0aW9uU2NvcGVWYXJpYWJsZXMoaXRlcmF0b3JOYW1lcywgaXRlbSwgaW5kZXgsIGl0ZW1zLCBleHRyYVZhcnMpIHtcbiAgICAvLyBXZSBtdXN0IGNyZWF0ZSBhIG5ldyBvYmplY3QsIHNvIGVhY2ggaXRlcmF0aW9uIGhhcyBhIG5ldyBzY29wZVxuICAgIGxldCBzY29wZVZhcmlhYmxlcyA9IGV4dHJhVmFycyA/IF9vYmplY3RTcHJlYWQyKHt9LCBleHRyYVZhcnMpIDoge307XG4gICAgc2NvcGVWYXJpYWJsZXNbaXRlcmF0b3JOYW1lcy5pdGVtXSA9IGl0ZW07XG4gICAgaWYgKGl0ZXJhdG9yTmFtZXMuaW5kZXgpIHNjb3BlVmFyaWFibGVzW2l0ZXJhdG9yTmFtZXMuaW5kZXhdID0gaW5kZXg7XG4gICAgaWYgKGl0ZXJhdG9yTmFtZXMuY29sbGVjdGlvbikgc2NvcGVWYXJpYWJsZXNbaXRlcmF0b3JOYW1lcy5jb2xsZWN0aW9uXSA9IGl0ZW1zO1xuICAgIHJldHVybiBzY29wZVZhcmlhYmxlcztcbiAgfVxuXG4gIGZ1bmN0aW9uIGdlbmVyYXRlS2V5Rm9ySXRlcmF0aW9uKGNvbXBvbmVudCwgZWwsIGluZGV4LCBpdGVyYXRpb25TY29wZVZhcmlhYmxlcykge1xuICAgIGxldCBiaW5kS2V5QXR0cmlidXRlID0gZ2V0WEF0dHJzKGVsLCBjb21wb25lbnQsICdiaW5kJykuZmlsdGVyKGF0dHIgPT4gYXR0ci52YWx1ZSA9PT0gJ2tleScpWzBdOyAvLyBJZiB0aGUgZGV2IGhhc24ndCBzcGVjaWZpZWQgYSBrZXksIGp1c3QgcmV0dXJuIHRoZSBpbmRleCBvZiB0aGUgaXRlcmF0aW9uLlxuXG4gICAgaWYgKCFiaW5kS2V5QXR0cmlidXRlKSByZXR1cm4gaW5kZXg7XG4gICAgcmV0dXJuIGNvbXBvbmVudC5ldmFsdWF0ZVJldHVybkV4cHJlc3Npb24oZWwsIGJpbmRLZXlBdHRyaWJ1dGUuZXhwcmVzc2lvbiwgKCkgPT4gaXRlcmF0aW9uU2NvcGVWYXJpYWJsZXMpO1xuICB9XG5cbiAgZnVuY3Rpb24gZXZhbHVhdGVJdGVtc0FuZFJldHVybkVtcHR5SWZYSWZJc1ByZXNlbnRBbmRGYWxzZU9uRWxlbWVudChjb21wb25lbnQsIGVsLCBpdGVyYXRvck5hbWVzLCBleHRyYVZhcnMpIHtcbiAgICBsZXQgaWZBdHRyaWJ1dGUgPSBnZXRYQXR0cnMoZWwsIGNvbXBvbmVudCwgJ2lmJylbMF07XG5cbiAgICBpZiAoaWZBdHRyaWJ1dGUgJiYgIWNvbXBvbmVudC5ldmFsdWF0ZVJldHVybkV4cHJlc3Npb24oZWwsIGlmQXR0cmlidXRlLmV4cHJlc3Npb24pKSB7XG4gICAgICByZXR1cm4gW107XG4gICAgfVxuXG4gICAgbGV0IGl0ZW1zID0gY29tcG9uZW50LmV2YWx1YXRlUmV0dXJuRXhwcmVzc2lvbihlbCwgaXRlcmF0b3JOYW1lcy5pdGVtcywgZXh0cmFWYXJzKTsgLy8gVGhpcyBhZGRzIHN1cHBvcnQgZm9yIHRoZSBgaSBpbiBuYCBzeW50YXguXG5cbiAgICBpZiAoaXNOdW1lcmljKGl0ZW1zKSAmJiBpdGVtcyA+IDApIHtcbiAgICAgIGl0ZW1zID0gQXJyYXkuZnJvbShBcnJheShpdGVtcykua2V5cygpLCBpID0+IGkgKyAxKTtcbiAgICB9XG5cbiAgICByZXR1cm4gaXRlbXM7XG4gIH1cblxuICBmdW5jdGlvbiBhZGRFbGVtZW50SW5Mb29wQWZ0ZXJDdXJyZW50RWwodGVtcGxhdGVFbCwgY3VycmVudEVsKSB7XG4gICAgbGV0IGNsb25lID0gZG9jdW1lbnQuaW1wb3J0Tm9kZSh0ZW1wbGF0ZUVsLmNvbnRlbnQsIHRydWUpO1xuICAgIGN1cnJlbnRFbC5wYXJlbnRFbGVtZW50Lmluc2VydEJlZm9yZShjbG9uZSwgY3VycmVudEVsLm5leHRFbGVtZW50U2libGluZyk7XG4gICAgcmV0dXJuIGN1cnJlbnRFbC5uZXh0RWxlbWVudFNpYmxpbmc7XG4gIH1cblxuICBmdW5jdGlvbiBsb29rQWhlYWRGb3JNYXRjaGluZ0tleWVkRWxlbWVudEFuZE1vdmVJdElmRm91bmQobmV4dEVsLCBjdXJyZW50S2V5KSB7XG4gICAgaWYgKCFuZXh0RWwpIHJldHVybjsgLy8gSWYgd2UgYXJlIGFscmVhZHkgcGFzdCB0aGUgeC1mb3IgZ2VuZXJhdGVkIGVsZW1lbnRzLCB3ZSBkb24ndCBuZWVkIHRvIGxvb2sgYWhlYWQuXG5cbiAgICBpZiAobmV4dEVsLl9feF9mb3Jfa2V5ID09PSB1bmRlZmluZWQpIHJldHVybjsgLy8gSWYgdGhlIHRoZSBrZXkncyBETyBtYXRjaCwgbm8gbmVlZCB0byBsb29rIGFoZWFkLlxuXG4gICAgaWYgKG5leHRFbC5fX3hfZm9yX2tleSA9PT0gY3VycmVudEtleSkgcmV0dXJuIG5leHRFbDsgLy8gSWYgdGhleSBkb24ndCwgd2UnbGwgbG9vayBhaGVhZCBmb3IgYSBtYXRjaC5cbiAgICAvLyBJZiB3ZSBmaW5kIGl0LCB3ZSdsbCBtb3ZlIGl0IHRvIHRoZSBjdXJyZW50IHBvc2l0aW9uIGluIHRoZSBsb29wLlxuXG4gICAgbGV0IHRtcE5leHRFbCA9IG5leHRFbDtcblxuICAgIHdoaWxlICh0bXBOZXh0RWwpIHtcbiAgICAgIGlmICh0bXBOZXh0RWwuX194X2Zvcl9rZXkgPT09IGN1cnJlbnRLZXkpIHtcbiAgICAgICAgcmV0dXJuIHRtcE5leHRFbC5wYXJlbnRFbGVtZW50Lmluc2VydEJlZm9yZSh0bXBOZXh0RWwsIG5leHRFbCk7XG4gICAgICB9XG5cbiAgICAgIHRtcE5leHRFbCA9IHRtcE5leHRFbC5uZXh0RWxlbWVudFNpYmxpbmcgJiYgdG1wTmV4dEVsLm5leHRFbGVtZW50U2libGluZy5fX3hfZm9yX2tleSAhPT0gdW5kZWZpbmVkID8gdG1wTmV4dEVsLm5leHRFbGVtZW50U2libGluZyA6IGZhbHNlO1xuICAgIH1cbiAgfVxuXG4gIGZ1bmN0aW9uIHJlbW92ZUFueUxlZnRPdmVyRWxlbWVudHNGcm9tUHJldmlvdXNVcGRhdGUoY3VycmVudEVsLCBjb21wb25lbnQpIHtcbiAgICB2YXIgbmV4dEVsZW1lbnRGcm9tT2xkTG9vcCA9IGN1cnJlbnRFbC5uZXh0RWxlbWVudFNpYmxpbmcgJiYgY3VycmVudEVsLm5leHRFbGVtZW50U2libGluZy5fX3hfZm9yX2tleSAhPT0gdW5kZWZpbmVkID8gY3VycmVudEVsLm5leHRFbGVtZW50U2libGluZyA6IGZhbHNlO1xuXG4gICAgd2hpbGUgKG5leHRFbGVtZW50RnJvbU9sZExvb3ApIHtcbiAgICAgIGxldCBuZXh0RWxlbWVudEZyb21PbGRMb29wSW1tdXRhYmxlID0gbmV4dEVsZW1lbnRGcm9tT2xkTG9vcDtcbiAgICAgIGxldCBuZXh0U2libGluZyA9IG5leHRFbGVtZW50RnJvbU9sZExvb3AubmV4dEVsZW1lbnRTaWJsaW5nO1xuICAgICAgdHJhbnNpdGlvbk91dChuZXh0RWxlbWVudEZyb21PbGRMb29wLCAoKSA9PiB7XG4gICAgICAgIG5leHRFbGVtZW50RnJvbU9sZExvb3BJbW11dGFibGUucmVtb3ZlKCk7XG4gICAgICB9LCAoKSA9PiB7fSwgY29tcG9uZW50KTtcbiAgICAgIG5leHRFbGVtZW50RnJvbU9sZExvb3AgPSBuZXh0U2libGluZyAmJiBuZXh0U2libGluZy5fX3hfZm9yX2tleSAhPT0gdW5kZWZpbmVkID8gbmV4dFNpYmxpbmcgOiBmYWxzZTtcbiAgICB9XG4gIH1cblxuICBmdW5jdGlvbiBoYW5kbGVBdHRyaWJ1dGVCaW5kaW5nRGlyZWN0aXZlKGNvbXBvbmVudCwgZWwsIGF0dHJOYW1lLCBleHByZXNzaW9uLCBleHRyYVZhcnMsIGF0dHJUeXBlLCBtb2RpZmllcnMpIHtcbiAgICB2YXIgdmFsdWUgPSBjb21wb25lbnQuZXZhbHVhdGVSZXR1cm5FeHByZXNzaW9uKGVsLCBleHByZXNzaW9uLCBleHRyYVZhcnMpO1xuXG4gICAgaWYgKGF0dHJOYW1lID09PSAndmFsdWUnKSB7XG4gICAgICBpZiAoQWxwaW5lLmlnbm9yZUZvY3VzZWRGb3JWYWx1ZUJpbmRpbmcgJiYgZG9jdW1lbnQuYWN0aXZlRWxlbWVudC5pc1NhbWVOb2RlKGVsKSkgcmV0dXJuOyAvLyBJZiBuZXN0ZWQgbW9kZWwga2V5IGlzIHVuZGVmaW5lZCwgc2V0IHRoZSBkZWZhdWx0IHZhbHVlIHRvIGVtcHR5IHN0cmluZy5cblxuICAgICAgaWYgKHZhbHVlID09PSB1bmRlZmluZWQgJiYgZXhwcmVzc2lvbi5tYXRjaCgvXFwuLykpIHtcbiAgICAgICAgdmFsdWUgPSAnJztcbiAgICAgIH1cblxuICAgICAgaWYgKGVsLnR5cGUgPT09ICdyYWRpbycpIHtcbiAgICAgICAgLy8gU2V0IHJhZGlvIHZhbHVlIGZyb20geC1iaW5kOnZhbHVlLCBpZiBubyBcInZhbHVlXCIgYXR0cmlidXRlIGV4aXN0cy5cbiAgICAgICAgLy8gSWYgdGhlcmUgYXJlIGFueSBpbml0aWFsIHN0YXRlIHZhbHVlcywgcmFkaW8gd2lsbCBoYXZlIGEgY29ycmVjdFxuICAgICAgICAvLyBcImNoZWNrZWRcIiB2YWx1ZSBzaW5jZSB4LWJpbmQ6dmFsdWUgaXMgcHJvY2Vzc2VkIGJlZm9yZSB4LW1vZGVsLlxuICAgICAgICBpZiAoZWwuYXR0cmlidXRlcy52YWx1ZSA9PT0gdW5kZWZpbmVkICYmIGF0dHJUeXBlID09PSAnYmluZCcpIHtcbiAgICAgICAgICBlbC52YWx1ZSA9IHZhbHVlO1xuICAgICAgICB9IGVsc2UgaWYgKGF0dHJUeXBlICE9PSAnYmluZCcpIHtcbiAgICAgICAgICBlbC5jaGVja2VkID0gY2hlY2tlZEF0dHJMb29zZUNvbXBhcmUoZWwudmFsdWUsIHZhbHVlKTtcbiAgICAgICAgfVxuICAgICAgfSBlbHNlIGlmIChlbC50eXBlID09PSAnY2hlY2tib3gnKSB7XG4gICAgICAgIC8vIElmIHdlIGFyZSBleHBsaWNpdGx5IGJpbmRpbmcgYSBzdHJpbmcgdG8gdGhlIDp2YWx1ZSwgc2V0IHRoZSBzdHJpbmcsXG4gICAgICAgIC8vIElmIHRoZSB2YWx1ZSBpcyBhIGJvb2xlYW4sIGxlYXZlIGl0IGFsb25lLCBpdCB3aWxsIGJlIHNldCB0byBcIm9uXCJcbiAgICAgICAgLy8gYXV0b21hdGljYWxseS5cbiAgICAgICAgaWYgKHR5cGVvZiB2YWx1ZSAhPT0gJ2Jvb2xlYW4nICYmICFbbnVsbCwgdW5kZWZpbmVkXS5pbmNsdWRlcyh2YWx1ZSkgJiYgYXR0clR5cGUgPT09ICdiaW5kJykge1xuICAgICAgICAgIGVsLnZhbHVlID0gU3RyaW5nKHZhbHVlKTtcbiAgICAgICAgfSBlbHNlIGlmIChhdHRyVHlwZSAhPT0gJ2JpbmQnKSB7XG4gICAgICAgICAgaWYgKEFycmF5LmlzQXJyYXkodmFsdWUpKSB7XG4gICAgICAgICAgICAvLyBJJ20gcHVycG9zZWx5IG5vdCB1c2luZyBBcnJheS5pbmNsdWRlcyBoZXJlIGJlY2F1c2UgaXQnc1xuICAgICAgICAgICAgLy8gc3RyaWN0LCBhbmQgYmVjYXVzZSBvZiBOdW1lcmljL1N0cmluZyBtaXMtY2FzdGluZywgSVxuICAgICAgICAgICAgLy8gd2FudCB0aGUgXCJpbmNsdWRlc1wiIHRvIGJlIFwiZnV6enlcIi5cbiAgICAgICAgICAgIGVsLmNoZWNrZWQgPSB2YWx1ZS5zb21lKHZhbCA9PiBjaGVja2VkQXR0ckxvb3NlQ29tcGFyZSh2YWwsIGVsLnZhbHVlKSk7XG4gICAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgIGVsLmNoZWNrZWQgPSAhIXZhbHVlO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfSBlbHNlIGlmIChlbC50YWdOYW1lID09PSAnU0VMRUNUJykge1xuICAgICAgICB1cGRhdGVTZWxlY3QoZWwsIHZhbHVlKTtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGlmIChlbC52YWx1ZSA9PT0gdmFsdWUpIHJldHVybjtcbiAgICAgICAgZWwudmFsdWUgPSB2YWx1ZTtcbiAgICAgIH1cbiAgICB9IGVsc2UgaWYgKGF0dHJOYW1lID09PSAnY2xhc3MnKSB7XG4gICAgICBpZiAoQXJyYXkuaXNBcnJheSh2YWx1ZSkpIHtcbiAgICAgICAgY29uc3Qgb3JpZ2luYWxDbGFzc2VzID0gZWwuX194X29yaWdpbmFsX2NsYXNzZXMgfHwgW107XG4gICAgICAgIGVsLnNldEF0dHJpYnV0ZSgnY2xhc3MnLCBhcnJheVVuaXF1ZShvcmlnaW5hbENsYXNzZXMuY29uY2F0KHZhbHVlKSkuam9pbignICcpKTtcbiAgICAgIH0gZWxzZSBpZiAodHlwZW9mIHZhbHVlID09PSAnb2JqZWN0Jykge1xuICAgICAgICAvLyBTb3J0aW5nIHRoZSBrZXlzIC8gY2xhc3MgbmFtZXMgYnkgdGhlaXIgYm9vbGVhbiB2YWx1ZSB3aWxsIGVuc3VyZSB0aGF0XG4gICAgICAgIC8vIGFueXRoaW5nIHRoYXQgZXZhbHVhdGVzIHRvIGBmYWxzZWAgYW5kIG5lZWRzIHRvIHJlbW92ZSBjbGFzc2VzIGlzIHJ1biBmaXJzdC5cbiAgICAgICAgY29uc3Qga2V5c1NvcnRlZEJ5Qm9vbGVhblZhbHVlID0gT2JqZWN0LmtleXModmFsdWUpLnNvcnQoKGEsIGIpID0+IHZhbHVlW2FdIC0gdmFsdWVbYl0pO1xuICAgICAgICBrZXlzU29ydGVkQnlCb29sZWFuVmFsdWUuZm9yRWFjaChjbGFzc05hbWVzID0+IHtcbiAgICAgICAgICBpZiAodmFsdWVbY2xhc3NOYW1lc10pIHtcbiAgICAgICAgICAgIGNvbnZlcnRDbGFzc1N0cmluZ1RvQXJyYXkoY2xhc3NOYW1lcykuZm9yRWFjaChjbGFzc05hbWUgPT4gZWwuY2xhc3NMaXN0LmFkZChjbGFzc05hbWUpKTtcbiAgICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgY29udmVydENsYXNzU3RyaW5nVG9BcnJheShjbGFzc05hbWVzKS5mb3JFYWNoKGNsYXNzTmFtZSA9PiBlbC5jbGFzc0xpc3QucmVtb3ZlKGNsYXNzTmFtZSkpO1xuICAgICAgICAgIH1cbiAgICAgICAgfSk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICBjb25zdCBvcmlnaW5hbENsYXNzZXMgPSBlbC5fX3hfb3JpZ2luYWxfY2xhc3NlcyB8fCBbXTtcbiAgICAgICAgY29uc3QgbmV3Q2xhc3NlcyA9IHZhbHVlID8gY29udmVydENsYXNzU3RyaW5nVG9BcnJheSh2YWx1ZSkgOiBbXTtcbiAgICAgICAgZWwuc2V0QXR0cmlidXRlKCdjbGFzcycsIGFycmF5VW5pcXVlKG9yaWdpbmFsQ2xhc3Nlcy5jb25jYXQobmV3Q2xhc3NlcykpLmpvaW4oJyAnKSk7XG4gICAgICB9XG4gICAgfSBlbHNlIHtcbiAgICAgIGF0dHJOYW1lID0gbW9kaWZpZXJzLmluY2x1ZGVzKCdjYW1lbCcpID8gY2FtZWxDYXNlKGF0dHJOYW1lKSA6IGF0dHJOYW1lOyAvLyBJZiBhbiBhdHRyaWJ1dGUncyBib3VuZCB2YWx1ZSBpcyBudWxsLCB1bmRlZmluZWQgb3IgZmFsc2UsIHJlbW92ZSB0aGUgYXR0cmlidXRlXG5cbiAgICAgIGlmIChbbnVsbCwgdW5kZWZpbmVkLCBmYWxzZV0uaW5jbHVkZXModmFsdWUpKSB7XG4gICAgICAgIGVsLnJlbW92ZUF0dHJpYnV0ZShhdHRyTmFtZSk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICBpc0Jvb2xlYW5BdHRyKGF0dHJOYW1lKSA/IHNldElmQ2hhbmdlZChlbCwgYXR0ck5hbWUsIGF0dHJOYW1lKSA6IHNldElmQ2hhbmdlZChlbCwgYXR0ck5hbWUsIHZhbHVlKTtcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICBmdW5jdGlvbiBzZXRJZkNoYW5nZWQoZWwsIGF0dHJOYW1lLCB2YWx1ZSkge1xuICAgIGlmIChlbC5nZXRBdHRyaWJ1dGUoYXR0ck5hbWUpICE9IHZhbHVlKSB7XG4gICAgICBlbC5zZXRBdHRyaWJ1dGUoYXR0ck5hbWUsIHZhbHVlKTtcbiAgICB9XG4gIH1cblxuICBmdW5jdGlvbiB1cGRhdGVTZWxlY3QoZWwsIHZhbHVlKSB7XG4gICAgY29uc3QgYXJyYXlXcmFwcGVkVmFsdWUgPSBbXS5jb25jYXQodmFsdWUpLm1hcCh2YWx1ZSA9PiB7XG4gICAgICByZXR1cm4gdmFsdWUgKyAnJztcbiAgICB9KTtcbiAgICBBcnJheS5mcm9tKGVsLm9wdGlvbnMpLmZvckVhY2gob3B0aW9uID0+IHtcbiAgICAgIG9wdGlvbi5zZWxlY3RlZCA9IGFycmF5V3JhcHBlZFZhbHVlLmluY2x1ZGVzKG9wdGlvbi52YWx1ZSB8fCBvcHRpb24udGV4dCk7XG4gICAgfSk7XG4gIH1cblxuICBmdW5jdGlvbiBoYW5kbGVUZXh0RGlyZWN0aXZlKGVsLCBvdXRwdXQsIGV4cHJlc3Npb24pIHtcbiAgICAvLyBJZiBuZXN0ZWQgbW9kZWwga2V5IGlzIHVuZGVmaW5lZCwgc2V0IHRoZSBkZWZhdWx0IHZhbHVlIHRvIGVtcHR5IHN0cmluZy5cbiAgICBpZiAob3V0cHV0ID09PSB1bmRlZmluZWQgJiYgZXhwcmVzc2lvbi5tYXRjaCgvXFwuLykpIHtcbiAgICAgIG91dHB1dCA9ICcnO1xuICAgIH1cblxuICAgIGVsLnRleHRDb250ZW50ID0gb3V0cHV0O1xuICB9XG5cbiAgZnVuY3Rpb24gaGFuZGxlSHRtbERpcmVjdGl2ZShjb21wb25lbnQsIGVsLCBleHByZXNzaW9uLCBleHRyYVZhcnMpIHtcbiAgICBlbC5pbm5lckhUTUwgPSBjb21wb25lbnQuZXZhbHVhdGVSZXR1cm5FeHByZXNzaW9uKGVsLCBleHByZXNzaW9uLCBleHRyYVZhcnMpO1xuICB9XG5cbiAgZnVuY3Rpb24gaGFuZGxlU2hvd0RpcmVjdGl2ZShjb21wb25lbnQsIGVsLCB2YWx1ZSwgbW9kaWZpZXJzLCBpbml0aWFsVXBkYXRlID0gZmFsc2UpIHtcbiAgICBjb25zdCBoaWRlID0gKCkgPT4ge1xuICAgICAgZWwuc3R5bGUuZGlzcGxheSA9ICdub25lJztcbiAgICAgIGVsLl9feF9pc19zaG93biA9IGZhbHNlO1xuICAgIH07XG5cbiAgICBjb25zdCBzaG93ID0gKCkgPT4ge1xuICAgICAgaWYgKGVsLnN0eWxlLmxlbmd0aCA9PT0gMSAmJiBlbC5zdHlsZS5kaXNwbGF5ID09PSAnbm9uZScpIHtcbiAgICAgICAgZWwucmVtb3ZlQXR0cmlidXRlKCdzdHlsZScpO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgZWwuc3R5bGUucmVtb3ZlUHJvcGVydHkoJ2Rpc3BsYXknKTtcbiAgICAgIH1cblxuICAgICAgZWwuX194X2lzX3Nob3duID0gdHJ1ZTtcbiAgICB9O1xuXG4gICAgaWYgKGluaXRpYWxVcGRhdGUgPT09IHRydWUpIHtcbiAgICAgIGlmICh2YWx1ZSkge1xuICAgICAgICBzaG93KCk7XG4gICAgICB9IGVsc2Uge1xuICAgICAgICBoaWRlKCk7XG4gICAgICB9XG5cbiAgICAgIHJldHVybjtcbiAgICB9XG5cbiAgICBjb25zdCBoYW5kbGUgPSAocmVzb2x2ZSwgcmVqZWN0KSA9PiB7XG4gICAgICBpZiAodmFsdWUpIHtcbiAgICAgICAgaWYgKGVsLnN0eWxlLmRpc3BsYXkgPT09ICdub25lJyB8fCBlbC5fX3hfdHJhbnNpdGlvbikge1xuICAgICAgICAgIHRyYW5zaXRpb25JbihlbCwgKCkgPT4ge1xuICAgICAgICAgICAgc2hvdygpO1xuICAgICAgICAgIH0sIHJlamVjdCwgY29tcG9uZW50KTtcbiAgICAgICAgfVxuXG4gICAgICAgIHJlc29sdmUoKCkgPT4ge30pO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgaWYgKGVsLnN0eWxlLmRpc3BsYXkgIT09ICdub25lJykge1xuICAgICAgICAgIHRyYW5zaXRpb25PdXQoZWwsICgpID0+IHtcbiAgICAgICAgICAgIHJlc29sdmUoKCkgPT4ge1xuICAgICAgICAgICAgICBoaWRlKCk7XG4gICAgICAgICAgICB9KTtcbiAgICAgICAgICB9LCByZWplY3QsIGNvbXBvbmVudCk7XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgcmVzb2x2ZSgoKSA9PiB7fSk7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9OyAvLyBUaGUgd29ya2luZyBvZiB4LXNob3cgaXMgYSBiaXQgY29tcGxleCBiZWNhdXNlIHdlIG5lZWQgdG9cbiAgICAvLyB3YWl0IGZvciBhbnkgY2hpbGQgdHJhbnNpdGlvbnMgdG8gZmluaXNoIGJlZm9yZSBoaWRpbmdcbiAgICAvLyBzb21lIGVsZW1lbnQuIEFsc28sIHRoaXMgaGFzIHRvIGJlIGRvbmUgcmVjdXJzaXZlbHkuXG4gICAgLy8gSWYgeC1zaG93LmltbWVkaWF0ZSwgZm9yZWdvZSB0aGUgd2FpdGluZy5cblxuXG4gICAgaWYgKG1vZGlmaWVycy5pbmNsdWRlcygnaW1tZWRpYXRlJykpIHtcbiAgICAgIGhhbmRsZShmaW5pc2ggPT4gZmluaXNoKCksICgpID0+IHt9KTtcbiAgICAgIHJldHVybjtcbiAgICB9IC8vIHgtc2hvdyBpcyBlbmNvdW50ZXJlZCBkdXJpbmcgYSBET00gdHJlZSB3YWxrLiBJZiBhbiBlbGVtZW50XG4gICAgLy8gd2UgZW5jb3VudGVyIGlzIE5PVCBhIGNoaWxkIG9mIGFub3RoZXIgeC1zaG93IGVsZW1lbnQgd2VcbiAgICAvLyBjYW4gZXhlY3V0ZSB0aGUgcHJldmlvdXMgeC1zaG93IHN0YWNrIChpZiBvbmUgZXhpc3RzKS5cblxuXG4gICAgaWYgKGNvbXBvbmVudC5zaG93RGlyZWN0aXZlTGFzdEVsZW1lbnQgJiYgIWNvbXBvbmVudC5zaG93RGlyZWN0aXZlTGFzdEVsZW1lbnQuY29udGFpbnMoZWwpKSB7XG4gICAgICBjb21wb25lbnQuZXhlY3V0ZUFuZENsZWFyUmVtYWluaW5nU2hvd0RpcmVjdGl2ZVN0YWNrKCk7XG4gICAgfVxuXG4gICAgY29tcG9uZW50LnNob3dEaXJlY3RpdmVTdGFjay5wdXNoKGhhbmRsZSk7XG4gICAgY29tcG9uZW50LnNob3dEaXJlY3RpdmVMYXN0RWxlbWVudCA9IGVsO1xuICB9XG5cbiAgZnVuY3Rpb24gaGFuZGxlSWZEaXJlY3RpdmUoY29tcG9uZW50LCBlbCwgZXhwcmVzc2lvblJlc3VsdCwgaW5pdGlhbFVwZGF0ZSwgZXh0cmFWYXJzKSB7XG4gICAgd2FybklmTWFsZm9ybWVkVGVtcGxhdGUoZWwsICd4LWlmJyk7XG4gICAgY29uc3QgZWxlbWVudEhhc0FscmVhZHlCZWVuQWRkZWQgPSBlbC5uZXh0RWxlbWVudFNpYmxpbmcgJiYgZWwubmV4dEVsZW1lbnRTaWJsaW5nLl9feF9pbnNlcnRlZF9tZSA9PT0gdHJ1ZTtcblxuICAgIGlmIChleHByZXNzaW9uUmVzdWx0ICYmICghZWxlbWVudEhhc0FscmVhZHlCZWVuQWRkZWQgfHwgZWwuX194X3RyYW5zaXRpb24pKSB7XG4gICAgICBjb25zdCBjbG9uZSA9IGRvY3VtZW50LmltcG9ydE5vZGUoZWwuY29udGVudCwgdHJ1ZSk7XG4gICAgICBlbC5wYXJlbnRFbGVtZW50Lmluc2VydEJlZm9yZShjbG9uZSwgZWwubmV4dEVsZW1lbnRTaWJsaW5nKTtcbiAgICAgIHRyYW5zaXRpb25JbihlbC5uZXh0RWxlbWVudFNpYmxpbmcsICgpID0+IHt9LCAoKSA9PiB7fSwgY29tcG9uZW50LCBpbml0aWFsVXBkYXRlKTtcbiAgICAgIGNvbXBvbmVudC5pbml0aWFsaXplRWxlbWVudHMoZWwubmV4dEVsZW1lbnRTaWJsaW5nLCBleHRyYVZhcnMpO1xuICAgICAgZWwubmV4dEVsZW1lbnRTaWJsaW5nLl9feF9pbnNlcnRlZF9tZSA9IHRydWU7XG4gICAgfSBlbHNlIGlmICghZXhwcmVzc2lvblJlc3VsdCAmJiBlbGVtZW50SGFzQWxyZWFkeUJlZW5BZGRlZCkge1xuICAgICAgdHJhbnNpdGlvbk91dChlbC5uZXh0RWxlbWVudFNpYmxpbmcsICgpID0+IHtcbiAgICAgICAgZWwubmV4dEVsZW1lbnRTaWJsaW5nLnJlbW92ZSgpO1xuICAgICAgfSwgKCkgPT4ge30sIGNvbXBvbmVudCwgaW5pdGlhbFVwZGF0ZSk7XG4gICAgfVxuICB9XG5cbiAgZnVuY3Rpb24gcmVnaXN0ZXJMaXN0ZW5lcihjb21wb25lbnQsIGVsLCBldmVudCwgbW9kaWZpZXJzLCBleHByZXNzaW9uLCBleHRyYVZhcnMgPSB7fSkge1xuICAgIGNvbnN0IG9wdGlvbnMgPSB7XG4gICAgICBwYXNzaXZlOiBtb2RpZmllcnMuaW5jbHVkZXMoJ3Bhc3NpdmUnKVxuICAgIH07XG5cbiAgICBpZiAobW9kaWZpZXJzLmluY2x1ZGVzKCdjYW1lbCcpKSB7XG4gICAgICBldmVudCA9IGNhbWVsQ2FzZShldmVudCk7XG4gICAgfVxuXG4gICAgaWYgKG1vZGlmaWVycy5pbmNsdWRlcygnYXdheScpKSB7XG4gICAgICBsZXQgaGFuZGxlciA9IGUgPT4ge1xuICAgICAgICAvLyBEb24ndCBkbyBhbnl0aGluZyBpZiB0aGUgY2xpY2sgY2FtZSBmcm9tIHRoZSBlbGVtZW50IG9yIHdpdGhpbiBpdC5cbiAgICAgICAgaWYgKGVsLmNvbnRhaW5zKGUudGFyZ2V0KSkgcmV0dXJuOyAvLyBEb24ndCBkbyBhbnl0aGluZyBpZiB0aGlzIGVsZW1lbnQgaXNuJ3QgY3VycmVudGx5IHZpc2libGUuXG5cbiAgICAgICAgaWYgKGVsLm9mZnNldFdpZHRoIDwgMSAmJiBlbC5vZmZzZXRIZWlnaHQgPCAxKSByZXR1cm47IC8vIE5vdyB0aGF0IHdlIGFyZSBzdXJlIHRoZSBlbGVtZW50IGlzIHZpc2libGUsIEFORCB0aGUgY2xpY2tcbiAgICAgICAgLy8gaXMgZnJvbSBvdXRzaWRlIGl0LCBsZXQncyBydW4gdGhlIGV4cHJlc3Npb24uXG5cbiAgICAgICAgcnVuTGlzdGVuZXJIYW5kbGVyKGNvbXBvbmVudCwgZXhwcmVzc2lvbiwgZSwgZXh0cmFWYXJzKTtcblxuICAgICAgICBpZiAobW9kaWZpZXJzLmluY2x1ZGVzKCdvbmNlJykpIHtcbiAgICAgICAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKGV2ZW50LCBoYW5kbGVyLCBvcHRpb25zKTtcbiAgICAgICAgfVxuICAgICAgfTsgLy8gTGlzdGVuIGZvciB0aGlzIGV2ZW50IGF0IHRoZSByb290IGxldmVsLlxuXG5cbiAgICAgIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoZXZlbnQsIGhhbmRsZXIsIG9wdGlvbnMpO1xuICAgIH0gZWxzZSB7XG4gICAgICBsZXQgbGlzdGVuZXJUYXJnZXQgPSBtb2RpZmllcnMuaW5jbHVkZXMoJ3dpbmRvdycpID8gd2luZG93IDogbW9kaWZpZXJzLmluY2x1ZGVzKCdkb2N1bWVudCcpID8gZG9jdW1lbnQgOiBlbDtcblxuICAgICAgbGV0IGhhbmRsZXIgPSBlID0+IHtcbiAgICAgICAgLy8gUmVtb3ZlIHRoaXMgZ2xvYmFsIGV2ZW50IGhhbmRsZXIgaWYgdGhlIGVsZW1lbnQgdGhhdCBkZWNsYXJlZCBpdFxuICAgICAgICAvLyBoYXMgYmVlbiByZW1vdmVkLiBJdCdzIG5vdyBzdGFsZS5cbiAgICAgICAgaWYgKGxpc3RlbmVyVGFyZ2V0ID09PSB3aW5kb3cgfHwgbGlzdGVuZXJUYXJnZXQgPT09IGRvY3VtZW50KSB7XG4gICAgICAgICAgaWYgKCFkb2N1bWVudC5ib2R5LmNvbnRhaW5zKGVsKSkge1xuICAgICAgICAgICAgbGlzdGVuZXJUYXJnZXQucmVtb3ZlRXZlbnRMaXN0ZW5lcihldmVudCwgaGFuZGxlciwgb3B0aW9ucyk7XG4gICAgICAgICAgICByZXR1cm47XG4gICAgICAgICAgfVxuICAgICAgICB9XG5cbiAgICAgICAgaWYgKGlzS2V5RXZlbnQoZXZlbnQpKSB7XG4gICAgICAgICAgaWYgKGlzTGlzdGVuaW5nRm9yQVNwZWNpZmljS2V5VGhhdEhhc250QmVlblByZXNzZWQoZSwgbW9kaWZpZXJzKSkge1xuICAgICAgICAgICAgcmV0dXJuO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuXG4gICAgICAgIGlmIChtb2RpZmllcnMuaW5jbHVkZXMoJ3ByZXZlbnQnKSkgZS5wcmV2ZW50RGVmYXVsdCgpO1xuICAgICAgICBpZiAobW9kaWZpZXJzLmluY2x1ZGVzKCdzdG9wJykpIGUuc3RvcFByb3BhZ2F0aW9uKCk7IC8vIElmIHRoZSAuc2VsZiBtb2RpZmllciBpc24ndCBwcmVzZW50LCBvciBpZiBpdCBpcyBwcmVzZW50IGFuZFxuICAgICAgICAvLyB0aGUgdGFyZ2V0IGVsZW1lbnQgbWF0Y2hlcyB0aGUgZWxlbWVudCB3ZSBhcmUgcmVnaXN0ZXJpbmcgdGhlXG4gICAgICAgIC8vIGV2ZW50IG9uLCBydW4gdGhlIGhhbmRsZXJcblxuICAgICAgICBpZiAoIW1vZGlmaWVycy5pbmNsdWRlcygnc2VsZicpIHx8IGUudGFyZ2V0ID09PSBlbCkge1xuICAgICAgICAgIGNvbnN0IHJldHVyblZhbHVlID0gcnVuTGlzdGVuZXJIYW5kbGVyKGNvbXBvbmVudCwgZXhwcmVzc2lvbiwgZSwgZXh0cmFWYXJzKTtcbiAgICAgICAgICByZXR1cm5WYWx1ZS50aGVuKHZhbHVlID0+IHtcbiAgICAgICAgICAgIGlmICh2YWx1ZSA9PT0gZmFsc2UpIHtcbiAgICAgICAgICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpO1xuICAgICAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgICAgaWYgKG1vZGlmaWVycy5pbmNsdWRlcygnb25jZScpKSB7XG4gICAgICAgICAgICAgICAgbGlzdGVuZXJUYXJnZXQucmVtb3ZlRXZlbnRMaXN0ZW5lcihldmVudCwgaGFuZGxlciwgb3B0aW9ucyk7XG4gICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICB9KTtcbiAgICAgICAgfVxuICAgICAgfTtcblxuICAgICAgaWYgKG1vZGlmaWVycy5pbmNsdWRlcygnZGVib3VuY2UnKSkge1xuICAgICAgICBsZXQgbmV4dE1vZGlmaWVyID0gbW9kaWZpZXJzW21vZGlmaWVycy5pbmRleE9mKCdkZWJvdW5jZScpICsgMV0gfHwgJ2ludmFsaWQtd2FpdCc7XG4gICAgICAgIGxldCB3YWl0ID0gaXNOdW1lcmljKG5leHRNb2RpZmllci5zcGxpdCgnbXMnKVswXSkgPyBOdW1iZXIobmV4dE1vZGlmaWVyLnNwbGl0KCdtcycpWzBdKSA6IDI1MDtcbiAgICAgICAgaGFuZGxlciA9IGRlYm91bmNlKGhhbmRsZXIsIHdhaXQpO1xuICAgICAgfVxuXG4gICAgICBsaXN0ZW5lclRhcmdldC5hZGRFdmVudExpc3RlbmVyKGV2ZW50LCBoYW5kbGVyLCBvcHRpb25zKTtcbiAgICB9XG4gIH1cblxuICBmdW5jdGlvbiBydW5MaXN0ZW5lckhhbmRsZXIoY29tcG9uZW50LCBleHByZXNzaW9uLCBlLCBleHRyYVZhcnMpIHtcbiAgICByZXR1cm4gY29tcG9uZW50LmV2YWx1YXRlQ29tbWFuZEV4cHJlc3Npb24oZS50YXJnZXQsIGV4cHJlc3Npb24sICgpID0+IHtcbiAgICAgIHJldHVybiBfb2JqZWN0U3ByZWFkMihfb2JqZWN0U3ByZWFkMih7fSwgZXh0cmFWYXJzKCkpLCB7fSwge1xuICAgICAgICAnJGV2ZW50JzogZVxuICAgICAgfSk7XG4gICAgfSk7XG4gIH1cblxuICBmdW5jdGlvbiBpc0tleUV2ZW50KGV2ZW50KSB7XG4gICAgcmV0dXJuIFsna2V5ZG93bicsICdrZXl1cCddLmluY2x1ZGVzKGV2ZW50KTtcbiAgfVxuXG4gIGZ1bmN0aW9uIGlzTGlzdGVuaW5nRm9yQVNwZWNpZmljS2V5VGhhdEhhc250QmVlblByZXNzZWQoZSwgbW9kaWZpZXJzKSB7XG4gICAgbGV0IGtleU1vZGlmaWVycyA9IG1vZGlmaWVycy5maWx0ZXIoaSA9PiB7XG4gICAgICByZXR1cm4gIVsnd2luZG93JywgJ2RvY3VtZW50JywgJ3ByZXZlbnQnLCAnc3RvcCddLmluY2x1ZGVzKGkpO1xuICAgIH0pO1xuXG4gICAgaWYgKGtleU1vZGlmaWVycy5pbmNsdWRlcygnZGVib3VuY2UnKSkge1xuICAgICAgbGV0IGRlYm91bmNlSW5kZXggPSBrZXlNb2RpZmllcnMuaW5kZXhPZignZGVib3VuY2UnKTtcbiAgICAgIGtleU1vZGlmaWVycy5zcGxpY2UoZGVib3VuY2VJbmRleCwgaXNOdW1lcmljKChrZXlNb2RpZmllcnNbZGVib3VuY2VJbmRleCArIDFdIHx8ICdpbnZhbGlkLXdhaXQnKS5zcGxpdCgnbXMnKVswXSkgPyAyIDogMSk7XG4gICAgfSAvLyBJZiBubyBtb2RpZmllciBpcyBzcGVjaWZpZWQsIHdlJ2xsIGNhbGwgaXQgYSBwcmVzcy5cblxuXG4gICAgaWYgKGtleU1vZGlmaWVycy5sZW5ndGggPT09IDApIHJldHVybiBmYWxzZTsgLy8gSWYgb25lIGlzIHBhc3NlZCwgQU5EIGl0IG1hdGNoZXMgdGhlIGtleSBwcmVzc2VkLCB3ZSdsbCBjYWxsIGl0IGEgcHJlc3MuXG5cbiAgICBpZiAoa2V5TW9kaWZpZXJzLmxlbmd0aCA9PT0gMSAmJiBrZXlNb2RpZmllcnNbMF0gPT09IGtleVRvTW9kaWZpZXIoZS5rZXkpKSByZXR1cm4gZmFsc2U7IC8vIFRoZSB1c2VyIGlzIGxpc3RlbmluZyBmb3Iga2V5IGNvbWJpbmF0aW9ucy5cblxuICAgIGNvbnN0IHN5c3RlbUtleU1vZGlmaWVycyA9IFsnY3RybCcsICdzaGlmdCcsICdhbHQnLCAnbWV0YScsICdjbWQnLCAnc3VwZXInXTtcbiAgICBjb25zdCBzZWxlY3RlZFN5c3RlbUtleU1vZGlmaWVycyA9IHN5c3RlbUtleU1vZGlmaWVycy5maWx0ZXIobW9kaWZpZXIgPT4ga2V5TW9kaWZpZXJzLmluY2x1ZGVzKG1vZGlmaWVyKSk7XG4gICAga2V5TW9kaWZpZXJzID0ga2V5TW9kaWZpZXJzLmZpbHRlcihpID0+ICFzZWxlY3RlZFN5c3RlbUtleU1vZGlmaWVycy5pbmNsdWRlcyhpKSk7XG5cbiAgICBpZiAoc2VsZWN0ZWRTeXN0ZW1LZXlNb2RpZmllcnMubGVuZ3RoID4gMCkge1xuICAgICAgY29uc3QgYWN0aXZlbHlQcmVzc2VkS2V5TW9kaWZpZXJzID0gc2VsZWN0ZWRTeXN0ZW1LZXlNb2RpZmllcnMuZmlsdGVyKG1vZGlmaWVyID0+IHtcbiAgICAgICAgLy8gQWxpYXMgXCJjbWRcIiBhbmQgXCJzdXBlclwiIHRvIFwibWV0YVwiXG4gICAgICAgIGlmIChtb2RpZmllciA9PT0gJ2NtZCcgfHwgbW9kaWZpZXIgPT09ICdzdXBlcicpIG1vZGlmaWVyID0gJ21ldGEnO1xuICAgICAgICByZXR1cm4gZVtgJHttb2RpZmllcn1LZXlgXTtcbiAgICAgIH0pOyAvLyBJZiBhbGwgdGhlIG1vZGlmaWVycyBzZWxlY3RlZCBhcmUgcHJlc3NlZCwgLi4uXG5cbiAgICAgIGlmIChhY3RpdmVseVByZXNzZWRLZXlNb2RpZmllcnMubGVuZ3RoID09PSBzZWxlY3RlZFN5c3RlbUtleU1vZGlmaWVycy5sZW5ndGgpIHtcbiAgICAgICAgLy8gQU5EIHRoZSByZW1haW5pbmcga2V5IGlzIHByZXNzZWQgYXMgd2VsbC4gSXQncyBhIHByZXNzLlxuICAgICAgICBpZiAoa2V5TW9kaWZpZXJzWzBdID09PSBrZXlUb01vZGlmaWVyKGUua2V5KSkgcmV0dXJuIGZhbHNlO1xuICAgICAgfVxuICAgIH0gLy8gV2UnbGwgY2FsbCBpdCBOT1QgYSB2YWxpZCBrZXlwcmVzcy5cblxuXG4gICAgcmV0dXJuIHRydWU7XG4gIH1cblxuICBmdW5jdGlvbiBrZXlUb01vZGlmaWVyKGtleSkge1xuICAgIHN3aXRjaCAoa2V5KSB7XG4gICAgICBjYXNlICcvJzpcbiAgICAgICAgcmV0dXJuICdzbGFzaCc7XG5cbiAgICAgIGNhc2UgJyAnOlxuICAgICAgY2FzZSAnU3BhY2ViYXInOlxuICAgICAgICByZXR1cm4gJ3NwYWNlJztcblxuICAgICAgZGVmYXVsdDpcbiAgICAgICAgcmV0dXJuIGtleSAmJiBrZWJhYkNhc2Uoa2V5KTtcbiAgICB9XG4gIH1cblxuICBmdW5jdGlvbiByZWdpc3Rlck1vZGVsTGlzdGVuZXIoY29tcG9uZW50LCBlbCwgbW9kaWZpZXJzLCBleHByZXNzaW9uLCBleHRyYVZhcnMpIHtcbiAgICAvLyBJZiB0aGUgZWxlbWVudCB3ZSBhcmUgYmluZGluZyB0byBpcyBhIHNlbGVjdCwgYSByYWRpbywgb3IgY2hlY2tib3hcbiAgICAvLyB3ZSdsbCBsaXN0ZW4gZm9yIHRoZSBjaGFuZ2UgZXZlbnQgaW5zdGVhZCBvZiB0aGUgXCJpbnB1dFwiIGV2ZW50LlxuICAgIHZhciBldmVudCA9IGVsLnRhZ05hbWUudG9Mb3dlckNhc2UoKSA9PT0gJ3NlbGVjdCcgfHwgWydjaGVja2JveCcsICdyYWRpbyddLmluY2x1ZGVzKGVsLnR5cGUpIHx8IG1vZGlmaWVycy5pbmNsdWRlcygnbGF6eScpID8gJ2NoYW5nZScgOiAnaW5wdXQnO1xuICAgIGNvbnN0IGxpc3RlbmVyRXhwcmVzc2lvbiA9IGAke2V4cHJlc3Npb259ID0gcmlnaHRTaWRlT2ZFeHByZXNzaW9uKCRldmVudCwgJHtleHByZXNzaW9ufSlgO1xuICAgIHJlZ2lzdGVyTGlzdGVuZXIoY29tcG9uZW50LCBlbCwgZXZlbnQsIG1vZGlmaWVycywgbGlzdGVuZXJFeHByZXNzaW9uLCAoKSA9PiB7XG4gICAgICByZXR1cm4gX29iamVjdFNwcmVhZDIoX29iamVjdFNwcmVhZDIoe30sIGV4dHJhVmFycygpKSwge30sIHtcbiAgICAgICAgcmlnaHRTaWRlT2ZFeHByZXNzaW9uOiBnZW5lcmF0ZU1vZGVsQXNzaWdubWVudEZ1bmN0aW9uKGVsLCBtb2RpZmllcnMsIGV4cHJlc3Npb24pXG4gICAgICB9KTtcbiAgICB9KTtcbiAgfVxuXG4gIGZ1bmN0aW9uIGdlbmVyYXRlTW9kZWxBc3NpZ25tZW50RnVuY3Rpb24oZWwsIG1vZGlmaWVycywgZXhwcmVzc2lvbikge1xuICAgIGlmIChlbC50eXBlID09PSAncmFkaW8nKSB7XG4gICAgICAvLyBSYWRpbyBidXR0b25zIG9ubHkgd29yayBwcm9wZXJseSB3aGVuIHRoZXkgc2hhcmUgYSBuYW1lIGF0dHJpYnV0ZS5cbiAgICAgIC8vIFBlb3BsZSBtaWdodCBhc3N1bWUgd2UgdGFrZSBjYXJlIG9mIHRoYXQgZm9yIHRoZW0sIGJlY2F1c2VcbiAgICAgIC8vIHRoZXkgYWxyZWFkeSBzZXQgYSBzaGFyZWQgXCJ4LW1vZGVsXCIgYXR0cmlidXRlLlxuICAgICAgaWYgKCFlbC5oYXNBdHRyaWJ1dGUoJ25hbWUnKSkgZWwuc2V0QXR0cmlidXRlKCduYW1lJywgZXhwcmVzc2lvbik7XG4gICAgfVxuXG4gICAgcmV0dXJuIChldmVudCwgY3VycmVudFZhbHVlKSA9PiB7XG4gICAgICAvLyBDaGVjayBmb3IgZXZlbnQuZGV0YWlsIGR1ZSB0byBhbiBpc3N1ZSB3aGVyZSBJRTExIGhhbmRsZXMgb3RoZXIgZXZlbnRzIGFzIGEgQ3VzdG9tRXZlbnQuXG4gICAgICBpZiAoZXZlbnQgaW5zdGFuY2VvZiBDdXN0b21FdmVudCAmJiBldmVudC5kZXRhaWwpIHtcbiAgICAgICAgcmV0dXJuIGV2ZW50LmRldGFpbDtcbiAgICAgIH0gZWxzZSBpZiAoZWwudHlwZSA9PT0gJ2NoZWNrYm94Jykge1xuICAgICAgICAvLyBJZiB0aGUgZGF0YSB3ZSBhcmUgYmluZGluZyB0byBpcyBhbiBhcnJheSwgdG9nZ2xlIGl0cyB2YWx1ZSBpbnNpZGUgdGhlIGFycmF5LlxuICAgICAgICBpZiAoQXJyYXkuaXNBcnJheShjdXJyZW50VmFsdWUpKSB7XG4gICAgICAgICAgY29uc3QgbmV3VmFsdWUgPSBtb2RpZmllcnMuaW5jbHVkZXMoJ251bWJlcicpID8gc2FmZVBhcnNlTnVtYmVyKGV2ZW50LnRhcmdldC52YWx1ZSkgOiBldmVudC50YXJnZXQudmFsdWU7XG4gICAgICAgICAgcmV0dXJuIGV2ZW50LnRhcmdldC5jaGVja2VkID8gY3VycmVudFZhbHVlLmNvbmNhdChbbmV3VmFsdWVdKSA6IGN1cnJlbnRWYWx1ZS5maWx0ZXIoZWwgPT4gIWNoZWNrZWRBdHRyTG9vc2VDb21wYXJlKGVsLCBuZXdWYWx1ZSkpO1xuICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgIHJldHVybiBldmVudC50YXJnZXQuY2hlY2tlZDtcbiAgICAgICAgfVxuICAgICAgfSBlbHNlIGlmIChlbC50YWdOYW1lLnRvTG93ZXJDYXNlKCkgPT09ICdzZWxlY3QnICYmIGVsLm11bHRpcGxlKSB7XG4gICAgICAgIHJldHVybiBtb2RpZmllcnMuaW5jbHVkZXMoJ251bWJlcicpID8gQXJyYXkuZnJvbShldmVudC50YXJnZXQuc2VsZWN0ZWRPcHRpb25zKS5tYXAob3B0aW9uID0+IHtcbiAgICAgICAgICBjb25zdCByYXdWYWx1ZSA9IG9wdGlvbi52YWx1ZSB8fCBvcHRpb24udGV4dDtcbiAgICAgICAgICByZXR1cm4gc2FmZVBhcnNlTnVtYmVyKHJhd1ZhbHVlKTtcbiAgICAgICAgfSkgOiBBcnJheS5mcm9tKGV2ZW50LnRhcmdldC5zZWxlY3RlZE9wdGlvbnMpLm1hcChvcHRpb24gPT4ge1xuICAgICAgICAgIHJldHVybiBvcHRpb24udmFsdWUgfHwgb3B0aW9uLnRleHQ7XG4gICAgICAgIH0pO1xuICAgICAgfSBlbHNlIHtcbiAgICAgICAgY29uc3QgcmF3VmFsdWUgPSBldmVudC50YXJnZXQudmFsdWU7XG4gICAgICAgIHJldHVybiBtb2RpZmllcnMuaW5jbHVkZXMoJ251bWJlcicpID8gc2FmZVBhcnNlTnVtYmVyKHJhd1ZhbHVlKSA6IG1vZGlmaWVycy5pbmNsdWRlcygndHJpbScpID8gcmF3VmFsdWUudHJpbSgpIDogcmF3VmFsdWU7XG4gICAgICB9XG4gICAgfTtcbiAgfVxuXG4gIGZ1bmN0aW9uIHNhZmVQYXJzZU51bWJlcihyYXdWYWx1ZSkge1xuICAgIGNvbnN0IG51bWJlciA9IHJhd1ZhbHVlID8gcGFyc2VGbG9hdChyYXdWYWx1ZSkgOiBudWxsO1xuICAgIHJldHVybiBpc051bWVyaWMobnVtYmVyKSA/IG51bWJlciA6IHJhd1ZhbHVlO1xuICB9XG5cbiAgLyoqXG4gICAqIENvcHlyaWdodCAoQykgMjAxNyBzYWxlc2ZvcmNlLmNvbSwgaW5jLlxuICAgKi9cbiAgY29uc3QgeyBpc0FycmF5IH0gPSBBcnJheTtcbiAgY29uc3QgeyBnZXRQcm90b3R5cGVPZiwgY3JlYXRlOiBPYmplY3RDcmVhdGUsIGRlZmluZVByb3BlcnR5OiBPYmplY3REZWZpbmVQcm9wZXJ0eSwgZGVmaW5lUHJvcGVydGllczogT2JqZWN0RGVmaW5lUHJvcGVydGllcywgaXNFeHRlbnNpYmxlLCBnZXRPd25Qcm9wZXJ0eURlc2NyaXB0b3IsIGdldE93blByb3BlcnR5TmFtZXMsIGdldE93blByb3BlcnR5U3ltYm9scywgcHJldmVudEV4dGVuc2lvbnMsIGhhc093blByb3BlcnR5LCB9ID0gT2JqZWN0O1xuICBjb25zdCB7IHB1c2g6IEFycmF5UHVzaCwgY29uY2F0OiBBcnJheUNvbmNhdCwgbWFwOiBBcnJheU1hcCwgfSA9IEFycmF5LnByb3RvdHlwZTtcbiAgZnVuY3Rpb24gaXNVbmRlZmluZWQob2JqKSB7XG4gICAgICByZXR1cm4gb2JqID09PSB1bmRlZmluZWQ7XG4gIH1cbiAgZnVuY3Rpb24gaXNGdW5jdGlvbihvYmopIHtcbiAgICAgIHJldHVybiB0eXBlb2Ygb2JqID09PSAnZnVuY3Rpb24nO1xuICB9XG4gIGZ1bmN0aW9uIGlzT2JqZWN0KG9iaikge1xuICAgICAgcmV0dXJuIHR5cGVvZiBvYmogPT09ICdvYmplY3QnO1xuICB9XG4gIGNvbnN0IHByb3h5VG9WYWx1ZU1hcCA9IG5ldyBXZWFrTWFwKCk7XG4gIGZ1bmN0aW9uIHJlZ2lzdGVyUHJveHkocHJveHksIHZhbHVlKSB7XG4gICAgICBwcm94eVRvVmFsdWVNYXAuc2V0KHByb3h5LCB2YWx1ZSk7XG4gIH1cbiAgY29uc3QgdW53cmFwID0gKHJlcGxpY2FPckFueSkgPT4gcHJveHlUb1ZhbHVlTWFwLmdldChyZXBsaWNhT3JBbnkpIHx8IHJlcGxpY2FPckFueTtcblxuICBmdW5jdGlvbiB3cmFwVmFsdWUobWVtYnJhbmUsIHZhbHVlKSB7XG4gICAgICByZXR1cm4gbWVtYnJhbmUudmFsdWVJc09ic2VydmFibGUodmFsdWUpID8gbWVtYnJhbmUuZ2V0UHJveHkodmFsdWUpIDogdmFsdWU7XG4gIH1cbiAgLyoqXG4gICAqIFVud3JhcCBwcm9wZXJ0eSBkZXNjcmlwdG9ycyB3aWxsIHNldCB2YWx1ZSBvbiBvcmlnaW5hbCBkZXNjcmlwdG9yXG4gICAqIFdlIG9ubHkgbmVlZCB0byB1bndyYXAgaWYgdmFsdWUgaXMgc3BlY2lmaWVkXG4gICAqIEBwYXJhbSBkZXNjcmlwdG9yIGV4dGVybmFsIGRlc2NycGl0b3IgcHJvdmlkZWQgdG8gZGVmaW5lIG5ldyBwcm9wZXJ0eSBvbiBvcmlnaW5hbCB2YWx1ZVxuICAgKi9cbiAgZnVuY3Rpb24gdW53cmFwRGVzY3JpcHRvcihkZXNjcmlwdG9yKSB7XG4gICAgICBpZiAoaGFzT3duUHJvcGVydHkuY2FsbChkZXNjcmlwdG9yLCAndmFsdWUnKSkge1xuICAgICAgICAgIGRlc2NyaXB0b3IudmFsdWUgPSB1bndyYXAoZGVzY3JpcHRvci52YWx1ZSk7XG4gICAgICB9XG4gICAgICByZXR1cm4gZGVzY3JpcHRvcjtcbiAgfVxuICBmdW5jdGlvbiBsb2NrU2hhZG93VGFyZ2V0KG1lbWJyYW5lLCBzaGFkb3dUYXJnZXQsIG9yaWdpbmFsVGFyZ2V0KSB7XG4gICAgICBjb25zdCB0YXJnZXRLZXlzID0gQXJyYXlDb25jYXQuY2FsbChnZXRPd25Qcm9wZXJ0eU5hbWVzKG9yaWdpbmFsVGFyZ2V0KSwgZ2V0T3duUHJvcGVydHlTeW1ib2xzKG9yaWdpbmFsVGFyZ2V0KSk7XG4gICAgICB0YXJnZXRLZXlzLmZvckVhY2goKGtleSkgPT4ge1xuICAgICAgICAgIGxldCBkZXNjcmlwdG9yID0gZ2V0T3duUHJvcGVydHlEZXNjcmlwdG9yKG9yaWdpbmFsVGFyZ2V0LCBrZXkpO1xuICAgICAgICAgIC8vIFdlIGRvIG5vdCBuZWVkIHRvIHdyYXAgdGhlIGRlc2NyaXB0b3IgaWYgY29uZmlndXJhYmxlXG4gICAgICAgICAgLy8gQmVjYXVzZSB3ZSBjYW4gZGVhbCB3aXRoIHdyYXBwaW5nIGl0IHdoZW4gdXNlciBnb2VzIHRocm91Z2hcbiAgICAgICAgICAvLyBHZXQgb3duIHByb3BlcnR5IGRlc2NyaXB0b3IuIFRoZXJlIGlzIGFsc28gYSBjaGFuY2UgdGhhdCB0aGlzIGRlc2NyaXB0b3JcbiAgICAgICAgICAvLyBjb3VsZCBjaGFuZ2Ugc29tZXRpbWUgaW4gdGhlIGZ1dHVyZSwgc28gd2UgY2FuIGRlZmVyIHdyYXBwaW5nXG4gICAgICAgICAgLy8gdW50aWwgd2UgbmVlZCB0b1xuICAgICAgICAgIGlmICghZGVzY3JpcHRvci5jb25maWd1cmFibGUpIHtcbiAgICAgICAgICAgICAgZGVzY3JpcHRvciA9IHdyYXBEZXNjcmlwdG9yKG1lbWJyYW5lLCBkZXNjcmlwdG9yLCB3cmFwVmFsdWUpO1xuICAgICAgICAgIH1cbiAgICAgICAgICBPYmplY3REZWZpbmVQcm9wZXJ0eShzaGFkb3dUYXJnZXQsIGtleSwgZGVzY3JpcHRvcik7XG4gICAgICB9KTtcbiAgICAgIHByZXZlbnRFeHRlbnNpb25zKHNoYWRvd1RhcmdldCk7XG4gIH1cbiAgY2xhc3MgUmVhY3RpdmVQcm94eUhhbmRsZXIge1xuICAgICAgY29uc3RydWN0b3IobWVtYnJhbmUsIHZhbHVlKSB7XG4gICAgICAgICAgdGhpcy5vcmlnaW5hbFRhcmdldCA9IHZhbHVlO1xuICAgICAgICAgIHRoaXMubWVtYnJhbmUgPSBtZW1icmFuZTtcbiAgICAgIH1cbiAgICAgIGdldChzaGFkb3dUYXJnZXQsIGtleSkge1xuICAgICAgICAgIGNvbnN0IHsgb3JpZ2luYWxUYXJnZXQsIG1lbWJyYW5lIH0gPSB0aGlzO1xuICAgICAgICAgIGNvbnN0IHZhbHVlID0gb3JpZ2luYWxUYXJnZXRba2V5XTtcbiAgICAgICAgICBjb25zdCB7IHZhbHVlT2JzZXJ2ZWQgfSA9IG1lbWJyYW5lO1xuICAgICAgICAgIHZhbHVlT2JzZXJ2ZWQob3JpZ2luYWxUYXJnZXQsIGtleSk7XG4gICAgICAgICAgcmV0dXJuIG1lbWJyYW5lLmdldFByb3h5KHZhbHVlKTtcbiAgICAgIH1cbiAgICAgIHNldChzaGFkb3dUYXJnZXQsIGtleSwgdmFsdWUpIHtcbiAgICAgICAgICBjb25zdCB7IG9yaWdpbmFsVGFyZ2V0LCBtZW1icmFuZTogeyB2YWx1ZU11dGF0ZWQgfSB9ID0gdGhpcztcbiAgICAgICAgICBjb25zdCBvbGRWYWx1ZSA9IG9yaWdpbmFsVGFyZ2V0W2tleV07XG4gICAgICAgICAgaWYgKG9sZFZhbHVlICE9PSB2YWx1ZSkge1xuICAgICAgICAgICAgICBvcmlnaW5hbFRhcmdldFtrZXldID0gdmFsdWU7XG4gICAgICAgICAgICAgIHZhbHVlTXV0YXRlZChvcmlnaW5hbFRhcmdldCwga2V5KTtcbiAgICAgICAgICB9XG4gICAgICAgICAgZWxzZSBpZiAoa2V5ID09PSAnbGVuZ3RoJyAmJiBpc0FycmF5KG9yaWdpbmFsVGFyZ2V0KSkge1xuICAgICAgICAgICAgICAvLyBmaXggZm9yIGlzc3VlICMyMzY6IHB1c2ggd2lsbCBhZGQgdGhlIG5ldyBpbmRleCwgYW5kIGJ5IHRoZSB0aW1lIGxlbmd0aFxuICAgICAgICAgICAgICAvLyBpcyB1cGRhdGVkLCB0aGUgaW50ZXJuYWwgbGVuZ3RoIGlzIGFscmVhZHkgZXF1YWwgdG8gdGhlIG5ldyBsZW5ndGggdmFsdWVcbiAgICAgICAgICAgICAgLy8gdGhlcmVmb3JlLCB0aGUgb2xkVmFsdWUgaXMgZXF1YWwgdG8gdGhlIHZhbHVlLiBUaGlzIGlzIHRoZSBmb3JraW5nIGxvZ2ljXG4gICAgICAgICAgICAgIC8vIHRvIHN1cHBvcnQgdGhpcyB1c2UgY2FzZS5cbiAgICAgICAgICAgICAgdmFsdWVNdXRhdGVkKG9yaWdpbmFsVGFyZ2V0LCBrZXkpO1xuICAgICAgICAgIH1cbiAgICAgICAgICByZXR1cm4gdHJ1ZTtcbiAgICAgIH1cbiAgICAgIGRlbGV0ZVByb3BlcnR5KHNoYWRvd1RhcmdldCwga2V5KSB7XG4gICAgICAgICAgY29uc3QgeyBvcmlnaW5hbFRhcmdldCwgbWVtYnJhbmU6IHsgdmFsdWVNdXRhdGVkIH0gfSA9IHRoaXM7XG4gICAgICAgICAgZGVsZXRlIG9yaWdpbmFsVGFyZ2V0W2tleV07XG4gICAgICAgICAgdmFsdWVNdXRhdGVkKG9yaWdpbmFsVGFyZ2V0LCBrZXkpO1xuICAgICAgICAgIHJldHVybiB0cnVlO1xuICAgICAgfVxuICAgICAgYXBwbHkoc2hhZG93VGFyZ2V0LCB0aGlzQXJnLCBhcmdBcnJheSkge1xuICAgICAgICAgIC8qIE5vIG9wICovXG4gICAgICB9XG4gICAgICBjb25zdHJ1Y3QodGFyZ2V0LCBhcmdBcnJheSwgbmV3VGFyZ2V0KSB7XG4gICAgICAgICAgLyogTm8gb3AgKi9cbiAgICAgIH1cbiAgICAgIGhhcyhzaGFkb3dUYXJnZXQsIGtleSkge1xuICAgICAgICAgIGNvbnN0IHsgb3JpZ2luYWxUYXJnZXQsIG1lbWJyYW5lOiB7IHZhbHVlT2JzZXJ2ZWQgfSB9ID0gdGhpcztcbiAgICAgICAgICB2YWx1ZU9ic2VydmVkKG9yaWdpbmFsVGFyZ2V0LCBrZXkpO1xuICAgICAgICAgIHJldHVybiBrZXkgaW4gb3JpZ2luYWxUYXJnZXQ7XG4gICAgICB9XG4gICAgICBvd25LZXlzKHNoYWRvd1RhcmdldCkge1xuICAgICAgICAgIGNvbnN0IHsgb3JpZ2luYWxUYXJnZXQgfSA9IHRoaXM7XG4gICAgICAgICAgcmV0dXJuIEFycmF5Q29uY2F0LmNhbGwoZ2V0T3duUHJvcGVydHlOYW1lcyhvcmlnaW5hbFRhcmdldCksIGdldE93blByb3BlcnR5U3ltYm9scyhvcmlnaW5hbFRhcmdldCkpO1xuICAgICAgfVxuICAgICAgaXNFeHRlbnNpYmxlKHNoYWRvd1RhcmdldCkge1xuICAgICAgICAgIGNvbnN0IHNoYWRvd0lzRXh0ZW5zaWJsZSA9IGlzRXh0ZW5zaWJsZShzaGFkb3dUYXJnZXQpO1xuICAgICAgICAgIGlmICghc2hhZG93SXNFeHRlbnNpYmxlKSB7XG4gICAgICAgICAgICAgIHJldHVybiBzaGFkb3dJc0V4dGVuc2libGU7XG4gICAgICAgICAgfVxuICAgICAgICAgIGNvbnN0IHsgb3JpZ2luYWxUYXJnZXQsIG1lbWJyYW5lIH0gPSB0aGlzO1xuICAgICAgICAgIGNvbnN0IHRhcmdldElzRXh0ZW5zaWJsZSA9IGlzRXh0ZW5zaWJsZShvcmlnaW5hbFRhcmdldCk7XG4gICAgICAgICAgaWYgKCF0YXJnZXRJc0V4dGVuc2libGUpIHtcbiAgICAgICAgICAgICAgbG9ja1NoYWRvd1RhcmdldChtZW1icmFuZSwgc2hhZG93VGFyZ2V0LCBvcmlnaW5hbFRhcmdldCk7XG4gICAgICAgICAgfVxuICAgICAgICAgIHJldHVybiB0YXJnZXRJc0V4dGVuc2libGU7XG4gICAgICB9XG4gICAgICBzZXRQcm90b3R5cGVPZihzaGFkb3dUYXJnZXQsIHByb3RvdHlwZSkge1xuICAgICAgfVxuICAgICAgZ2V0UHJvdG90eXBlT2Yoc2hhZG93VGFyZ2V0KSB7XG4gICAgICAgICAgY29uc3QgeyBvcmlnaW5hbFRhcmdldCB9ID0gdGhpcztcbiAgICAgICAgICByZXR1cm4gZ2V0UHJvdG90eXBlT2Yob3JpZ2luYWxUYXJnZXQpO1xuICAgICAgfVxuICAgICAgZ2V0T3duUHJvcGVydHlEZXNjcmlwdG9yKHNoYWRvd1RhcmdldCwga2V5KSB7XG4gICAgICAgICAgY29uc3QgeyBvcmlnaW5hbFRhcmdldCwgbWVtYnJhbmUgfSA9IHRoaXM7XG4gICAgICAgICAgY29uc3QgeyB2YWx1ZU9ic2VydmVkIH0gPSB0aGlzLm1lbWJyYW5lO1xuICAgICAgICAgIC8vIGtleXMgbG9va2VkIHVwIHZpYSBoYXNPd25Qcm9wZXJ0eSBuZWVkIHRvIGJlIHJlYWN0aXZlXG4gICAgICAgICAgdmFsdWVPYnNlcnZlZChvcmlnaW5hbFRhcmdldCwga2V5KTtcbiAgICAgICAgICBsZXQgZGVzYyA9IGdldE93blByb3BlcnR5RGVzY3JpcHRvcihvcmlnaW5hbFRhcmdldCwga2V5KTtcbiAgICAgICAgICBpZiAoaXNVbmRlZmluZWQoZGVzYykpIHtcbiAgICAgICAgICAgICAgcmV0dXJuIGRlc2M7XG4gICAgICAgICAgfVxuICAgICAgICAgIGNvbnN0IHNoYWRvd0Rlc2NyaXB0b3IgPSBnZXRPd25Qcm9wZXJ0eURlc2NyaXB0b3Ioc2hhZG93VGFyZ2V0LCBrZXkpO1xuICAgICAgICAgIGlmICghaXNVbmRlZmluZWQoc2hhZG93RGVzY3JpcHRvcikpIHtcbiAgICAgICAgICAgICAgcmV0dXJuIHNoYWRvd0Rlc2NyaXB0b3I7XG4gICAgICAgICAgfVxuICAgICAgICAgIC8vIE5vdGU6IGJ5IGFjY2Vzc2luZyB0aGUgZGVzY3JpcHRvciwgdGhlIGtleSBpcyBtYXJrZWQgYXMgb2JzZXJ2ZWRcbiAgICAgICAgICAvLyBidXQgYWNjZXNzIHRvIHRoZSB2YWx1ZSwgc2V0dGVyIG9yIGdldHRlciAoaWYgYXZhaWxhYmxlKSBjYW5ub3Qgb2JzZXJ2ZVxuICAgICAgICAgIC8vIG11dGF0aW9ucywganVzdCBsaWtlIHJlZ3VsYXIgbWV0aG9kcywgaW4gd2hpY2ggY2FzZSB3ZSBqdXN0IGRvIG5vdGhpbmcuXG4gICAgICAgICAgZGVzYyA9IHdyYXBEZXNjcmlwdG9yKG1lbWJyYW5lLCBkZXNjLCB3cmFwVmFsdWUpO1xuICAgICAgICAgIGlmICghZGVzYy5jb25maWd1cmFibGUpIHtcbiAgICAgICAgICAgICAgLy8gSWYgZGVzY3JpcHRvciBmcm9tIG9yaWdpbmFsIHRhcmdldCBpcyBub3QgY29uZmlndXJhYmxlLFxuICAgICAgICAgICAgICAvLyBXZSBtdXN0IGNvcHkgdGhlIHdyYXBwZWQgZGVzY3JpcHRvciBvdmVyIHRvIHRoZSBzaGFkb3cgdGFyZ2V0LlxuICAgICAgICAgICAgICAvLyBPdGhlcndpc2UsIHByb3h5IHdpbGwgdGhyb3cgYW4gaW52YXJpYW50IGVycm9yLlxuICAgICAgICAgICAgICAvLyBUaGlzIGlzIG91ciBsYXN0IGNoYW5jZSB0byBsb2NrIHRoZSB2YWx1ZS5cbiAgICAgICAgICAgICAgLy8gaHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvSmF2YVNjcmlwdC9SZWZlcmVuY2UvR2xvYmFsX09iamVjdHMvUHJveHkvaGFuZGxlci9nZXRPd25Qcm9wZXJ0eURlc2NyaXB0b3IjSW52YXJpYW50c1xuICAgICAgICAgICAgICBPYmplY3REZWZpbmVQcm9wZXJ0eShzaGFkb3dUYXJnZXQsIGtleSwgZGVzYyk7XG4gICAgICAgICAgfVxuICAgICAgICAgIHJldHVybiBkZXNjO1xuICAgICAgfVxuICAgICAgcHJldmVudEV4dGVuc2lvbnMoc2hhZG93VGFyZ2V0KSB7XG4gICAgICAgICAgY29uc3QgeyBvcmlnaW5hbFRhcmdldCwgbWVtYnJhbmUgfSA9IHRoaXM7XG4gICAgICAgICAgbG9ja1NoYWRvd1RhcmdldChtZW1icmFuZSwgc2hhZG93VGFyZ2V0LCBvcmlnaW5hbFRhcmdldCk7XG4gICAgICAgICAgcHJldmVudEV4dGVuc2lvbnMob3JpZ2luYWxUYXJnZXQpO1xuICAgICAgICAgIHJldHVybiB0cnVlO1xuICAgICAgfVxuICAgICAgZGVmaW5lUHJvcGVydHkoc2hhZG93VGFyZ2V0LCBrZXksIGRlc2NyaXB0b3IpIHtcbiAgICAgICAgICBjb25zdCB7IG9yaWdpbmFsVGFyZ2V0LCBtZW1icmFuZSB9ID0gdGhpcztcbiAgICAgICAgICBjb25zdCB7IHZhbHVlTXV0YXRlZCB9ID0gbWVtYnJhbmU7XG4gICAgICAgICAgY29uc3QgeyBjb25maWd1cmFibGUgfSA9IGRlc2NyaXB0b3I7XG4gICAgICAgICAgLy8gV2UgaGF2ZSB0byBjaGVjayBmb3IgdmFsdWUgaW4gZGVzY3JpcHRvclxuICAgICAgICAgIC8vIGJlY2F1c2UgT2JqZWN0LmZyZWV6ZShwcm94eSkgY2FsbHMgdGhpcyBtZXRob2RcbiAgICAgICAgICAvLyB3aXRoIG9ubHkgeyBjb25maWd1cmFibGU6IGZhbHNlLCB3cml0ZWFibGU6IGZhbHNlIH1cbiAgICAgICAgICAvLyBBZGRpdGlvbmFsbHksIG1ldGhvZCB3aWxsIG9ubHkgYmUgY2FsbGVkIHdpdGggd3JpdGVhYmxlOmZhbHNlXG4gICAgICAgICAgLy8gaWYgdGhlIGRlc2NyaXB0b3IgaGFzIGEgdmFsdWUsIGFzIG9wcG9zZWQgdG8gZ2V0dGVyL3NldHRlclxuICAgICAgICAgIC8vIFNvIHdlIGNhbiBqdXN0IGNoZWNrIGlmIHdyaXRhYmxlIGlzIHByZXNlbnQgYW5kIHRoZW4gc2VlIGlmXG4gICAgICAgICAgLy8gdmFsdWUgaXMgcHJlc2VudC4gVGhpcyBlbGltaW5hdGVzIGdldHRlciBhbmQgc2V0dGVyIGRlc2NyaXB0b3JzXG4gICAgICAgICAgaWYgKGhhc093blByb3BlcnR5LmNhbGwoZGVzY3JpcHRvciwgJ3dyaXRhYmxlJykgJiYgIWhhc093blByb3BlcnR5LmNhbGwoZGVzY3JpcHRvciwgJ3ZhbHVlJykpIHtcbiAgICAgICAgICAgICAgY29uc3Qgb3JpZ2luYWxEZXNjcmlwdG9yID0gZ2V0T3duUHJvcGVydHlEZXNjcmlwdG9yKG9yaWdpbmFsVGFyZ2V0LCBrZXkpO1xuICAgICAgICAgICAgICBkZXNjcmlwdG9yLnZhbHVlID0gb3JpZ2luYWxEZXNjcmlwdG9yLnZhbHVlO1xuICAgICAgICAgIH1cbiAgICAgICAgICBPYmplY3REZWZpbmVQcm9wZXJ0eShvcmlnaW5hbFRhcmdldCwga2V5LCB1bndyYXBEZXNjcmlwdG9yKGRlc2NyaXB0b3IpKTtcbiAgICAgICAgICBpZiAoY29uZmlndXJhYmxlID09PSBmYWxzZSkge1xuICAgICAgICAgICAgICBPYmplY3REZWZpbmVQcm9wZXJ0eShzaGFkb3dUYXJnZXQsIGtleSwgd3JhcERlc2NyaXB0b3IobWVtYnJhbmUsIGRlc2NyaXB0b3IsIHdyYXBWYWx1ZSkpO1xuICAgICAgICAgIH1cbiAgICAgICAgICB2YWx1ZU11dGF0ZWQob3JpZ2luYWxUYXJnZXQsIGtleSk7XG4gICAgICAgICAgcmV0dXJuIHRydWU7XG4gICAgICB9XG4gIH1cblxuICBmdW5jdGlvbiB3cmFwUmVhZE9ubHlWYWx1ZShtZW1icmFuZSwgdmFsdWUpIHtcbiAgICAgIHJldHVybiBtZW1icmFuZS52YWx1ZUlzT2JzZXJ2YWJsZSh2YWx1ZSkgPyBtZW1icmFuZS5nZXRSZWFkT25seVByb3h5KHZhbHVlKSA6IHZhbHVlO1xuICB9XG4gIGNsYXNzIFJlYWRPbmx5SGFuZGxlciB7XG4gICAgICBjb25zdHJ1Y3RvcihtZW1icmFuZSwgdmFsdWUpIHtcbiAgICAgICAgICB0aGlzLm9yaWdpbmFsVGFyZ2V0ID0gdmFsdWU7XG4gICAgICAgICAgdGhpcy5tZW1icmFuZSA9IG1lbWJyYW5lO1xuICAgICAgfVxuICAgICAgZ2V0KHNoYWRvd1RhcmdldCwga2V5KSB7XG4gICAgICAgICAgY29uc3QgeyBtZW1icmFuZSwgb3JpZ2luYWxUYXJnZXQgfSA9IHRoaXM7XG4gICAgICAgICAgY29uc3QgdmFsdWUgPSBvcmlnaW5hbFRhcmdldFtrZXldO1xuICAgICAgICAgIGNvbnN0IHsgdmFsdWVPYnNlcnZlZCB9ID0gbWVtYnJhbmU7XG4gICAgICAgICAgdmFsdWVPYnNlcnZlZChvcmlnaW5hbFRhcmdldCwga2V5KTtcbiAgICAgICAgICByZXR1cm4gbWVtYnJhbmUuZ2V0UmVhZE9ubHlQcm94eSh2YWx1ZSk7XG4gICAgICB9XG4gICAgICBzZXQoc2hhZG93VGFyZ2V0LCBrZXksIHZhbHVlKSB7XG4gICAgICAgICAgcmV0dXJuIGZhbHNlO1xuICAgICAgfVxuICAgICAgZGVsZXRlUHJvcGVydHkoc2hhZG93VGFyZ2V0LCBrZXkpIHtcbiAgICAgICAgICByZXR1cm4gZmFsc2U7XG4gICAgICB9XG4gICAgICBhcHBseShzaGFkb3dUYXJnZXQsIHRoaXNBcmcsIGFyZ0FycmF5KSB7XG4gICAgICAgICAgLyogTm8gb3AgKi9cbiAgICAgIH1cbiAgICAgIGNvbnN0cnVjdCh0YXJnZXQsIGFyZ0FycmF5LCBuZXdUYXJnZXQpIHtcbiAgICAgICAgICAvKiBObyBvcCAqL1xuICAgICAgfVxuICAgICAgaGFzKHNoYWRvd1RhcmdldCwga2V5KSB7XG4gICAgICAgICAgY29uc3QgeyBvcmlnaW5hbFRhcmdldCwgbWVtYnJhbmU6IHsgdmFsdWVPYnNlcnZlZCB9IH0gPSB0aGlzO1xuICAgICAgICAgIHZhbHVlT2JzZXJ2ZWQob3JpZ2luYWxUYXJnZXQsIGtleSk7XG4gICAgICAgICAgcmV0dXJuIGtleSBpbiBvcmlnaW5hbFRhcmdldDtcbiAgICAgIH1cbiAgICAgIG93bktleXMoc2hhZG93VGFyZ2V0KSB7XG4gICAgICAgICAgY29uc3QgeyBvcmlnaW5hbFRhcmdldCB9ID0gdGhpcztcbiAgICAgICAgICByZXR1cm4gQXJyYXlDb25jYXQuY2FsbChnZXRPd25Qcm9wZXJ0eU5hbWVzKG9yaWdpbmFsVGFyZ2V0KSwgZ2V0T3duUHJvcGVydHlTeW1ib2xzKG9yaWdpbmFsVGFyZ2V0KSk7XG4gICAgICB9XG4gICAgICBzZXRQcm90b3R5cGVPZihzaGFkb3dUYXJnZXQsIHByb3RvdHlwZSkge1xuICAgICAgfVxuICAgICAgZ2V0T3duUHJvcGVydHlEZXNjcmlwdG9yKHNoYWRvd1RhcmdldCwga2V5KSB7XG4gICAgICAgICAgY29uc3QgeyBvcmlnaW5hbFRhcmdldCwgbWVtYnJhbmUgfSA9IHRoaXM7XG4gICAgICAgICAgY29uc3QgeyB2YWx1ZU9ic2VydmVkIH0gPSBtZW1icmFuZTtcbiAgICAgICAgICAvLyBrZXlzIGxvb2tlZCB1cCB2aWEgaGFzT3duUHJvcGVydHkgbmVlZCB0byBiZSByZWFjdGl2ZVxuICAgICAgICAgIHZhbHVlT2JzZXJ2ZWQob3JpZ2luYWxUYXJnZXQsIGtleSk7XG4gICAgICAgICAgbGV0IGRlc2MgPSBnZXRPd25Qcm9wZXJ0eURlc2NyaXB0b3Iob3JpZ2luYWxUYXJnZXQsIGtleSk7XG4gICAgICAgICAgaWYgKGlzVW5kZWZpbmVkKGRlc2MpKSB7XG4gICAgICAgICAgICAgIHJldHVybiBkZXNjO1xuICAgICAgICAgIH1cbiAgICAgICAgICBjb25zdCBzaGFkb3dEZXNjcmlwdG9yID0gZ2V0T3duUHJvcGVydHlEZXNjcmlwdG9yKHNoYWRvd1RhcmdldCwga2V5KTtcbiAgICAgICAgICBpZiAoIWlzVW5kZWZpbmVkKHNoYWRvd0Rlc2NyaXB0b3IpKSB7XG4gICAgICAgICAgICAgIHJldHVybiBzaGFkb3dEZXNjcmlwdG9yO1xuICAgICAgICAgIH1cbiAgICAgICAgICAvLyBOb3RlOiBieSBhY2Nlc3NpbmcgdGhlIGRlc2NyaXB0b3IsIHRoZSBrZXkgaXMgbWFya2VkIGFzIG9ic2VydmVkXG4gICAgICAgICAgLy8gYnV0IGFjY2VzcyB0byB0aGUgdmFsdWUgb3IgZ2V0dGVyIChpZiBhdmFpbGFibGUpIGNhbm5vdCBiZSBvYnNlcnZlZCxcbiAgICAgICAgICAvLyBqdXN0IGxpa2UgcmVndWxhciBtZXRob2RzLCBpbiB3aGljaCBjYXNlIHdlIGp1c3QgZG8gbm90aGluZy5cbiAgICAgICAgICBkZXNjID0gd3JhcERlc2NyaXB0b3IobWVtYnJhbmUsIGRlc2MsIHdyYXBSZWFkT25seVZhbHVlKTtcbiAgICAgICAgICBpZiAoaGFzT3duUHJvcGVydHkuY2FsbChkZXNjLCAnc2V0JykpIHtcbiAgICAgICAgICAgICAgZGVzYy5zZXQgPSB1bmRlZmluZWQ7IC8vIHJlYWRPbmx5IG1lbWJyYW5lIGRvZXMgbm90IGFsbG93IHNldHRlcnNcbiAgICAgICAgICB9XG4gICAgICAgICAgaWYgKCFkZXNjLmNvbmZpZ3VyYWJsZSkge1xuICAgICAgICAgICAgICAvLyBJZiBkZXNjcmlwdG9yIGZyb20gb3JpZ2luYWwgdGFyZ2V0IGlzIG5vdCBjb25maWd1cmFibGUsXG4gICAgICAgICAgICAgIC8vIFdlIG11c3QgY29weSB0aGUgd3JhcHBlZCBkZXNjcmlwdG9yIG92ZXIgdG8gdGhlIHNoYWRvdyB0YXJnZXQuXG4gICAgICAgICAgICAgIC8vIE90aGVyd2lzZSwgcHJveHkgd2lsbCB0aHJvdyBhbiBpbnZhcmlhbnQgZXJyb3IuXG4gICAgICAgICAgICAgIC8vIFRoaXMgaXMgb3VyIGxhc3QgY2hhbmNlIHRvIGxvY2sgdGhlIHZhbHVlLlxuICAgICAgICAgICAgICAvLyBodHRwczovL2RldmVsb3Blci5tb3ppbGxhLm9yZy9lbi1VUy9kb2NzL1dlYi9KYXZhU2NyaXB0L1JlZmVyZW5jZS9HbG9iYWxfT2JqZWN0cy9Qcm94eS9oYW5kbGVyL2dldE93blByb3BlcnR5RGVzY3JpcHRvciNJbnZhcmlhbnRzXG4gICAgICAgICAgICAgIE9iamVjdERlZmluZVByb3BlcnR5KHNoYWRvd1RhcmdldCwga2V5LCBkZXNjKTtcbiAgICAgICAgICB9XG4gICAgICAgICAgcmV0dXJuIGRlc2M7XG4gICAgICB9XG4gICAgICBwcmV2ZW50RXh0ZW5zaW9ucyhzaGFkb3dUYXJnZXQpIHtcbiAgICAgICAgICByZXR1cm4gZmFsc2U7XG4gICAgICB9XG4gICAgICBkZWZpbmVQcm9wZXJ0eShzaGFkb3dUYXJnZXQsIGtleSwgZGVzY3JpcHRvcikge1xuICAgICAgICAgIHJldHVybiBmYWxzZTtcbiAgICAgIH1cbiAgfVxuICBmdW5jdGlvbiBjcmVhdGVTaGFkb3dUYXJnZXQodmFsdWUpIHtcbiAgICAgIGxldCBzaGFkb3dUYXJnZXQgPSB1bmRlZmluZWQ7XG4gICAgICBpZiAoaXNBcnJheSh2YWx1ZSkpIHtcbiAgICAgICAgICBzaGFkb3dUYXJnZXQgPSBbXTtcbiAgICAgIH1cbiAgICAgIGVsc2UgaWYgKGlzT2JqZWN0KHZhbHVlKSkge1xuICAgICAgICAgIHNoYWRvd1RhcmdldCA9IHt9O1xuICAgICAgfVxuICAgICAgcmV0dXJuIHNoYWRvd1RhcmdldDtcbiAgfVxuICBjb25zdCBPYmplY3REb3RQcm90b3R5cGUgPSBPYmplY3QucHJvdG90eXBlO1xuICBmdW5jdGlvbiBkZWZhdWx0VmFsdWVJc09ic2VydmFibGUodmFsdWUpIHtcbiAgICAgIC8vIGludGVudGlvbmFsbHkgY2hlY2tpbmcgZm9yIG51bGxcbiAgICAgIGlmICh2YWx1ZSA9PT0gbnVsbCkge1xuICAgICAgICAgIHJldHVybiBmYWxzZTtcbiAgICAgIH1cbiAgICAgIC8vIHRyZWF0IGFsbCBub24tb2JqZWN0IHR5cGVzLCBpbmNsdWRpbmcgdW5kZWZpbmVkLCBhcyBub24tb2JzZXJ2YWJsZSB2YWx1ZXNcbiAgICAgIGlmICh0eXBlb2YgdmFsdWUgIT09ICdvYmplY3QnKSB7XG4gICAgICAgICAgcmV0dXJuIGZhbHNlO1xuICAgICAgfVxuICAgICAgaWYgKGlzQXJyYXkodmFsdWUpKSB7XG4gICAgICAgICAgcmV0dXJuIHRydWU7XG4gICAgICB9XG4gICAgICBjb25zdCBwcm90byA9IGdldFByb3RvdHlwZU9mKHZhbHVlKTtcbiAgICAgIHJldHVybiAocHJvdG8gPT09IE9iamVjdERvdFByb3RvdHlwZSB8fCBwcm90byA9PT0gbnVsbCB8fCBnZXRQcm90b3R5cGVPZihwcm90bykgPT09IG51bGwpO1xuICB9XG4gIGNvbnN0IGRlZmF1bHRWYWx1ZU9ic2VydmVkID0gKG9iaiwga2V5KSA9PiB7XG4gICAgICAvKiBkbyBub3RoaW5nICovXG4gIH07XG4gIGNvbnN0IGRlZmF1bHRWYWx1ZU11dGF0ZWQgPSAob2JqLCBrZXkpID0+IHtcbiAgICAgIC8qIGRvIG5vdGhpbmcgKi9cbiAgfTtcbiAgY29uc3QgZGVmYXVsdFZhbHVlRGlzdG9ydGlvbiA9ICh2YWx1ZSkgPT4gdmFsdWU7XG4gIGZ1bmN0aW9uIHdyYXBEZXNjcmlwdG9yKG1lbWJyYW5lLCBkZXNjcmlwdG9yLCBnZXRWYWx1ZSkge1xuICAgICAgY29uc3QgeyBzZXQsIGdldCB9ID0gZGVzY3JpcHRvcjtcbiAgICAgIGlmIChoYXNPd25Qcm9wZXJ0eS5jYWxsKGRlc2NyaXB0b3IsICd2YWx1ZScpKSB7XG4gICAgICAgICAgZGVzY3JpcHRvci52YWx1ZSA9IGdldFZhbHVlKG1lbWJyYW5lLCBkZXNjcmlwdG9yLnZhbHVlKTtcbiAgICAgIH1cbiAgICAgIGVsc2Uge1xuICAgICAgICAgIGlmICghaXNVbmRlZmluZWQoZ2V0KSkge1xuICAgICAgICAgICAgICBkZXNjcmlwdG9yLmdldCA9IGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgICAgICAgIC8vIGludm9raW5nIHRoZSBvcmlnaW5hbCBnZXR0ZXIgd2l0aCB0aGUgb3JpZ2luYWwgdGFyZ2V0XG4gICAgICAgICAgICAgICAgICByZXR1cm4gZ2V0VmFsdWUobWVtYnJhbmUsIGdldC5jYWxsKHVud3JhcCh0aGlzKSkpO1xuICAgICAgICAgICAgICB9O1xuICAgICAgICAgIH1cbiAgICAgICAgICBpZiAoIWlzVW5kZWZpbmVkKHNldCkpIHtcbiAgICAgICAgICAgICAgZGVzY3JpcHRvci5zZXQgPSBmdW5jdGlvbiAodmFsdWUpIHtcbiAgICAgICAgICAgICAgICAgIC8vIEF0IHRoaXMgcG9pbnQgd2UgZG9uJ3QgaGF2ZSBhIGNsZWFyIGluZGljYXRpb24gb2Ygd2hldGhlclxuICAgICAgICAgICAgICAgICAgLy8gb3Igbm90IGEgdmFsaWQgbXV0YXRpb24gd2lsbCBvY2N1ciwgd2UgZG9uJ3QgaGF2ZSB0aGUga2V5LFxuICAgICAgICAgICAgICAgICAgLy8gYW5kIHdlIGFyZSBub3Qgc3VyZSB3aHkgYW5kIGhvdyB0aGV5IGFyZSBpbnZva2luZyB0aGlzIHNldHRlci5cbiAgICAgICAgICAgICAgICAgIC8vIE5ldmVydGhlbGVzcyB3ZSBwcmVzZXJ2ZSB0aGUgb3JpZ2luYWwgc2VtYW50aWNzIGJ5IGludm9raW5nIHRoZVxuICAgICAgICAgICAgICAgICAgLy8gb3JpZ2luYWwgc2V0dGVyIHdpdGggdGhlIG9yaWdpbmFsIHRhcmdldCBhbmQgdGhlIHVud3JhcHBlZCB2YWx1ZVxuICAgICAgICAgICAgICAgICAgc2V0LmNhbGwodW53cmFwKHRoaXMpLCBtZW1icmFuZS51bndyYXBQcm94eSh2YWx1ZSkpO1xuICAgICAgICAgICAgICB9O1xuICAgICAgICAgIH1cbiAgICAgIH1cbiAgICAgIHJldHVybiBkZXNjcmlwdG9yO1xuICB9XG4gIGNsYXNzIFJlYWN0aXZlTWVtYnJhbmUge1xuICAgICAgY29uc3RydWN0b3Iob3B0aW9ucykge1xuICAgICAgICAgIHRoaXMudmFsdWVEaXN0b3J0aW9uID0gZGVmYXVsdFZhbHVlRGlzdG9ydGlvbjtcbiAgICAgICAgICB0aGlzLnZhbHVlTXV0YXRlZCA9IGRlZmF1bHRWYWx1ZU11dGF0ZWQ7XG4gICAgICAgICAgdGhpcy52YWx1ZU9ic2VydmVkID0gZGVmYXVsdFZhbHVlT2JzZXJ2ZWQ7XG4gICAgICAgICAgdGhpcy52YWx1ZUlzT2JzZXJ2YWJsZSA9IGRlZmF1bHRWYWx1ZUlzT2JzZXJ2YWJsZTtcbiAgICAgICAgICB0aGlzLm9iamVjdEdyYXBoID0gbmV3IFdlYWtNYXAoKTtcbiAgICAgICAgICBpZiAoIWlzVW5kZWZpbmVkKG9wdGlvbnMpKSB7XG4gICAgICAgICAgICAgIGNvbnN0IHsgdmFsdWVEaXN0b3J0aW9uLCB2YWx1ZU11dGF0ZWQsIHZhbHVlT2JzZXJ2ZWQsIHZhbHVlSXNPYnNlcnZhYmxlIH0gPSBvcHRpb25zO1xuICAgICAgICAgICAgICB0aGlzLnZhbHVlRGlzdG9ydGlvbiA9IGlzRnVuY3Rpb24odmFsdWVEaXN0b3J0aW9uKSA/IHZhbHVlRGlzdG9ydGlvbiA6IGRlZmF1bHRWYWx1ZURpc3RvcnRpb247XG4gICAgICAgICAgICAgIHRoaXMudmFsdWVNdXRhdGVkID0gaXNGdW5jdGlvbih2YWx1ZU11dGF0ZWQpID8gdmFsdWVNdXRhdGVkIDogZGVmYXVsdFZhbHVlTXV0YXRlZDtcbiAgICAgICAgICAgICAgdGhpcy52YWx1ZU9ic2VydmVkID0gaXNGdW5jdGlvbih2YWx1ZU9ic2VydmVkKSA/IHZhbHVlT2JzZXJ2ZWQgOiBkZWZhdWx0VmFsdWVPYnNlcnZlZDtcbiAgICAgICAgICAgICAgdGhpcy52YWx1ZUlzT2JzZXJ2YWJsZSA9IGlzRnVuY3Rpb24odmFsdWVJc09ic2VydmFibGUpID8gdmFsdWVJc09ic2VydmFibGUgOiBkZWZhdWx0VmFsdWVJc09ic2VydmFibGU7XG4gICAgICAgICAgfVxuICAgICAgfVxuICAgICAgZ2V0UHJveHkodmFsdWUpIHtcbiAgICAgICAgICBjb25zdCB1bndyYXBwZWRWYWx1ZSA9IHVud3JhcCh2YWx1ZSk7XG4gICAgICAgICAgY29uc3QgZGlzdG9ydGVkID0gdGhpcy52YWx1ZURpc3RvcnRpb24odW53cmFwcGVkVmFsdWUpO1xuICAgICAgICAgIGlmICh0aGlzLnZhbHVlSXNPYnNlcnZhYmxlKGRpc3RvcnRlZCkpIHtcbiAgICAgICAgICAgICAgY29uc3QgbyA9IHRoaXMuZ2V0UmVhY3RpdmVTdGF0ZSh1bndyYXBwZWRWYWx1ZSwgZGlzdG9ydGVkKTtcbiAgICAgICAgICAgICAgLy8gd2hlbiB0cnlpbmcgdG8gZXh0cmFjdCB0aGUgd3JpdGFibGUgdmVyc2lvbiBvZiBhIHJlYWRvbmx5XG4gICAgICAgICAgICAgIC8vIHdlIHJldHVybiB0aGUgcmVhZG9ubHkuXG4gICAgICAgICAgICAgIHJldHVybiBvLnJlYWRPbmx5ID09PSB2YWx1ZSA/IHZhbHVlIDogby5yZWFjdGl2ZTtcbiAgICAgICAgICB9XG4gICAgICAgICAgcmV0dXJuIGRpc3RvcnRlZDtcbiAgICAgIH1cbiAgICAgIGdldFJlYWRPbmx5UHJveHkodmFsdWUpIHtcbiAgICAgICAgICB2YWx1ZSA9IHVud3JhcCh2YWx1ZSk7XG4gICAgICAgICAgY29uc3QgZGlzdG9ydGVkID0gdGhpcy52YWx1ZURpc3RvcnRpb24odmFsdWUpO1xuICAgICAgICAgIGlmICh0aGlzLnZhbHVlSXNPYnNlcnZhYmxlKGRpc3RvcnRlZCkpIHtcbiAgICAgICAgICAgICAgcmV0dXJuIHRoaXMuZ2V0UmVhY3RpdmVTdGF0ZSh2YWx1ZSwgZGlzdG9ydGVkKS5yZWFkT25seTtcbiAgICAgICAgICB9XG4gICAgICAgICAgcmV0dXJuIGRpc3RvcnRlZDtcbiAgICAgIH1cbiAgICAgIHVud3JhcFByb3h5KHApIHtcbiAgICAgICAgICByZXR1cm4gdW53cmFwKHApO1xuICAgICAgfVxuICAgICAgZ2V0UmVhY3RpdmVTdGF0ZSh2YWx1ZSwgZGlzdG9ydGVkVmFsdWUpIHtcbiAgICAgICAgICBjb25zdCB7IG9iamVjdEdyYXBoLCB9ID0gdGhpcztcbiAgICAgICAgICBsZXQgcmVhY3RpdmVTdGF0ZSA9IG9iamVjdEdyYXBoLmdldChkaXN0b3J0ZWRWYWx1ZSk7XG4gICAgICAgICAgaWYgKHJlYWN0aXZlU3RhdGUpIHtcbiAgICAgICAgICAgICAgcmV0dXJuIHJlYWN0aXZlU3RhdGU7XG4gICAgICAgICAgfVxuICAgICAgICAgIGNvbnN0IG1lbWJyYW5lID0gdGhpcztcbiAgICAgICAgICByZWFjdGl2ZVN0YXRlID0ge1xuICAgICAgICAgICAgICBnZXQgcmVhY3RpdmUoKSB7XG4gICAgICAgICAgICAgICAgICBjb25zdCByZWFjdGl2ZUhhbmRsZXIgPSBuZXcgUmVhY3RpdmVQcm94eUhhbmRsZXIobWVtYnJhbmUsIGRpc3RvcnRlZFZhbHVlKTtcbiAgICAgICAgICAgICAgICAgIC8vIGNhY2hpbmcgdGhlIHJlYWN0aXZlIHByb3h5IGFmdGVyIHRoZSBmaXJzdCB0aW1lIGl0IGlzIGFjY2Vzc2VkXG4gICAgICAgICAgICAgICAgICBjb25zdCBwcm94eSA9IG5ldyBQcm94eShjcmVhdGVTaGFkb3dUYXJnZXQoZGlzdG9ydGVkVmFsdWUpLCByZWFjdGl2ZUhhbmRsZXIpO1xuICAgICAgICAgICAgICAgICAgcmVnaXN0ZXJQcm94eShwcm94eSwgdmFsdWUpO1xuICAgICAgICAgICAgICAgICAgT2JqZWN0RGVmaW5lUHJvcGVydHkodGhpcywgJ3JlYWN0aXZlJywgeyB2YWx1ZTogcHJveHkgfSk7XG4gICAgICAgICAgICAgICAgICByZXR1cm4gcHJveHk7XG4gICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgIGdldCByZWFkT25seSgpIHtcbiAgICAgICAgICAgICAgICAgIGNvbnN0IHJlYWRPbmx5SGFuZGxlciA9IG5ldyBSZWFkT25seUhhbmRsZXIobWVtYnJhbmUsIGRpc3RvcnRlZFZhbHVlKTtcbiAgICAgICAgICAgICAgICAgIC8vIGNhY2hpbmcgdGhlIHJlYWRPbmx5IHByb3h5IGFmdGVyIHRoZSBmaXJzdCB0aW1lIGl0IGlzIGFjY2Vzc2VkXG4gICAgICAgICAgICAgICAgICBjb25zdCBwcm94eSA9IG5ldyBQcm94eShjcmVhdGVTaGFkb3dUYXJnZXQoZGlzdG9ydGVkVmFsdWUpLCByZWFkT25seUhhbmRsZXIpO1xuICAgICAgICAgICAgICAgICAgcmVnaXN0ZXJQcm94eShwcm94eSwgdmFsdWUpO1xuICAgICAgICAgICAgICAgICAgT2JqZWN0RGVmaW5lUHJvcGVydHkodGhpcywgJ3JlYWRPbmx5JywgeyB2YWx1ZTogcHJveHkgfSk7XG4gICAgICAgICAgICAgICAgICByZXR1cm4gcHJveHk7XG4gICAgICAgICAgICAgIH1cbiAgICAgICAgICB9O1xuICAgICAgICAgIG9iamVjdEdyYXBoLnNldChkaXN0b3J0ZWRWYWx1ZSwgcmVhY3RpdmVTdGF0ZSk7XG4gICAgICAgICAgcmV0dXJuIHJlYWN0aXZlU3RhdGU7XG4gICAgICB9XG4gIH1cbiAgLyoqIHZlcnNpb246IDAuMjYuMCAqL1xuXG4gIGZ1bmN0aW9uIHdyYXAoZGF0YSwgbXV0YXRpb25DYWxsYmFjaykge1xuXG4gICAgbGV0IG1lbWJyYW5lID0gbmV3IFJlYWN0aXZlTWVtYnJhbmUoe1xuICAgICAgdmFsdWVNdXRhdGVkKHRhcmdldCwga2V5KSB7XG4gICAgICAgIG11dGF0aW9uQ2FsbGJhY2sodGFyZ2V0LCBrZXkpO1xuICAgICAgfVxuXG4gICAgfSk7XG4gICAgcmV0dXJuIHtcbiAgICAgIGRhdGE6IG1lbWJyYW5lLmdldFByb3h5KGRhdGEpLFxuICAgICAgbWVtYnJhbmU6IG1lbWJyYW5lXG4gICAgfTtcbiAgfVxuICBmdW5jdGlvbiB1bndyYXAkMShtZW1icmFuZSwgb2JzZXJ2YWJsZSkge1xuICAgIGxldCB1bndyYXBwZWREYXRhID0gbWVtYnJhbmUudW53cmFwUHJveHkob2JzZXJ2YWJsZSk7XG4gICAgbGV0IGNvcHkgPSB7fTtcbiAgICBPYmplY3Qua2V5cyh1bndyYXBwZWREYXRhKS5mb3JFYWNoKGtleSA9PiB7XG4gICAgICBpZiAoWyckZWwnLCAnJHJlZnMnLCAnJG5leHRUaWNrJywgJyR3YXRjaCddLmluY2x1ZGVzKGtleSkpIHJldHVybjtcbiAgICAgIGNvcHlba2V5XSA9IHVud3JhcHBlZERhdGFba2V5XTtcbiAgICB9KTtcbiAgICByZXR1cm4gY29weTtcbiAgfVxuXG4gIGNsYXNzIENvbXBvbmVudCB7XG4gICAgY29uc3RydWN0b3IoZWwsIGNvbXBvbmVudEZvckNsb25lID0gbnVsbCkge1xuICAgICAgdGhpcy4kZWwgPSBlbDtcbiAgICAgIGNvbnN0IGRhdGFBdHRyID0gdGhpcy4kZWwuZ2V0QXR0cmlidXRlKCd4LWRhdGEnKTtcbiAgICAgIGNvbnN0IGRhdGFFeHByZXNzaW9uID0gZGF0YUF0dHIgPT09ICcnID8gJ3t9JyA6IGRhdGFBdHRyO1xuICAgICAgY29uc3QgaW5pdEV4cHJlc3Npb24gPSB0aGlzLiRlbC5nZXRBdHRyaWJ1dGUoJ3gtaW5pdCcpO1xuICAgICAgbGV0IGRhdGFFeHRyYXMgPSB7XG4gICAgICAgICRlbDogdGhpcy4kZWxcbiAgICAgIH07XG4gICAgICBsZXQgY2Fub25pY2FsQ29tcG9uZW50RWxlbWVudFJlZmVyZW5jZSA9IGNvbXBvbmVudEZvckNsb25lID8gY29tcG9uZW50Rm9yQ2xvbmUuJGVsIDogdGhpcy4kZWw7XG4gICAgICBPYmplY3QuZW50cmllcyhBbHBpbmUubWFnaWNQcm9wZXJ0aWVzKS5mb3JFYWNoKChbbmFtZSwgY2FsbGJhY2tdKSA9PiB7XG4gICAgICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShkYXRhRXh0cmFzLCBgJCR7bmFtZX1gLCB7XG4gICAgICAgICAgZ2V0OiBmdW5jdGlvbiBnZXQoKSB7XG4gICAgICAgICAgICByZXR1cm4gY2FsbGJhY2soY2Fub25pY2FsQ29tcG9uZW50RWxlbWVudFJlZmVyZW5jZSk7XG4gICAgICAgICAgfVxuICAgICAgICB9KTtcbiAgICAgIH0pO1xuICAgICAgdGhpcy51bm9ic2VydmVkRGF0YSA9IGNvbXBvbmVudEZvckNsb25lID8gY29tcG9uZW50Rm9yQ2xvbmUuZ2V0VW5vYnNlcnZlZERhdGEoKSA6IHNhZmVyRXZhbChlbCwgZGF0YUV4cHJlc3Npb24sIGRhdGFFeHRyYXMpO1xuICAgICAgLy8gQ29uc3RydWN0IGEgUHJveHktYmFzZWQgb2JzZXJ2YWJsZS4gVGhpcyB3aWxsIGJlIHVzZWQgdG8gaGFuZGxlIHJlYWN0aXZpdHkuXG5cbiAgICAgIGxldCB7XG4gICAgICAgIG1lbWJyYW5lLFxuICAgICAgICBkYXRhXG4gICAgICB9ID0gdGhpcy53cmFwRGF0YUluT2JzZXJ2YWJsZSh0aGlzLnVub2JzZXJ2ZWREYXRhKTtcbiAgICAgIHRoaXMuJGRhdGEgPSBkYXRhO1xuICAgICAgdGhpcy5tZW1icmFuZSA9IG1lbWJyYW5lOyAvLyBBZnRlciBtYWtpbmcgdXNlci1zdXBwbGllZCBkYXRhIG1ldGhvZHMgcmVhY3RpdmUsIHdlIGNhbiBub3cgYWRkXG4gICAgICAvLyBvdXIgbWFnaWMgcHJvcGVydGllcyB0byB0aGUgb3JpZ2luYWwgZGF0YSBmb3IgYWNjZXNzLlxuXG4gICAgICB0aGlzLnVub2JzZXJ2ZWREYXRhLiRlbCA9IHRoaXMuJGVsO1xuICAgICAgdGhpcy51bm9ic2VydmVkRGF0YS4kcmVmcyA9IHRoaXMuZ2V0UmVmc1Byb3h5KCk7XG4gICAgICB0aGlzLm5leHRUaWNrU3RhY2sgPSBbXTtcblxuICAgICAgdGhpcy51bm9ic2VydmVkRGF0YS4kbmV4dFRpY2sgPSBjYWxsYmFjayA9PiB7XG4gICAgICAgIHRoaXMubmV4dFRpY2tTdGFjay5wdXNoKGNhbGxiYWNrKTtcbiAgICAgIH07XG5cbiAgICAgIHRoaXMud2F0Y2hlcnMgPSB7fTtcblxuICAgICAgdGhpcy51bm9ic2VydmVkRGF0YS4kd2F0Y2ggPSAocHJvcGVydHksIGNhbGxiYWNrKSA9PiB7XG4gICAgICAgIGlmICghdGhpcy53YXRjaGVyc1twcm9wZXJ0eV0pIHRoaXMud2F0Y2hlcnNbcHJvcGVydHldID0gW107XG4gICAgICAgIHRoaXMud2F0Y2hlcnNbcHJvcGVydHldLnB1c2goY2FsbGJhY2spO1xuICAgICAgfTtcbiAgICAgIC8qIE1PREVSTi1PTkxZOlNUQVJUICovXG4gICAgICAvLyBXZSByZW1vdmUgdGhpcyBwaWVjZSBvZiBjb2RlIGZyb20gdGhlIGxlZ2FjeSBidWlsZC5cbiAgICAgIC8vIEluIElFMTEsIHdlIGhhdmUgYWxyZWFkeSBkZWZpbmVkIG91ciBoZWxwZXJzIGF0IHRoaXMgcG9pbnQuXG4gICAgICAvLyBSZWdpc3RlciBjdXN0b20gbWFnaWMgcHJvcGVydGllcy5cblxuXG4gICAgICBPYmplY3QuZW50cmllcyhBbHBpbmUubWFnaWNQcm9wZXJ0aWVzKS5mb3JFYWNoKChbbmFtZSwgY2FsbGJhY2tdKSA9PiB7XG4gICAgICAgIE9iamVjdC5kZWZpbmVQcm9wZXJ0eSh0aGlzLnVub2JzZXJ2ZWREYXRhLCBgJCR7bmFtZX1gLCB7XG4gICAgICAgICAgZ2V0OiBmdW5jdGlvbiBnZXQoKSB7XG4gICAgICAgICAgICByZXR1cm4gY2FsbGJhY2soY2Fub25pY2FsQ29tcG9uZW50RWxlbWVudFJlZmVyZW5jZSwgdGhpcy4kZWwpO1xuICAgICAgICAgIH1cbiAgICAgICAgfSk7XG4gICAgICB9KTtcbiAgICAgIC8qIE1PREVSTi1PTkxZOkVORCAqL1xuXG4gICAgICB0aGlzLnNob3dEaXJlY3RpdmVTdGFjayA9IFtdO1xuICAgICAgdGhpcy5zaG93RGlyZWN0aXZlTGFzdEVsZW1lbnQ7XG4gICAgICBjb21wb25lbnRGb3JDbG9uZSB8fCBBbHBpbmUub25CZWZvcmVDb21wb25lbnRJbml0aWFsaXplZHMuZm9yRWFjaChjYWxsYmFjayA9PiBjYWxsYmFjayh0aGlzKSk7XG4gICAgICB2YXIgaW5pdFJldHVybmVkQ2FsbGJhY2s7IC8vIElmIHgtaW5pdCBpcyBwcmVzZW50IEFORCB3ZSBhcmVuJ3QgY2xvbmluZyAoc2tpcCB4LWluaXQgb24gY2xvbmUpXG5cbiAgICAgIGlmIChpbml0RXhwcmVzc2lvbiAmJiAhY29tcG9uZW50Rm9yQ2xvbmUpIHtcbiAgICAgICAgLy8gV2Ugd2FudCB0byBhbGxvdyBkYXRhIG1hbmlwdWxhdGlvbiwgYnV0IG5vdCB0cmlnZ2VyIERPTSB1cGRhdGVzIGp1c3QgeWV0LlxuICAgICAgICAvLyBXZSBoYXZlbid0IGV2ZW4gaW5pdGlhbGl6ZWQgdGhlIGVsZW1lbnRzIHdpdGggdGhlaXIgQWxwaW5lIGJpbmRpbmdzLiBJIG1lYW4gYydtb24uXG4gICAgICAgIHRoaXMucGF1c2VSZWFjdGl2aXR5ID0gdHJ1ZTtcbiAgICAgICAgaW5pdFJldHVybmVkQ2FsbGJhY2sgPSB0aGlzLmV2YWx1YXRlUmV0dXJuRXhwcmVzc2lvbih0aGlzLiRlbCwgaW5pdEV4cHJlc3Npb24pO1xuICAgICAgICB0aGlzLnBhdXNlUmVhY3Rpdml0eSA9IGZhbHNlO1xuICAgICAgfSAvLyBSZWdpc3RlciBhbGwgb3VyIGxpc3RlbmVycyBhbmQgc2V0IGFsbCBvdXIgYXR0cmlidXRlIGJpbmRpbmdzLlxuXG5cbiAgICAgIHRoaXMuaW5pdGlhbGl6ZUVsZW1lbnRzKHRoaXMuJGVsKTsgLy8gVXNlIG11dGF0aW9uIG9ic2VydmVyIHRvIGRldGVjdCBuZXcgZWxlbWVudHMgYmVpbmcgYWRkZWQgd2l0aGluIHRoaXMgY29tcG9uZW50IGF0IHJ1bi10aW1lLlxuICAgICAgLy8gQWxwaW5lJ3MganVzdCBzbyBkYXJuIGZsZXhpYmxlIGFtaXJpdGU/XG5cbiAgICAgIHRoaXMubGlzdGVuRm9yTmV3RWxlbWVudHNUb0luaXRpYWxpemUoKTtcblxuICAgICAgaWYgKHR5cGVvZiBpbml0UmV0dXJuZWRDYWxsYmFjayA9PT0gJ2Z1bmN0aW9uJykge1xuICAgICAgICAvLyBSdW4gdGhlIGNhbGxiYWNrIHJldHVybmVkIGZyb20gdGhlIFwieC1pbml0XCIgaG9vayB0byBhbGxvdyB0aGUgdXNlciB0byBkbyBzdHVmZiBhZnRlclxuICAgICAgICAvLyBBbHBpbmUncyBnb3QgaXQncyBncnViYnkgbGl0dGxlIHBhd3MgYWxsIG92ZXIgZXZlcnl0aGluZy5cbiAgICAgICAgaW5pdFJldHVybmVkQ2FsbGJhY2suY2FsbCh0aGlzLiRkYXRhKTtcbiAgICAgIH1cblxuICAgICAgY29tcG9uZW50Rm9yQ2xvbmUgfHwgc2V0VGltZW91dCgoKSA9PiB7XG4gICAgICAgIEFscGluZS5vbkNvbXBvbmVudEluaXRpYWxpemVkcy5mb3JFYWNoKGNhbGxiYWNrID0+IGNhbGxiYWNrKHRoaXMpKTtcbiAgICAgIH0sIDApO1xuICAgIH1cblxuICAgIGdldFVub2JzZXJ2ZWREYXRhKCkge1xuICAgICAgcmV0dXJuIHVud3JhcCQxKHRoaXMubWVtYnJhbmUsIHRoaXMuJGRhdGEpO1xuICAgIH1cblxuICAgIHdyYXBEYXRhSW5PYnNlcnZhYmxlKGRhdGEpIHtcbiAgICAgIHZhciBzZWxmID0gdGhpcztcbiAgICAgIGxldCB1cGRhdGVEb20gPSBkZWJvdW5jZShmdW5jdGlvbiAoKSB7XG4gICAgICAgIHNlbGYudXBkYXRlRWxlbWVudHMoc2VsZi4kZWwpO1xuICAgICAgfSwgMCk7XG4gICAgICByZXR1cm4gd3JhcChkYXRhLCAodGFyZ2V0LCBrZXkpID0+IHtcbiAgICAgICAgaWYgKHNlbGYud2F0Y2hlcnNba2V5XSkge1xuICAgICAgICAgIC8vIElmIHRoZXJlJ3MgYSB3YXRjaGVyIGZvciB0aGlzIHNwZWNpZmljIGtleSwgcnVuIGl0LlxuICAgICAgICAgIHNlbGYud2F0Y2hlcnNba2V5XS5mb3JFYWNoKGNhbGxiYWNrID0+IGNhbGxiYWNrKHRhcmdldFtrZXldKSk7XG4gICAgICAgIH0gZWxzZSBpZiAoQXJyYXkuaXNBcnJheSh0YXJnZXQpKSB7XG4gICAgICAgICAgLy8gQXJyYXlzIGFyZSBzcGVjaWFsIGNhc2VzLCBpZiBhbnkgb2YgdGhlIGl0ZW1zIGNoYW5nZSwgd2UgY29uc2lkZXIgdGhlIGFycmF5IGFzIG11dGF0ZWQuXG4gICAgICAgICAgT2JqZWN0LmtleXMoc2VsZi53YXRjaGVycykuZm9yRWFjaChmdWxsRG90Tm90YXRpb25LZXkgPT4ge1xuICAgICAgICAgICAgbGV0IGRvdE5vdGF0aW9uUGFydHMgPSBmdWxsRG90Tm90YXRpb25LZXkuc3BsaXQoJy4nKTsgLy8gSWdub3JlIGxlbmd0aCBtdXRhdGlvbnMgc2luY2UgdGhleSB3b3VsZCByZXN1bHQgaW4gZHVwbGljYXRlIGNhbGxzLlxuICAgICAgICAgICAgLy8gRm9yIGV4YW1wbGUsIHdoZW4gY2FsbGluZyBwdXNoLCB3ZSB3b3VsZCBnZXQgYSBtdXRhdGlvbiBmb3IgdGhlIGl0ZW0ncyBrZXlcbiAgICAgICAgICAgIC8vIGFuZCBhIHNlY29uZCBtdXRhdGlvbiBmb3IgdGhlIGxlbmd0aCBwcm9wZXJ0eS5cblxuICAgICAgICAgICAgaWYgKGtleSA9PT0gJ2xlbmd0aCcpIHJldHVybjtcbiAgICAgICAgICAgIGRvdE5vdGF0aW9uUGFydHMucmVkdWNlKChjb21wYXJpc29uRGF0YSwgcGFydCkgPT4ge1xuICAgICAgICAgICAgICBpZiAoT2JqZWN0LmlzKHRhcmdldCwgY29tcGFyaXNvbkRhdGFbcGFydF0pKSB7XG4gICAgICAgICAgICAgICAgc2VsZi53YXRjaGVyc1tmdWxsRG90Tm90YXRpb25LZXldLmZvckVhY2goY2FsbGJhY2sgPT4gY2FsbGJhY2sodGFyZ2V0KSk7XG4gICAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgICByZXR1cm4gY29tcGFyaXNvbkRhdGFbcGFydF07XG4gICAgICAgICAgICB9LCBzZWxmLnVub2JzZXJ2ZWREYXRhKTtcbiAgICAgICAgICB9KTtcbiAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAvLyBMZXQncyB3YWxrIHRocm91Z2ggdGhlIHdhdGNoZXJzIHdpdGggXCJkb3Qtbm90YXRpb25cIiAoZm9vLmJhcikgYW5kIHNlZVxuICAgICAgICAgIC8vIGlmIHRoaXMgbXV0YXRpb24gZml0cyBhbnkgb2YgdGhlbS5cbiAgICAgICAgICBPYmplY3Qua2V5cyhzZWxmLndhdGNoZXJzKS5maWx0ZXIoaSA9PiBpLmluY2x1ZGVzKCcuJykpLmZvckVhY2goZnVsbERvdE5vdGF0aW9uS2V5ID0+IHtcbiAgICAgICAgICAgIGxldCBkb3ROb3RhdGlvblBhcnRzID0gZnVsbERvdE5vdGF0aW9uS2V5LnNwbGl0KCcuJyk7IC8vIElmIHRoaXMgZG90LW5vdGF0aW9uIHdhdGNoZXIncyBsYXN0IFwicGFydFwiIGRvZXNuJ3QgbWF0Y2ggdGhlIGN1cnJlbnRcbiAgICAgICAgICAgIC8vIGtleSwgdGhlbiBza2lwIGl0IGVhcmx5IGZvciBwZXJmb3JtYW5jZSByZWFzb25zLlxuXG4gICAgICAgICAgICBpZiAoa2V5ICE9PSBkb3ROb3RhdGlvblBhcnRzW2RvdE5vdGF0aW9uUGFydHMubGVuZ3RoIC0gMV0pIHJldHVybjsgLy8gTm93LCB3YWxrIHRocm91Z2ggdGhlIGRvdC1ub3RhdGlvbiBcInBhcnRzXCIgcmVjdXJzaXZlbHkgdG8gZmluZFxuICAgICAgICAgICAgLy8gYSBtYXRjaCwgYW5kIGNhbGwgdGhlIHdhdGNoZXIgaWYgb25lJ3MgZm91bmQuXG5cbiAgICAgICAgICAgIGRvdE5vdGF0aW9uUGFydHMucmVkdWNlKChjb21wYXJpc29uRGF0YSwgcGFydCkgPT4ge1xuICAgICAgICAgICAgICBpZiAoT2JqZWN0LmlzKHRhcmdldCwgY29tcGFyaXNvbkRhdGEpKSB7XG4gICAgICAgICAgICAgICAgLy8gUnVuIHRoZSB3YXRjaGVycy5cbiAgICAgICAgICAgICAgICBzZWxmLndhdGNoZXJzW2Z1bGxEb3ROb3RhdGlvbktleV0uZm9yRWFjaChjYWxsYmFjayA9PiBjYWxsYmFjayh0YXJnZXRba2V5XSkpO1xuICAgICAgICAgICAgICB9XG5cbiAgICAgICAgICAgICAgcmV0dXJuIGNvbXBhcmlzb25EYXRhW3BhcnRdO1xuICAgICAgICAgICAgfSwgc2VsZi51bm9ic2VydmVkRGF0YSk7XG4gICAgICAgICAgfSk7XG4gICAgICAgIH0gLy8gRG9uJ3QgcmVhY3QgdG8gZGF0YSBjaGFuZ2VzIGZvciBjYXNlcyBsaWtlIHRoZSBgeC1jcmVhdGVkYCBob29rLlxuXG5cbiAgICAgICAgaWYgKHNlbGYucGF1c2VSZWFjdGl2aXR5KSByZXR1cm47XG4gICAgICAgIHVwZGF0ZURvbSgpO1xuICAgICAgfSk7XG4gICAgfVxuXG4gICAgd2Fsa0FuZFNraXBOZXN0ZWRDb21wb25lbnRzKGVsLCBjYWxsYmFjaywgaW5pdGlhbGl6ZUNvbXBvbmVudENhbGxiYWNrID0gKCkgPT4ge30pIHtcbiAgICAgIHdhbGsoZWwsIGVsID0+IHtcbiAgICAgICAgLy8gV2UndmUgaGl0IGEgY29tcG9uZW50LlxuICAgICAgICBpZiAoZWwuaGFzQXR0cmlidXRlKCd4LWRhdGEnKSkge1xuICAgICAgICAgIC8vIElmIGl0J3Mgbm90IHRoZSBjdXJyZW50IG9uZS5cbiAgICAgICAgICBpZiAoIWVsLmlzU2FtZU5vZGUodGhpcy4kZWwpKSB7XG4gICAgICAgICAgICAvLyBJbml0aWFsaXplIGl0IGlmIGl0J3Mgbm90LlxuICAgICAgICAgICAgaWYgKCFlbC5fX3gpIGluaXRpYWxpemVDb21wb25lbnRDYWxsYmFjayhlbCk7IC8vIE5vdyB3ZSdsbCBsZXQgdGhhdCBzdWItY29tcG9uZW50IGRlYWwgd2l0aCBpdHNlbGYuXG5cbiAgICAgICAgICAgIHJldHVybiBmYWxzZTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cblxuICAgICAgICByZXR1cm4gY2FsbGJhY2soZWwpO1xuICAgICAgfSk7XG4gICAgfVxuXG4gICAgaW5pdGlhbGl6ZUVsZW1lbnRzKHJvb3RFbCwgZXh0cmFWYXJzID0gKCkgPT4ge30pIHtcbiAgICAgIHRoaXMud2Fsa0FuZFNraXBOZXN0ZWRDb21wb25lbnRzKHJvb3RFbCwgZWwgPT4ge1xuICAgICAgICAvLyBEb24ndCB0b3VjaCBzcGF3bnMgZnJvbSBmb3IgbG9vcFxuICAgICAgICBpZiAoZWwuX194X2Zvcl9rZXkgIT09IHVuZGVmaW5lZCkgcmV0dXJuIGZhbHNlOyAvLyBEb24ndCB0b3VjaCBzcGF3bnMgZnJvbSBpZiBkaXJlY3RpdmVzXG5cbiAgICAgICAgaWYgKGVsLl9feF9pbnNlcnRlZF9tZSAhPT0gdW5kZWZpbmVkKSByZXR1cm4gZmFsc2U7XG4gICAgICAgIHRoaXMuaW5pdGlhbGl6ZUVsZW1lbnQoZWwsIGV4dHJhVmFycyk7XG4gICAgICB9LCBlbCA9PiB7XG4gICAgICAgIGVsLl9feCA9IG5ldyBDb21wb25lbnQoZWwpO1xuICAgICAgfSk7XG4gICAgICB0aGlzLmV4ZWN1dGVBbmRDbGVhclJlbWFpbmluZ1Nob3dEaXJlY3RpdmVTdGFjaygpO1xuICAgICAgdGhpcy5leGVjdXRlQW5kQ2xlYXJOZXh0VGlja1N0YWNrKHJvb3RFbCk7XG4gICAgfVxuXG4gICAgaW5pdGlhbGl6ZUVsZW1lbnQoZWwsIGV4dHJhVmFycykge1xuICAgICAgLy8gVG8gc3VwcG9ydCBjbGFzcyBhdHRyaWJ1dGUgbWVyZ2luZywgd2UgaGF2ZSB0byBrbm93IHdoYXQgdGhlIGVsZW1lbnQnc1xuICAgICAgLy8gb3JpZ2luYWwgY2xhc3MgYXR0cmlidXRlIGxvb2tlZCBsaWtlIGZvciByZWZlcmVuY2UuXG4gICAgICBpZiAoZWwuaGFzQXR0cmlidXRlKCdjbGFzcycpICYmIGdldFhBdHRycyhlbCwgdGhpcykubGVuZ3RoID4gMCkge1xuICAgICAgICBlbC5fX3hfb3JpZ2luYWxfY2xhc3NlcyA9IGNvbnZlcnRDbGFzc1N0cmluZ1RvQXJyYXkoZWwuZ2V0QXR0cmlidXRlKCdjbGFzcycpKTtcbiAgICAgIH1cblxuICAgICAgdGhpcy5yZWdpc3Rlckxpc3RlbmVycyhlbCwgZXh0cmFWYXJzKTtcbiAgICAgIHRoaXMucmVzb2x2ZUJvdW5kQXR0cmlidXRlcyhlbCwgdHJ1ZSwgZXh0cmFWYXJzKTtcbiAgICB9XG5cbiAgICB1cGRhdGVFbGVtZW50cyhyb290RWwsIGV4dHJhVmFycyA9ICgpID0+IHt9KSB7XG4gICAgICB0aGlzLndhbGtBbmRTa2lwTmVzdGVkQ29tcG9uZW50cyhyb290RWwsIGVsID0+IHtcbiAgICAgICAgLy8gRG9uJ3QgdG91Y2ggc3Bhd25zIGZyb20gZm9yIGxvb3AgKGFuZCBjaGVjayBpZiB0aGUgcm9vdCBpcyBhY3R1YWxseSBhIGZvciBsb29wIGluIGEgcGFyZW50LCBkb24ndCBza2lwIGl0LilcbiAgICAgICAgaWYgKGVsLl9feF9mb3Jfa2V5ICE9PSB1bmRlZmluZWQgJiYgIWVsLmlzU2FtZU5vZGUodGhpcy4kZWwpKSByZXR1cm4gZmFsc2U7XG4gICAgICAgIHRoaXMudXBkYXRlRWxlbWVudChlbCwgZXh0cmFWYXJzKTtcbiAgICAgIH0sIGVsID0+IHtcbiAgICAgICAgZWwuX194ID0gbmV3IENvbXBvbmVudChlbCk7XG4gICAgICB9KTtcbiAgICAgIHRoaXMuZXhlY3V0ZUFuZENsZWFyUmVtYWluaW5nU2hvd0RpcmVjdGl2ZVN0YWNrKCk7XG4gICAgICB0aGlzLmV4ZWN1dGVBbmRDbGVhck5leHRUaWNrU3RhY2socm9vdEVsKTtcbiAgICB9XG5cbiAgICBleGVjdXRlQW5kQ2xlYXJOZXh0VGlja1N0YWNrKGVsKSB7XG4gICAgICAvLyBTa2lwIHNwYXducyBmcm9tIGFscGluZSBkaXJlY3RpdmVzXG4gICAgICBpZiAoZWwgPT09IHRoaXMuJGVsICYmIHRoaXMubmV4dFRpY2tTdGFjay5sZW5ndGggPiAwKSB7XG4gICAgICAgIC8vIFdlIHJ1biB0aGUgdGljayBzdGFjayBhZnRlciB0aGUgbmV4dCBmcmFtZSB0byBhbGxvdyBhbnlcbiAgICAgICAgLy8gcnVubmluZyB0cmFuc2l0aW9ucyB0byBwYXNzIHRoZSBpbml0aWFsIHNob3cgc3RhZ2UuXG4gICAgICAgIHJlcXVlc3RBbmltYXRpb25GcmFtZSgoKSA9PiB7XG4gICAgICAgICAgd2hpbGUgKHRoaXMubmV4dFRpY2tTdGFjay5sZW5ndGggPiAwKSB7XG4gICAgICAgICAgICB0aGlzLm5leHRUaWNrU3RhY2suc2hpZnQoKSgpO1xuICAgICAgICAgIH1cbiAgICAgICAgfSk7XG4gICAgICB9XG4gICAgfVxuXG4gICAgZXhlY3V0ZUFuZENsZWFyUmVtYWluaW5nU2hvd0RpcmVjdGl2ZVN0YWNrKCkge1xuICAgICAgLy8gVGhlIGdvYWwgaGVyZSBpcyB0byBzdGFydCBhbGwgdGhlIHgtc2hvdyB0cmFuc2l0aW9uc1xuICAgICAgLy8gYW5kIGJ1aWxkIGEgbmVzdGVkIHByb21pc2UgY2hhaW4gc28gdGhhdCBlbGVtZW50c1xuICAgICAgLy8gb25seSBoaWRlIHdoZW4gdGhlIGNoaWxkcmVuIGFyZSBmaW5pc2hlZCBoaWRpbmcuXG4gICAgICB0aGlzLnNob3dEaXJlY3RpdmVTdGFjay5yZXZlcnNlKCkubWFwKGhhbmRsZXIgPT4ge1xuICAgICAgICByZXR1cm4gbmV3IFByb21pc2UoKHJlc29sdmUsIHJlamVjdCkgPT4ge1xuICAgICAgICAgIGhhbmRsZXIocmVzb2x2ZSwgcmVqZWN0KTtcbiAgICAgICAgfSk7XG4gICAgICB9KS5yZWR1Y2UoKHByb21pc2VDaGFpbiwgcHJvbWlzZSkgPT4ge1xuICAgICAgICByZXR1cm4gcHJvbWlzZUNoYWluLnRoZW4oKCkgPT4ge1xuICAgICAgICAgIHJldHVybiBwcm9taXNlLnRoZW4oZmluaXNoRWxlbWVudCA9PiB7XG4gICAgICAgICAgICBmaW5pc2hFbGVtZW50KCk7XG4gICAgICAgICAgfSk7XG4gICAgICAgIH0pO1xuICAgICAgfSwgUHJvbWlzZS5yZXNvbHZlKCgpID0+IHt9KSkuY2F0Y2goZSA9PiB7XG4gICAgICAgIGlmIChlICE9PSBUUkFOU0lUSU9OX0NBTkNFTExFRCkgdGhyb3cgZTtcbiAgICAgIH0pOyAvLyBXZSd2ZSBwcm9jZXNzZWQgdGhlIGhhbmRsZXIgc3RhY2suIGxldCdzIGNsZWFyIGl0LlxuXG4gICAgICB0aGlzLnNob3dEaXJlY3RpdmVTdGFjayA9IFtdO1xuICAgICAgdGhpcy5zaG93RGlyZWN0aXZlTGFzdEVsZW1lbnQgPSB1bmRlZmluZWQ7XG4gICAgfVxuXG4gICAgdXBkYXRlRWxlbWVudChlbCwgZXh0cmFWYXJzKSB7XG4gICAgICB0aGlzLnJlc29sdmVCb3VuZEF0dHJpYnV0ZXMoZWwsIGZhbHNlLCBleHRyYVZhcnMpO1xuICAgIH1cblxuICAgIHJlZ2lzdGVyTGlzdGVuZXJzKGVsLCBleHRyYVZhcnMpIHtcbiAgICAgIGdldFhBdHRycyhlbCwgdGhpcykuZm9yRWFjaCgoe1xuICAgICAgICB0eXBlLFxuICAgICAgICB2YWx1ZSxcbiAgICAgICAgbW9kaWZpZXJzLFxuICAgICAgICBleHByZXNzaW9uXG4gICAgICB9KSA9PiB7XG4gICAgICAgIHN3aXRjaCAodHlwZSkge1xuICAgICAgICAgIGNhc2UgJ29uJzpcbiAgICAgICAgICAgIHJlZ2lzdGVyTGlzdGVuZXIodGhpcywgZWwsIHZhbHVlLCBtb2RpZmllcnMsIGV4cHJlc3Npb24sIGV4dHJhVmFycyk7XG4gICAgICAgICAgICBicmVhaztcblxuICAgICAgICAgIGNhc2UgJ21vZGVsJzpcbiAgICAgICAgICAgIHJlZ2lzdGVyTW9kZWxMaXN0ZW5lcih0aGlzLCBlbCwgbW9kaWZpZXJzLCBleHByZXNzaW9uLCBleHRyYVZhcnMpO1xuICAgICAgICAgICAgYnJlYWs7XG4gICAgICAgIH1cbiAgICAgIH0pO1xuICAgIH1cblxuICAgIHJlc29sdmVCb3VuZEF0dHJpYnV0ZXMoZWwsIGluaXRpYWxVcGRhdGUgPSBmYWxzZSwgZXh0cmFWYXJzKSB7XG4gICAgICBsZXQgYXR0cnMgPSBnZXRYQXR0cnMoZWwsIHRoaXMpO1xuICAgICAgYXR0cnMuZm9yRWFjaCgoe1xuICAgICAgICB0eXBlLFxuICAgICAgICB2YWx1ZSxcbiAgICAgICAgbW9kaWZpZXJzLFxuICAgICAgICBleHByZXNzaW9uXG4gICAgICB9KSA9PiB7XG4gICAgICAgIHN3aXRjaCAodHlwZSkge1xuICAgICAgICAgIGNhc2UgJ21vZGVsJzpcbiAgICAgICAgICAgIGhhbmRsZUF0dHJpYnV0ZUJpbmRpbmdEaXJlY3RpdmUodGhpcywgZWwsICd2YWx1ZScsIGV4cHJlc3Npb24sIGV4dHJhVmFycywgdHlwZSwgbW9kaWZpZXJzKTtcbiAgICAgICAgICAgIGJyZWFrO1xuXG4gICAgICAgICAgY2FzZSAnYmluZCc6XG4gICAgICAgICAgICAvLyBUaGUgOmtleSBiaW5kaW5nIG9uIGFuIHgtZm9yIGlzIHNwZWNpYWwsIGlnbm9yZSBpdC5cbiAgICAgICAgICAgIGlmIChlbC50YWdOYW1lLnRvTG93ZXJDYXNlKCkgPT09ICd0ZW1wbGF0ZScgJiYgdmFsdWUgPT09ICdrZXknKSByZXR1cm47XG4gICAgICAgICAgICBoYW5kbGVBdHRyaWJ1dGVCaW5kaW5nRGlyZWN0aXZlKHRoaXMsIGVsLCB2YWx1ZSwgZXhwcmVzc2lvbiwgZXh0cmFWYXJzLCB0eXBlLCBtb2RpZmllcnMpO1xuICAgICAgICAgICAgYnJlYWs7XG5cbiAgICAgICAgICBjYXNlICd0ZXh0JzpcbiAgICAgICAgICAgIHZhciBvdXRwdXQgPSB0aGlzLmV2YWx1YXRlUmV0dXJuRXhwcmVzc2lvbihlbCwgZXhwcmVzc2lvbiwgZXh0cmFWYXJzKTtcbiAgICAgICAgICAgIGhhbmRsZVRleHREaXJlY3RpdmUoZWwsIG91dHB1dCwgZXhwcmVzc2lvbik7XG4gICAgICAgICAgICBicmVhaztcblxuICAgICAgICAgIGNhc2UgJ2h0bWwnOlxuICAgICAgICAgICAgaGFuZGxlSHRtbERpcmVjdGl2ZSh0aGlzLCBlbCwgZXhwcmVzc2lvbiwgZXh0cmFWYXJzKTtcbiAgICAgICAgICAgIGJyZWFrO1xuXG4gICAgICAgICAgY2FzZSAnc2hvdyc6XG4gICAgICAgICAgICB2YXIgb3V0cHV0ID0gdGhpcy5ldmFsdWF0ZVJldHVybkV4cHJlc3Npb24oZWwsIGV4cHJlc3Npb24sIGV4dHJhVmFycyk7XG4gICAgICAgICAgICBoYW5kbGVTaG93RGlyZWN0aXZlKHRoaXMsIGVsLCBvdXRwdXQsIG1vZGlmaWVycywgaW5pdGlhbFVwZGF0ZSk7XG4gICAgICAgICAgICBicmVhaztcblxuICAgICAgICAgIGNhc2UgJ2lmJzpcbiAgICAgICAgICAgIC8vIElmIHRoaXMgZWxlbWVudCBhbHNvIGhhcyB4LWZvciBvbiBpdCwgZG9uJ3QgcHJvY2VzcyB4LWlmLlxuICAgICAgICAgICAgLy8gV2Ugd2lsbCBsZXQgdGhlIFwieC1mb3JcIiBkaXJlY3RpdmUgaGFuZGxlIHRoZSBcImlmXCJpbmcuXG4gICAgICAgICAgICBpZiAoYXR0cnMuc29tZShpID0+IGkudHlwZSA9PT0gJ2ZvcicpKSByZXR1cm47XG4gICAgICAgICAgICB2YXIgb3V0cHV0ID0gdGhpcy5ldmFsdWF0ZVJldHVybkV4cHJlc3Npb24oZWwsIGV4cHJlc3Npb24sIGV4dHJhVmFycyk7XG4gICAgICAgICAgICBoYW5kbGVJZkRpcmVjdGl2ZSh0aGlzLCBlbCwgb3V0cHV0LCBpbml0aWFsVXBkYXRlLCBleHRyYVZhcnMpO1xuICAgICAgICAgICAgYnJlYWs7XG5cbiAgICAgICAgICBjYXNlICdmb3InOlxuICAgICAgICAgICAgaGFuZGxlRm9yRGlyZWN0aXZlKHRoaXMsIGVsLCBleHByZXNzaW9uLCBpbml0aWFsVXBkYXRlLCBleHRyYVZhcnMpO1xuICAgICAgICAgICAgYnJlYWs7XG5cbiAgICAgICAgICBjYXNlICdjbG9hayc6XG4gICAgICAgICAgICBlbC5yZW1vdmVBdHRyaWJ1dGUoJ3gtY2xvYWsnKTtcbiAgICAgICAgICAgIGJyZWFrO1xuICAgICAgICB9XG4gICAgICB9KTtcbiAgICB9XG5cbiAgICBldmFsdWF0ZVJldHVybkV4cHJlc3Npb24oZWwsIGV4cHJlc3Npb24sIGV4dHJhVmFycyA9ICgpID0+IHt9KSB7XG4gICAgICByZXR1cm4gc2FmZXJFdmFsKGVsLCBleHByZXNzaW9uLCB0aGlzLiRkYXRhLCBfb2JqZWN0U3ByZWFkMihfb2JqZWN0U3ByZWFkMih7fSwgZXh0cmFWYXJzKCkpLCB7fSwge1xuICAgICAgICAkZGlzcGF0Y2g6IHRoaXMuZ2V0RGlzcGF0Y2hGdW5jdGlvbihlbClcbiAgICAgIH0pKTtcbiAgICB9XG5cbiAgICBldmFsdWF0ZUNvbW1hbmRFeHByZXNzaW9uKGVsLCBleHByZXNzaW9uLCBleHRyYVZhcnMgPSAoKSA9PiB7fSkge1xuICAgICAgcmV0dXJuIHNhZmVyRXZhbE5vUmV0dXJuKGVsLCBleHByZXNzaW9uLCB0aGlzLiRkYXRhLCBfb2JqZWN0U3ByZWFkMihfb2JqZWN0U3ByZWFkMih7fSwgZXh0cmFWYXJzKCkpLCB7fSwge1xuICAgICAgICAkZGlzcGF0Y2g6IHRoaXMuZ2V0RGlzcGF0Y2hGdW5jdGlvbihlbClcbiAgICAgIH0pKTtcbiAgICB9XG5cbiAgICBnZXREaXNwYXRjaEZ1bmN0aW9uKGVsKSB7XG4gICAgICByZXR1cm4gKGV2ZW50LCBkZXRhaWwgPSB7fSkgPT4ge1xuICAgICAgICBlbC5kaXNwYXRjaEV2ZW50KG5ldyBDdXN0b21FdmVudChldmVudCwge1xuICAgICAgICAgIGRldGFpbCxcbiAgICAgICAgICBidWJibGVzOiB0cnVlXG4gICAgICAgIH0pKTtcbiAgICAgIH07XG4gICAgfVxuXG4gICAgbGlzdGVuRm9yTmV3RWxlbWVudHNUb0luaXRpYWxpemUoKSB7XG4gICAgICBjb25zdCB0YXJnZXROb2RlID0gdGhpcy4kZWw7XG4gICAgICBjb25zdCBvYnNlcnZlck9wdGlvbnMgPSB7XG4gICAgICAgIGNoaWxkTGlzdDogdHJ1ZSxcbiAgICAgICAgYXR0cmlidXRlczogdHJ1ZSxcbiAgICAgICAgc3VidHJlZTogdHJ1ZVxuICAgICAgfTtcbiAgICAgIGNvbnN0IG9ic2VydmVyID0gbmV3IE11dGF0aW9uT2JzZXJ2ZXIobXV0YXRpb25zID0+IHtcbiAgICAgICAgZm9yIChsZXQgaSA9IDA7IGkgPCBtdXRhdGlvbnMubGVuZ3RoOyBpKyspIHtcbiAgICAgICAgICAvLyBGaWx0ZXIgb3V0IG11dGF0aW9ucyB0cmlnZ2VyZWQgZnJvbSBjaGlsZCBjb21wb25lbnRzLlxuICAgICAgICAgIGNvbnN0IGNsb3Nlc3RQYXJlbnRDb21wb25lbnQgPSBtdXRhdGlvbnNbaV0udGFyZ2V0LmNsb3Nlc3QoJ1t4LWRhdGFdJyk7XG4gICAgICAgICAgaWYgKCEoY2xvc2VzdFBhcmVudENvbXBvbmVudCAmJiBjbG9zZXN0UGFyZW50Q29tcG9uZW50LmlzU2FtZU5vZGUodGhpcy4kZWwpKSkgY29udGludWU7XG5cbiAgICAgICAgICBpZiAobXV0YXRpb25zW2ldLnR5cGUgPT09ICdhdHRyaWJ1dGVzJyAmJiBtdXRhdGlvbnNbaV0uYXR0cmlidXRlTmFtZSA9PT0gJ3gtZGF0YScpIHtcbiAgICAgICAgICAgIGNvbnN0IHhBdHRyID0gbXV0YXRpb25zW2ldLnRhcmdldC5nZXRBdHRyaWJ1dGUoJ3gtZGF0YScpIHx8ICd7fSc7XG4gICAgICAgICAgICBjb25zdCByYXdEYXRhID0gc2FmZXJFdmFsKHRoaXMuJGVsLCB4QXR0ciwge1xuICAgICAgICAgICAgICAkZWw6IHRoaXMuJGVsXG4gICAgICAgICAgICB9KTtcbiAgICAgICAgICAgIE9iamVjdC5rZXlzKHJhd0RhdGEpLmZvckVhY2goa2V5ID0+IHtcbiAgICAgICAgICAgICAgaWYgKHRoaXMuJGRhdGFba2V5XSAhPT0gcmF3RGF0YVtrZXldKSB7XG4gICAgICAgICAgICAgICAgdGhpcy4kZGF0YVtrZXldID0gcmF3RGF0YVtrZXldO1xuICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9KTtcbiAgICAgICAgICB9XG5cbiAgICAgICAgICBpZiAobXV0YXRpb25zW2ldLmFkZGVkTm9kZXMubGVuZ3RoID4gMCkge1xuICAgICAgICAgICAgbXV0YXRpb25zW2ldLmFkZGVkTm9kZXMuZm9yRWFjaChub2RlID0+IHtcbiAgICAgICAgICAgICAgaWYgKG5vZGUubm9kZVR5cGUgIT09IDEgfHwgbm9kZS5fX3hfaW5zZXJ0ZWRfbWUpIHJldHVybjtcblxuICAgICAgICAgICAgICBpZiAobm9kZS5tYXRjaGVzKCdbeC1kYXRhXScpICYmICFub2RlLl9feCkge1xuICAgICAgICAgICAgICAgIG5vZGUuX194ID0gbmV3IENvbXBvbmVudChub2RlKTtcbiAgICAgICAgICAgICAgICByZXR1cm47XG4gICAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgICB0aGlzLmluaXRpYWxpemVFbGVtZW50cyhub2RlKTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfSk7XG4gICAgICBvYnNlcnZlci5vYnNlcnZlKHRhcmdldE5vZGUsIG9ic2VydmVyT3B0aW9ucyk7XG4gICAgfVxuXG4gICAgZ2V0UmVmc1Byb3h5KCkge1xuICAgICAgdmFyIHNlbGYgPSB0aGlzO1xuICAgICAgdmFyIHJlZk9iaiA9IHt9O1xuICAgICAgLy8gT25lIG9mIHRoZSBnb2FscyBvZiB0aGlzIGlzIHRvIG5vdCBob2xkIGVsZW1lbnRzIGluIG1lbW9yeSwgYnV0IHJhdGhlciByZS1ldmFsdWF0ZVxuICAgICAgLy8gdGhlIERPTSB3aGVuIHRoZSBzeXN0ZW0gbmVlZHMgc29tZXRoaW5nIGZyb20gaXQuIFRoaXMgd2F5LCB0aGUgZnJhbWV3b3JrIGlzIGZsZXhpYmxlIGFuZFxuICAgICAgLy8gZnJpZW5kbHkgdG8gb3V0c2lkZSBET00gY2hhbmdlcyBmcm9tIGxpYnJhcmllcyBsaWtlIFZ1ZS9MaXZld2lyZS5cbiAgICAgIC8vIEZvciB0aGlzIHJlYXNvbiwgSSdtIHVzaW5nIGFuIFwib24tZGVtYW5kXCIgcHJveHkgdG8gZmFrZSBhIFwiJHJlZnNcIiBvYmplY3QuXG5cbiAgICAgIHJldHVybiBuZXcgUHJveHkocmVmT2JqLCB7XG4gICAgICAgIGdldChvYmplY3QsIHByb3BlcnR5KSB7XG4gICAgICAgICAgaWYgKHByb3BlcnR5ID09PSAnJGlzQWxwaW5lUHJveHknKSByZXR1cm4gdHJ1ZTtcbiAgICAgICAgICB2YXIgcmVmOyAvLyBXZSBjYW4ndCBqdXN0IHF1ZXJ5IHRoZSBET00gYmVjYXVzZSBpdCdzIGhhcmQgdG8gZmlsdGVyIG91dCByZWZzIGluXG4gICAgICAgICAgLy8gbmVzdGVkIGNvbXBvbmVudHMuXG5cbiAgICAgICAgICBzZWxmLndhbGtBbmRTa2lwTmVzdGVkQ29tcG9uZW50cyhzZWxmLiRlbCwgZWwgPT4ge1xuICAgICAgICAgICAgaWYgKGVsLmhhc0F0dHJpYnV0ZSgneC1yZWYnKSAmJiBlbC5nZXRBdHRyaWJ1dGUoJ3gtcmVmJykgPT09IHByb3BlcnR5KSB7XG4gICAgICAgICAgICAgIHJlZiA9IGVsO1xuICAgICAgICAgICAgfVxuICAgICAgICAgIH0pO1xuICAgICAgICAgIHJldHVybiByZWY7XG4gICAgICAgIH1cblxuICAgICAgfSk7XG4gICAgfVxuXG4gIH1cblxuICBjb25zdCBBbHBpbmUgPSB7XG4gICAgdmVyc2lvbjogXCIyLjguMFwiLFxuICAgIHBhdXNlTXV0YXRpb25PYnNlcnZlcjogZmFsc2UsXG4gICAgbWFnaWNQcm9wZXJ0aWVzOiB7fSxcbiAgICBvbkNvbXBvbmVudEluaXRpYWxpemVkczogW10sXG4gICAgb25CZWZvcmVDb21wb25lbnRJbml0aWFsaXplZHM6IFtdLFxuICAgIGlnbm9yZUZvY3VzZWRGb3JWYWx1ZUJpbmRpbmc6IGZhbHNlLFxuICAgIHN0YXJ0OiBhc3luYyBmdW5jdGlvbiBzdGFydCgpIHtcbiAgICAgIGlmICghaXNUZXN0aW5nKCkpIHtcbiAgICAgICAgYXdhaXQgZG9tUmVhZHkoKTtcbiAgICAgIH1cblxuICAgICAgdGhpcy5kaXNjb3ZlckNvbXBvbmVudHMoZWwgPT4ge1xuICAgICAgICB0aGlzLmluaXRpYWxpemVDb21wb25lbnQoZWwpO1xuICAgICAgfSk7IC8vIEl0J3MgZWFzaWVyIGFuZCBtb3JlIHBlcmZvcm1hbnQgdG8ganVzdCBzdXBwb3J0IFR1cmJvbGlua3MgdGhhbiBsaXN0ZW5cbiAgICAgIC8vIHRvIE11dGF0aW9uT2JzZXJ2ZXIgbXV0YXRpb25zIGF0IHRoZSBkb2N1bWVudCBsZXZlbC5cblxuICAgICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcihcInR1cmJvbGlua3M6bG9hZFwiLCAoKSA9PiB7XG4gICAgICAgIHRoaXMuZGlzY292ZXJVbmluaXRpYWxpemVkQ29tcG9uZW50cyhlbCA9PiB7XG4gICAgICAgICAgdGhpcy5pbml0aWFsaXplQ29tcG9uZW50KGVsKTtcbiAgICAgICAgfSk7XG4gICAgICB9KTtcbiAgICAgIHRoaXMubGlzdGVuRm9yTmV3VW5pbml0aWFsaXplZENvbXBvbmVudHNBdFJ1blRpbWUoKTtcbiAgICB9LFxuICAgIGRpc2NvdmVyQ29tcG9uZW50czogZnVuY3Rpb24gZGlzY292ZXJDb21wb25lbnRzKGNhbGxiYWNrKSB7XG4gICAgICBjb25zdCByb290RWxzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnW3gtZGF0YV0nKTtcbiAgICAgIHJvb3RFbHMuZm9yRWFjaChyb290RWwgPT4ge1xuICAgICAgICBjYWxsYmFjayhyb290RWwpO1xuICAgICAgfSk7XG4gICAgfSxcbiAgICBkaXNjb3ZlclVuaW5pdGlhbGl6ZWRDb21wb25lbnRzOiBmdW5jdGlvbiBkaXNjb3ZlclVuaW5pdGlhbGl6ZWRDb21wb25lbnRzKGNhbGxiYWNrLCBlbCA9IG51bGwpIHtcbiAgICAgIGNvbnN0IHJvb3RFbHMgPSAoZWwgfHwgZG9jdW1lbnQpLnF1ZXJ5U2VsZWN0b3JBbGwoJ1t4LWRhdGFdJyk7XG4gICAgICBBcnJheS5mcm9tKHJvb3RFbHMpLmZpbHRlcihlbCA9PiBlbC5fX3ggPT09IHVuZGVmaW5lZCkuZm9yRWFjaChyb290RWwgPT4ge1xuICAgICAgICBjYWxsYmFjayhyb290RWwpO1xuICAgICAgfSk7XG4gICAgfSxcbiAgICBsaXN0ZW5Gb3JOZXdVbmluaXRpYWxpemVkQ29tcG9uZW50c0F0UnVuVGltZTogZnVuY3Rpb24gbGlzdGVuRm9yTmV3VW5pbml0aWFsaXplZENvbXBvbmVudHNBdFJ1blRpbWUoKSB7XG4gICAgICBjb25zdCB0YXJnZXROb2RlID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignYm9keScpO1xuICAgICAgY29uc3Qgb2JzZXJ2ZXJPcHRpb25zID0ge1xuICAgICAgICBjaGlsZExpc3Q6IHRydWUsXG4gICAgICAgIGF0dHJpYnV0ZXM6IHRydWUsXG4gICAgICAgIHN1YnRyZWU6IHRydWVcbiAgICAgIH07XG4gICAgICBjb25zdCBvYnNlcnZlciA9IG5ldyBNdXRhdGlvbk9ic2VydmVyKG11dGF0aW9ucyA9PiB7XG4gICAgICAgIGlmICh0aGlzLnBhdXNlTXV0YXRpb25PYnNlcnZlcikgcmV0dXJuO1xuXG4gICAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgbXV0YXRpb25zLmxlbmd0aDsgaSsrKSB7XG4gICAgICAgICAgaWYgKG11dGF0aW9uc1tpXS5hZGRlZE5vZGVzLmxlbmd0aCA+IDApIHtcbiAgICAgICAgICAgIG11dGF0aW9uc1tpXS5hZGRlZE5vZGVzLmZvckVhY2gobm9kZSA9PiB7XG4gICAgICAgICAgICAgIC8vIERpc2NhcmQgbm9uLWVsZW1lbnQgbm9kZXMgKGxpa2UgbGluZS1icmVha3MpXG4gICAgICAgICAgICAgIGlmIChub2RlLm5vZGVUeXBlICE9PSAxKSByZXR1cm47IC8vIERpc2NhcmQgYW55IGNoYW5nZXMgaGFwcGVuaW5nIHdpdGhpbiBhbiBleGlzdGluZyBjb21wb25lbnQuXG4gICAgICAgICAgICAgIC8vIFRoZXkgd2lsbCB0YWtlIGNhcmUgb2YgdGhlbXNlbHZlcy5cblxuICAgICAgICAgICAgICBpZiAobm9kZS5wYXJlbnRFbGVtZW50ICYmIG5vZGUucGFyZW50RWxlbWVudC5jbG9zZXN0KCdbeC1kYXRhXScpKSByZXR1cm47XG4gICAgICAgICAgICAgIHRoaXMuZGlzY292ZXJVbmluaXRpYWxpemVkQ29tcG9uZW50cyhlbCA9PiB7XG4gICAgICAgICAgICAgICAgdGhpcy5pbml0aWFsaXplQ29tcG9uZW50KGVsKTtcbiAgICAgICAgICAgICAgfSwgbm9kZS5wYXJlbnRFbGVtZW50KTtcbiAgICAgICAgICAgIH0pO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgfSk7XG4gICAgICBvYnNlcnZlci5vYnNlcnZlKHRhcmdldE5vZGUsIG9ic2VydmVyT3B0aW9ucyk7XG4gICAgfSxcbiAgICBpbml0aWFsaXplQ29tcG9uZW50OiBmdW5jdGlvbiBpbml0aWFsaXplQ29tcG9uZW50KGVsKSB7XG4gICAgICBpZiAoIWVsLl9feCkge1xuICAgICAgICAvLyBXcmFwIGluIGEgdHJ5L2NhdGNoIHNvIHRoYXQgd2UgZG9uJ3QgcHJldmVudCBvdGhlciBjb21wb25lbnRzXG4gICAgICAgIC8vIGZyb20gaW5pdGlhbGl6aW5nIHdoZW4gb25lIGNvbXBvbmVudCBjb250YWlucyBhbiBlcnJvci5cbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICBlbC5fX3ggPSBuZXcgQ29tcG9uZW50KGVsKTtcbiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgICAgICBzZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgICAgICAgIHRocm93IGVycm9yO1xuICAgICAgICAgIH0sIDApO1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfSxcbiAgICBjbG9uZTogZnVuY3Rpb24gY2xvbmUoY29tcG9uZW50LCBuZXdFbCkge1xuICAgICAgaWYgKCFuZXdFbC5fX3gpIHtcbiAgICAgICAgbmV3RWwuX194ID0gbmV3IENvbXBvbmVudChuZXdFbCwgY29tcG9uZW50KTtcbiAgICAgIH1cbiAgICB9LFxuICAgIGFkZE1hZ2ljUHJvcGVydHk6IGZ1bmN0aW9uIGFkZE1hZ2ljUHJvcGVydHkobmFtZSwgY2FsbGJhY2spIHtcbiAgICAgIHRoaXMubWFnaWNQcm9wZXJ0aWVzW25hbWVdID0gY2FsbGJhY2s7XG4gICAgfSxcbiAgICBvbkNvbXBvbmVudEluaXRpYWxpemVkOiBmdW5jdGlvbiBvbkNvbXBvbmVudEluaXRpYWxpemVkKGNhbGxiYWNrKSB7XG4gICAgICB0aGlzLm9uQ29tcG9uZW50SW5pdGlhbGl6ZWRzLnB1c2goY2FsbGJhY2spO1xuICAgIH0sXG4gICAgb25CZWZvcmVDb21wb25lbnRJbml0aWFsaXplZDogZnVuY3Rpb24gb25CZWZvcmVDb21wb25lbnRJbml0aWFsaXplZChjYWxsYmFjaykge1xuICAgICAgdGhpcy5vbkJlZm9yZUNvbXBvbmVudEluaXRpYWxpemVkcy5wdXNoKGNhbGxiYWNrKTtcbiAgICB9XG4gIH07XG5cbiAgaWYgKCFpc1Rlc3RpbmcoKSkge1xuICAgIHdpbmRvdy5BbHBpbmUgPSBBbHBpbmU7XG5cbiAgICBpZiAod2luZG93LmRlZmVyTG9hZGluZ0FscGluZSkge1xuICAgICAgd2luZG93LmRlZmVyTG9hZGluZ0FscGluZShmdW5jdGlvbiAoKSB7XG4gICAgICAgIHdpbmRvdy5BbHBpbmUuc3RhcnQoKTtcbiAgICAgIH0pO1xuICAgIH0gZWxzZSB7XG4gICAgICB3aW5kb3cuQWxwaW5lLnN0YXJ0KCk7XG4gICAgfVxuICB9XG5cbiAgcmV0dXJuIEFscGluZTtcblxufSkpKTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/alpinejs/dist/alpine.js\n");
 
 /***/ }),
 
@@ -1875,28 +23,208 @@
 /*!******************************!*\
   !*** ./resources/js/site.js ***!
   \******************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
-/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alpinejs__WEBPACK_IMPORTED_MODULE_0__);
-
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ \"./node_modules/alpinejs/dist/alpine.js\");\n/* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(alpinejs__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var focus_visible__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-visible */ \"./node_modules/focus-visible/dist/focus-visible.js\");\n/* harmony import */ var focus_visible__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_visible__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var typed_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! typed.js */ \"./node_modules/typed.js/lib/typed.js\");\n/* harmony import */ var typed_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(typed_js__WEBPACK_IMPORTED_MODULE_2__);\n\n\n // User for the autosearch in Algolia\n// use for typing efect\n\nvar typed4 = new (typed_js__WEBPACK_IMPORTED_MODULE_2___default())('#search', {\n  strings: ['Search for cars', 'Search for houses', 'Search for Audi s3 2017', 'Search for Peach Cargo 2020', 'Search fo average price of a Porsche 911 2010'],\n  typeSpeed: 25,\n  backSpeed: 0,\n  backDelay: 1000,\n  startDelay: 1000,\n  attr: 'placeholder',\n  bindInputFocusEvents: true,\n  loop: true,\n  smartBackspace: false\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvc2l0ZS5qcz82ZDgzIl0sIm5hbWVzIjpbInR5cGVkNCIsIlR5cGVkIiwic3RyaW5ncyIsInR5cGVTcGVlZCIsImJhY2tTcGVlZCIsImJhY2tEZWxheSIsInN0YXJ0RGVsYXkiLCJhdHRyIiwiYmluZElucHV0Rm9jdXNFdmVudHMiLCJsb29wIiwic21hcnRCYWNrc3BhY2UiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTtBQUNBO0NBTUE7QUFFQTs7QUFDQSxJQUFJQSxNQUFNLEdBQUcsSUFBSUMsaURBQUosQ0FBVSxTQUFWLEVBQXFCO0FBQzFCQyxTQUFPLEVBQUUsQ0FBQyxpQkFBRCxFQUFvQixtQkFBcEIsRUFBeUMseUJBQXpDLEVBQW9FLDZCQUFwRSxFQUFtRywrQ0FBbkcsQ0FEaUI7QUFFMUJDLFdBQVMsRUFBRSxFQUZlO0FBRzFCQyxXQUFTLEVBQUUsQ0FIZTtBQUkxQkMsV0FBUyxFQUFFLElBSmU7QUFLMUJDLFlBQVUsRUFBRSxJQUxjO0FBTTFCQyxNQUFJLEVBQUUsYUFOb0I7QUFPMUJDLHNCQUFvQixFQUFFLElBUEk7QUFRMUJDLE1BQUksRUFBRSxJQVJvQjtBQVMxQkMsZ0JBQWMsRUFBRTtBQVRVLENBQXJCLENBQWIiLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvc2l0ZS5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAnYWxwaW5lanMnXG5pbXBvcnQgJ2ZvY3VzLXZpc2libGUnXG5pbXBvcnQgVHlwZWQgZnJvbSAndHlwZWQuanMnXG5cblxuXG5cbi8vIFVzZXIgZm9yIHRoZSBhdXRvc2VhcmNoIGluIEFsZ29saWFcblxuLy8gdXNlIGZvciB0eXBpbmcgZWZlY3RcbnZhciB0eXBlZDQgPSBuZXcgVHlwZWQoJyNzZWFyY2gnLCB7XG4gICAgICAgIHN0cmluZ3M6IFsnU2VhcmNoIGZvciBjYXJzJywgJ1NlYXJjaCBmb3IgaG91c2VzJywgJ1NlYXJjaCBmb3IgQXVkaSBzMyAyMDE3JywgJ1NlYXJjaCBmb3IgUGVhY2ggQ2FyZ28gMjAyMCcsICdTZWFyY2ggZm8gYXZlcmFnZSBwcmljZSBvZiBhIFBvcnNjaGUgOTExIDIwMTAnXSxcbiAgICAgICAgdHlwZVNwZWVkOiAyNSxcbiAgICAgICAgYmFja1NwZWVkOiAwLFxuICAgICAgICBiYWNrRGVsYXk6IDEwMDAsXG4gICAgICAgIHN0YXJ0RGVsYXk6IDEwMDAsXG4gICAgICAgIGF0dHI6ICdwbGFjZWhvbGRlcicsXG4gICAgICAgIGJpbmRJbnB1dEZvY3VzRXZlbnRzOiB0cnVlLFxuICAgICAgICBsb29wOiB0cnVlLFxuICAgICAgICBzbWFydEJhY2tzcGFjZTogZmFsc2VcblxufSk7XG4gICAgXG5cblxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/js/site.js\n");
 
 /***/ }),
 
-/***/ 0:
-/*!*****************************************************************!*\
-  !*** multi ./resources/js/site.js ./resources/css/tailwind.css ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/focus-visible/dist/focus-visible.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/focus-visible/dist/focus-visible.js ***!
+  \**********************************************************/
+/***/ (function() {
 
-__webpack_require__(/*! /Users/philpasquin/Documents/site/mystfoil/resources/js/site.js */"./resources/js/site.js");
-module.exports = __webpack_require__(/*! /Users/philpasquin/Documents/site/mystfoil/resources/css/tailwind.css */"./resources/css/tailwind.css");
+eval("(function (global, factory) {\n   true ? factory() :\n  0;\n}(this, (function () { 'use strict';\n\n  /**\n   * Applies the :focus-visible polyfill at the given scope.\n   * A scope in this case is either the top-level Document or a Shadow Root.\n   *\n   * @param {(Document|ShadowRoot)} scope\n   * @see https://github.com/WICG/focus-visible\n   */\n  function applyFocusVisiblePolyfill(scope) {\n    var hadKeyboardEvent = true;\n    var hadFocusVisibleRecently = false;\n    var hadFocusVisibleRecentlyTimeout = null;\n\n    var inputTypesAllowlist = {\n      text: true,\n      search: true,\n      url: true,\n      tel: true,\n      email: true,\n      password: true,\n      number: true,\n      date: true,\n      month: true,\n      week: true,\n      time: true,\n      datetime: true,\n      'datetime-local': true\n    };\n\n    /**\n     * Helper function for legacy browsers and iframes which sometimes focus\n     * elements like document, body, and non-interactive SVG.\n     * @param {Element} el\n     */\n    function isValidFocusTarget(el) {\n      if (\n        el &&\n        el !== document &&\n        el.nodeName !== 'HTML' &&\n        el.nodeName !== 'BODY' &&\n        'classList' in el &&\n        'contains' in el.classList\n      ) {\n        return true;\n      }\n      return false;\n    }\n\n    /**\n     * Computes whether the given element should automatically trigger the\n     * `focus-visible` class being added, i.e. whether it should always match\n     * `:focus-visible` when focused.\n     * @param {Element} el\n     * @return {boolean}\n     */\n    function focusTriggersKeyboardModality(el) {\n      var type = el.type;\n      var tagName = el.tagName;\n\n      if (tagName === 'INPUT' && inputTypesAllowlist[type] && !el.readOnly) {\n        return true;\n      }\n\n      if (tagName === 'TEXTAREA' && !el.readOnly) {\n        return true;\n      }\n\n      if (el.isContentEditable) {\n        return true;\n      }\n\n      return false;\n    }\n\n    /**\n     * Add the `focus-visible` class to the given element if it was not added by\n     * the author.\n     * @param {Element} el\n     */\n    function addFocusVisibleClass(el) {\n      if (el.classList.contains('focus-visible')) {\n        return;\n      }\n      el.classList.add('focus-visible');\n      el.setAttribute('data-focus-visible-added', '');\n    }\n\n    /**\n     * Remove the `focus-visible` class from the given element if it was not\n     * originally added by the author.\n     * @param {Element} el\n     */\n    function removeFocusVisibleClass(el) {\n      if (!el.hasAttribute('data-focus-visible-added')) {\n        return;\n      }\n      el.classList.remove('focus-visible');\n      el.removeAttribute('data-focus-visible-added');\n    }\n\n    /**\n     * If the most recent user interaction was via the keyboard;\n     * and the key press did not include a meta, alt/option, or control key;\n     * then the modality is keyboard. Otherwise, the modality is not keyboard.\n     * Apply `focus-visible` to any current active element and keep track\n     * of our keyboard modality state with `hadKeyboardEvent`.\n     * @param {KeyboardEvent} e\n     */\n    function onKeyDown(e) {\n      if (e.metaKey || e.altKey || e.ctrlKey) {\n        return;\n      }\n\n      if (isValidFocusTarget(scope.activeElement)) {\n        addFocusVisibleClass(scope.activeElement);\n      }\n\n      hadKeyboardEvent = true;\n    }\n\n    /**\n     * If at any point a user clicks with a pointing device, ensure that we change\n     * the modality away from keyboard.\n     * This avoids the situation where a user presses a key on an already focused\n     * element, and then clicks on a different element, focusing it with a\n     * pointing device, while we still think we're in keyboard modality.\n     * @param {Event} e\n     */\n    function onPointerDown(e) {\n      hadKeyboardEvent = false;\n    }\n\n    /**\n     * On `focus`, add the `focus-visible` class to the target if:\n     * - the target received focus as a result of keyboard navigation, or\n     * - the event target is an element that will likely require interaction\n     *   via the keyboard (e.g. a text box)\n     * @param {Event} e\n     */\n    function onFocus(e) {\n      // Prevent IE from focusing the document or HTML element.\n      if (!isValidFocusTarget(e.target)) {\n        return;\n      }\n\n      if (hadKeyboardEvent || focusTriggersKeyboardModality(e.target)) {\n        addFocusVisibleClass(e.target);\n      }\n    }\n\n    /**\n     * On `blur`, remove the `focus-visible` class from the target.\n     * @param {Event} e\n     */\n    function onBlur(e) {\n      if (!isValidFocusTarget(e.target)) {\n        return;\n      }\n\n      if (\n        e.target.classList.contains('focus-visible') ||\n        e.target.hasAttribute('data-focus-visible-added')\n      ) {\n        // To detect a tab/window switch, we look for a blur event followed\n        // rapidly by a visibility change.\n        // If we don't see a visibility change within 100ms, it's probably a\n        // regular focus change.\n        hadFocusVisibleRecently = true;\n        window.clearTimeout(hadFocusVisibleRecentlyTimeout);\n        hadFocusVisibleRecentlyTimeout = window.setTimeout(function() {\n          hadFocusVisibleRecently = false;\n        }, 100);\n        removeFocusVisibleClass(e.target);\n      }\n    }\n\n    /**\n     * If the user changes tabs, keep track of whether or not the previously\n     * focused element had .focus-visible.\n     * @param {Event} e\n     */\n    function onVisibilityChange(e) {\n      if (document.visibilityState === 'hidden') {\n        // If the tab becomes active again, the browser will handle calling focus\n        // on the element (Safari actually calls it twice).\n        // If this tab change caused a blur on an element with focus-visible,\n        // re-apply the class when the user switches back to the tab.\n        if (hadFocusVisibleRecently) {\n          hadKeyboardEvent = true;\n        }\n        addInitialPointerMoveListeners();\n      }\n    }\n\n    /**\n     * Add a group of listeners to detect usage of any pointing devices.\n     * These listeners will be added when the polyfill first loads, and anytime\n     * the window is blurred, so that they are active when the window regains\n     * focus.\n     */\n    function addInitialPointerMoveListeners() {\n      document.addEventListener('mousemove', onInitialPointerMove);\n      document.addEventListener('mousedown', onInitialPointerMove);\n      document.addEventListener('mouseup', onInitialPointerMove);\n      document.addEventListener('pointermove', onInitialPointerMove);\n      document.addEventListener('pointerdown', onInitialPointerMove);\n      document.addEventListener('pointerup', onInitialPointerMove);\n      document.addEventListener('touchmove', onInitialPointerMove);\n      document.addEventListener('touchstart', onInitialPointerMove);\n      document.addEventListener('touchend', onInitialPointerMove);\n    }\n\n    function removeInitialPointerMoveListeners() {\n      document.removeEventListener('mousemove', onInitialPointerMove);\n      document.removeEventListener('mousedown', onInitialPointerMove);\n      document.removeEventListener('mouseup', onInitialPointerMove);\n      document.removeEventListener('pointermove', onInitialPointerMove);\n      document.removeEventListener('pointerdown', onInitialPointerMove);\n      document.removeEventListener('pointerup', onInitialPointerMove);\n      document.removeEventListener('touchmove', onInitialPointerMove);\n      document.removeEventListener('touchstart', onInitialPointerMove);\n      document.removeEventListener('touchend', onInitialPointerMove);\n    }\n\n    /**\n     * When the polfyill first loads, assume the user is in keyboard modality.\n     * If any event is received from a pointing device (e.g. mouse, pointer,\n     * touch), turn off keyboard modality.\n     * This accounts for situations where focus enters the page from the URL bar.\n     * @param {Event} e\n     */\n    function onInitialPointerMove(e) {\n      // Work around a Safari quirk that fires a mousemove on <html> whenever the\n      // window blurs, even if you're tabbing out of the page. ¯\\_(ツ)_/¯\n      if (e.target.nodeName && e.target.nodeName.toLowerCase() === 'html') {\n        return;\n      }\n\n      hadKeyboardEvent = false;\n      removeInitialPointerMoveListeners();\n    }\n\n    // For some kinds of state, we are interested in changes at the global scope\n    // only. For example, global pointer input, global key presses and global\n    // visibility change should affect the state at every scope:\n    document.addEventListener('keydown', onKeyDown, true);\n    document.addEventListener('mousedown', onPointerDown, true);\n    document.addEventListener('pointerdown', onPointerDown, true);\n    document.addEventListener('touchstart', onPointerDown, true);\n    document.addEventListener('visibilitychange', onVisibilityChange, true);\n\n    addInitialPointerMoveListeners();\n\n    // For focus and blur, we specifically care about state changes in the local\n    // scope. This is because focus / blur events that originate from within a\n    // shadow root are not re-dispatched from the host element if it was already\n    // the active element in its own scope:\n    scope.addEventListener('focus', onFocus, true);\n    scope.addEventListener('blur', onBlur, true);\n\n    // We detect that a node is a ShadowRoot by ensuring that it is a\n    // DocumentFragment and also has a host property. This check covers native\n    // implementation and polyfill implementation transparently. If we only cared\n    // about the native implementation, we could just check if the scope was\n    // an instance of a ShadowRoot.\n    if (scope.nodeType === Node.DOCUMENT_FRAGMENT_NODE && scope.host) {\n      // Since a ShadowRoot is a special kind of DocumentFragment, it does not\n      // have a root element to add a class to. So, we add this attribute to the\n      // host element instead:\n      scope.host.setAttribute('data-js-focus-visible', '');\n    } else if (scope.nodeType === Node.DOCUMENT_NODE) {\n      document.documentElement.classList.add('js-focus-visible');\n      document.documentElement.setAttribute('data-js-focus-visible', '');\n    }\n  }\n\n  // It is important to wrap all references to global window and document in\n  // these checks to support server-side rendering use cases\n  // @see https://github.com/WICG/focus-visible/issues/199\n  if (typeof window !== 'undefined' && typeof document !== 'undefined') {\n    // Make the polyfill helper globally available. This can be used as a signal\n    // to interested libraries that wish to coordinate with the polyfill for e.g.,\n    // applying the polyfill to a shadow root:\n    window.applyFocusVisiblePolyfill = applyFocusVisiblePolyfill;\n\n    // Notify interested libraries of the polyfill's presence, in case the\n    // polyfill was loaded lazily:\n    var event;\n\n    try {\n      event = new CustomEvent('focus-visible-polyfill-ready');\n    } catch (error) {\n      // IE11 does not support using CustomEvent as a constructor directly:\n      event = document.createEvent('CustomEvent');\n      event.initCustomEvent('focus-visible-polyfill-ready', false, false, {});\n    }\n\n    window.dispatchEvent(event);\n  }\n\n  if (typeof document !== 'undefined') {\n    // Apply the polyfill to the global document, so that no JavaScript\n    // coordination is required to use the polyfill in the top-level document:\n    applyFocusVisiblePolyfill(document);\n  }\n\n})));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvZm9jdXMtdmlzaWJsZS9kaXN0L2ZvY3VzLXZpc2libGUuanM/OTVmMCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLEVBQUUsS0FBNEQ7QUFDOUQsRUFBRSxDQUNXO0FBQ2IsQ0FBQyxxQkFBcUI7O0FBRXRCO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsYUFBYSxzQkFBc0I7QUFDbkM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLFFBQVE7QUFDdkI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWUsUUFBUTtBQUN2QixnQkFBZ0I7QUFDaEI7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLFFBQVE7QUFDdkI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLFFBQVE7QUFDdkI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLGNBQWM7QUFDN0I7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLE1BQU07QUFDckI7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWUsTUFBTTtBQUNyQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBLGVBQWUsTUFBTTtBQUNyQjtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFNBQVM7QUFDVDtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0EsZUFBZSxNQUFNO0FBQ3JCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZSxNQUFNO0FBQ3JCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7QUFDTDtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0EsS0FBSztBQUNMO0FBQ0E7QUFDQSw0RUFBNEU7QUFDNUU7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBLENBQUMiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvZm9jdXMtdmlzaWJsZS9kaXN0L2ZvY3VzLXZpc2libGUuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIoZnVuY3Rpb24gKGdsb2JhbCwgZmFjdG9yeSkge1xuICB0eXBlb2YgZXhwb3J0cyA9PT0gJ29iamVjdCcgJiYgdHlwZW9mIG1vZHVsZSAhPT0gJ3VuZGVmaW5lZCcgPyBmYWN0b3J5KCkgOlxuICB0eXBlb2YgZGVmaW5lID09PSAnZnVuY3Rpb24nICYmIGRlZmluZS5hbWQgPyBkZWZpbmUoZmFjdG9yeSkgOlxuICAoZmFjdG9yeSgpKTtcbn0odGhpcywgKGZ1bmN0aW9uICgpIHsgJ3VzZSBzdHJpY3QnO1xuXG4gIC8qKlxuICAgKiBBcHBsaWVzIHRoZSA6Zm9jdXMtdmlzaWJsZSBwb2x5ZmlsbCBhdCB0aGUgZ2l2ZW4gc2NvcGUuXG4gICAqIEEgc2NvcGUgaW4gdGhpcyBjYXNlIGlzIGVpdGhlciB0aGUgdG9wLWxldmVsIERvY3VtZW50IG9yIGEgU2hhZG93IFJvb3QuXG4gICAqXG4gICAqIEBwYXJhbSB7KERvY3VtZW50fFNoYWRvd1Jvb3QpfSBzY29wZVxuICAgKiBAc2VlIGh0dHBzOi8vZ2l0aHViLmNvbS9XSUNHL2ZvY3VzLXZpc2libGVcbiAgICovXG4gIGZ1bmN0aW9uIGFwcGx5Rm9jdXNWaXNpYmxlUG9seWZpbGwoc2NvcGUpIHtcbiAgICB2YXIgaGFkS2V5Ym9hcmRFdmVudCA9IHRydWU7XG4gICAgdmFyIGhhZEZvY3VzVmlzaWJsZVJlY2VudGx5ID0gZmFsc2U7XG4gICAgdmFyIGhhZEZvY3VzVmlzaWJsZVJlY2VudGx5VGltZW91dCA9IG51bGw7XG5cbiAgICB2YXIgaW5wdXRUeXBlc0FsbG93bGlzdCA9IHtcbiAgICAgIHRleHQ6IHRydWUsXG4gICAgICBzZWFyY2g6IHRydWUsXG4gICAgICB1cmw6IHRydWUsXG4gICAgICB0ZWw6IHRydWUsXG4gICAgICBlbWFpbDogdHJ1ZSxcbiAgICAgIHBhc3N3b3JkOiB0cnVlLFxuICAgICAgbnVtYmVyOiB0cnVlLFxuICAgICAgZGF0ZTogdHJ1ZSxcbiAgICAgIG1vbnRoOiB0cnVlLFxuICAgICAgd2VlazogdHJ1ZSxcbiAgICAgIHRpbWU6IHRydWUsXG4gICAgICBkYXRldGltZTogdHJ1ZSxcbiAgICAgICdkYXRldGltZS1sb2NhbCc6IHRydWVcbiAgICB9O1xuXG4gICAgLyoqXG4gICAgICogSGVscGVyIGZ1bmN0aW9uIGZvciBsZWdhY3kgYnJvd3NlcnMgYW5kIGlmcmFtZXMgd2hpY2ggc29tZXRpbWVzIGZvY3VzXG4gICAgICogZWxlbWVudHMgbGlrZSBkb2N1bWVudCwgYm9keSwgYW5kIG5vbi1pbnRlcmFjdGl2ZSBTVkcuXG4gICAgICogQHBhcmFtIHtFbGVtZW50fSBlbFxuICAgICAqL1xuICAgIGZ1bmN0aW9uIGlzVmFsaWRGb2N1c1RhcmdldChlbCkge1xuICAgICAgaWYgKFxuICAgICAgICBlbCAmJlxuICAgICAgICBlbCAhPT0gZG9jdW1lbnQgJiZcbiAgICAgICAgZWwubm9kZU5hbWUgIT09ICdIVE1MJyAmJlxuICAgICAgICBlbC5ub2RlTmFtZSAhPT0gJ0JPRFknICYmXG4gICAgICAgICdjbGFzc0xpc3QnIGluIGVsICYmXG4gICAgICAgICdjb250YWlucycgaW4gZWwuY2xhc3NMaXN0XG4gICAgICApIHtcbiAgICAgICAgcmV0dXJuIHRydWU7XG4gICAgICB9XG4gICAgICByZXR1cm4gZmFsc2U7XG4gICAgfVxuXG4gICAgLyoqXG4gICAgICogQ29tcHV0ZXMgd2hldGhlciB0aGUgZ2l2ZW4gZWxlbWVudCBzaG91bGQgYXV0b21hdGljYWxseSB0cmlnZ2VyIHRoZVxuICAgICAqIGBmb2N1cy12aXNpYmxlYCBjbGFzcyBiZWluZyBhZGRlZCwgaS5lLiB3aGV0aGVyIGl0IHNob3VsZCBhbHdheXMgbWF0Y2hcbiAgICAgKiBgOmZvY3VzLXZpc2libGVgIHdoZW4gZm9jdXNlZC5cbiAgICAgKiBAcGFyYW0ge0VsZW1lbnR9IGVsXG4gICAgICogQHJldHVybiB7Ym9vbGVhbn1cbiAgICAgKi9cbiAgICBmdW5jdGlvbiBmb2N1c1RyaWdnZXJzS2V5Ym9hcmRNb2RhbGl0eShlbCkge1xuICAgICAgdmFyIHR5cGUgPSBlbC50eXBlO1xuICAgICAgdmFyIHRhZ05hbWUgPSBlbC50YWdOYW1lO1xuXG4gICAgICBpZiAodGFnTmFtZSA9PT0gJ0lOUFVUJyAmJiBpbnB1dFR5cGVzQWxsb3dsaXN0W3R5cGVdICYmICFlbC5yZWFkT25seSkge1xuICAgICAgICByZXR1cm4gdHJ1ZTtcbiAgICAgIH1cblxuICAgICAgaWYgKHRhZ05hbWUgPT09ICdURVhUQVJFQScgJiYgIWVsLnJlYWRPbmx5KSB7XG4gICAgICAgIHJldHVybiB0cnVlO1xuICAgICAgfVxuXG4gICAgICBpZiAoZWwuaXNDb250ZW50RWRpdGFibGUpIHtcbiAgICAgICAgcmV0dXJuIHRydWU7XG4gICAgICB9XG5cbiAgICAgIHJldHVybiBmYWxzZTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBBZGQgdGhlIGBmb2N1cy12aXNpYmxlYCBjbGFzcyB0byB0aGUgZ2l2ZW4gZWxlbWVudCBpZiBpdCB3YXMgbm90IGFkZGVkIGJ5XG4gICAgICogdGhlIGF1dGhvci5cbiAgICAgKiBAcGFyYW0ge0VsZW1lbnR9IGVsXG4gICAgICovXG4gICAgZnVuY3Rpb24gYWRkRm9jdXNWaXNpYmxlQ2xhc3MoZWwpIHtcbiAgICAgIGlmIChlbC5jbGFzc0xpc3QuY29udGFpbnMoJ2ZvY3VzLXZpc2libGUnKSkge1xuICAgICAgICByZXR1cm47XG4gICAgICB9XG4gICAgICBlbC5jbGFzc0xpc3QuYWRkKCdmb2N1cy12aXNpYmxlJyk7XG4gICAgICBlbC5zZXRBdHRyaWJ1dGUoJ2RhdGEtZm9jdXMtdmlzaWJsZS1hZGRlZCcsICcnKTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBSZW1vdmUgdGhlIGBmb2N1cy12aXNpYmxlYCBjbGFzcyBmcm9tIHRoZSBnaXZlbiBlbGVtZW50IGlmIGl0IHdhcyBub3RcbiAgICAgKiBvcmlnaW5hbGx5IGFkZGVkIGJ5IHRoZSBhdXRob3IuXG4gICAgICogQHBhcmFtIHtFbGVtZW50fSBlbFxuICAgICAqL1xuICAgIGZ1bmN0aW9uIHJlbW92ZUZvY3VzVmlzaWJsZUNsYXNzKGVsKSB7XG4gICAgICBpZiAoIWVsLmhhc0F0dHJpYnV0ZSgnZGF0YS1mb2N1cy12aXNpYmxlLWFkZGVkJykpIHtcbiAgICAgICAgcmV0dXJuO1xuICAgICAgfVxuICAgICAgZWwuY2xhc3NMaXN0LnJlbW92ZSgnZm9jdXMtdmlzaWJsZScpO1xuICAgICAgZWwucmVtb3ZlQXR0cmlidXRlKCdkYXRhLWZvY3VzLXZpc2libGUtYWRkZWQnKTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBJZiB0aGUgbW9zdCByZWNlbnQgdXNlciBpbnRlcmFjdGlvbiB3YXMgdmlhIHRoZSBrZXlib2FyZDtcbiAgICAgKiBhbmQgdGhlIGtleSBwcmVzcyBkaWQgbm90IGluY2x1ZGUgYSBtZXRhLCBhbHQvb3B0aW9uLCBvciBjb250cm9sIGtleTtcbiAgICAgKiB0aGVuIHRoZSBtb2RhbGl0eSBpcyBrZXlib2FyZC4gT3RoZXJ3aXNlLCB0aGUgbW9kYWxpdHkgaXMgbm90IGtleWJvYXJkLlxuICAgICAqIEFwcGx5IGBmb2N1cy12aXNpYmxlYCB0byBhbnkgY3VycmVudCBhY3RpdmUgZWxlbWVudCBhbmQga2VlcCB0cmFja1xuICAgICAqIG9mIG91ciBrZXlib2FyZCBtb2RhbGl0eSBzdGF0ZSB3aXRoIGBoYWRLZXlib2FyZEV2ZW50YC5cbiAgICAgKiBAcGFyYW0ge0tleWJvYXJkRXZlbnR9IGVcbiAgICAgKi9cbiAgICBmdW5jdGlvbiBvbktleURvd24oZSkge1xuICAgICAgaWYgKGUubWV0YUtleSB8fCBlLmFsdEtleSB8fCBlLmN0cmxLZXkpIHtcbiAgICAgICAgcmV0dXJuO1xuICAgICAgfVxuXG4gICAgICBpZiAoaXNWYWxpZEZvY3VzVGFyZ2V0KHNjb3BlLmFjdGl2ZUVsZW1lbnQpKSB7XG4gICAgICAgIGFkZEZvY3VzVmlzaWJsZUNsYXNzKHNjb3BlLmFjdGl2ZUVsZW1lbnQpO1xuICAgICAgfVxuXG4gICAgICBoYWRLZXlib2FyZEV2ZW50ID0gdHJ1ZTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBJZiBhdCBhbnkgcG9pbnQgYSB1c2VyIGNsaWNrcyB3aXRoIGEgcG9pbnRpbmcgZGV2aWNlLCBlbnN1cmUgdGhhdCB3ZSBjaGFuZ2VcbiAgICAgKiB0aGUgbW9kYWxpdHkgYXdheSBmcm9tIGtleWJvYXJkLlxuICAgICAqIFRoaXMgYXZvaWRzIHRoZSBzaXR1YXRpb24gd2hlcmUgYSB1c2VyIHByZXNzZXMgYSBrZXkgb24gYW4gYWxyZWFkeSBmb2N1c2VkXG4gICAgICogZWxlbWVudCwgYW5kIHRoZW4gY2xpY2tzIG9uIGEgZGlmZmVyZW50IGVsZW1lbnQsIGZvY3VzaW5nIGl0IHdpdGggYVxuICAgICAqIHBvaW50aW5nIGRldmljZSwgd2hpbGUgd2Ugc3RpbGwgdGhpbmsgd2UncmUgaW4ga2V5Ym9hcmQgbW9kYWxpdHkuXG4gICAgICogQHBhcmFtIHtFdmVudH0gZVxuICAgICAqL1xuICAgIGZ1bmN0aW9uIG9uUG9pbnRlckRvd24oZSkge1xuICAgICAgaGFkS2V5Ym9hcmRFdmVudCA9IGZhbHNlO1xuICAgIH1cblxuICAgIC8qKlxuICAgICAqIE9uIGBmb2N1c2AsIGFkZCB0aGUgYGZvY3VzLXZpc2libGVgIGNsYXNzIHRvIHRoZSB0YXJnZXQgaWY6XG4gICAgICogLSB0aGUgdGFyZ2V0IHJlY2VpdmVkIGZvY3VzIGFzIGEgcmVzdWx0IG9mIGtleWJvYXJkIG5hdmlnYXRpb24sIG9yXG4gICAgICogLSB0aGUgZXZlbnQgdGFyZ2V0IGlzIGFuIGVsZW1lbnQgdGhhdCB3aWxsIGxpa2VseSByZXF1aXJlIGludGVyYWN0aW9uXG4gICAgICogICB2aWEgdGhlIGtleWJvYXJkIChlLmcuIGEgdGV4dCBib3gpXG4gICAgICogQHBhcmFtIHtFdmVudH0gZVxuICAgICAqL1xuICAgIGZ1bmN0aW9uIG9uRm9jdXMoZSkge1xuICAgICAgLy8gUHJldmVudCBJRSBmcm9tIGZvY3VzaW5nIHRoZSBkb2N1bWVudCBvciBIVE1MIGVsZW1lbnQuXG4gICAgICBpZiAoIWlzVmFsaWRGb2N1c1RhcmdldChlLnRhcmdldCkpIHtcbiAgICAgICAgcmV0dXJuO1xuICAgICAgfVxuXG4gICAgICBpZiAoaGFkS2V5Ym9hcmRFdmVudCB8fCBmb2N1c1RyaWdnZXJzS2V5Ym9hcmRNb2RhbGl0eShlLnRhcmdldCkpIHtcbiAgICAgICAgYWRkRm9jdXNWaXNpYmxlQ2xhc3MoZS50YXJnZXQpO1xuICAgICAgfVxuICAgIH1cblxuICAgIC8qKlxuICAgICAqIE9uIGBibHVyYCwgcmVtb3ZlIHRoZSBgZm9jdXMtdmlzaWJsZWAgY2xhc3MgZnJvbSB0aGUgdGFyZ2V0LlxuICAgICAqIEBwYXJhbSB7RXZlbnR9IGVcbiAgICAgKi9cbiAgICBmdW5jdGlvbiBvbkJsdXIoZSkge1xuICAgICAgaWYgKCFpc1ZhbGlkRm9jdXNUYXJnZXQoZS50YXJnZXQpKSB7XG4gICAgICAgIHJldHVybjtcbiAgICAgIH1cblxuICAgICAgaWYgKFxuICAgICAgICBlLnRhcmdldC5jbGFzc0xpc3QuY29udGFpbnMoJ2ZvY3VzLXZpc2libGUnKSB8fFxuICAgICAgICBlLnRhcmdldC5oYXNBdHRyaWJ1dGUoJ2RhdGEtZm9jdXMtdmlzaWJsZS1hZGRlZCcpXG4gICAgICApIHtcbiAgICAgICAgLy8gVG8gZGV0ZWN0IGEgdGFiL3dpbmRvdyBzd2l0Y2gsIHdlIGxvb2sgZm9yIGEgYmx1ciBldmVudCBmb2xsb3dlZFxuICAgICAgICAvLyByYXBpZGx5IGJ5IGEgdmlzaWJpbGl0eSBjaGFuZ2UuXG4gICAgICAgIC8vIElmIHdlIGRvbid0IHNlZSBhIHZpc2liaWxpdHkgY2hhbmdlIHdpdGhpbiAxMDBtcywgaXQncyBwcm9iYWJseSBhXG4gICAgICAgIC8vIHJlZ3VsYXIgZm9jdXMgY2hhbmdlLlxuICAgICAgICBoYWRGb2N1c1Zpc2libGVSZWNlbnRseSA9IHRydWU7XG4gICAgICAgIHdpbmRvdy5jbGVhclRpbWVvdXQoaGFkRm9jdXNWaXNpYmxlUmVjZW50bHlUaW1lb3V0KTtcbiAgICAgICAgaGFkRm9jdXNWaXNpYmxlUmVjZW50bHlUaW1lb3V0ID0gd2luZG93LnNldFRpbWVvdXQoZnVuY3Rpb24oKSB7XG4gICAgICAgICAgaGFkRm9jdXNWaXNpYmxlUmVjZW50bHkgPSBmYWxzZTtcbiAgICAgICAgfSwgMTAwKTtcbiAgICAgICAgcmVtb3ZlRm9jdXNWaXNpYmxlQ2xhc3MoZS50YXJnZXQpO1xuICAgICAgfVxuICAgIH1cblxuICAgIC8qKlxuICAgICAqIElmIHRoZSB1c2VyIGNoYW5nZXMgdGFicywga2VlcCB0cmFjayBvZiB3aGV0aGVyIG9yIG5vdCB0aGUgcHJldmlvdXNseVxuICAgICAqIGZvY3VzZWQgZWxlbWVudCBoYWQgLmZvY3VzLXZpc2libGUuXG4gICAgICogQHBhcmFtIHtFdmVudH0gZVxuICAgICAqL1xuICAgIGZ1bmN0aW9uIG9uVmlzaWJpbGl0eUNoYW5nZShlKSB7XG4gICAgICBpZiAoZG9jdW1lbnQudmlzaWJpbGl0eVN0YXRlID09PSAnaGlkZGVuJykge1xuICAgICAgICAvLyBJZiB0aGUgdGFiIGJlY29tZXMgYWN0aXZlIGFnYWluLCB0aGUgYnJvd3NlciB3aWxsIGhhbmRsZSBjYWxsaW5nIGZvY3VzXG4gICAgICAgIC8vIG9uIHRoZSBlbGVtZW50IChTYWZhcmkgYWN0dWFsbHkgY2FsbHMgaXQgdHdpY2UpLlxuICAgICAgICAvLyBJZiB0aGlzIHRhYiBjaGFuZ2UgY2F1c2VkIGEgYmx1ciBvbiBhbiBlbGVtZW50IHdpdGggZm9jdXMtdmlzaWJsZSxcbiAgICAgICAgLy8gcmUtYXBwbHkgdGhlIGNsYXNzIHdoZW4gdGhlIHVzZXIgc3dpdGNoZXMgYmFjayB0byB0aGUgdGFiLlxuICAgICAgICBpZiAoaGFkRm9jdXNWaXNpYmxlUmVjZW50bHkpIHtcbiAgICAgICAgICBoYWRLZXlib2FyZEV2ZW50ID0gdHJ1ZTtcbiAgICAgICAgfVxuICAgICAgICBhZGRJbml0aWFsUG9pbnRlck1vdmVMaXN0ZW5lcnMoKTtcbiAgICAgIH1cbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBBZGQgYSBncm91cCBvZiBsaXN0ZW5lcnMgdG8gZGV0ZWN0IHVzYWdlIG9mIGFueSBwb2ludGluZyBkZXZpY2VzLlxuICAgICAqIFRoZXNlIGxpc3RlbmVycyB3aWxsIGJlIGFkZGVkIHdoZW4gdGhlIHBvbHlmaWxsIGZpcnN0IGxvYWRzLCBhbmQgYW55dGltZVxuICAgICAqIHRoZSB3aW5kb3cgaXMgYmx1cnJlZCwgc28gdGhhdCB0aGV5IGFyZSBhY3RpdmUgd2hlbiB0aGUgd2luZG93IHJlZ2FpbnNcbiAgICAgKiBmb2N1cy5cbiAgICAgKi9cbiAgICBmdW5jdGlvbiBhZGRJbml0aWFsUG9pbnRlck1vdmVMaXN0ZW5lcnMoKSB7XG4gICAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdtb3VzZW1vdmUnLCBvbkluaXRpYWxQb2ludGVyTW92ZSk7XG4gICAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdtb3VzZWRvd24nLCBvbkluaXRpYWxQb2ludGVyTW92ZSk7XG4gICAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdtb3VzZXVwJywgb25Jbml0aWFsUG9pbnRlck1vdmUpO1xuICAgICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigncG9pbnRlcm1vdmUnLCBvbkluaXRpYWxQb2ludGVyTW92ZSk7XG4gICAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdwb2ludGVyZG93bicsIG9uSW5pdGlhbFBvaW50ZXJNb3ZlKTtcbiAgICAgIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ3BvaW50ZXJ1cCcsIG9uSW5pdGlhbFBvaW50ZXJNb3ZlKTtcbiAgICAgIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ3RvdWNobW92ZScsIG9uSW5pdGlhbFBvaW50ZXJNb3ZlKTtcbiAgICAgIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ3RvdWNoc3RhcnQnLCBvbkluaXRpYWxQb2ludGVyTW92ZSk7XG4gICAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCd0b3VjaGVuZCcsIG9uSW5pdGlhbFBvaW50ZXJNb3ZlKTtcbiAgICB9XG5cbiAgICBmdW5jdGlvbiByZW1vdmVJbml0aWFsUG9pbnRlck1vdmVMaXN0ZW5lcnMoKSB7XG4gICAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKCdtb3VzZW1vdmUnLCBvbkluaXRpYWxQb2ludGVyTW92ZSk7XG4gICAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKCdtb3VzZWRvd24nLCBvbkluaXRpYWxQb2ludGVyTW92ZSk7XG4gICAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKCdtb3VzZXVwJywgb25Jbml0aWFsUG9pbnRlck1vdmUpO1xuICAgICAgZG9jdW1lbnQucmVtb3ZlRXZlbnRMaXN0ZW5lcigncG9pbnRlcm1vdmUnLCBvbkluaXRpYWxQb2ludGVyTW92ZSk7XG4gICAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKCdwb2ludGVyZG93bicsIG9uSW5pdGlhbFBvaW50ZXJNb3ZlKTtcbiAgICAgIGRvY3VtZW50LnJlbW92ZUV2ZW50TGlzdGVuZXIoJ3BvaW50ZXJ1cCcsIG9uSW5pdGlhbFBvaW50ZXJNb3ZlKTtcbiAgICAgIGRvY3VtZW50LnJlbW92ZUV2ZW50TGlzdGVuZXIoJ3RvdWNobW92ZScsIG9uSW5pdGlhbFBvaW50ZXJNb3ZlKTtcbiAgICAgIGRvY3VtZW50LnJlbW92ZUV2ZW50TGlzdGVuZXIoJ3RvdWNoc3RhcnQnLCBvbkluaXRpYWxQb2ludGVyTW92ZSk7XG4gICAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKCd0b3VjaGVuZCcsIG9uSW5pdGlhbFBvaW50ZXJNb3ZlKTtcbiAgICB9XG5cbiAgICAvKipcbiAgICAgKiBXaGVuIHRoZSBwb2xmeWlsbCBmaXJzdCBsb2FkcywgYXNzdW1lIHRoZSB1c2VyIGlzIGluIGtleWJvYXJkIG1vZGFsaXR5LlxuICAgICAqIElmIGFueSBldmVudCBpcyByZWNlaXZlZCBmcm9tIGEgcG9pbnRpbmcgZGV2aWNlIChlLmcuIG1vdXNlLCBwb2ludGVyLFxuICAgICAqIHRvdWNoKSwgdHVybiBvZmYga2V5Ym9hcmQgbW9kYWxpdHkuXG4gICAgICogVGhpcyBhY2NvdW50cyBmb3Igc2l0dWF0aW9ucyB3aGVyZSBmb2N1cyBlbnRlcnMgdGhlIHBhZ2UgZnJvbSB0aGUgVVJMIGJhci5cbiAgICAgKiBAcGFyYW0ge0V2ZW50fSBlXG4gICAgICovXG4gICAgZnVuY3Rpb24gb25Jbml0aWFsUG9pbnRlck1vdmUoZSkge1xuICAgICAgLy8gV29yayBhcm91bmQgYSBTYWZhcmkgcXVpcmsgdGhhdCBmaXJlcyBhIG1vdXNlbW92ZSBvbiA8aHRtbD4gd2hlbmV2ZXIgdGhlXG4gICAgICAvLyB3aW5kb3cgYmx1cnMsIGV2ZW4gaWYgeW91J3JlIHRhYmJpbmcgb3V0IG9mIHRoZSBwYWdlLiDCr1xcXyjjg4QpXy/Cr1xuICAgICAgaWYgKGUudGFyZ2V0Lm5vZGVOYW1lICYmIGUudGFyZ2V0Lm5vZGVOYW1lLnRvTG93ZXJDYXNlKCkgPT09ICdodG1sJykge1xuICAgICAgICByZXR1cm47XG4gICAgICB9XG5cbiAgICAgIGhhZEtleWJvYXJkRXZlbnQgPSBmYWxzZTtcbiAgICAgIHJlbW92ZUluaXRpYWxQb2ludGVyTW92ZUxpc3RlbmVycygpO1xuICAgIH1cblxuICAgIC8vIEZvciBzb21lIGtpbmRzIG9mIHN0YXRlLCB3ZSBhcmUgaW50ZXJlc3RlZCBpbiBjaGFuZ2VzIGF0IHRoZSBnbG9iYWwgc2NvcGVcbiAgICAvLyBvbmx5LiBGb3IgZXhhbXBsZSwgZ2xvYmFsIHBvaW50ZXIgaW5wdXQsIGdsb2JhbCBrZXkgcHJlc3NlcyBhbmQgZ2xvYmFsXG4gICAgLy8gdmlzaWJpbGl0eSBjaGFuZ2Ugc2hvdWxkIGFmZmVjdCB0aGUgc3RhdGUgYXQgZXZlcnkgc2NvcGU6XG4gICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIG9uS2V5RG93biwgdHJ1ZSk7XG4gICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignbW91c2Vkb3duJywgb25Qb2ludGVyRG93biwgdHJ1ZSk7XG4gICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigncG9pbnRlcmRvd24nLCBvblBvaW50ZXJEb3duLCB0cnVlKTtcbiAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCd0b3VjaHN0YXJ0Jywgb25Qb2ludGVyRG93biwgdHJ1ZSk7XG4gICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigndmlzaWJpbGl0eWNoYW5nZScsIG9uVmlzaWJpbGl0eUNoYW5nZSwgdHJ1ZSk7XG5cbiAgICBhZGRJbml0aWFsUG9pbnRlck1vdmVMaXN0ZW5lcnMoKTtcblxuICAgIC8vIEZvciBmb2N1cyBhbmQgYmx1ciwgd2Ugc3BlY2lmaWNhbGx5IGNhcmUgYWJvdXQgc3RhdGUgY2hhbmdlcyBpbiB0aGUgbG9jYWxcbiAgICAvLyBzY29wZS4gVGhpcyBpcyBiZWNhdXNlIGZvY3VzIC8gYmx1ciBldmVudHMgdGhhdCBvcmlnaW5hdGUgZnJvbSB3aXRoaW4gYVxuICAgIC8vIHNoYWRvdyByb290IGFyZSBub3QgcmUtZGlzcGF0Y2hlZCBmcm9tIHRoZSBob3N0IGVsZW1lbnQgaWYgaXQgd2FzIGFscmVhZHlcbiAgICAvLyB0aGUgYWN0aXZlIGVsZW1lbnQgaW4gaXRzIG93biBzY29wZTpcbiAgICBzY29wZS5hZGRFdmVudExpc3RlbmVyKCdmb2N1cycsIG9uRm9jdXMsIHRydWUpO1xuICAgIHNjb3BlLmFkZEV2ZW50TGlzdGVuZXIoJ2JsdXInLCBvbkJsdXIsIHRydWUpO1xuXG4gICAgLy8gV2UgZGV0ZWN0IHRoYXQgYSBub2RlIGlzIGEgU2hhZG93Um9vdCBieSBlbnN1cmluZyB0aGF0IGl0IGlzIGFcbiAgICAvLyBEb2N1bWVudEZyYWdtZW50IGFuZCBhbHNvIGhhcyBhIGhvc3QgcHJvcGVydHkuIFRoaXMgY2hlY2sgY292ZXJzIG5hdGl2ZVxuICAgIC8vIGltcGxlbWVudGF0aW9uIGFuZCBwb2x5ZmlsbCBpbXBsZW1lbnRhdGlvbiB0cmFuc3BhcmVudGx5LiBJZiB3ZSBvbmx5IGNhcmVkXG4gICAgLy8gYWJvdXQgdGhlIG5hdGl2ZSBpbXBsZW1lbnRhdGlvbiwgd2UgY291bGQganVzdCBjaGVjayBpZiB0aGUgc2NvcGUgd2FzXG4gICAgLy8gYW4gaW5zdGFuY2Ugb2YgYSBTaGFkb3dSb290LlxuICAgIGlmIChzY29wZS5ub2RlVHlwZSA9PT0gTm9kZS5ET0NVTUVOVF9GUkFHTUVOVF9OT0RFICYmIHNjb3BlLmhvc3QpIHtcbiAgICAgIC8vIFNpbmNlIGEgU2hhZG93Um9vdCBpcyBhIHNwZWNpYWwga2luZCBvZiBEb2N1bWVudEZyYWdtZW50LCBpdCBkb2VzIG5vdFxuICAgICAgLy8gaGF2ZSBhIHJvb3QgZWxlbWVudCB0byBhZGQgYSBjbGFzcyB0by4gU28sIHdlIGFkZCB0aGlzIGF0dHJpYnV0ZSB0byB0aGVcbiAgICAgIC8vIGhvc3QgZWxlbWVudCBpbnN0ZWFkOlxuICAgICAgc2NvcGUuaG9zdC5zZXRBdHRyaWJ1dGUoJ2RhdGEtanMtZm9jdXMtdmlzaWJsZScsICcnKTtcbiAgICB9IGVsc2UgaWYgKHNjb3BlLm5vZGVUeXBlID09PSBOb2RlLkRPQ1VNRU5UX05PREUpIHtcbiAgICAgIGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5jbGFzc0xpc3QuYWRkKCdqcy1mb2N1cy12aXNpYmxlJyk7XG4gICAgICBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuc2V0QXR0cmlidXRlKCdkYXRhLWpzLWZvY3VzLXZpc2libGUnLCAnJyk7XG4gICAgfVxuICB9XG5cbiAgLy8gSXQgaXMgaW1wb3J0YW50IHRvIHdyYXAgYWxsIHJlZmVyZW5jZXMgdG8gZ2xvYmFsIHdpbmRvdyBhbmQgZG9jdW1lbnQgaW5cbiAgLy8gdGhlc2UgY2hlY2tzIHRvIHN1cHBvcnQgc2VydmVyLXNpZGUgcmVuZGVyaW5nIHVzZSBjYXNlc1xuICAvLyBAc2VlIGh0dHBzOi8vZ2l0aHViLmNvbS9XSUNHL2ZvY3VzLXZpc2libGUvaXNzdWVzLzE5OVxuICBpZiAodHlwZW9mIHdpbmRvdyAhPT0gJ3VuZGVmaW5lZCcgJiYgdHlwZW9mIGRvY3VtZW50ICE9PSAndW5kZWZpbmVkJykge1xuICAgIC8vIE1ha2UgdGhlIHBvbHlmaWxsIGhlbHBlciBnbG9iYWxseSBhdmFpbGFibGUuIFRoaXMgY2FuIGJlIHVzZWQgYXMgYSBzaWduYWxcbiAgICAvLyB0byBpbnRlcmVzdGVkIGxpYnJhcmllcyB0aGF0IHdpc2ggdG8gY29vcmRpbmF0ZSB3aXRoIHRoZSBwb2x5ZmlsbCBmb3IgZS5nLixcbiAgICAvLyBhcHBseWluZyB0aGUgcG9seWZpbGwgdG8gYSBzaGFkb3cgcm9vdDpcbiAgICB3aW5kb3cuYXBwbHlGb2N1c1Zpc2libGVQb2x5ZmlsbCA9IGFwcGx5Rm9jdXNWaXNpYmxlUG9seWZpbGw7XG5cbiAgICAvLyBOb3RpZnkgaW50ZXJlc3RlZCBsaWJyYXJpZXMgb2YgdGhlIHBvbHlmaWxsJ3MgcHJlc2VuY2UsIGluIGNhc2UgdGhlXG4gICAgLy8gcG9seWZpbGwgd2FzIGxvYWRlZCBsYXppbHk6XG4gICAgdmFyIGV2ZW50O1xuXG4gICAgdHJ5IHtcbiAgICAgIGV2ZW50ID0gbmV3IEN1c3RvbUV2ZW50KCdmb2N1cy12aXNpYmxlLXBvbHlmaWxsLXJlYWR5Jyk7XG4gICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgIC8vIElFMTEgZG9lcyBub3Qgc3VwcG9ydCB1c2luZyBDdXN0b21FdmVudCBhcyBhIGNvbnN0cnVjdG9yIGRpcmVjdGx5OlxuICAgICAgZXZlbnQgPSBkb2N1bWVudC5jcmVhdGVFdmVudCgnQ3VzdG9tRXZlbnQnKTtcbiAgICAgIGV2ZW50LmluaXRDdXN0b21FdmVudCgnZm9jdXMtdmlzaWJsZS1wb2x5ZmlsbC1yZWFkeScsIGZhbHNlLCBmYWxzZSwge30pO1xuICAgIH1cblxuICAgIHdpbmRvdy5kaXNwYXRjaEV2ZW50KGV2ZW50KTtcbiAgfVxuXG4gIGlmICh0eXBlb2YgZG9jdW1lbnQgIT09ICd1bmRlZmluZWQnKSB7XG4gICAgLy8gQXBwbHkgdGhlIHBvbHlmaWxsIHRvIHRoZSBnbG9iYWwgZG9jdW1lbnQsIHNvIHRoYXQgbm8gSmF2YVNjcmlwdFxuICAgIC8vIGNvb3JkaW5hdGlvbiBpcyByZXF1aXJlZCB0byB1c2UgdGhlIHBvbHlmaWxsIGluIHRoZSB0b3AtbGV2ZWwgZG9jdW1lbnQ6XG4gICAgYXBwbHlGb2N1c1Zpc2libGVQb2x5ZmlsbChkb2N1bWVudCk7XG4gIH1cblxufSkpKTtcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/focus-visible/dist/focus-visible.js\n");
 
+/***/ }),
+
+/***/ "./resources/css/site.css":
+/*!********************************!*\
+  !*** ./resources/css/site.css ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvY3NzL3NpdGUuY3NzPzY2NWMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBIiwiZmlsZSI6Ii4vcmVzb3VyY2VzL2Nzcy9zaXRlLmNzcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/css/site.css\n");
+
+/***/ }),
+
+/***/ "./node_modules/typed.js/lib/typed.js":
+/*!********************************************!*\
+  !*** ./node_modules/typed.js/lib/typed.js ***!
+  \********************************************/
+/***/ (function(module) {
+
+eval("/*!\n * \n *   typed.js - A JavaScript Typing Animation Library\n *   Author: Matt Boldt <me@mattboldt.com>\n *   Version: v2.0.11\n *   Url: https://github.com/mattboldt/typed.js\n *   License(s): MIT\n * \n */\n(function webpackUniversalModuleDefinition(root, factory) {\n\tif(true)\n\t\tmodule.exports = factory();\n\telse {}\n})(this, function() {\nreturn /******/ (function(modules) { // webpackBootstrap\n/******/ \t// The module cache\n/******/ \tvar installedModules = {};\n/******/\n/******/ \t// The require function\n/******/ \tfunction __nested_webpack_require_737__(moduleId) {\n/******/\n/******/ \t\t// Check if module is in cache\n/******/ \t\tif(installedModules[moduleId])\n/******/ \t\t\treturn installedModules[moduleId].exports;\n/******/\n/******/ \t\t// Create a new module (and put it into the cache)\n/******/ \t\tvar module = installedModules[moduleId] = {\n/******/ \t\t\texports: {},\n/******/ \t\t\tid: moduleId,\n/******/ \t\t\tloaded: false\n/******/ \t\t};\n/******/\n/******/ \t\t// Execute the module function\n/******/ \t\tmodules[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_737__);\n/******/\n/******/ \t\t// Flag the module as loaded\n/******/ \t\tmodule.loaded = true;\n/******/\n/******/ \t\t// Return the exports of the module\n/******/ \t\treturn module.exports;\n/******/ \t}\n/******/\n/******/\n/******/ \t// expose the modules object (__webpack_modules__)\n/******/ \t__nested_webpack_require_737__.m = modules;\n/******/\n/******/ \t// expose the module cache\n/******/ \t__nested_webpack_require_737__.c = installedModules;\n/******/\n/******/ \t// __webpack_public_path__\n/******/ \t__nested_webpack_require_737__.p = \"\";\n/******/\n/******/ \t// Load entry module and return exports\n/******/ \treturn __nested_webpack_require_737__(0);\n/******/ })\n/************************************************************************/\n/******/ ([\n/* 0 */\n/***/ (function(module, exports, __nested_webpack_require_2018__) {\n\n\t'use strict';\n\t\n\tObject.defineProperty(exports, '__esModule', {\n\t  value: true\n\t});\n\t\n\tvar _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();\n\t\n\tfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }\n\t\n\tvar _initializerJs = __nested_webpack_require_2018__(1);\n\t\n\tvar _htmlParserJs = __nested_webpack_require_2018__(3);\n\t\n\t/**\n\t * Welcome to Typed.js!\n\t * @param {string} elementId HTML element ID _OR_ HTML element\n\t * @param {object} options options object\n\t * @returns {object} a new Typed object\n\t */\n\t\n\tvar Typed = (function () {\n\t  function Typed(elementId, options) {\n\t    _classCallCheck(this, Typed);\n\t\n\t    // Initialize it up\n\t    _initializerJs.initializer.load(this, options, elementId);\n\t    // All systems go!\n\t    this.begin();\n\t  }\n\t\n\t  /**\n\t   * Toggle start() and stop() of the Typed instance\n\t   * @public\n\t   */\n\t\n\t  _createClass(Typed, [{\n\t    key: 'toggle',\n\t    value: function toggle() {\n\t      this.pause.status ? this.start() : this.stop();\n\t    }\n\t\n\t    /**\n\t     * Stop typing / backspacing and enable cursor blinking\n\t     * @public\n\t     */\n\t  }, {\n\t    key: 'stop',\n\t    value: function stop() {\n\t      if (this.typingComplete) return;\n\t      if (this.pause.status) return;\n\t      this.toggleBlinking(true);\n\t      this.pause.status = true;\n\t      this.options.onStop(this.arrayPos, this);\n\t    }\n\t\n\t    /**\n\t     * Start typing / backspacing after being stopped\n\t     * @public\n\t     */\n\t  }, {\n\t    key: 'start',\n\t    value: function start() {\n\t      if (this.typingComplete) return;\n\t      if (!this.pause.status) return;\n\t      this.pause.status = false;\n\t      if (this.pause.typewrite) {\n\t        this.typewrite(this.pause.curString, this.pause.curStrPos);\n\t      } else {\n\t        this.backspace(this.pause.curString, this.pause.curStrPos);\n\t      }\n\t      this.options.onStart(this.arrayPos, this);\n\t    }\n\t\n\t    /**\n\t     * Destroy this instance of Typed\n\t     * @public\n\t     */\n\t  }, {\n\t    key: 'destroy',\n\t    value: function destroy() {\n\t      this.reset(false);\n\t      this.options.onDestroy(this);\n\t    }\n\t\n\t    /**\n\t     * Reset Typed and optionally restarts\n\t     * @param {boolean} restart\n\t     * @public\n\t     */\n\t  }, {\n\t    key: 'reset',\n\t    value: function reset() {\n\t      var restart = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];\n\t\n\t      clearInterval(this.timeout);\n\t      this.replaceText('');\n\t      if (this.cursor && this.cursor.parentNode) {\n\t        this.cursor.parentNode.removeChild(this.cursor);\n\t        this.cursor = null;\n\t      }\n\t      this.strPos = 0;\n\t      this.arrayPos = 0;\n\t      this.curLoop = 0;\n\t      if (restart) {\n\t        this.insertCursor();\n\t        this.options.onReset(this);\n\t        this.begin();\n\t      }\n\t    }\n\t\n\t    /**\n\t     * Begins the typing animation\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'begin',\n\t    value: function begin() {\n\t      var _this = this;\n\t\n\t      this.options.onBegin(this);\n\t      this.typingComplete = false;\n\t      this.shuffleStringsIfNeeded(this);\n\t      this.insertCursor();\n\t      if (this.bindInputFocusEvents) this.bindFocusEvents();\n\t      this.timeout = setTimeout(function () {\n\t        // Check if there is some text in the element, if yes start by backspacing the default message\n\t        if (!_this.currentElContent || _this.currentElContent.length === 0) {\n\t          _this.typewrite(_this.strings[_this.sequence[_this.arrayPos]], _this.strPos);\n\t        } else {\n\t          // Start typing\n\t          _this.backspace(_this.currentElContent, _this.currentElContent.length);\n\t        }\n\t      }, this.startDelay);\n\t    }\n\t\n\t    /**\n\t     * Called for each character typed\n\t     * @param {string} curString the current string in the strings array\n\t     * @param {number} curStrPos the current position in the curString\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'typewrite',\n\t    value: function typewrite(curString, curStrPos) {\n\t      var _this2 = this;\n\t\n\t      if (this.fadeOut && this.el.classList.contains(this.fadeOutClass)) {\n\t        this.el.classList.remove(this.fadeOutClass);\n\t        if (this.cursor) this.cursor.classList.remove(this.fadeOutClass);\n\t      }\n\t\n\t      var humanize = this.humanizer(this.typeSpeed);\n\t      var numChars = 1;\n\t\n\t      if (this.pause.status === true) {\n\t        this.setPauseStatus(curString, curStrPos, true);\n\t        return;\n\t      }\n\t\n\t      // contain typing function in a timeout humanize'd delay\n\t      this.timeout = setTimeout(function () {\n\t        // skip over any HTML chars\n\t        curStrPos = _htmlParserJs.htmlParser.typeHtmlChars(curString, curStrPos, _this2);\n\t\n\t        var pauseTime = 0;\n\t        var substr = curString.substr(curStrPos);\n\t        // check for an escape character before a pause value\n\t        // format: \\^\\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^\n\t        // single ^ are removed from string\n\t        if (substr.charAt(0) === '^') {\n\t          if (/^\\^\\d+/.test(substr)) {\n\t            var skip = 1; // skip at least 1\n\t            substr = /\\d+/.exec(substr)[0];\n\t            skip += substr.length;\n\t            pauseTime = parseInt(substr);\n\t            _this2.temporaryPause = true;\n\t            _this2.options.onTypingPaused(_this2.arrayPos, _this2);\n\t            // strip out the escape character and pause value so they're not printed\n\t            curString = curString.substring(0, curStrPos) + curString.substring(curStrPos + skip);\n\t            _this2.toggleBlinking(true);\n\t          }\n\t        }\n\t\n\t        // check for skip characters formatted as\n\t        // \"this is a `string to print NOW` ...\"\n\t        if (substr.charAt(0) === '`') {\n\t          while (curString.substr(curStrPos + numChars).charAt(0) !== '`') {\n\t            numChars++;\n\t            if (curStrPos + numChars > curString.length) break;\n\t          }\n\t          // strip out the escape characters and append all the string in between\n\t          var stringBeforeSkip = curString.substring(0, curStrPos);\n\t          var stringSkipped = curString.substring(stringBeforeSkip.length + 1, curStrPos + numChars);\n\t          var stringAfterSkip = curString.substring(curStrPos + numChars + 1);\n\t          curString = stringBeforeSkip + stringSkipped + stringAfterSkip;\n\t          numChars--;\n\t        }\n\t\n\t        // timeout for any pause after a character\n\t        _this2.timeout = setTimeout(function () {\n\t          // Accounts for blinking while paused\n\t          _this2.toggleBlinking(false);\n\t\n\t          // We're done with this sentence!\n\t          if (curStrPos >= curString.length) {\n\t            _this2.doneTyping(curString, curStrPos);\n\t          } else {\n\t            _this2.keepTyping(curString, curStrPos, numChars);\n\t          }\n\t          // end of character pause\n\t          if (_this2.temporaryPause) {\n\t            _this2.temporaryPause = false;\n\t            _this2.options.onTypingResumed(_this2.arrayPos, _this2);\n\t          }\n\t        }, pauseTime);\n\t\n\t        // humanized value for typing\n\t      }, humanize);\n\t    }\n\t\n\t    /**\n\t     * Continue to the next string & begin typing\n\t     * @param {string} curString the current string in the strings array\n\t     * @param {number} curStrPos the current position in the curString\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'keepTyping',\n\t    value: function keepTyping(curString, curStrPos, numChars) {\n\t      // call before functions if applicable\n\t      if (curStrPos === 0) {\n\t        this.toggleBlinking(false);\n\t        this.options.preStringTyped(this.arrayPos, this);\n\t      }\n\t      // start typing each new char into existing string\n\t      // curString: arg, this.el.html: original text inside element\n\t      curStrPos += numChars;\n\t      var nextString = curString.substr(0, curStrPos);\n\t      this.replaceText(nextString);\n\t      // loop the function\n\t      this.typewrite(curString, curStrPos);\n\t    }\n\t\n\t    /**\n\t     * We're done typing the current string\n\t     * @param {string} curString the current string in the strings array\n\t     * @param {number} curStrPos the current position in the curString\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'doneTyping',\n\t    value: function doneTyping(curString, curStrPos) {\n\t      var _this3 = this;\n\t\n\t      // fires callback function\n\t      this.options.onStringTyped(this.arrayPos, this);\n\t      this.toggleBlinking(true);\n\t      // is this the final string\n\t      if (this.arrayPos === this.strings.length - 1) {\n\t        // callback that occurs on the last typed string\n\t        this.complete();\n\t        // quit if we wont loop back\n\t        if (this.loop === false || this.curLoop === this.loopCount) {\n\t          return;\n\t        }\n\t      }\n\t      this.timeout = setTimeout(function () {\n\t        _this3.backspace(curString, curStrPos);\n\t      }, this.backDelay);\n\t    }\n\t\n\t    /**\n\t     * Backspaces 1 character at a time\n\t     * @param {string} curString the current string in the strings array\n\t     * @param {number} curStrPos the current position in the curString\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'backspace',\n\t    value: function backspace(curString, curStrPos) {\n\t      var _this4 = this;\n\t\n\t      if (this.pause.status === true) {\n\t        this.setPauseStatus(curString, curStrPos, true);\n\t        return;\n\t      }\n\t      if (this.fadeOut) return this.initFadeOut();\n\t\n\t      this.toggleBlinking(false);\n\t      var humanize = this.humanizer(this.backSpeed);\n\t\n\t      this.timeout = setTimeout(function () {\n\t        curStrPos = _htmlParserJs.htmlParser.backSpaceHtmlChars(curString, curStrPos, _this4);\n\t        // replace text with base text + typed characters\n\t        var curStringAtPosition = curString.substr(0, curStrPos);\n\t        _this4.replaceText(curStringAtPosition);\n\t\n\t        // if smartBack is enabled\n\t        if (_this4.smartBackspace) {\n\t          // the remaining part of the current string is equal of the same part of the new string\n\t          var nextString = _this4.strings[_this4.arrayPos + 1];\n\t          if (nextString && curStringAtPosition === nextString.substr(0, curStrPos)) {\n\t            _this4.stopNum = curStrPos;\n\t          } else {\n\t            _this4.stopNum = 0;\n\t          }\n\t        }\n\t\n\t        // if the number (id of character in current string) is\n\t        // less than the stop number, keep going\n\t        if (curStrPos > _this4.stopNum) {\n\t          // subtract characters one by one\n\t          curStrPos--;\n\t          // loop the function\n\t          _this4.backspace(curString, curStrPos);\n\t        } else if (curStrPos <= _this4.stopNum) {\n\t          // if the stop number has been reached, increase\n\t          // array position to next string\n\t          _this4.arrayPos++;\n\t          // When looping, begin at the beginning after backspace complete\n\t          if (_this4.arrayPos === _this4.strings.length) {\n\t            _this4.arrayPos = 0;\n\t            _this4.options.onLastStringBackspaced();\n\t            _this4.shuffleStringsIfNeeded();\n\t            _this4.begin();\n\t          } else {\n\t            _this4.typewrite(_this4.strings[_this4.sequence[_this4.arrayPos]], curStrPos);\n\t          }\n\t        }\n\t        // humanized value for typing\n\t      }, humanize);\n\t    }\n\t\n\t    /**\n\t     * Full animation is complete\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'complete',\n\t    value: function complete() {\n\t      this.options.onComplete(this);\n\t      if (this.loop) {\n\t        this.curLoop++;\n\t      } else {\n\t        this.typingComplete = true;\n\t      }\n\t    }\n\t\n\t    /**\n\t     * Has the typing been stopped\n\t     * @param {string} curString the current string in the strings array\n\t     * @param {number} curStrPos the current position in the curString\n\t     * @param {boolean} isTyping\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'setPauseStatus',\n\t    value: function setPauseStatus(curString, curStrPos, isTyping) {\n\t      this.pause.typewrite = isTyping;\n\t      this.pause.curString = curString;\n\t      this.pause.curStrPos = curStrPos;\n\t    }\n\t\n\t    /**\n\t     * Toggle the blinking cursor\n\t     * @param {boolean} isBlinking\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'toggleBlinking',\n\t    value: function toggleBlinking(isBlinking) {\n\t      if (!this.cursor) return;\n\t      // if in paused state, don't toggle blinking a 2nd time\n\t      if (this.pause.status) return;\n\t      if (this.cursorBlinking === isBlinking) return;\n\t      this.cursorBlinking = isBlinking;\n\t      if (isBlinking) {\n\t        this.cursor.classList.add('typed-cursor--blink');\n\t      } else {\n\t        this.cursor.classList.remove('typed-cursor--blink');\n\t      }\n\t    }\n\t\n\t    /**\n\t     * Speed in MS to type\n\t     * @param {number} speed\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'humanizer',\n\t    value: function humanizer(speed) {\n\t      return Math.round(Math.random() * speed / 2) + speed;\n\t    }\n\t\n\t    /**\n\t     * Shuffle the sequence of the strings array\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'shuffleStringsIfNeeded',\n\t    value: function shuffleStringsIfNeeded() {\n\t      if (!this.shuffle) return;\n\t      this.sequence = this.sequence.sort(function () {\n\t        return Math.random() - 0.5;\n\t      });\n\t    }\n\t\n\t    /**\n\t     * Adds a CSS class to fade out current string\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'initFadeOut',\n\t    value: function initFadeOut() {\n\t      var _this5 = this;\n\t\n\t      this.el.className += ' ' + this.fadeOutClass;\n\t      if (this.cursor) this.cursor.className += ' ' + this.fadeOutClass;\n\t      return setTimeout(function () {\n\t        _this5.arrayPos++;\n\t        _this5.replaceText('');\n\t\n\t        // Resets current string if end of loop reached\n\t        if (_this5.strings.length > _this5.arrayPos) {\n\t          _this5.typewrite(_this5.strings[_this5.sequence[_this5.arrayPos]], 0);\n\t        } else {\n\t          _this5.typewrite(_this5.strings[0], 0);\n\t          _this5.arrayPos = 0;\n\t        }\n\t      }, this.fadeOutDelay);\n\t    }\n\t\n\t    /**\n\t     * Replaces current text in the HTML element\n\t     * depending on element type\n\t     * @param {string} str\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'replaceText',\n\t    value: function replaceText(str) {\n\t      if (this.attr) {\n\t        this.el.setAttribute(this.attr, str);\n\t      } else {\n\t        if (this.isInput) {\n\t          this.el.value = str;\n\t        } else if (this.contentType === 'html') {\n\t          this.el.innerHTML = str;\n\t        } else {\n\t          this.el.textContent = str;\n\t        }\n\t      }\n\t    }\n\t\n\t    /**\n\t     * If using input elements, bind focus in order to\n\t     * start and stop the animation\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'bindFocusEvents',\n\t    value: function bindFocusEvents() {\n\t      var _this6 = this;\n\t\n\t      if (!this.isInput) return;\n\t      this.el.addEventListener('focus', function (e) {\n\t        _this6.stop();\n\t      });\n\t      this.el.addEventListener('blur', function (e) {\n\t        if (_this6.el.value && _this6.el.value.length !== 0) {\n\t          return;\n\t        }\n\t        _this6.start();\n\t      });\n\t    }\n\t\n\t    /**\n\t     * On init, insert the cursor element\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'insertCursor',\n\t    value: function insertCursor() {\n\t      if (!this.showCursor) return;\n\t      if (this.cursor) return;\n\t      this.cursor = document.createElement('span');\n\t      this.cursor.className = 'typed-cursor';\n\t      this.cursor.innerHTML = this.cursorChar;\n\t      this.el.parentNode && this.el.parentNode.insertBefore(this.cursor, this.el.nextSibling);\n\t    }\n\t  }]);\n\t\n\t  return Typed;\n\t})();\n\t\n\texports['default'] = Typed;\n\tmodule.exports = exports['default'];\n\n/***/ }),\n/* 1 */\n/***/ (function(module, exports, __nested_webpack_require_18173__) {\n\n\t'use strict';\n\t\n\tObject.defineProperty(exports, '__esModule', {\n\t  value: true\n\t});\n\t\n\tvar _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };\n\t\n\tvar _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();\n\t\n\tfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }\n\t\n\tfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }\n\t\n\tvar _defaultsJs = __nested_webpack_require_18173__(2);\n\t\n\tvar _defaultsJs2 = _interopRequireDefault(_defaultsJs);\n\t\n\t/**\n\t * Initialize the Typed object\n\t */\n\t\n\tvar Initializer = (function () {\n\t  function Initializer() {\n\t    _classCallCheck(this, Initializer);\n\t  }\n\t\n\t  _createClass(Initializer, [{\n\t    key: 'load',\n\t\n\t    /**\n\t     * Load up defaults & options on the Typed instance\n\t     * @param {Typed} self instance of Typed\n\t     * @param {object} options options object\n\t     * @param {string} elementId HTML element ID _OR_ instance of HTML element\n\t     * @private\n\t     */\n\t\n\t    value: function load(self, options, elementId) {\n\t      // chosen element to manipulate text\n\t      if (typeof elementId === 'string') {\n\t        self.el = document.querySelector(elementId);\n\t      } else {\n\t        self.el = elementId;\n\t      }\n\t\n\t      self.options = _extends({}, _defaultsJs2['default'], options);\n\t\n\t      // attribute to type into\n\t      self.isInput = self.el.tagName.toLowerCase() === 'input';\n\t      self.attr = self.options.attr;\n\t      self.bindInputFocusEvents = self.options.bindInputFocusEvents;\n\t\n\t      // show cursor\n\t      self.showCursor = self.isInput ? false : self.options.showCursor;\n\t\n\t      // custom cursor\n\t      self.cursorChar = self.options.cursorChar;\n\t\n\t      // Is the cursor blinking\n\t      self.cursorBlinking = true;\n\t\n\t      // text content of element\n\t      self.elContent = self.attr ? self.el.getAttribute(self.attr) : self.el.textContent;\n\t\n\t      // html or plain text\n\t      self.contentType = self.options.contentType;\n\t\n\t      // typing speed\n\t      self.typeSpeed = self.options.typeSpeed;\n\t\n\t      // add a delay before typing starts\n\t      self.startDelay = self.options.startDelay;\n\t\n\t      // backspacing speed\n\t      self.backSpeed = self.options.backSpeed;\n\t\n\t      // only backspace what doesn't match the previous string\n\t      self.smartBackspace = self.options.smartBackspace;\n\t\n\t      // amount of time to wait before backspacing\n\t      self.backDelay = self.options.backDelay;\n\t\n\t      // Fade out instead of backspace\n\t      self.fadeOut = self.options.fadeOut;\n\t      self.fadeOutClass = self.options.fadeOutClass;\n\t      self.fadeOutDelay = self.options.fadeOutDelay;\n\t\n\t      // variable to check whether typing is currently paused\n\t      self.isPaused = false;\n\t\n\t      // input strings of text\n\t      self.strings = self.options.strings.map(function (s) {\n\t        return s.trim();\n\t      });\n\t\n\t      // div containing strings\n\t      if (typeof self.options.stringsElement === 'string') {\n\t        self.stringsElement = document.querySelector(self.options.stringsElement);\n\t      } else {\n\t        self.stringsElement = self.options.stringsElement;\n\t      }\n\t\n\t      if (self.stringsElement) {\n\t        self.strings = [];\n\t        self.stringsElement.style.display = 'none';\n\t        var strings = Array.prototype.slice.apply(self.stringsElement.children);\n\t        var stringsLength = strings.length;\n\t\n\t        if (stringsLength) {\n\t          for (var i = 0; i < stringsLength; i += 1) {\n\t            var stringEl = strings[i];\n\t            self.strings.push(stringEl.innerHTML.trim());\n\t          }\n\t        }\n\t      }\n\t\n\t      // character number position of current string\n\t      self.strPos = 0;\n\t\n\t      // current array position\n\t      self.arrayPos = 0;\n\t\n\t      // index of string to stop backspacing on\n\t      self.stopNum = 0;\n\t\n\t      // Looping logic\n\t      self.loop = self.options.loop;\n\t      self.loopCount = self.options.loopCount;\n\t      self.curLoop = 0;\n\t\n\t      // shuffle the strings\n\t      self.shuffle = self.options.shuffle;\n\t      // the order of strings\n\t      self.sequence = [];\n\t\n\t      self.pause = {\n\t        status: false,\n\t        typewrite: true,\n\t        curString: '',\n\t        curStrPos: 0\n\t      };\n\t\n\t      // When the typing is complete (when not looped)\n\t      self.typingComplete = false;\n\t\n\t      // Set the order in which the strings are typed\n\t      for (var i in self.strings) {\n\t        self.sequence[i] = i;\n\t      }\n\t\n\t      // If there is some text in the element\n\t      self.currentElContent = this.getCurrentElContent(self);\n\t\n\t      self.autoInsertCss = self.options.autoInsertCss;\n\t\n\t      this.appendAnimationCss(self);\n\t    }\n\t  }, {\n\t    key: 'getCurrentElContent',\n\t    value: function getCurrentElContent(self) {\n\t      var elContent = '';\n\t      if (self.attr) {\n\t        elContent = self.el.getAttribute(self.attr);\n\t      } else if (self.isInput) {\n\t        elContent = self.el.value;\n\t      } else if (self.contentType === 'html') {\n\t        elContent = self.el.innerHTML;\n\t      } else {\n\t        elContent = self.el.textContent;\n\t      }\n\t      return elContent;\n\t    }\n\t  }, {\n\t    key: 'appendAnimationCss',\n\t    value: function appendAnimationCss(self) {\n\t      var cssDataName = 'data-typed-js-css';\n\t      if (!self.autoInsertCss) {\n\t        return;\n\t      }\n\t      if (!self.showCursor && !self.fadeOut) {\n\t        return;\n\t      }\n\t      if (document.querySelector('[' + cssDataName + ']')) {\n\t        return;\n\t      }\n\t\n\t      var css = document.createElement('style');\n\t      css.type = 'text/css';\n\t      css.setAttribute(cssDataName, true);\n\t\n\t      var innerCss = '';\n\t      if (self.showCursor) {\n\t        innerCss += '\\n        .typed-cursor{\\n          opacity: 1;\\n        }\\n        .typed-cursor.typed-cursor--blink{\\n          animation: typedjsBlink 0.7s infinite;\\n          -webkit-animation: typedjsBlink 0.7s infinite;\\n                  animation: typedjsBlink 0.7s infinite;\\n        }\\n        @keyframes typedjsBlink{\\n          50% { opacity: 0.0; }\\n        }\\n        @-webkit-keyframes typedjsBlink{\\n          0% { opacity: 1; }\\n          50% { opacity: 0.0; }\\n          100% { opacity: 1; }\\n        }\\n      ';\n\t      }\n\t      if (self.fadeOut) {\n\t        innerCss += '\\n        .typed-fade-out{\\n          opacity: 0;\\n          transition: opacity .25s;\\n        }\\n        .typed-cursor.typed-cursor--blink.typed-fade-out{\\n          -webkit-animation: 0;\\n          animation: 0;\\n        }\\n      ';\n\t      }\n\t      if (css.length === 0) {\n\t        return;\n\t      }\n\t      css.innerHTML = innerCss;\n\t      document.body.appendChild(css);\n\t    }\n\t  }]);\n\t\n\t  return Initializer;\n\t})();\n\t\n\texports['default'] = Initializer;\n\tvar initializer = new Initializer();\n\texports.initializer = initializer;\n\n/***/ }),\n/* 2 */\n/***/ (function(module, exports) {\n\n\t/**\n\t * Defaults & options\n\t * @returns {object} Typed defaults & options\n\t * @public\n\t */\n\t\n\t'use strict';\n\t\n\tObject.defineProperty(exports, '__esModule', {\n\t  value: true\n\t});\n\tvar defaults = {\n\t  /**\n\t   * @property {array} strings strings to be typed\n\t   * @property {string} stringsElement ID of element containing string children\n\t   */\n\t  strings: ['These are the default values...', 'You know what you should do?', 'Use your own!', 'Have a great day!'],\n\t  stringsElement: null,\n\t\n\t  /**\n\t   * @property {number} typeSpeed type speed in milliseconds\n\t   */\n\t  typeSpeed: 0,\n\t\n\t  /**\n\t   * @property {number} startDelay time before typing starts in milliseconds\n\t   */\n\t  startDelay: 0,\n\t\n\t  /**\n\t   * @property {number} backSpeed backspacing speed in milliseconds\n\t   */\n\t  backSpeed: 0,\n\t\n\t  /**\n\t   * @property {boolean} smartBackspace only backspace what doesn't match the previous string\n\t   */\n\t  smartBackspace: true,\n\t\n\t  /**\n\t   * @property {boolean} shuffle shuffle the strings\n\t   */\n\t  shuffle: false,\n\t\n\t  /**\n\t   * @property {number} backDelay time before backspacing in milliseconds\n\t   */\n\t  backDelay: 700,\n\t\n\t  /**\n\t   * @property {boolean} fadeOut Fade out instead of backspace\n\t   * @property {string} fadeOutClass css class for fade animation\n\t   * @property {boolean} fadeOutDelay Fade out delay in milliseconds\n\t   */\n\t  fadeOut: false,\n\t  fadeOutClass: 'typed-fade-out',\n\t  fadeOutDelay: 500,\n\t\n\t  /**\n\t   * @property {boolean} loop loop strings\n\t   * @property {number} loopCount amount of loops\n\t   */\n\t  loop: false,\n\t  loopCount: Infinity,\n\t\n\t  /**\n\t   * @property {boolean} showCursor show cursor\n\t   * @property {string} cursorChar character for cursor\n\t   * @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>\n\t   */\n\t  showCursor: true,\n\t  cursorChar: '|',\n\t  autoInsertCss: true,\n\t\n\t  /**\n\t   * @property {string} attr attribute for typing\n\t   * Ex: input placeholder, value, or just HTML text\n\t   */\n\t  attr: null,\n\t\n\t  /**\n\t   * @property {boolean} bindInputFocusEvents bind to focus and blur if el is text input\n\t   */\n\t  bindInputFocusEvents: false,\n\t\n\t  /**\n\t   * @property {string} contentType 'html' or 'null' for plaintext\n\t   */\n\t  contentType: 'html',\n\t\n\t  /**\n\t   * Before it begins typing\n\t   * @param {Typed} self\n\t   */\n\t  onBegin: function onBegin(self) {},\n\t\n\t  /**\n\t   * All typing is complete\n\t   * @param {Typed} self\n\t   */\n\t  onComplete: function onComplete(self) {},\n\t\n\t  /**\n\t   * Before each string is typed\n\t   * @param {number} arrayPos\n\t   * @param {Typed} self\n\t   */\n\t  preStringTyped: function preStringTyped(arrayPos, self) {},\n\t\n\t  /**\n\t   * After each string is typed\n\t   * @param {number} arrayPos\n\t   * @param {Typed} self\n\t   */\n\t  onStringTyped: function onStringTyped(arrayPos, self) {},\n\t\n\t  /**\n\t   * During looping, after last string is typed\n\t   * @param {Typed} self\n\t   */\n\t  onLastStringBackspaced: function onLastStringBackspaced(self) {},\n\t\n\t  /**\n\t   * Typing has been stopped\n\t   * @param {number} arrayPos\n\t   * @param {Typed} self\n\t   */\n\t  onTypingPaused: function onTypingPaused(arrayPos, self) {},\n\t\n\t  /**\n\t   * Typing has been started after being stopped\n\t   * @param {number} arrayPos\n\t   * @param {Typed} self\n\t   */\n\t  onTypingResumed: function onTypingResumed(arrayPos, self) {},\n\t\n\t  /**\n\t   * After reset\n\t   * @param {Typed} self\n\t   */\n\t  onReset: function onReset(self) {},\n\t\n\t  /**\n\t   * After stop\n\t   * @param {number} arrayPos\n\t   * @param {Typed} self\n\t   */\n\t  onStop: function onStop(arrayPos, self) {},\n\t\n\t  /**\n\t   * After start\n\t   * @param {number} arrayPos\n\t   * @param {Typed} self\n\t   */\n\t  onStart: function onStart(arrayPos, self) {},\n\t\n\t  /**\n\t   * After destroy\n\t   * @param {Typed} self\n\t   */\n\t  onDestroy: function onDestroy(self) {}\n\t};\n\t\n\texports['default'] = defaults;\n\tmodule.exports = exports['default'];\n\n/***/ }),\n/* 3 */\n/***/ (function(module, exports) {\n\n\t/**\n\t * TODO: These methods can probably be combined somehow\n\t * Parse HTML tags & HTML Characters\n\t */\n\t\n\t'use strict';\n\t\n\tObject.defineProperty(exports, '__esModule', {\n\t  value: true\n\t});\n\t\n\tvar _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();\n\t\n\tfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }\n\t\n\tvar HTMLParser = (function () {\n\t  function HTMLParser() {\n\t    _classCallCheck(this, HTMLParser);\n\t  }\n\t\n\t  _createClass(HTMLParser, [{\n\t    key: 'typeHtmlChars',\n\t\n\t    /**\n\t     * Type HTML tags & HTML Characters\n\t     * @param {string} curString Current string\n\t     * @param {number} curStrPos Position in current string\n\t     * @param {Typed} self instance of Typed\n\t     * @returns {number} a new string position\n\t     * @private\n\t     */\n\t\n\t    value: function typeHtmlChars(curString, curStrPos, self) {\n\t      if (self.contentType !== 'html') return curStrPos;\n\t      var curChar = curString.substr(curStrPos).charAt(0);\n\t      if (curChar === '<' || curChar === '&') {\n\t        var endTag = '';\n\t        if (curChar === '<') {\n\t          endTag = '>';\n\t        } else {\n\t          endTag = ';';\n\t        }\n\t        while (curString.substr(curStrPos + 1).charAt(0) !== endTag) {\n\t          curStrPos++;\n\t          if (curStrPos + 1 > curString.length) {\n\t            break;\n\t          }\n\t        }\n\t        curStrPos++;\n\t      }\n\t      return curStrPos;\n\t    }\n\t\n\t    /**\n\t     * Backspace HTML tags and HTML Characters\n\t     * @param {string} curString Current string\n\t     * @param {number} curStrPos Position in current string\n\t     * @param {Typed} self instance of Typed\n\t     * @returns {number} a new string position\n\t     * @private\n\t     */\n\t  }, {\n\t    key: 'backSpaceHtmlChars',\n\t    value: function backSpaceHtmlChars(curString, curStrPos, self) {\n\t      if (self.contentType !== 'html') return curStrPos;\n\t      var curChar = curString.substr(curStrPos).charAt(0);\n\t      if (curChar === '>' || curChar === ';') {\n\t        var endTag = '';\n\t        if (curChar === '>') {\n\t          endTag = '<';\n\t        } else {\n\t          endTag = '&';\n\t        }\n\t        while (curString.substr(curStrPos - 1).charAt(0) !== endTag) {\n\t          curStrPos--;\n\t          if (curStrPos < 0) {\n\t            break;\n\t          }\n\t        }\n\t        curStrPos--;\n\t      }\n\t      return curStrPos;\n\t    }\n\t  }]);\n\t\n\t  return HTMLParser;\n\t})();\n\t\n\texports['default'] = HTMLParser;\n\tvar htmlParser = new HTMLParser();\n\texports.htmlParser = htmlParser;\n\n/***/ })\n/******/ ])\n});\n;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvdHlwZWQuanMvbGliL3R5cGVkLmpzPzEwYjMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFJLElBQXlEO0FBQzdEO0FBQ0EsTUFBTSxFQUtzQjtBQUM1QixDQUFDO0FBQ0Qsb0NBQW9DO0FBQ3BDO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsbUJBQW1CLDhCQUFtQjtBQUN0QztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHVCQUF1QjtBQUN2QjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsMEVBQTBFLDhCQUFtQjtBQUM3RjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFVBQVUsOEJBQW1CO0FBQzdCO0FBQ0E7QUFDQSxVQUFVLDhCQUFtQjtBQUM3QjtBQUNBO0FBQ0EsVUFBVSw4QkFBbUI7QUFDN0I7QUFDQTtBQUNBLGlCQUFpQiw4QkFBbUI7QUFDcEMsVUFBVTtBQUNWO0FBQ0E7QUFDQTtBQUNBLGlDQUFpQywrQkFBbUI7O0FBRXBEOztBQUVBO0FBQ0E7QUFDQSxFQUFFOztBQUVGLGtDQUFrQywyQ0FBMkMsZ0JBQWdCLGtCQUFrQixPQUFPLDJCQUEyQix3REFBd0QsZ0NBQWdDLHVEQUF1RCwyREFBMkQsRUFBRSxFQUFFLHlEQUF5RCxxRUFBcUUsNkRBQTZELG9CQUFvQixHQUFHLEVBQUU7O0FBRW5qQixrREFBa0QsMENBQTBDLDBEQUEwRCxFQUFFOztBQUV4SixzQkFBc0IsK0JBQW1COztBQUV6QyxxQkFBcUIsK0JBQW1COztBQUV4QztBQUNBO0FBQ0EsWUFBWSxPQUFPO0FBQ25CLFlBQVksT0FBTztBQUNuQixjQUFjLE9BQU87QUFDckI7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLElBQUk7QUFDSjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsSUFBSTtBQUNKO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsUUFBUTtBQUNSO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsSUFBSTtBQUNKO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBLGdCQUFnQixRQUFRO0FBQ3hCO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLElBQUk7QUFDSjtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsVUFBVTtBQUNWO0FBQ0E7QUFDQTtBQUNBLFFBQVE7QUFDUjs7QUFFQTtBQUNBO0FBQ0EsZ0JBQWdCLE9BQU87QUFDdkIsZ0JBQWdCLE9BQU87QUFDdkI7QUFDQTtBQUNBLElBQUk7QUFDSjtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLDBCQUEwQjtBQUMxQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBLFlBQVk7QUFDWjtB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QWtDLDJDQUEyQyxnQkFBZ0Isa0JBQWtCLE9BQU8sMkJBQTJCLHdEQUF3RCxnQ0FBZ0MsdURBQXVELDJEQUEyRCxFQUFFLEVBQUUseURBQXlELHFFQUFxRSw2REFBNkQsb0JBQW9CLEdBQUcsRUFBRTs7QUFFbmpCLGtEQUFrRCwwQ0FBMEMsMERBQTBELEVBQUU7O0FBRXhKO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBLGdCQUFnQixPQUFPO0FBQ3ZCLGdCQUFnQixPQUFPO0FBQ3ZCLGdCQUFnQixNQUFNO0FBQ3RCLGtCQUFrQixPQUFPO0FBQ3pCO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxVQUFVO0FBQ1Ysc0JBQXNCO0FBQ3RCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBLGdCQUFnQixPQUFPO0FBQ3ZCLGdCQUFnQixPQUFPO0FBQ3ZCLGdCQUFnQixNQUFNO0FBQ3RCLGtCQUFrQixPQUFPO0FBQ3pCO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBO0FBQ0E7QUFDQSw0Q0FBNEM7QUFDNUM7QUFDQTtBQUNBO0FBQ0EsVUFBVTtBQUNWO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLElBQUk7O0FBRUo7QUFDQSxFQUFFOztBQUVGO0FBQ0E7QUFDQTs7QUFFQSxPQUFPO0FBQ1A7QUFDQSxDQUFDO0FBQ0QiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvdHlwZWQuanMvbGliL3R5cGVkLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyohXG4gKiBcbiAqICAgdHlwZWQuanMgLSBBIEphdmFTY3JpcHQgVHlwaW5nIEFuaW1hdGlvbiBMaWJyYXJ5XG4gKiAgIEF1dGhvcjogTWF0dCBCb2xkdCA8bWVAbWF0dGJvbGR0LmNvbT5cbiAqICAgVmVyc2lvbjogdjIuMC4xMVxuICogICBVcmw6IGh0dHBzOi8vZ2l0aHViLmNvbS9tYXR0Ym9sZHQvdHlwZWQuanNcbiAqICAgTGljZW5zZShzKTogTUlUXG4gKiBcbiAqL1xuKGZ1bmN0aW9uIHdlYnBhY2tVbml2ZXJzYWxNb2R1bGVEZWZpbml0aW9uKHJvb3QsIGZhY3RvcnkpIHtcblx0aWYodHlwZW9mIGV4cG9ydHMgPT09ICdvYmplY3QnICYmIHR5cGVvZiBtb2R1bGUgPT09ICdvYmplY3QnKVxuXHRcdG1vZHVsZS5leHBvcnRzID0gZmFjdG9yeSgpO1xuXHRlbHNlIGlmKHR5cGVvZiBkZWZpbmUgPT09ICdmdW5jdGlvbicgJiYgZGVmaW5lLmFtZClcblx0XHRkZWZpbmUoW10sIGZhY3RvcnkpO1xuXHRlbHNlIGlmKHR5cGVvZiBleHBvcnRzID09PSAnb2JqZWN0Jylcblx0XHRleHBvcnRzW1wiVHlwZWRcIl0gPSBmYWN0b3J5KCk7XG5cdGVsc2Vcblx0XHRyb290W1wiVHlwZWRcIl0gPSBmYWN0b3J5KCk7XG59KSh0aGlzLCBmdW5jdGlvbigpIHtcbnJldHVybiAvKioqKioqLyAoZnVuY3Rpb24obW9kdWxlcykgeyAvLyB3ZWJwYWNrQm9vdHN0cmFwXG4vKioqKioqLyBcdC8vIFRoZSBtb2R1bGUgY2FjaGVcbi8qKioqKiovIFx0dmFyIGluc3RhbGxlZE1vZHVsZXMgPSB7fTtcbi8qKioqKiovXG4vKioqKioqLyBcdC8vIFRoZSByZXF1aXJlIGZ1bmN0aW9uXG4vKioqKioqLyBcdGZ1bmN0aW9uIF9fd2VicGFja19yZXF1aXJlX18obW9kdWxlSWQpIHtcbi8qKioqKiovXG4vKioqKioqLyBcdFx0Ly8gQ2hlY2sgaWYgbW9kdWxlIGlzIGluIGNhY2hlXG4vKioqKioqLyBcdFx0aWYoaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0pXG4vKioqKioqLyBcdFx0XHRyZXR1cm4gaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0uZXhwb3J0cztcbi8qKioqKiovXG4vKioqKioqLyBcdFx0Ly8gQ3JlYXRlIGEgbmV3IG1vZHVsZSAoYW5kIHB1dCBpdCBpbnRvIHRoZSBjYWNoZSlcbi8qKioqKiovIFx0XHR2YXIgbW9kdWxlID0gaW5zdGFsbGVkTW9kdWxlc1ttb2R1bGVJZF0gPSB7XG4vKioqKioqLyBcdFx0XHRleHBvcnRzOiB7fSxcbi8qKioqKiovIFx0XHRcdGlkOiBtb2R1bGVJZCxcbi8qKioqKiovIFx0XHRcdGxvYWRlZDogZmFsc2Vcbi8qKioqKiovIFx0XHR9O1xuLyoqKioqKi9cbi8qKioqKiovIFx0XHQvLyBFeGVjdXRlIHRoZSBtb2R1bGUgZnVuY3Rpb25cbi8qKioqKiovIFx0XHRtb2R1bGVzW21vZHVsZUlkXS5jYWxsKG1vZHVsZS5leHBvcnRzLCBtb2R1bGUsIG1vZHVsZS5leHBvcnRzLCBfX3dlYnBhY2tfcmVxdWlyZV9fKTtcbi8qKioqKiovXG4vKioqKioqLyBcdFx0Ly8gRmxhZyB0aGUgbW9kdWxlIGFzIGxvYWRlZFxuLyoqKioqKi8gXHRcdG1vZHVsZS5sb2FkZWQgPSB0cnVlO1xuLyoqKioqKi9cbi8qKioqKiovIFx0XHQvLyBSZXR1cm4gdGhlIGV4cG9ydHMgb2YgdGhlIG1vZHVsZVxuLyoqKioqKi8gXHRcdHJldHVybiBtb2R1bGUuZXhwb3J0cztcbi8qKioqKiovIFx0fVxuLyoqKioqKi9cbi8qKioqKiovXG4vKioqKioqLyBcdC8vIGV4cG9zZSB0aGUgbW9kdWxlcyBvYmplY3QgKF9fd2VicGFja19tb2R1bGVzX18pXG4vKioqKioqLyBcdF9fd2VicGFja19yZXF1aXJlX18ubSA9IG1vZHVsZXM7XG4vKioqKioqL1xuLyoqKioqKi8gXHQvLyBleHBvc2UgdGhlIG1vZHVsZSBjYWNoZVxuLyoqKioqKi8gXHRfX3dlYnBhY2tfcmVxdWlyZV9fLmMgPSBpbnN0YWxsZWRNb2R1bGVzO1xuLyoqKioqKi9cbi8qKioqKiovIFx0Ly8gX193ZWJwYWNrX3B1YmxpY19wYXRoX19cbi8qKioqKiovIFx0X193ZWJwYWNrX3JlcXVpcmVfXy5wID0gXCJcIjtcbi8qKioqKiovXG4vKioqKioqLyBcdC8vIExvYWQgZW50cnkgbW9kdWxlIGFuZCByZXR1cm4gZXhwb3J0c1xuLyoqKioqKi8gXHRyZXR1cm4gX193ZWJwYWNrX3JlcXVpcmVfXygwKTtcbi8qKioqKiovIH0pXG4vKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqL1xuLyoqKioqKi8gKFtcbi8qIDAgKi9cbi8qKiovIChmdW5jdGlvbihtb2R1bGUsIGV4cG9ydHMsIF9fd2VicGFja19yZXF1aXJlX18pIHtcblxuXHQndXNlIHN0cmljdCc7XG5cdFxuXHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgJ19fZXNNb2R1bGUnLCB7XG5cdCAgdmFsdWU6IHRydWVcblx0fSk7XG5cdFxuXHR2YXIgX2NyZWF0ZUNsYXNzID0gKGZ1bmN0aW9uICgpIHsgZnVuY3Rpb24gZGVmaW5lUHJvcGVydGllcyh0YXJnZXQsIHByb3BzKSB7IGZvciAodmFyIGkgPSAwOyBpIDwgcHJvcHMubGVuZ3RoOyBpKyspIHsgdmFyIGRlc2NyaXB0b3IgPSBwcm9wc1tpXTsgZGVzY3JpcHRvci5lbnVtZXJhYmxlID0gZGVzY3JpcHRvci5lbnVtZXJhYmxlIHx8IGZhbHNlOyBkZXNjcmlwdG9yLmNvbmZpZ3VyYWJsZSA9IHRydWU7IGlmICgndmFsdWUnIGluIGRlc2NyaXB0b3IpIGRlc2NyaXB0b3Iud3JpdGFibGUgPSB0cnVlOyBPYmplY3QuZGVmaW5lUHJvcGVydHkodGFyZ2V0LCBkZXNjcmlwdG9yLmtleSwgZGVzY3JpcHRvcik7IH0gfSByZXR1cm4gZnVuY3Rpb24gKENvbnN0cnVjdG9yLCBwcm90b1Byb3BzLCBzdGF0aWNQcm9wcykgeyBpZiAocHJvdG9Qcm9wcykgZGVmaW5lUHJvcGVydGllcyhDb25zdHJ1Y3Rvci5wcm90b3R5cGUsIHByb3RvUHJvcHMpOyBpZiAoc3RhdGljUHJvcHMpIGRlZmluZVByb3BlcnRpZXMoQ29uc3RydWN0b3IsIHN0YXRpY1Byb3BzKTsgcmV0dXJuIENvbnN0cnVjdG9yOyB9OyB9KSgpO1xuXHRcblx0ZnVuY3Rpb24gX2NsYXNzQ2FsbENoZWNrKGluc3RhbmNlLCBDb25zdHJ1Y3RvcikgeyBpZiAoIShpbnN0YW5jZSBpbnN0YW5jZW9mIENvbnN0cnVjdG9yKSkgeyB0aHJvdyBuZXcgVHlwZUVycm9yKCdDYW5ub3QgY2FsbCBhIGNsYXNzIGFzIGEgZnVuY3Rpb24nKTsgfSB9XG5cdFxuXHR2YXIgX2luaXRpYWxpemVySnMgPSBfX3dlYnBhY2tfcmVxdWlyZV9fKDEpO1xuXHRcblx0dmFyIF9odG1sUGFyc2VySnMgPSBfX3dlYnBhY2tfcmVxdWlyZV9fKDMpO1xuXHRcblx0LyoqXG5cdCAqIFdlbGNvbWUgdG8gVHlwZWQuanMhXG5cdCAqIEBwYXJhbSB7c3RyaW5nfSBlbGVtZW50SWQgSFRNTCBlbGVtZW50IElEIF9PUl8gSFRNTCBlbGVtZW50XG5cdCAqIEBwYXJhbSB7b2JqZWN0fSBvcHRpb25zIG9wdGlvbnMgb2JqZWN0XG5cdCAqIEByZXR1cm5zIHtvYmplY3R9IGEgbmV3IFR5cGVkIG9iamVjdFxuXHQgKi9cblx0XG5cdHZhciBUeXBlZCA9IChmdW5jdGlvbiAoKSB7XG5cdCAgZnVuY3Rpb24gVHlwZWQoZWxlbWVudElkLCBvcHRpb25zKSB7XG5cdCAgICBfY2xhc3NDYWxsQ2hlY2sodGhpcywgVHlwZWQpO1xuXHRcblx0ICAgIC8vIEluaXRpYWxpemUgaXQgdXBcblx0ICAgIF9pbml0aWFsaXplckpzLmluaXRpYWxpemVyLmxvYWQodGhpcywgb3B0aW9ucywgZWxlbWVudElkKTtcblx0ICAgIC8vIEFsbCBzeXN0ZW1zIGdvIVxuXHQgICAgdGhpcy5iZWdpbigpO1xuXHQgIH1cblx0XG5cdCAgLyoqXG5cdCAgICogVG9nZ2xlIHN0YXJ0KCkgYW5kIHN0b3AoKSBvZiB0aGUgVHlwZWQgaW5zdGFuY2Vcblx0ICAgKiBAcHVibGljXG5cdCAgICovXG5cdFxuXHQgIF9jcmVhdGVDbGFzcyhUeXBlZCwgW3tcblx0ICAgIGtleTogJ3RvZ2dsZScsXG5cdCAgICB2YWx1ZTogZnVuY3Rpb24gdG9nZ2xlKCkge1xuXHQgICAgICB0aGlzLnBhdXNlLnN0YXR1cyA/IHRoaXMuc3RhcnQoKSA6IHRoaXMuc3RvcCgpO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogU3RvcCB0eXBpbmcgLyBiYWNrc3BhY2luZyBhbmQgZW5hYmxlIGN1cnNvciBibGlua2luZ1xuXHQgICAgICogQHB1YmxpY1xuXHQgICAgICovXG5cdCAgfSwge1xuXHQgICAga2V5OiAnc3RvcCcsXG5cdCAgICB2YWx1ZTogZnVuY3Rpb24gc3RvcCgpIHtcblx0ICAgICAgaWYgKHRoaXMudHlwaW5nQ29tcGxldGUpIHJldHVybjtcblx0ICAgICAgaWYgKHRoaXMucGF1c2Uuc3RhdHVzKSByZXR1cm47XG5cdCAgICAgIHRoaXMudG9nZ2xlQmxpbmtpbmcodHJ1ZSk7XG5cdCAgICAgIHRoaXMucGF1c2Uuc3RhdHVzID0gdHJ1ZTtcblx0ICAgICAgdGhpcy5vcHRpb25zLm9uU3RvcCh0aGlzLmFycmF5UG9zLCB0aGlzKTtcblx0ICAgIH1cblx0XG5cdCAgICAvKipcblx0ICAgICAqIFN0YXJ0IHR5cGluZyAvIGJhY2tzcGFjaW5nIGFmdGVyIGJlaW5nIHN0b3BwZWRcblx0ICAgICAqIEBwdWJsaWNcblx0ICAgICAqL1xuXHQgIH0sIHtcblx0ICAgIGtleTogJ3N0YXJ0Jyxcblx0ICAgIHZhbHVlOiBmdW5jdGlvbiBzdGFydCgpIHtcblx0ICAgICAgaWYgKHRoaXMudHlwaW5nQ29tcGxldGUpIHJldHVybjtcblx0ICAgICAgaWYgKCF0aGlzLnBhdXNlLnN0YXR1cykgcmV0dXJuO1xuXHQgICAgICB0aGlzLnBhdXNlLnN0YXR1cyA9IGZhbHNlO1xuXHQgICAgICBpZiAodGhpcy5wYXVzZS50eXBld3JpdGUpIHtcblx0ICAgICAgICB0aGlzLnR5cGV3cml0ZSh0aGlzLnBhdXNlLmN1clN0cmluZywgdGhpcy5wYXVzZS5jdXJTdHJQb3MpO1xuXHQgICAgICB9IGVsc2Uge1xuXHQgICAgICAgIHRoaXMuYmFja3NwYWNlKHRoaXMucGF1c2UuY3VyU3RyaW5nLCB0aGlzLnBhdXNlLmN1clN0clBvcyk7XG5cdCAgICAgIH1cblx0ICAgICAgdGhpcy5vcHRpb25zLm9uU3RhcnQodGhpcy5hcnJheVBvcywgdGhpcyk7XG5cdCAgICB9XG5cdFxuXHQgICAgLyoqXG5cdCAgICAgKiBEZXN0cm95IHRoaXMgaW5zdGFuY2Ugb2YgVHlwZWRcblx0ICAgICAqIEBwdWJsaWNcblx0ICAgICAqL1xuXHQgIH0sIHtcblx0ICAgIGtleTogJ2Rlc3Ryb3knLFxuXHQgICAgdmFsdWU6IGZ1bmN0aW9uIGRlc3Ryb3koKSB7XG5cdCAgICAgIHRoaXMucmVzZXQoZmFsc2UpO1xuXHQgICAgICB0aGlzLm9wdGlvbnMub25EZXN0cm95KHRoaXMpO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogUmVzZXQgVHlwZWQgYW5kIG9wdGlvbmFsbHkgcmVzdGFydHNcblx0ICAgICAqIEBwYXJhbSB7Ym9vbGVhbn0gcmVzdGFydFxuXHQgICAgICogQHB1YmxpY1xuXHQgICAgICovXG5cdCAgfSwge1xuXHQgICAga2V5OiAncmVzZXQnLFxuXHQgICAgdmFsdWU6IGZ1bmN0aW9uIHJlc2V0KCkge1xuXHQgICAgICB2YXIgcmVzdGFydCA9IGFyZ3VtZW50cy5sZW5ndGggPD0gMCB8fCBhcmd1bWVudHNbMF0gPT09IHVuZGVmaW5lZCA/IHRydWUgOiBhcmd1bWVudHNbMF07XG5cdFxuXHQgICAgICBjbGVhckludGVydmFsKHRoaXMudGltZW91dCk7XG5cdCAgICAgIHRoaXMucmVwbGFjZVRleHQoJycpO1xuXHQgICAgICBpZiAodGhpcy5jdXJzb3IgJiYgdGhpcy5jdXJzb3IucGFyZW50Tm9kZSkge1xuXHQgICAgICAgIHRoaXMuY3Vyc29yLnBhcmVudE5vZGUucmVtb3ZlQ2hpbGQodGhpcy5jdXJzb3IpO1xuXHQgICAgICAgIHRoaXMuY3Vyc29yID0gbnVsbDtcblx0ICAgICAgfVxuXHQgICAgICB0aGlzLnN0clBvcyA9IDA7XG5cdCAgICAgIHRoaXMuYXJyYXlQb3MgPSAwO1xuXHQgICAgICB0aGlzLmN1ckxvb3AgPSAwO1xuXHQgICAgICBpZiAocmVzdGFydCkge1xuXHQgICAgICAgIHRoaXMuaW5zZXJ0Q3Vyc29yKCk7XG5cdCAgICAgICAgdGhpcy5vcHRpb25zLm9uUmVzZXQodGhpcyk7XG5cdCAgICAgICAgdGhpcy5iZWdpbigpO1xuXHQgICAgICB9XG5cdCAgICB9XG5cdFxuXHQgICAgLyoqXG5cdCAgICAgKiBCZWdpbnMgdGhlIHR5cGluZyBhbmltYXRpb25cblx0ICAgICAqIEBwcml2YXRlXG5cdCAgICAgKi9cblx0ICB9LCB7XG5cdCAgICBrZXk6ICdiZWdpbicsXG5cdCAgICB2YWx1ZTogZnVuY3Rpb24gYmVnaW4oKSB7XG5cdCAgICAgIHZhciBfdGhpcyA9IHRoaXM7XG5cdFxuXHQgICAgICB0aGlzLm9wdGlvbnMub25CZWdpbih0aGlzKTtcblx0ICAgICAgdGhpcy50eXBpbmdDb21wbGV0ZSA9IGZhbHNlO1xuXHQgICAgICB0aGlzLnNodWZmbGVTdHJpbmdzSWZOZWVkZWQodGhpcyk7XG5cdCAgICAgIHRoaXMuaW5zZXJ0Q3Vyc29yKCk7XG5cdCAgICAgIGlmICh0aGlzLmJpbmRJbnB1dEZvY3VzRXZlbnRzKSB0aGlzLmJpbmRGb2N1c0V2ZW50cygpO1xuXHQgICAgICB0aGlzLnRpbWVvdXQgPSBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHtcblx0ICAgICAgICAvLyBDaGVjayBpZiB0aGVyZSBpcyBzb21lIHRleHQgaW4gdGhlIGVsZW1lbnQsIGlmIHllcyBzdGFydCBieSBiYWNrc3BhY2luZyB0aGUgZGVmYXVsdCBtZXNzYWdlXG5cdCAgICAgICAgaWYgKCFfdGhpcy5jdXJyZW50RWxDb250ZW50IHx8IF90aGlzLmN1cnJlbnRFbENvbnRlbnQubGVuZ3RoID09PSAwKSB7XG5cdCAgICAgICAgICBfdGhpcy50eXBld3JpdGUoX3RoaXMuc3RyaW5nc1tfdGhpcy5zZXF1ZW5jZVtfdGhpcy5hcnJheVBvc11dLCBfdGhpcy5zdHJQb3MpO1xuXHQgICAgICAgIH0gZWxzZSB7XG5cdCAgICAgICAgICAvLyBTdGFydCB0eXBpbmdcblx0ICAgICAgICAgIF90aGlzLmJhY2tzcGFjZShfdGhpcy5jdXJyZW50RWxDb250ZW50LCBfdGhpcy5jdXJyZW50RWxDb250ZW50Lmxlbmd0aCk7XG5cdCAgICAgICAgfVxuXHQgICAgICB9LCB0aGlzLnN0YXJ0RGVsYXkpO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogQ2FsbGVkIGZvciBlYWNoIGNoYXJhY3RlciB0eXBlZFxuXHQgICAgICogQHBhcmFtIHtzdHJpbmd9IGN1clN0cmluZyB0aGUgY3VycmVudCBzdHJpbmcgaW4gdGhlIHN0cmluZ3MgYXJyYXlcblx0ICAgICAqIEBwYXJhbSB7bnVtYmVyfSBjdXJTdHJQb3MgdGhlIGN1cnJlbnQgcG9zaXRpb24gaW4gdGhlIGN1clN0cmluZ1xuXHQgICAgICogQHByaXZhdGVcblx0ICAgICAqL1xuXHQgIH0sIHtcblx0ICAgIGtleTogJ3R5cGV3cml0ZScsXG5cdCAgICB2YWx1ZTogZnVuY3Rpb24gdHlwZXdyaXRlKGN1clN0cmluZywgY3VyU3RyUG9zKSB7XG5cdCAgICAgIHZhciBfdGhpczIgPSB0aGlzO1xuXHRcblx0ICAgICAgaWYgKHRoaXMuZmFkZU91dCAmJiB0aGlzLmVsLmNsYXNzTGlzdC5jb250YWlucyh0aGlzLmZhZGVPdXRDbGFzcykpIHtcblx0ICAgICAgICB0aGlzLmVsLmNsYXNzTGlzdC5yZW1vdmUodGhpcy5mYWRlT3V0Q2xhc3MpO1xuXHQgICAgICAgIGlmICh0aGlzLmN1cnNvcikgdGhpcy5jdXJzb3IuY2xhc3NMaXN0LnJlbW92ZSh0aGlzLmZhZGVPdXRDbGFzcyk7XG5cdCAgICAgIH1cblx0XG5cdCAgICAgIHZhciBodW1hbml6ZSA9IHRoaXMuaHVtYW5pemVyKHRoaXMudHlwZVNwZWVkKTtcblx0ICAgICAgdmFyIG51bUNoYXJzID0gMTtcblx0XG5cdCAgICAgIGlmICh0aGlzLnBhdXNlLnN0YXR1cyA9PT0gdHJ1ZSkge1xuXHQgICAgICAgIHRoaXMuc2V0UGF1c2VTdGF0dXMoY3VyU3RyaW5nLCBjdXJTdHJQb3MsIHRydWUpO1xuXHQgICAgICAgIHJldHVybjtcblx0ICAgICAgfVxuXHRcblx0ICAgICAgLy8gY29udGFpbiB0eXBpbmcgZnVuY3Rpb24gaW4gYSB0aW1lb3V0IGh1bWFuaXplJ2QgZGVsYXlcblx0ICAgICAgdGhpcy50aW1lb3V0ID0gc2V0VGltZW91dChmdW5jdGlvbiAoKSB7XG5cdCAgICAgICAgLy8gc2tpcCBvdmVyIGFueSBIVE1MIGNoYXJzXG5cdCAgICAgICAgY3VyU3RyUG9zID0gX2h0bWxQYXJzZXJKcy5odG1sUGFyc2VyLnR5cGVIdG1sQ2hhcnMoY3VyU3RyaW5nLCBjdXJTdHJQb3MsIF90aGlzMik7XG5cdFxuXHQgICAgICAgIHZhciBwYXVzZVRpbWUgPSAwO1xuXHQgICAgICAgIHZhciBzdWJzdHIgPSBjdXJTdHJpbmcuc3Vic3RyKGN1clN0clBvcyk7XG5cdCAgICAgICAgLy8gY2hlY2sgZm9yIGFuIGVzY2FwZSBjaGFyYWN0ZXIgYmVmb3JlIGEgcGF1c2UgdmFsdWVcblx0ICAgICAgICAvLyBmb3JtYXQ6IFxcXlxcZCsgLi4gZWc6IF4xMDAwIC4uIHNob3VsZCBiZSBhYmxlIHRvIHByaW50IHRoZSBeIHRvbyB1c2luZyBeXlxuXHQgICAgICAgIC8vIHNpbmdsZSBeIGFyZSByZW1vdmVkIGZyb20gc3RyaW5nXG5cdCAgICAgICAgaWYgKHN1YnN0ci5jaGFyQXQoMCkgPT09ICdeJykge1xuXHQgICAgICAgICAgaWYgKC9eXFxeXFxkKy8udGVzdChzdWJzdHIpKSB7XG5cdCAgICAgICAgICAgIHZhciBza2lwID0gMTsgLy8gc2tpcCBhdCBsZWFzdCAxXG5cdCAgICAgICAgICAgIHN1YnN0ciA9IC9cXGQrLy5leGVjKHN1YnN0cilbMF07XG5cdCAgICAgICAgICAgIHNraXAgKz0gc3Vic3RyLmxlbmd0aDtcblx0ICAgICAgICAgICAgcGF1c2VUaW1lID0gcGFyc2VJbnQoc3Vic3RyKTtcblx0ICAgICAgICAgICAgX3RoaXMyLnRlbXBvcmFyeVBhdXNlID0gdHJ1ZTtcblx0ICAgICAgICAgICAgX3RoaXMyLm9wdGlvbnMub25UeXBpbmdQYXVzZWQoX3RoaXMyLmFycmF5UG9zLCBfdGhpczIpO1xuXHQgICAgICAgICAgICAvLyBzdHJpcCBvdXQgdGhlIGVzY2FwZSBjaGFyYWN0ZXIgYW5kIHBhdXNlIHZhbHVlIHNvIHRoZXkncmUgbm90IHByaW50ZWRcblx0ICAgICAgICAgICAgY3VyU3RyaW5nID0gY3VyU3RyaW5nLnN1YnN0cmluZygwLCBjdXJTdHJQb3MpICsgY3VyU3RyaW5nLnN1YnN0cmluZyhjdXJTdHJQb3MgKyBza2lwKTtcblx0ICAgICAgICAgICAgX3RoaXMyLnRvZ2dsZUJsaW5raW5nKHRydWUpO1xuXHQgICAgICAgICAgfVxuXHQgICAgICAgIH1cblx0XG5cdCAgICAgICAgLy8gY2hlY2sgZm9yIHNraXAgY2hhcmFjdGVycyBmb3JtYXR0ZWQgYXNcblx0ICAgICAgICAvLyBcInRoaXMgaXMgYSBgc3RyaW5nIHRvIHByaW50IE5PV2AgLi4uXCJcblx0ICAgICAgICBpZiAoc3Vic3RyLmNoYXJBdCgwKSA9PT0gJ2AnKSB7XG5cdCAgICAgICAgICB3aGlsZSAoY3VyU3RyaW5nLnN1YnN0cihjdXJTdHJQb3MgKyBudW1DaGFycykuY2hhckF0KDApICE9PSAnYCcpIHtcblx0ICAgICAgICAgICAgbnVtQ2hhcnMrKztcblx0ICAgICAgICAgICAgaWYgKGN1clN0clBvcyArIG51bUNoYXJzID4gY3VyU3RyaW5nLmxlbmd0aCkgYnJlYWs7XG5cdCAgICAgICAgICB9XG5cdCAgICAgICAgICAvLyBzdHJpcCBvdXQgdGhlIGVzY2FwZSBjaGFyYWN0ZXJzIGFuZCBhcHBlbmQgYWxsIHRoZSBzdHJpbmcgaW4gYmV0d2VlblxuXHQgICAgICAgICAgdmFyIHN0cmluZ0JlZm9yZVNraXAgPSBjdXJTdHJpbmcuc3Vic3RyaW5nKDAsIGN1clN0clBvcyk7XG5cdCAgICAgICAgICB2YXIgc3RyaW5nU2tpcHBlZCA9IGN1clN0cmluZy5zdWJzdHJpbmcoc3RyaW5nQmVmb3JlU2tpcC5sZW5ndGggKyAxLCBjdXJTdHJQb3MgKyBudW1DaGFycyk7XG5cdCAgICAgICAgICB2YXIgc3RyaW5nQWZ0ZXJTa2lwID0gY3VyU3RyaW5nLnN1YnN0cmluZyhjdXJTdHJQb3MgKyBudW1DaGFycyArIDEpO1xuXHQgICAgICAgICAgY3VyU3RyaW5nID0gc3RyaW5nQmVmb3JlU2tpcCArIHN0cmluZ1NraXBwZWQgKyBzdHJpbmdBZnRlclNraXA7XG5cdCAgICAgICAgICBudW1DaGFycy0tO1xuXHQgICAgICAgIH1cblx0XG5cdCAgICAgICAgLy8gdGltZW91dCBmb3IgYW55IHBhdXNlIGFmdGVyIGEgY2hhcmFjdGVyXG5cdCAgICAgICAgX3RoaXMyLnRpbWVvdXQgPSBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHtcblx0ICAgICAgICAgIC8vIEFjY291bnRzIGZvciBibGlua2luZyB3aGlsZSBwYXVzZWRcblx0ICAgICAgICAgIF90aGlzMi50b2dnbGVCbGlua2luZyhmYWxzZSk7XG5cdFxuXHQgICAgICAgICAgLy8gV2UncmUgZG9uZSB3aXRoIHRoaXMgc2VudGVuY2UhXG5cdCAgICAgICAgICBpZiAoY3VyU3RyUG9zID49IGN1clN0cmluZy5sZW5ndGgpIHtcblx0ICAgICAgICAgICAgX3RoaXMyLmRvbmVUeXBpbmcoY3VyU3RyaW5nLCBjdXJTdHJQb3MpO1xuXHQgICAgICAgICAgfSBlbHNlIHtcblx0ICAgICAgICAgICAgX3RoaXMyLmtlZXBUeXBpbmcoY3VyU3RyaW5nLCBjdXJTdHJQb3MsIG51bUNoYXJzKTtcblx0ICAgICAgICAgIH1cblx0ICAgICAgICAgIC8vIGVuZCBvZiBjaGFyYWN0ZXIgcGF1c2Vcblx0ICAgICAgICAgIGlmIChfdGhpczIudGVtcG9yYXJ5UGF1c2UpIHtcblx0ICAgICAgICAgICAgX3RoaXMyLnRlbXBvcmFyeVBhdXNlID0gZmFsc2U7XG5cdCAgICAgICAgICAgIF90aGlzMi5vcHRpb25zLm9uVHlwaW5nUmVzdW1lZChfdGhpczIuYXJyYXlQb3MsIF90aGlzMik7XG5cdCAgICAgICAgICB9XG5cdCAgICAgICAgfSwgcGF1c2VUaW1lKTtcblx0XG5cdCAgICAgICAgLy8gaHVtYW5pemVkIHZhbHVlIGZvciB0eXBpbmdcblx0ICAgICAgfSwgaHVtYW5pemUpO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogQ29udGludWUgdG8gdGhlIG5leHQgc3RyaW5nICYgYmVnaW4gdHlwaW5nXG5cdCAgICAgKiBAcGFyYW0ge3N0cmluZ30gY3VyU3RyaW5nIHRoZSBjdXJyZW50IHN0cmluZyBpbiB0aGUgc3RyaW5ncyBhcnJheVxuXHQgICAgICogQHBhcmFtIHtudW1iZXJ9IGN1clN0clBvcyB0aGUgY3VycmVudCBwb3NpdGlvbiBpbiB0aGUgY3VyU3RyaW5nXG5cdCAgICAgKiBAcHJpdmF0ZVxuXHQgICAgICovXG5cdCAgfSwge1xuXHQgICAga2V5OiAna2VlcFR5cGluZycsXG5cdCAgICB2YWx1ZTogZnVuY3Rpb24ga2VlcFR5cGluZyhjdXJTdHJpbmcsIGN1clN0clBvcywgbnVtQ2hhcnMpIHtcblx0ICAgICAgLy8gY2FsbCBiZWZvcmUgZnVuY3Rpb25zIGlmIGFwcGxpY2FibGVcblx0ICAgICAgaWYgKGN1clN0clBvcyA9PT0gMCkge1xuXHQgICAgICAgIHRoaXMudG9nZ2xlQmxpbmtpbmcoZmFsc2UpO1xuXHQgICAgICAgIHRoaXMub3B0aW9ucy5wcmVTdHJpbmdUeXBlZCh0aGlzLmFycmF5UG9zLCB0aGlzKTtcblx0ICAgICAgfVxuXHQgICAgICAvLyBzdGFydCB0eXBpbmcgZWFjaCBuZXcgY2hhciBpbnRvIGV4aXN0aW5nIHN0cmluZ1xuXHQgICAgICAvLyBjdXJTdHJpbmc6IGFyZywgdGhpcy5lbC5odG1sOiBvcmlnaW5hbCB0ZXh0IGluc2lkZSBlbGVtZW50XG5cdCAgICAgIGN1clN0clBvcyArPSBudW1DaGFycztcblx0ICAgICAgdmFyIG5leHRTdHJpbmcgPSBjdXJTdHJpbmcuc3Vic3RyKDAsIGN1clN0clBvcyk7XG5cdCAgICAgIHRoaXMucmVwbGFjZVRleHQobmV4dFN0cmluZyk7XG5cdCAgICAgIC8vIGxvb3AgdGhlIGZ1bmN0aW9uXG5cdCAgICAgIHRoaXMudHlwZXdyaXRlKGN1clN0cmluZywgY3VyU3RyUG9zKTtcblx0ICAgIH1cblx0XG5cdCAgICAvKipcblx0ICAgICAqIFdlJ3JlIGRvbmUgdHlwaW5nIHRoZSBjdXJyZW50IHN0cmluZ1xuXHQgICAgICogQHBhcmFtIHtzdHJpbmd9IGN1clN0cmluZyB0aGUgY3VycmVudCBzdHJpbmcgaW4gdGhlIHN0cmluZ3MgYXJyYXlcblx0ICAgICAqIEBwYXJhbSB7bnVtYmVyfSBjdXJTdHJQb3MgdGhlIGN1cnJlbnQgcG9zaXRpb24gaW4gdGhlIGN1clN0cmluZ1xuXHQgICAgICogQHByaXZhdGVcblx0ICAgICAqL1xuXHQgIH0sIHtcblx0ICAgIGtleTogJ2RvbmVUeXBpbmcnLFxuXHQgICAgdmFsdWU6IGZ1bmN0aW9uIGRvbmVUeXBpbmcoY3VyU3RyaW5nLCBjdXJTdHJQb3MpIHtcblx0ICAgICAgdmFyIF90aGlzMyA9IHRoaXM7XG5cdFxuXHQgICAgICAvLyBmaXJlcyBjYWxsYmFjayBmdW5jdGlvblxuXHQgICAgICB0aGlzLm9wdGlvbnMub25TdHJpbmdUeXBlZCh0aGlzLmFycmF5UG9zLCB0aGlzKTtcblx0ICAgICAgdGhpcy50b2dnbGVCbGlua2luZyh0cnVlKTtcblx0ICAgICAgLy8gaXMgdGhpcyB0aGUgZmluYWwgc3RyaW5nXG5cdCAgICAgIGlmICh0aGlzLmFycmF5UG9zID09PSB0aGlzLnN0cmluZ3MubGVuZ3RoIC0gMSkge1xuXHQgICAgICAgIC8vIGNhbGxiYWNrIHRoYXQgb2NjdXJzIG9uIHRoZSBsYXN0IHR5cGVkIHN0cmluZ1xuXHQgICAgICAgIHRoaXMuY29tcGxldGUoKTtcblx0ICAgICAgICAvLyBxdWl0IGlmIHdlIHdvbnQgbG9vcCBiYWNrXG5cdCAgICAgICAgaWYgKHRoaXMubG9vcCA9PT0gZmFsc2UgfHwgdGhpcy5jdXJMb29wID09PSB0aGlzLmxvb3BDb3VudCkge1xuXHQgICAgICAgICAgcmV0dXJuO1xuXHQgICAgICAgIH1cblx0ICAgICAgfVxuXHQgICAgICB0aGlzLnRpbWVvdXQgPSBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHtcblx0ICAgICAgICBfdGhpczMuYmFja3NwYWNlKGN1clN0cmluZywgY3VyU3RyUG9zKTtcblx0ICAgICAgfSwgdGhpcy5iYWNrRGVsYXkpO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogQmFja3NwYWNlcyAxIGNoYXJhY3RlciBhdCBhIHRpbWVcblx0ICAgICAqIEBwYXJhbSB7c3RyaW5nfSBjdXJTdHJpbmcgdGhlIGN1cnJlbnQgc3RyaW5nIGluIHRoZSBzdHJpbmdzIGFycmF5XG5cdCAgICAgKiBAcGFyYW0ge251bWJlcn0gY3VyU3RyUG9zIHRoZSBjdXJyZW50IHBvc2l0aW9uIGluIHRoZSBjdXJTdHJpbmdcblx0ICAgICAqIEBwcml2YXRlXG5cdCAgICAgKi9cblx0ICB9LCB7XG5cdCAgICBrZXk6ICdiYWNrc3BhY2UnLFxuXHQgICAgdmFsdWU6IGZ1bmN0aW9uIGJhY2tzcGFjZShjdXJTdHJpbmcsIGN1clN0clBvcykge1xuXHQgICAgICB2YXIgX3RoaXM0ID0gdGhpcztcblx0XG5cdCAgICAgIGlmICh0aGlzLnBhdXNlLnN0YXR1cyA9PT0gdHJ1ZSkge1xuXHQgICAgICAgIHRoaXMuc2V0UGF1c2VTdGF0dXMoY3VyU3RyaW5nLCBjdXJTdHJQb3MsIHRydWUpO1xuXHQgICAgICAgIHJldHVybjtcblx0ICAgICAgfVxuXHQgICAgICBpZiAodGhpcy5mYWRlT3V0KSByZXR1cm4gdGhpcy5pbml0RmFkZU91dCgpO1xuXHRcblx0ICAgICAgdGhpcy50b2dnbGVCbGlua2luZyhmYWxzZSk7XG5cdCAgICAgIHZhciBodW1hbml6ZSA9IHRoaXMuaHVtYW5pemVyKHRoaXMuYmFja1NwZWVkKTtcblx0XG5cdCAgICAgIHRoaXMudGltZW91dCA9IHNldFRpbWVvdXQoZnVuY3Rpb24gKCkge1xuXHQgICAgICAgIGN1clN0clBvcyA9IF9odG1sUGFyc2VySnMuaHRtbFBhcnNlci5iYWNrU3BhY2VIdG1sQ2hhcnMoY3VyU3RyaW5nLCBjdXJTdHJQb3MsIF90aGlzNCk7XG5cdCAgICAgICAgLy8gcmVwbGFjZSB0ZXh0IHdpdGggYmFzZSB0ZXh0ICsgdHlwZWQgY2hhcmFjdGVyc1xuXHQgICAgICAgIHZhciBjdXJTdHJpbmdBdFBvc2l0aW9uID0gY3VyU3RyaW5nLnN1YnN0cigwLCBjdXJTdHJQb3MpO1xuXHQgICAgICAgIF90aGlzNC5yZXBsYWNlVGV4dChjdXJTdHJpbmdBdFBvc2l0aW9uKTtcblx0XG5cdCAgICAgICAgLy8gaWYgc21hcnRCYWNrIGlzIGVuYWJsZWRcblx0ICAgICAgICBpZiAoX3RoaXM0LnNtYXJ0QmFja3NwYWNlKSB7XG5cdCAgICAgICAgICAvLyB0aGUgcmVtYWluaW5nIHBhcnQgb2YgdGhlIGN1cnJlbnQgc3RyaW5nIGlzIGVxdWFsIG9mIHRoZSBzYW1lIHBhcnQgb2YgdGhlIG5ldyBzdHJpbmdcblx0ICAgICAgICAgIHZhciBuZXh0U3RyaW5nID0gX3RoaXM0LnN0cmluZ3NbX3RoaXM0LmFycmF5UG9zICsgMV07XG5cdCAgICAgICAgICBpZiAobmV4dFN0cmluZyAmJiBjdXJTdHJpbmdBdFBvc2l0aW9uID09PSBuZXh0U3RyaW5nLnN1YnN0cigwLCBjdXJTdHJQb3MpKSB7XG5cdCAgICAgICAgICAgIF90aGlzNC5zdG9wTnVtID0gY3VyU3RyUG9zO1xuXHQgICAgICAgICAgfSBlbHNlIHtcblx0ICAgICAgICAgICAgX3RoaXM0LnN0b3BOdW0gPSAwO1xuXHQgICAgICAgICAgfVxuXHQgICAgICAgIH1cblx0XG5cdCAgICAgICAgLy8gaWYgdGhlIG51bWJlciAoaWQgb2YgY2hhcmFjdGVyIGluIGN1cnJlbnQgc3RyaW5nKSBpc1xuXHQgICAgICAgIC8vIGxlc3MgdGhhbiB0aGUgc3RvcCBudW1iZXIsIGtlZXAgZ29pbmdcblx0ICAgICAgICBpZiAoY3VyU3RyUG9zID4gX3RoaXM0LnN0b3BOdW0pIHtcblx0ICAgICAgICAgIC8vIHN1YnRyYWN0IGNoYXJhY3RlcnMgb25lIGJ5IG9uZVxuXHQgICAgICAgICAgY3VyU3RyUG9zLS07XG5cdCAgICAgICAgICAvLyBsb29wIHRoZSBmdW5jdGlvblxuXHQgICAgICAgICAgX3RoaXM0LmJhY2tzcGFjZShjdXJTdHJpbmcsIGN1clN0clBvcyk7XG5cdCAgICAgICAgfSBlbHNlIGlmIChjdXJTdHJQb3MgPD0gX3RoaXM0LnN0b3BOdW0pIHtcblx0ICAgICAgICAgIC8vIGlmIHRoZSBzdG9wIG51bWJlciBoYXMgYmVlbiByZWFjaGVkLCBpbmNyZWFzZVxuXHQgICAgICAgICAgLy8gYXJyYXkgcG9zaXRpb24gdG8gbmV4dCBzdHJpbmdcblx0ICAgICAgICAgIF90aGlzNC5hcnJheVBvcysrO1xuXHQgICAgICAgICAgLy8gV2hlbiBsb29waW5nLCBiZWdpbiBhdCB0aGUgYmVnaW5uaW5nIGFmdGVyIGJhY2tzcGFjZSBjb21wbGV0ZVxuXHQgICAgICAgICAgaWYgKF90aGlzNC5hcnJheVBvcyA9PT0gX3RoaXM0LnN0cmluZ3MubGVuZ3RoKSB7XG5cdCAgICAgICAgICAgIF90aGlzNC5hcnJheVBvcyA9IDA7XG5cdCAgICAgICAgICAgIF90aGlzNC5vcHRpb25zLm9uTGFzdFN0cmluZ0JhY2tzcGFjZWQoKTtcblx0ICAgICAgICAgICAgX3RoaXM0LnNodWZmbGVTdHJpbmdzSWZOZWVkZWQoKTtcblx0ICAgICAgICAgICAgX3RoaXM0LmJlZ2luKCk7XG5cdCAgICAgICAgICB9IGVsc2Uge1xuXHQgICAgICAgICAgICBfdGhpczQudHlwZXdyaXRlKF90aGlzNC5zdHJpbmdzW190aGlzNC5zZXF1ZW5jZVtfdGhpczQuYXJyYXlQb3NdXSwgY3VyU3RyUG9zKTtcblx0ICAgICAgICAgIH1cblx0ICAgICAgICB9XG5cdCAgICAgICAgLy8gaHVtYW5pemVkIHZhbHVlIGZvciB0eXBpbmdcblx0ICAgICAgfSwgaHVtYW5pemUpO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogRnVsbCBhbmltYXRpb24gaXMgY29tcGxldGVcblx0ICAgICAqIEBwcml2YXRlXG5cdCAgICAgKi9cblx0ICB9LCB7XG5cdCAgICBrZXk6ICdjb21wbGV0ZScsXG5cdCAgICB2YWx1ZTogZnVuY3Rpb24gY29tcGxldGUoKSB7XG5cdCAgICAgIHRoaXMub3B0aW9ucy5vbkNvbXBsZXRlKHRoaXMpO1xuXHQgICAgICBpZiAodGhpcy5sb29wKSB7XG5cdCAgICAgICAgdGhpcy5jdXJMb29wKys7XG5cdCAgICAgIH0gZWxzZSB7XG5cdCAgICAgICAgdGhpcy50eXBpbmdDb21wbGV0ZSA9IHRydWU7XG5cdCAgICAgIH1cblx0ICAgIH1cblx0XG5cdCAgICAvKipcblx0ICAgICAqIEhhcyB0aGUgdHlwaW5nIGJlZW4gc3RvcHBlZFxuXHQgICAgICogQHBhcmFtIHtzdHJpbmd9IGN1clN0cmluZyB0aGUgY3VycmVudCBzdHJpbmcgaW4gdGhlIHN0cmluZ3MgYXJyYXlcblx0ICAgICAqIEBwYXJhbSB7bnVtYmVyfSBjdXJTdHJQb3MgdGhlIGN1cnJlbnQgcG9zaXRpb24gaW4gdGhlIGN1clN0cmluZ1xuXHQgICAgICogQHBhcmFtIHtib29sZWFufSBpc1R5cGluZ1xuXHQgICAgICogQHByaXZhdGVcblx0ICAgICAqL1xuXHQgIH0sIHtcblx0ICAgIGtleTogJ3NldFBhdXNlU3RhdHVzJyxcblx0ICAgIHZhbHVlOiBmdW5jdGlvbiBzZXRQYXVzZVN0YXR1cyhjdXJTdHJpbmcsIGN1clN0clBvcywgaXNUeXBpbmcpIHtcblx0ICAgICAgdGhpcy5wYXVzZS50eXBld3JpdGUgPSBpc1R5cGluZztcblx0ICAgICAgdGhpcy5wYXVzZS5jdXJTdHJpbmcgPSBjdXJTdHJpbmc7XG5cdCAgICAgIHRoaXMucGF1c2UuY3VyU3RyUG9zID0gY3VyU3RyUG9zO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogVG9nZ2xlIHRoZSBibGlua2luZyBjdXJzb3Jcblx0ICAgICAqIEBwYXJhbSB7Ym9vbGVhbn0gaXNCbGlua2luZ1xuXHQgICAgICogQHByaXZhdGVcblx0ICAgICAqL1xuXHQgIH0sIHtcblx0ICAgIGtleTogJ3RvZ2dsZUJsaW5raW5nJyxcblx0ICAgIHZhbHVlOiBmdW5jdGlvbiB0b2dnbGVCbGlua2luZyhpc0JsaW5raW5nKSB7XG5cdCAgICAgIGlmICghdGhpcy5jdXJzb3IpIHJldHVybjtcblx0ICAgICAgLy8gaWYgaW4gcGF1c2VkIHN0YXRlLCBkb24ndCB0b2dnbGUgYmxpbmtpbmcgYSAybmQgdGltZVxuXHQgICAgICBpZiAodGhpcy5wYXVzZS5zdGF0dXMpIHJldHVybjtcblx0ICAgICAgaWYgKHRoaXMuY3Vyc29yQmxpbmtpbmcgPT09IGlzQmxpbmtpbmcpIHJldHVybjtcblx0ICAgICAgdGhpcy5jdXJzb3JCbGlua2luZyA9IGlzQmxpbmtpbmc7XG5cdCAgICAgIGlmIChpc0JsaW5raW5nKSB7XG5cdCAgICAgICAgdGhpcy5jdXJzb3IuY2xhc3NMaXN0LmFkZCgndHlwZWQtY3Vyc29yLS1ibGluaycpO1xuXHQgICAgICB9IGVsc2Uge1xuXHQgICAgICAgIHRoaXMuY3Vyc29yLmNsYXNzTGlzdC5yZW1vdmUoJ3R5cGVkLWN1cnNvci0tYmxpbmsnKTtcblx0ICAgICAgfVxuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogU3BlZWQgaW4gTVMgdG8gdHlwZVxuXHQgICAgICogQHBhcmFtIHtudW1iZXJ9IHNwZWVkXG5cdCAgICAgKiBAcHJpdmF0ZVxuXHQgICAgICovXG5cdCAgfSwge1xuXHQgICAga2V5OiAnaHVtYW5pemVyJyxcblx0ICAgIHZhbHVlOiBmdW5jdGlvbiBodW1hbml6ZXIoc3BlZWQpIHtcblx0ICAgICAgcmV0dXJuIE1hdGgucm91bmQoTWF0aC5yYW5kb20oKSAqIHNwZWVkIC8gMikgKyBzcGVlZDtcblx0ICAgIH1cblx0XG5cdCAgICAvKipcblx0ICAgICAqIFNodWZmbGUgdGhlIHNlcXVlbmNlIG9mIHRoZSBzdHJpbmdzIGFycmF5XG5cdCAgICAgKiBAcHJpdmF0ZVxuXHQgICAgICovXG5cdCAgfSwge1xuXHQgICAga2V5OiAnc2h1ZmZsZVN0cmluZ3NJZk5lZWRlZCcsXG5cdCAgICB2YWx1ZTogZnVuY3Rpb24gc2h1ZmZsZVN0cmluZ3NJZk5lZWRlZCgpIHtcblx0ICAgICAgaWYgKCF0aGlzLnNodWZmbGUpIHJldHVybjtcblx0ICAgICAgdGhpcy5zZXF1ZW5jZSA9IHRoaXMuc2VxdWVuY2Uuc29ydChmdW5jdGlvbiAoKSB7XG5cdCAgICAgICAgcmV0dXJuIE1hdGgucmFuZG9tKCkgLSAwLjU7XG5cdCAgICAgIH0pO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogQWRkcyBhIENTUyBjbGFzcyB0byBmYWRlIG91dCBjdXJyZW50IHN0cmluZ1xuXHQgICAgICogQHByaXZhdGVcblx0ICAgICAqL1xuXHQgIH0sIHtcblx0ICAgIGtleTogJ2luaXRGYWRlT3V0Jyxcblx0ICAgIHZhbHVlOiBmdW5jdGlvbiBpbml0RmFkZU91dCgpIHtcblx0ICAgICAgdmFyIF90aGlzNSA9IHRoaXM7XG5cdFxuXHQgICAgICB0aGlzLmVsLmNsYXNzTmFtZSArPSAnICcgKyB0aGlzLmZhZGVPdXRDbGFzcztcblx0ICAgICAgaWYgKHRoaXMuY3Vyc29yKSB0aGlzLmN1cnNvci5jbGFzc05hbWUgKz0gJyAnICsgdGhpcy5mYWRlT3V0Q2xhc3M7XG5cdCAgICAgIHJldHVybiBzZXRUaW1lb3V0KGZ1bmN0aW9uICgpIHtcblx0ICAgICAgICBfdGhpczUuYXJyYXlQb3MrKztcblx0ICAgICAgICBfdGhpczUucmVwbGFjZVRleHQoJycpO1xuXHRcblx0ICAgICAgICAvLyBSZXNldHMgY3VycmVudCBzdHJpbmcgaWYgZW5kIG9mIGxvb3AgcmVhY2hlZFxuXHQgICAgICAgIGlmIChfdGhpczUuc3RyaW5ncy5sZW5ndGggPiBfdGhpczUuYXJyYXlQb3MpIHtcblx0ICAgICAgICAgIF90aGlzNS50eXBld3JpdGUoX3RoaXM1LnN0cmluZ3NbX3RoaXM1LnNlcXVlbmNlW190aGlzNS5hcnJheVBvc11dLCAwKTtcblx0ICAgICAgICB9IGVsc2Uge1xuXHQgICAgICAgICAgX3RoaXM1LnR5cGV3cml0ZShfdGhpczUuc3RyaW5nc1swXSwgMCk7XG5cdCAgICAgICAgICBfdGhpczUuYXJyYXlQb3MgPSAwO1xuXHQgICAgICAgIH1cblx0ICAgICAgfSwgdGhpcy5mYWRlT3V0RGVsYXkpO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogUmVwbGFjZXMgY3VycmVudCB0ZXh0IGluIHRoZSBIVE1MIGVsZW1lbnRcblx0ICAgICAqIGRlcGVuZGluZyBvbiBlbGVtZW50IHR5cGVcblx0ICAgICAqIEBwYXJhbSB7c3RyaW5nfSBzdHJcblx0ICAgICAqIEBwcml2YXRlXG5cdCAgICAgKi9cblx0ICB9LCB7XG5cdCAgICBrZXk6ICdyZXBsYWNlVGV4dCcsXG5cdCAgICB2YWx1ZTogZnVuY3Rpb24gcmVwbGFjZVRleHQoc3RyKSB7XG5cdCAgICAgIGlmICh0aGlzLmF0dHIpIHtcblx0ICAgICAgICB0aGlzLmVsLnNldEF0dHJpYnV0ZSh0aGlzLmF0dHIsIHN0cik7XG5cdCAgICAgIH0gZWxzZSB7XG5cdCAgICAgICAgaWYgKHRoaXMuaXNJbnB1dCkge1xuXHQgICAgICAgICAgdGhpcy5lbC52YWx1ZSA9IHN0cjtcblx0ICAgICAgICB9IGVsc2UgaWYgKHRoaXMuY29udGVudFR5cGUgPT09ICdodG1sJykge1xuXHQgICAgICAgICAgdGhpcy5lbC5pbm5lckhUTUwgPSBzdHI7XG5cdCAgICAgICAgfSBlbHNlIHtcblx0ICAgICAgICAgIHRoaXMuZWwudGV4dENvbnRlbnQgPSBzdHI7XG5cdCAgICAgICAgfVxuXHQgICAgICB9XG5cdCAgICB9XG5cdFxuXHQgICAgLyoqXG5cdCAgICAgKiBJZiB1c2luZyBpbnB1dCBlbGVtZW50cywgYmluZCBmb2N1cyBpbiBvcmRlciB0b1xuXHQgICAgICogc3RhcnQgYW5kIHN0b3AgdGhlIGFuaW1hdGlvblxuXHQgICAgICogQHByaXZhdGVcblx0ICAgICAqL1xuXHQgIH0sIHtcblx0ICAgIGtleTogJ2JpbmRGb2N1c0V2ZW50cycsXG5cdCAgICB2YWx1ZTogZnVuY3Rpb24gYmluZEZvY3VzRXZlbnRzKCkge1xuXHQgICAgICB2YXIgX3RoaXM2ID0gdGhpcztcblx0XG5cdCAgICAgIGlmICghdGhpcy5pc0lucHV0KSByZXR1cm47XG5cdCAgICAgIHRoaXMuZWwuYWRkRXZlbnRMaXN0ZW5lcignZm9jdXMnLCBmdW5jdGlvbiAoZSkge1xuXHQgICAgICAgIF90aGlzNi5zdG9wKCk7XG5cdCAgICAgIH0pO1xuXHQgICAgICB0aGlzLmVsLmFkZEV2ZW50TGlzdGVuZXIoJ2JsdXInLCBmdW5jdGlvbiAoZSkge1xuXHQgICAgICAgIGlmIChfdGhpczYuZWwudmFsdWUgJiYgX3RoaXM2LmVsLnZhbHVlLmxlbmd0aCAhPT0gMCkge1xuXHQgICAgICAgICAgcmV0dXJuO1xuXHQgICAgICAgIH1cblx0ICAgICAgICBfdGhpczYuc3RhcnQoKTtcblx0ICAgICAgfSk7XG5cdCAgICB9XG5cdFxuXHQgICAgLyoqXG5cdCAgICAgKiBPbiBpbml0LCBpbnNlcnQgdGhlIGN1cnNvciBlbGVtZW50XG5cdCAgICAgKiBAcHJpdmF0ZVxuXHQgICAgICovXG5cdCAgfSwge1xuXHQgICAga2V5OiAnaW5zZXJ0Q3Vyc29yJyxcblx0ICAgIHZhbHVlOiBmdW5jdGlvbiBpbnNlcnRDdXJzb3IoKSB7XG5cdCAgICAgIGlmICghdGhpcy5zaG93Q3Vyc29yKSByZXR1cm47XG5cdCAgICAgIGlmICh0aGlzLmN1cnNvcikgcmV0dXJuO1xuXHQgICAgICB0aGlzLmN1cnNvciA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NwYW4nKTtcblx0ICAgICAgdGhpcy5jdXJzb3IuY2xhc3NOYW1lID0gJ3R5cGVkLWN1cnNvcic7XG5cdCAgICAgIHRoaXMuY3Vyc29yLmlubmVySFRNTCA9IHRoaXMuY3Vyc29yQ2hhcjtcblx0ICAgICAgdGhpcy5lbC5wYXJlbnROb2RlICYmIHRoaXMuZWwucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUodGhpcy5jdXJzb3IsIHRoaXMuZWwubmV4dFNpYmxpbmcpO1xuXHQgICAgfVxuXHQgIH1dKTtcblx0XG5cdCAgcmV0dXJuIFR5cGVkO1xuXHR9KSgpO1xuXHRcblx0ZXhwb3J0c1snZGVmYXVsdCddID0gVHlwZWQ7XG5cdG1vZHVsZS5leHBvcnRzID0gZXhwb3J0c1snZGVmYXVsdCddO1xuXG4vKioqLyB9KSxcbi8qIDEgKi9cbi8qKiovIChmdW5jdGlvbihtb2R1bGUsIGV4cG9ydHMsIF9fd2VicGFja19yZXF1aXJlX18pIHtcblxuXHQndXNlIHN0cmljdCc7XG5cdFxuXHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgJ19fZXNNb2R1bGUnLCB7XG5cdCAgdmFsdWU6IHRydWVcblx0fSk7XG5cdFxuXHR2YXIgX2V4dGVuZHMgPSBPYmplY3QuYXNzaWduIHx8IGZ1bmN0aW9uICh0YXJnZXQpIHsgZm9yICh2YXIgaSA9IDE7IGkgPCBhcmd1bWVudHMubGVuZ3RoOyBpKyspIHsgdmFyIHNvdXJjZSA9IGFyZ3VtZW50c1tpXTsgZm9yICh2YXIga2V5IGluIHNvdXJjZSkgeyBpZiAoT2JqZWN0LnByb3RvdHlwZS5oYXNPd25Qcm9wZXJ0eS5jYWxsKHNvdXJjZSwga2V5KSkgeyB0YXJnZXRba2V5XSA9IHNvdXJjZVtrZXldOyB9IH0gfSByZXR1cm4gdGFyZ2V0OyB9O1xuXHRcblx0dmFyIF9jcmVhdGVDbGFzcyA9IChmdW5jdGlvbiAoKSB7IGZ1bmN0aW9uIGRlZmluZVByb3BlcnRpZXModGFyZ2V0LCBwcm9wcykgeyBmb3IgKHZhciBpID0gMDsgaSA8IHByb3BzLmxlbmd0aDsgaSsrKSB7IHZhciBkZXNjcmlwdG9yID0gcHJvcHNbaV07IGRlc2NyaXB0b3IuZW51bWVyYWJsZSA9IGRlc2NyaXB0b3IuZW51bWVyYWJsZSB8fCBmYWxzZTsgZGVzY3JpcHRvci5jb25maWd1cmFibGUgPSB0cnVlOyBpZiAoJ3ZhbHVlJyBpbiBkZXNjcmlwdG9yKSBkZXNjcmlwdG9yLndyaXRhYmxlID0gdHJ1ZTsgT2JqZWN0LmRlZmluZVByb3BlcnR5KHRhcmdldCwgZGVzY3JpcHRvci5rZXksIGRlc2NyaXB0b3IpOyB9IH0gcmV0dXJuIGZ1bmN0aW9uIChDb25zdHJ1Y3RvciwgcHJvdG9Qcm9wcywgc3RhdGljUHJvcHMpIHsgaWYgKHByb3RvUHJvcHMpIGRlZmluZVByb3BlcnRpZXMoQ29uc3RydWN0b3IucHJvdG90eXBlLCBwcm90b1Byb3BzKTsgaWYgKHN0YXRpY1Byb3BzKSBkZWZpbmVQcm9wZXJ0aWVzKENvbnN0cnVjdG9yLCBzdGF0aWNQcm9wcyk7IHJldHVybiBDb25zdHJ1Y3RvcjsgfTsgfSkoKTtcblx0XG5cdGZ1bmN0aW9uIF9pbnRlcm9wUmVxdWlyZURlZmF1bHQob2JqKSB7IHJldHVybiBvYmogJiYgb2JqLl9fZXNNb2R1bGUgPyBvYmogOiB7ICdkZWZhdWx0Jzogb2JqIH07IH1cblx0XG5cdGZ1bmN0aW9uIF9jbGFzc0NhbGxDaGVjayhpbnN0YW5jZSwgQ29uc3RydWN0b3IpIHsgaWYgKCEoaW5zdGFuY2UgaW5zdGFuY2VvZiBDb25zdHJ1Y3RvcikpIHsgdGhyb3cgbmV3IFR5cGVFcnJvcignQ2Fubm90IGNhbGwgYSBjbGFzcyBhcyBhIGZ1bmN0aW9uJyk7IH0gfVxuXHRcblx0dmFyIF9kZWZhdWx0c0pzID0gX193ZWJwYWNrX3JlcXVpcmVfXygyKTtcblx0XG5cdHZhciBfZGVmYXVsdHNKczIgPSBfaW50ZXJvcFJlcXVpcmVEZWZhdWx0KF9kZWZhdWx0c0pzKTtcblx0XG5cdC8qKlxuXHQgKiBJbml0aWFsaXplIHRoZSBUeXBlZCBvYmplY3Rcblx0ICovXG5cdFxuXHR2YXIgSW5pdGlhbGl6ZXIgPSAoZnVuY3Rpb24gKCkge1xuXHQgIGZ1bmN0aW9uIEluaXRpYWxpemVyKCkge1xuXHQgICAgX2NsYXNzQ2FsbENoZWNrKHRoaXMsIEluaXRpYWxpemVyKTtcblx0ICB9XG5cdFxuXHQgIF9jcmVhdGVDbGFzcyhJbml0aWFsaXplciwgW3tcblx0ICAgIGtleTogJ2xvYWQnLFxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogTG9hZCB1cCBkZWZhdWx0cyAmIG9wdGlvbnMgb24gdGhlIFR5cGVkIGluc3RhbmNlXG5cdCAgICAgKiBAcGFyYW0ge1R5cGVkfSBzZWxmIGluc3RhbmNlIG9mIFR5cGVkXG5cdCAgICAgKiBAcGFyYW0ge29iamVjdH0gb3B0aW9ucyBvcHRpb25zIG9iamVjdFxuXHQgICAgICogQHBhcmFtIHtzdHJpbmd9IGVsZW1lbnRJZCBIVE1MIGVsZW1lbnQgSUQgX09SXyBpbnN0YW5jZSBvZiBIVE1MIGVsZW1lbnRcblx0ICAgICAqIEBwcml2YXRlXG5cdCAgICAgKi9cblx0XG5cdCAgICB2YWx1ZTogZnVuY3Rpb24gbG9hZChzZWxmLCBvcHRpb25zLCBlbGVtZW50SWQpIHtcblx0ICAgICAgLy8gY2hvc2VuIGVsZW1lbnQgdG8gbWFuaXB1bGF0ZSB0ZXh0XG5cdCAgICAgIGlmICh0eXBlb2YgZWxlbWVudElkID09PSAnc3RyaW5nJykge1xuXHQgICAgICAgIHNlbGYuZWwgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKGVsZW1lbnRJZCk7XG5cdCAgICAgIH0gZWxzZSB7XG5cdCAgICAgICAgc2VsZi5lbCA9IGVsZW1lbnRJZDtcblx0ICAgICAgfVxuXHRcblx0ICAgICAgc2VsZi5vcHRpb25zID0gX2V4dGVuZHMoe30sIF9kZWZhdWx0c0pzMlsnZGVmYXVsdCddLCBvcHRpb25zKTtcblx0XG5cdCAgICAgIC8vIGF0dHJpYnV0ZSB0byB0eXBlIGludG9cblx0ICAgICAgc2VsZi5pc0lucHV0ID0gc2VsZi5lbC50YWdOYW1lLnRvTG93ZXJDYXNlKCkgPT09ICdpbnB1dCc7XG5cdCAgICAgIHNlbGYuYXR0ciA9IHNlbGYub3B0aW9ucy5hdHRyO1xuXHQgICAgICBzZWxmLmJpbmRJbnB1dEZvY3VzRXZlbnRzID0gc2VsZi5vcHRpb25zLmJpbmRJbnB1dEZvY3VzRXZlbnRzO1xuXHRcblx0ICAgICAgLy8gc2hvdyBjdXJzb3Jcblx0ICAgICAgc2VsZi5zaG93Q3Vyc29yID0gc2VsZi5pc0lucHV0ID8gZmFsc2UgOiBzZWxmLm9wdGlvbnMuc2hvd0N1cnNvcjtcblx0XG5cdCAgICAgIC8vIGN1c3RvbSBjdXJzb3Jcblx0ICAgICAgc2VsZi5jdXJzb3JDaGFyID0gc2VsZi5vcHRpb25zLmN1cnNvckNoYXI7XG5cdFxuXHQgICAgICAvLyBJcyB0aGUgY3Vyc29yIGJsaW5raW5nXG5cdCAgICAgIHNlbGYuY3Vyc29yQmxpbmtpbmcgPSB0cnVlO1xuXHRcblx0ICAgICAgLy8gdGV4dCBjb250ZW50IG9mIGVsZW1lbnRcblx0ICAgICAgc2VsZi5lbENvbnRlbnQgPSBzZWxmLmF0dHIgPyBzZWxmLmVsLmdldEF0dHJpYnV0ZShzZWxmLmF0dHIpIDogc2VsZi5lbC50ZXh0Q29udGVudDtcblx0XG5cdCAgICAgIC8vIGh0bWwgb3IgcGxhaW4gdGV4dFxuXHQgICAgICBzZWxmLmNvbnRlbnRUeXBlID0gc2VsZi5vcHRpb25zLmNvbnRlbnRUeXBlO1xuXHRcblx0ICAgICAgLy8gdHlwaW5nIHNwZWVkXG5cdCAgICAgIHNlbGYudHlwZVNwZWVkID0gc2VsZi5vcHRpb25zLnR5cGVTcGVlZDtcblx0XG5cdCAgICAgIC8vIGFkZCBhIGRlbGF5IGJlZm9yZSB0eXBpbmcgc3RhcnRzXG5cdCAgICAgIHNlbGYuc3RhcnREZWxheSA9IHNlbGYub3B0aW9ucy5zdGFydERlbGF5O1xuXHRcblx0ICAgICAgLy8gYmFja3NwYWNpbmcgc3BlZWRcblx0ICAgICAgc2VsZi5iYWNrU3BlZWQgPSBzZWxmLm9wdGlvbnMuYmFja1NwZWVkO1xuXHRcblx0ICAgICAgLy8gb25seSBiYWNrc3BhY2Ugd2hhdCBkb2Vzbid0IG1hdGNoIHRoZSBwcmV2aW91cyBzdHJpbmdcblx0ICAgICAgc2VsZi5zbWFydEJhY2tzcGFjZSA9IHNlbGYub3B0aW9ucy5zbWFydEJhY2tzcGFjZTtcblx0XG5cdCAgICAgIC8vIGFtb3VudCBvZiB0aW1lIHRvIHdhaXQgYmVmb3JlIGJhY2tzcGFjaW5nXG5cdCAgICAgIHNlbGYuYmFja0RlbGF5ID0gc2VsZi5vcHRpb25zLmJhY2tEZWxheTtcblx0XG5cdCAgICAgIC8vIEZhZGUgb3V0IGluc3RlYWQgb2YgYmFja3NwYWNlXG5cdCAgICAgIHNlbGYuZmFkZU91dCA9IHNlbGYub3B0aW9ucy5mYWRlT3V0O1xuXHQgICAgICBzZWxmLmZhZGVPdXRDbGFzcyA9IHNlbGYub3B0aW9ucy5mYWRlT3V0Q2xhc3M7XG5cdCAgICAgIHNlbGYuZmFkZU91dERlbGF5ID0gc2VsZi5vcHRpb25zLmZhZGVPdXREZWxheTtcblx0XG5cdCAgICAgIC8vIHZhcmlhYmxlIHRvIGNoZWNrIHdoZXRoZXIgdHlwaW5nIGlzIGN1cnJlbnRseSBwYXVzZWRcblx0ICAgICAgc2VsZi5pc1BhdXNlZCA9IGZhbHNlO1xuXHRcblx0ICAgICAgLy8gaW5wdXQgc3RyaW5ncyBvZiB0ZXh0XG5cdCAgICAgIHNlbGYuc3RyaW5ncyA9IHNlbGYub3B0aW9ucy5zdHJpbmdzLm1hcChmdW5jdGlvbiAocykge1xuXHQgICAgICAgIHJldHVybiBzLnRyaW0oKTtcblx0ICAgICAgfSk7XG5cdFxuXHQgICAgICAvLyBkaXYgY29udGFpbmluZyBzdHJpbmdzXG5cdCAgICAgIGlmICh0eXBlb2Ygc2VsZi5vcHRpb25zLnN0cmluZ3NFbGVtZW50ID09PSAnc3RyaW5nJykge1xuXHQgICAgICAgIHNlbGYuc3RyaW5nc0VsZW1lbnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKHNlbGYub3B0aW9ucy5zdHJpbmdzRWxlbWVudCk7XG5cdCAgICAgIH0gZWxzZSB7XG5cdCAgICAgICAgc2VsZi5zdHJpbmdzRWxlbWVudCA9IHNlbGYub3B0aW9ucy5zdHJpbmdzRWxlbWVudDtcblx0ICAgICAgfVxuXHRcblx0ICAgICAgaWYgKHNlbGYuc3RyaW5nc0VsZW1lbnQpIHtcblx0ICAgICAgICBzZWxmLnN0cmluZ3MgPSBbXTtcblx0ICAgICAgICBzZWxmLnN0cmluZ3NFbGVtZW50LnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7XG5cdCAgICAgICAgdmFyIHN0cmluZ3MgPSBBcnJheS5wcm90b3R5cGUuc2xpY2UuYXBwbHkoc2VsZi5zdHJpbmdzRWxlbWVudC5jaGlsZHJlbik7XG5cdCAgICAgICAgdmFyIHN0cmluZ3NMZW5ndGggPSBzdHJpbmdzLmxlbmd0aDtcblx0XG5cdCAgICAgICAgaWYgKHN0cmluZ3NMZW5ndGgpIHtcblx0ICAgICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgc3RyaW5nc0xlbmd0aDsgaSArPSAxKSB7XG5cdCAgICAgICAgICAgIHZhciBzdHJpbmdFbCA9IHN0cmluZ3NbaV07XG5cdCAgICAgICAgICAgIHNlbGYuc3RyaW5ncy5wdXNoKHN0cmluZ0VsLmlubmVySFRNTC50cmltKCkpO1xuXHQgICAgICAgICAgfVxuXHQgICAgICAgIH1cblx0ICAgICAgfVxuXHRcblx0ICAgICAgLy8gY2hhcmFjdGVyIG51bWJlciBwb3NpdGlvbiBvZiBjdXJyZW50IHN0cmluZ1xuXHQgICAgICBzZWxmLnN0clBvcyA9IDA7XG5cdFxuXHQgICAgICAvLyBjdXJyZW50IGFycmF5IHBvc2l0aW9uXG5cdCAgICAgIHNlbGYuYXJyYXlQb3MgPSAwO1xuXHRcblx0ICAgICAgLy8gaW5kZXggb2Ygc3RyaW5nIHRvIHN0b3AgYmFja3NwYWNpbmcgb25cblx0ICAgICAgc2VsZi5zdG9wTnVtID0gMDtcblx0XG5cdCAgICAgIC8vIExvb3BpbmcgbG9naWNcblx0ICAgICAgc2VsZi5sb29wID0gc2VsZi5vcHRpb25zLmxvb3A7XG5cdCAgICAgIHNlbGYubG9vcENvdW50ID0gc2VsZi5vcHRpb25zLmxvb3BDb3VudDtcblx0ICAgICAgc2VsZi5jdXJMb29wID0gMDtcblx0XG5cdCAgICAgIC8vIHNodWZmbGUgdGhlIHN0cmluZ3Ncblx0ICAgICAgc2VsZi5zaHVmZmxlID0gc2VsZi5vcHRpb25zLnNodWZmbGU7XG5cdCAgICAgIC8vIHRoZSBvcmRlciBvZiBzdHJpbmdzXG5cdCAgICAgIHNlbGYuc2VxdWVuY2UgPSBbXTtcblx0XG5cdCAgICAgIHNlbGYucGF1c2UgPSB7XG5cdCAgICAgICAgc3RhdHVzOiBmYWxzZSxcblx0ICAgICAgICB0eXBld3JpdGU6IHRydWUsXG5cdCAgICAgICAgY3VyU3RyaW5nOiAnJyxcblx0ICAgICAgICBjdXJTdHJQb3M6IDBcblx0ICAgICAgfTtcblx0XG5cdCAgICAgIC8vIFdoZW4gdGhlIHR5cGluZyBpcyBjb21wbGV0ZSAod2hlbiBub3QgbG9vcGVkKVxuXHQgICAgICBzZWxmLnR5cGluZ0NvbXBsZXRlID0gZmFsc2U7XG5cdFxuXHQgICAgICAvLyBTZXQgdGhlIG9yZGVyIGluIHdoaWNoIHRoZSBzdHJpbmdzIGFyZSB0eXBlZFxuXHQgICAgICBmb3IgKHZhciBpIGluIHNlbGYuc3RyaW5ncykge1xuXHQgICAgICAgIHNlbGYuc2VxdWVuY2VbaV0gPSBpO1xuXHQgICAgICB9XG5cdFxuXHQgICAgICAvLyBJZiB0aGVyZSBpcyBzb21lIHRleHQgaW4gdGhlIGVsZW1lbnRcblx0ICAgICAgc2VsZi5jdXJyZW50RWxDb250ZW50ID0gdGhpcy5nZXRDdXJyZW50RWxDb250ZW50KHNlbGYpO1xuXHRcblx0ICAgICAgc2VsZi5hdXRvSW5zZXJ0Q3NzID0gc2VsZi5vcHRpb25zLmF1dG9JbnNlcnRDc3M7XG5cdFxuXHQgICAgICB0aGlzLmFwcGVuZEFuaW1hdGlvbkNzcyhzZWxmKTtcblx0ICAgIH1cblx0ICB9LCB7XG5cdCAgICBrZXk6ICdnZXRDdXJyZW50RWxDb250ZW50Jyxcblx0ICAgIHZhbHVlOiBmdW5jdGlvbiBnZXRDdXJyZW50RWxDb250ZW50KHNlbGYpIHtcblx0ICAgICAgdmFyIGVsQ29udGVudCA9ICcnO1xuXHQgICAgICBpZiAoc2VsZi5hdHRyKSB7XG5cdCAgICAgICAgZWxDb250ZW50ID0gc2VsZi5lbC5nZXRBdHRyaWJ1dGUoc2VsZi5hdHRyKTtcblx0ICAgICAgfSBlbHNlIGlmIChzZWxmLmlzSW5wdXQpIHtcblx0ICAgICAgICBlbENvbnRlbnQgPSBzZWxmLmVsLnZhbHVlO1xuXHQgICAgICB9IGVsc2UgaWYgKHNlbGYuY29udGVudFR5cGUgPT09ICdodG1sJykge1xuXHQgICAgICAgIGVsQ29udGVudCA9IHNlbGYuZWwuaW5uZXJIVE1MO1xuXHQgICAgICB9IGVsc2Uge1xuXHQgICAgICAgIGVsQ29udGVudCA9IHNlbGYuZWwudGV4dENvbnRlbnQ7XG5cdCAgICAgIH1cblx0ICAgICAgcmV0dXJuIGVsQ29udGVudDtcblx0ICAgIH1cblx0ICB9LCB7XG5cdCAgICBrZXk6ICdhcHBlbmRBbmltYXRpb25Dc3MnLFxuXHQgICAgdmFsdWU6IGZ1bmN0aW9uIGFwcGVuZEFuaW1hdGlvbkNzcyhzZWxmKSB7XG5cdCAgICAgIHZhciBjc3NEYXRhTmFtZSA9ICdkYXRhLXR5cGVkLWpzLWNzcyc7XG5cdCAgICAgIGlmICghc2VsZi5hdXRvSW5zZXJ0Q3NzKSB7XG5cdCAgICAgICAgcmV0dXJuO1xuXHQgICAgICB9XG5cdCAgICAgIGlmICghc2VsZi5zaG93Q3Vyc29yICYmICFzZWxmLmZhZGVPdXQpIHtcblx0ICAgICAgICByZXR1cm47XG5cdCAgICAgIH1cblx0ICAgICAgaWYgKGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ1snICsgY3NzRGF0YU5hbWUgKyAnXScpKSB7XG5cdCAgICAgICAgcmV0dXJuO1xuXHQgICAgICB9XG5cdFxuXHQgICAgICB2YXIgY3NzID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc3R5bGUnKTtcblx0ICAgICAgY3NzLnR5cGUgPSAndGV4dC9jc3MnO1xuXHQgICAgICBjc3Muc2V0QXR0cmlidXRlKGNzc0RhdGFOYW1lLCB0cnVlKTtcblx0XG5cdCAgICAgIHZhciBpbm5lckNzcyA9ICcnO1xuXHQgICAgICBpZiAoc2VsZi5zaG93Q3Vyc29yKSB7XG5cdCAgICAgICAgaW5uZXJDc3MgKz0gJ1xcbiAgICAgICAgLnR5cGVkLWN1cnNvcntcXG4gICAgICAgICAgb3BhY2l0eTogMTtcXG4gICAgICAgIH1cXG4gICAgICAgIC50eXBlZC1jdXJzb3IudHlwZWQtY3Vyc29yLS1ibGlua3tcXG4gICAgICAgICAgYW5pbWF0aW9uOiB0eXBlZGpzQmxpbmsgMC43cyBpbmZpbml0ZTtcXG4gICAgICAgICAgLXdlYmtpdC1hbmltYXRpb246IHR5cGVkanNCbGluayAwLjdzIGluZmluaXRlO1xcbiAgICAgICAgICAgICAgICAgIGFuaW1hdGlvbjogdHlwZWRqc0JsaW5rIDAuN3MgaW5maW5pdGU7XFxuICAgICAgICB9XFxuICAgICAgICBAa2V5ZnJhbWVzIHR5cGVkanNCbGlua3tcXG4gICAgICAgICAgNTAlIHsgb3BhY2l0eTogMC4wOyB9XFxuICAgICAgICB9XFxuICAgICAgICBALXdlYmtpdC1rZXlmcmFtZXMgdHlwZWRqc0JsaW5re1xcbiAgICAgICAgICAwJSB7IG9wYWNpdHk6IDE7IH1cXG4gICAgICAgICAgNTAlIHsgb3BhY2l0eTogMC4wOyB9XFxuICAgICAgICAgIDEwMCUgeyBvcGFjaXR5OiAxOyB9XFxuICAgICAgICB9XFxuICAgICAgJztcblx0ICAgICAgfVxuXHQgICAgICBpZiAoc2VsZi5mYWRlT3V0KSB7XG5cdCAgICAgICAgaW5uZXJDc3MgKz0gJ1xcbiAgICAgICAgLnR5cGVkLWZhZGUtb3V0e1xcbiAgICAgICAgICBvcGFjaXR5OiAwO1xcbiAgICAgICAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IC4yNXM7XFxuICAgICAgICB9XFxuICAgICAgICAudHlwZWQtY3Vyc29yLnR5cGVkLWN1cnNvci0tYmxpbmsudHlwZWQtZmFkZS1vdXR7XFxuICAgICAgICAgIC13ZWJraXQtYW5pbWF0aW9uOiAwO1xcbiAgICAgICAgICBhbmltYXRpb246IDA7XFxuICAgICAgICB9XFxuICAgICAgJztcblx0ICAgICAgfVxuXHQgICAgICBpZiAoY3NzLmxlbmd0aCA9PT0gMCkge1xuXHQgICAgICAgIHJldHVybjtcblx0ICAgICAgfVxuXHQgICAgICBjc3MuaW5uZXJIVE1MID0gaW5uZXJDc3M7XG5cdCAgICAgIGRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoY3NzKTtcblx0ICAgIH1cblx0ICB9XSk7XG5cdFxuXHQgIHJldHVybiBJbml0aWFsaXplcjtcblx0fSkoKTtcblx0XG5cdGV4cG9ydHNbJ2RlZmF1bHQnXSA9IEluaXRpYWxpemVyO1xuXHR2YXIgaW5pdGlhbGl6ZXIgPSBuZXcgSW5pdGlhbGl6ZXIoKTtcblx0ZXhwb3J0cy5pbml0aWFsaXplciA9IGluaXRpYWxpemVyO1xuXG4vKioqLyB9KSxcbi8qIDIgKi9cbi8qKiovIChmdW5jdGlvbihtb2R1bGUsIGV4cG9ydHMpIHtcblxuXHQvKipcblx0ICogRGVmYXVsdHMgJiBvcHRpb25zXG5cdCAqIEByZXR1cm5zIHtvYmplY3R9IFR5cGVkIGRlZmF1bHRzICYgb3B0aW9uc1xuXHQgKiBAcHVibGljXG5cdCAqL1xuXHRcblx0J3VzZSBzdHJpY3QnO1xuXHRcblx0T2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsICdfX2VzTW9kdWxlJywge1xuXHQgIHZhbHVlOiB0cnVlXG5cdH0pO1xuXHR2YXIgZGVmYXVsdHMgPSB7XG5cdCAgLyoqXG5cdCAgICogQHByb3BlcnR5IHthcnJheX0gc3RyaW5ncyBzdHJpbmdzIHRvIGJlIHR5cGVkXG5cdCAgICogQHByb3BlcnR5IHtzdHJpbmd9IHN0cmluZ3NFbGVtZW50IElEIG9mIGVsZW1lbnQgY29udGFpbmluZyBzdHJpbmcgY2hpbGRyZW5cblx0ICAgKi9cblx0ICBzdHJpbmdzOiBbJ1RoZXNlIGFyZSB0aGUgZGVmYXVsdCB2YWx1ZXMuLi4nLCAnWW91IGtub3cgd2hhdCB5b3Ugc2hvdWxkIGRvPycsICdVc2UgeW91ciBvd24hJywgJ0hhdmUgYSBncmVhdCBkYXkhJ10sXG5cdCAgc3RyaW5nc0VsZW1lbnQ6IG51bGwsXG5cdFxuXHQgIC8qKlxuXHQgICAqIEBwcm9wZXJ0eSB7bnVtYmVyfSB0eXBlU3BlZWQgdHlwZSBzcGVlZCBpbiBtaWxsaXNlY29uZHNcblx0ICAgKi9cblx0ICB0eXBlU3BlZWQ6IDAsXG5cdFxuXHQgIC8qKlxuXHQgICAqIEBwcm9wZXJ0eSB7bnVtYmVyfSBzdGFydERlbGF5IHRpbWUgYmVmb3JlIHR5cGluZyBzdGFydHMgaW4gbWlsbGlzZWNvbmRzXG5cdCAgICovXG5cdCAgc3RhcnREZWxheTogMCxcblx0XG5cdCAgLyoqXG5cdCAgICogQHByb3BlcnR5IHtudW1iZXJ9IGJhY2tTcGVlZCBiYWNrc3BhY2luZyBzcGVlZCBpbiBtaWxsaXNlY29uZHNcblx0ICAgKi9cblx0ICBiYWNrU3BlZWQ6IDAsXG5cdFxuXHQgIC8qKlxuXHQgICAqIEBwcm9wZXJ0eSB7Ym9vbGVhbn0gc21hcnRCYWNrc3BhY2Ugb25seSBiYWNrc3BhY2Ugd2hhdCBkb2Vzbid0IG1hdGNoIHRoZSBwcmV2aW91cyBzdHJpbmdcblx0ICAgKi9cblx0ICBzbWFydEJhY2tzcGFjZTogdHJ1ZSxcblx0XG5cdCAgLyoqXG5cdCAgICogQHByb3BlcnR5IHtib29sZWFufSBzaHVmZmxlIHNodWZmbGUgdGhlIHN0cmluZ3Ncblx0ICAgKi9cblx0ICBzaHVmZmxlOiBmYWxzZSxcblx0XG5cdCAgLyoqXG5cdCAgICogQHByb3BlcnR5IHtudW1iZXJ9IGJhY2tEZWxheSB0aW1lIGJlZm9yZSBiYWNrc3BhY2luZyBpbiBtaWxsaXNlY29uZHNcblx0ICAgKi9cblx0ICBiYWNrRGVsYXk6IDcwMCxcblx0XG5cdCAgLyoqXG5cdCAgICogQHByb3BlcnR5IHtib29sZWFufSBmYWRlT3V0IEZhZGUgb3V0IGluc3RlYWQgb2YgYmFja3NwYWNlXG5cdCAgICogQHByb3BlcnR5IHtzdHJpbmd9IGZhZGVPdXRDbGFzcyBjc3MgY2xhc3MgZm9yIGZhZGUgYW5pbWF0aW9uXG5cdCAgICogQHByb3BlcnR5IHtib29sZWFufSBmYWRlT3V0RGVsYXkgRmFkZSBvdXQgZGVsYXkgaW4gbWlsbGlzZWNvbmRzXG5cdCAgICovXG5cdCAgZmFkZU91dDogZmFsc2UsXG5cdCAgZmFkZU91dENsYXNzOiAndHlwZWQtZmFkZS1vdXQnLFxuXHQgIGZhZGVPdXREZWxheTogNTAwLFxuXHRcblx0ICAvKipcblx0ICAgKiBAcHJvcGVydHkge2Jvb2xlYW59IGxvb3AgbG9vcCBzdHJpbmdzXG5cdCAgICogQHByb3BlcnR5IHtudW1iZXJ9IGxvb3BDb3VudCBhbW91bnQgb2YgbG9vcHNcblx0ICAgKi9cblx0ICBsb29wOiBmYWxzZSxcblx0ICBsb29wQ291bnQ6IEluZmluaXR5LFxuXHRcblx0ICAvKipcblx0ICAgKiBAcHJvcGVydHkge2Jvb2xlYW59IHNob3dDdXJzb3Igc2hvdyBjdXJzb3Jcblx0ICAgKiBAcHJvcGVydHkge3N0cmluZ30gY3Vyc29yQ2hhciBjaGFyYWN0ZXIgZm9yIGN1cnNvclxuXHQgICAqIEBwcm9wZXJ0eSB7Ym9vbGVhbn0gYXV0b0luc2VydENzcyBpbnNlcnQgQ1NTIGZvciBjdXJzb3IgYW5kIGZhZGVPdXQgaW50byBIVE1MIDxoZWFkPlxuXHQgICAqL1xuXHQgIHNob3dDdXJzb3I6IHRydWUsXG5cdCAgY3Vyc29yQ2hhcjogJ3wnLFxuXHQgIGF1dG9JbnNlcnRDc3M6IHRydWUsXG5cdFxuXHQgIC8qKlxuXHQgICAqIEBwcm9wZXJ0eSB7c3RyaW5nfSBhdHRyIGF0dHJpYnV0ZSBmb3IgdHlwaW5nXG5cdCAgICogRXg6IGlucHV0IHBsYWNlaG9sZGVyLCB2YWx1ZSwgb3IganVzdCBIVE1MIHRleHRcblx0ICAgKi9cblx0ICBhdHRyOiBudWxsLFxuXHRcblx0ICAvKipcblx0ICAgKiBAcHJvcGVydHkge2Jvb2xlYW59IGJpbmRJbnB1dEZvY3VzRXZlbnRzIGJpbmQgdG8gZm9jdXMgYW5kIGJsdXIgaWYgZWwgaXMgdGV4dCBpbnB1dFxuXHQgICAqL1xuXHQgIGJpbmRJbnB1dEZvY3VzRXZlbnRzOiBmYWxzZSxcblx0XG5cdCAgLyoqXG5cdCAgICogQHByb3BlcnR5IHtzdHJpbmd9IGNvbnRlbnRUeXBlICdodG1sJyBvciAnbnVsbCcgZm9yIHBsYWludGV4dFxuXHQgICAqL1xuXHQgIGNvbnRlbnRUeXBlOiAnaHRtbCcsXG5cdFxuXHQgIC8qKlxuXHQgICAqIEJlZm9yZSBpdCBiZWdpbnMgdHlwaW5nXG5cdCAgICogQHBhcmFtIHtUeXBlZH0gc2VsZlxuXHQgICAqL1xuXHQgIG9uQmVnaW46IGZ1bmN0aW9uIG9uQmVnaW4oc2VsZikge30sXG5cdFxuXHQgIC8qKlxuXHQgICAqIEFsbCB0eXBpbmcgaXMgY29tcGxldGVcblx0ICAgKiBAcGFyYW0ge1R5cGVkfSBzZWxmXG5cdCAgICovXG5cdCAgb25Db21wbGV0ZTogZnVuY3Rpb24gb25Db21wbGV0ZShzZWxmKSB7fSxcblx0XG5cdCAgLyoqXG5cdCAgICogQmVmb3JlIGVhY2ggc3RyaW5nIGlzIHR5cGVkXG5cdCAgICogQHBhcmFtIHtudW1iZXJ9IGFycmF5UG9zXG5cdCAgICogQHBhcmFtIHtUeXBlZH0gc2VsZlxuXHQgICAqL1xuXHQgIHByZVN0cmluZ1R5cGVkOiBmdW5jdGlvbiBwcmVTdHJpbmdUeXBlZChhcnJheVBvcywgc2VsZikge30sXG5cdFxuXHQgIC8qKlxuXHQgICAqIEFmdGVyIGVhY2ggc3RyaW5nIGlzIHR5cGVkXG5cdCAgICogQHBhcmFtIHtudW1iZXJ9IGFycmF5UG9zXG5cdCAgICogQHBhcmFtIHtUeXBlZH0gc2VsZlxuXHQgICAqL1xuXHQgIG9uU3RyaW5nVHlwZWQ6IGZ1bmN0aW9uIG9uU3RyaW5nVHlwZWQoYXJyYXlQb3MsIHNlbGYpIHt9LFxuXHRcblx0ICAvKipcblx0ICAgKiBEdXJpbmcgbG9vcGluZywgYWZ0ZXIgbGFzdCBzdHJpbmcgaXMgdHlwZWRcblx0ICAgKiBAcGFyYW0ge1R5cGVkfSBzZWxmXG5cdCAgICovXG5cdCAgb25MYXN0U3RyaW5nQmFja3NwYWNlZDogZnVuY3Rpb24gb25MYXN0U3RyaW5nQmFja3NwYWNlZChzZWxmKSB7fSxcblx0XG5cdCAgLyoqXG5cdCAgICogVHlwaW5nIGhhcyBiZWVuIHN0b3BwZWRcblx0ICAgKiBAcGFyYW0ge251bWJlcn0gYXJyYXlQb3Ncblx0ICAgKiBAcGFyYW0ge1R5cGVkfSBzZWxmXG5cdCAgICovXG5cdCAgb25UeXBpbmdQYXVzZWQ6IGZ1bmN0aW9uIG9uVHlwaW5nUGF1c2VkKGFycmF5UG9zLCBzZWxmKSB7fSxcblx0XG5cdCAgLyoqXG5cdCAgICogVHlwaW5nIGhhcyBiZWVuIHN0YXJ0ZWQgYWZ0ZXIgYmVpbmcgc3RvcHBlZFxuXHQgICAqIEBwYXJhbSB7bnVtYmVyfSBhcnJheVBvc1xuXHQgICAqIEBwYXJhbSB7VHlwZWR9IHNlbGZcblx0ICAgKi9cblx0ICBvblR5cGluZ1Jlc3VtZWQ6IGZ1bmN0aW9uIG9uVHlwaW5nUmVzdW1lZChhcnJheVBvcywgc2VsZikge30sXG5cdFxuXHQgIC8qKlxuXHQgICAqIEFmdGVyIHJlc2V0XG5cdCAgICogQHBhcmFtIHtUeXBlZH0gc2VsZlxuXHQgICAqL1xuXHQgIG9uUmVzZXQ6IGZ1bmN0aW9uIG9uUmVzZXQoc2VsZikge30sXG5cdFxuXHQgIC8qKlxuXHQgICAqIEFmdGVyIHN0b3Bcblx0ICAgKiBAcGFyYW0ge251bWJlcn0gYXJyYXlQb3Ncblx0ICAgKiBAcGFyYW0ge1R5cGVkfSBzZWxmXG5cdCAgICovXG5cdCAgb25TdG9wOiBmdW5jdGlvbiBvblN0b3AoYXJyYXlQb3MsIHNlbGYpIHt9LFxuXHRcblx0ICAvKipcblx0ICAgKiBBZnRlciBzdGFydFxuXHQgICAqIEBwYXJhbSB7bnVtYmVyfSBhcnJheVBvc1xuXHQgICAqIEBwYXJhbSB7VHlwZWR9IHNlbGZcblx0ICAgKi9cblx0ICBvblN0YXJ0OiBmdW5jdGlvbiBvblN0YXJ0KGFycmF5UG9zLCBzZWxmKSB7fSxcblx0XG5cdCAgLyoqXG5cdCAgICogQWZ0ZXIgZGVzdHJveVxuXHQgICAqIEBwYXJhbSB7VHlwZWR9IHNlbGZcblx0ICAgKi9cblx0ICBvbkRlc3Ryb3k6IGZ1bmN0aW9uIG9uRGVzdHJveShzZWxmKSB7fVxuXHR9O1xuXHRcblx0ZXhwb3J0c1snZGVmYXVsdCddID0gZGVmYXVsdHM7XG5cdG1vZHVsZS5leHBvcnRzID0gZXhwb3J0c1snZGVmYXVsdCddO1xuXG4vKioqLyB9KSxcbi8qIDMgKi9cbi8qKiovIChmdW5jdGlvbihtb2R1bGUsIGV4cG9ydHMpIHtcblxuXHQvKipcblx0ICogVE9ETzogVGhlc2UgbWV0aG9kcyBjYW4gcHJvYmFibHkgYmUgY29tYmluZWQgc29tZWhvd1xuXHQgKiBQYXJzZSBIVE1MIHRhZ3MgJiBIVE1MIENoYXJhY3RlcnNcblx0ICovXG5cdFxuXHQndXNlIHN0cmljdCc7XG5cdFxuXHRPYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgJ19fZXNNb2R1bGUnLCB7XG5cdCAgdmFsdWU6IHRydWVcblx0fSk7XG5cdFxuXHR2YXIgX2NyZWF0ZUNsYXNzID0gKGZ1bmN0aW9uICgpIHsgZnVuY3Rpb24gZGVmaW5lUHJvcGVydGllcyh0YXJnZXQsIHByb3BzKSB7IGZvciAodmFyIGkgPSAwOyBpIDwgcHJvcHMubGVuZ3RoOyBpKyspIHsgdmFyIGRlc2NyaXB0b3IgPSBwcm9wc1tpXTsgZGVzY3JpcHRvci5lbnVtZXJhYmxlID0gZGVzY3JpcHRvci5lbnVtZXJhYmxlIHx8IGZhbHNlOyBkZXNjcmlwdG9yLmNvbmZpZ3VyYWJsZSA9IHRydWU7IGlmICgndmFsdWUnIGluIGRlc2NyaXB0b3IpIGRlc2NyaXB0b3Iud3JpdGFibGUgPSB0cnVlOyBPYmplY3QuZGVmaW5lUHJvcGVydHkodGFyZ2V0LCBkZXNjcmlwdG9yLmtleSwgZGVzY3JpcHRvcik7IH0gfSByZXR1cm4gZnVuY3Rpb24gKENvbnN0cnVjdG9yLCBwcm90b1Byb3BzLCBzdGF0aWNQcm9wcykgeyBpZiAocHJvdG9Qcm9wcykgZGVmaW5lUHJvcGVydGllcyhDb25zdHJ1Y3Rvci5wcm90b3R5cGUsIHByb3RvUHJvcHMpOyBpZiAoc3RhdGljUHJvcHMpIGRlZmluZVByb3BlcnRpZXMoQ29uc3RydWN0b3IsIHN0YXRpY1Byb3BzKTsgcmV0dXJuIENvbnN0cnVjdG9yOyB9OyB9KSgpO1xuXHRcblx0ZnVuY3Rpb24gX2NsYXNzQ2FsbENoZWNrKGluc3RhbmNlLCBDb25zdHJ1Y3RvcikgeyBpZiAoIShpbnN0YW5jZSBpbnN0YW5jZW9mIENvbnN0cnVjdG9yKSkgeyB0aHJvdyBuZXcgVHlwZUVycm9yKCdDYW5ub3QgY2FsbCBhIGNsYXNzIGFzIGEgZnVuY3Rpb24nKTsgfSB9XG5cdFxuXHR2YXIgSFRNTFBhcnNlciA9IChmdW5jdGlvbiAoKSB7XG5cdCAgZnVuY3Rpb24gSFRNTFBhcnNlcigpIHtcblx0ICAgIF9jbGFzc0NhbGxDaGVjayh0aGlzLCBIVE1MUGFyc2VyKTtcblx0ICB9XG5cdFxuXHQgIF9jcmVhdGVDbGFzcyhIVE1MUGFyc2VyLCBbe1xuXHQgICAga2V5OiAndHlwZUh0bWxDaGFycycsXG5cdFxuXHQgICAgLyoqXG5cdCAgICAgKiBUeXBlIEhUTUwgdGFncyAmIEhUTUwgQ2hhcmFjdGVyc1xuXHQgICAgICogQHBhcmFtIHtzdHJpbmd9IGN1clN0cmluZyBDdXJyZW50IHN0cmluZ1xuXHQgICAgICogQHBhcmFtIHtudW1iZXJ9IGN1clN0clBvcyBQb3NpdGlvbiBpbiBjdXJyZW50IHN0cmluZ1xuXHQgICAgICogQHBhcmFtIHtUeXBlZH0gc2VsZiBpbnN0YW5jZSBvZiBUeXBlZFxuXHQgICAgICogQHJldHVybnMge251bWJlcn0gYSBuZXcgc3RyaW5nIHBvc2l0aW9uXG5cdCAgICAgKiBAcHJpdmF0ZVxuXHQgICAgICovXG5cdFxuXHQgICAgdmFsdWU6IGZ1bmN0aW9uIHR5cGVIdG1sQ2hhcnMoY3VyU3RyaW5nLCBjdXJTdHJQb3MsIHNlbGYpIHtcblx0ICAgICAgaWYgKHNlbGYuY29udGVudFR5cGUgIT09ICdodG1sJykgcmV0dXJuIGN1clN0clBvcztcblx0ICAgICAgdmFyIGN1ckNoYXIgPSBjdXJTdHJpbmcuc3Vic3RyKGN1clN0clBvcykuY2hhckF0KDApO1xuXHQgICAgICBpZiAoY3VyQ2hhciA9PT0gJzwnIHx8IGN1ckNoYXIgPT09ICcmJykge1xuXHQgICAgICAgIHZhciBlbmRUYWcgPSAnJztcblx0ICAgICAgICBpZiAoY3VyQ2hhciA9PT0gJzwnKSB7XG5cdCAgICAgICAgICBlbmRUYWcgPSAnPic7XG5cdCAgICAgICAgfSBlbHNlIHtcblx0ICAgICAgICAgIGVuZFRhZyA9ICc7Jztcblx0ICAgICAgICB9XG5cdCAgICAgICAgd2hpbGUgKGN1clN0cmluZy5zdWJzdHIoY3VyU3RyUG9zICsgMSkuY2hhckF0KDApICE9PSBlbmRUYWcpIHtcblx0ICAgICAgICAgIGN1clN0clBvcysrO1xuXHQgICAgICAgICAgaWYgKGN1clN0clBvcyArIDEgPiBjdXJTdHJpbmcubGVuZ3RoKSB7XG5cdCAgICAgICAgICAgIGJyZWFrO1xuXHQgICAgICAgICAgfVxuXHQgICAgICAgIH1cblx0ICAgICAgICBjdXJTdHJQb3MrKztcblx0ICAgICAgfVxuXHQgICAgICByZXR1cm4gY3VyU3RyUG9zO1xuXHQgICAgfVxuXHRcblx0ICAgIC8qKlxuXHQgICAgICogQmFja3NwYWNlIEhUTUwgdGFncyBhbmQgSFRNTCBDaGFyYWN0ZXJzXG5cdCAgICAgKiBAcGFyYW0ge3N0cmluZ30gY3VyU3RyaW5nIEN1cnJlbnQgc3RyaW5nXG5cdCAgICAgKiBAcGFyYW0ge251bWJlcn0gY3VyU3RyUG9zIFBvc2l0aW9uIGluIGN1cnJlbnQgc3RyaW5nXG5cdCAgICAgKiBAcGFyYW0ge1R5cGVkfSBzZWxmIGluc3RhbmNlIG9mIFR5cGVkXG5cdCAgICAgKiBAcmV0dXJucyB7bnVtYmVyfSBhIG5ldyBzdHJpbmcgcG9zaXRpb25cblx0ICAgICAqIEBwcml2YXRlXG5cdCAgICAgKi9cblx0ICB9LCB7XG5cdCAgICBrZXk6ICdiYWNrU3BhY2VIdG1sQ2hhcnMnLFxuXHQgICAgdmFsdWU6IGZ1bmN0aW9uIGJhY2tTcGFjZUh0bWxDaGFycyhjdXJTdHJpbmcsIGN1clN0clBvcywgc2VsZikge1xuXHQgICAgICBpZiAoc2VsZi5jb250ZW50VHlwZSAhPT0gJ2h0bWwnKSByZXR1cm4gY3VyU3RyUG9zO1xuXHQgICAgICB2YXIgY3VyQ2hhciA9IGN1clN0cmluZy5zdWJzdHIoY3VyU3RyUG9zKS5jaGFyQXQoMCk7XG5cdCAgICAgIGlmIChjdXJDaGFyID09PSAnPicgfHwgY3VyQ2hhciA9PT0gJzsnKSB7XG5cdCAgICAgICAgdmFyIGVuZFRhZyA9ICcnO1xuXHQgICAgICAgIGlmIChjdXJDaGFyID09PSAnPicpIHtcblx0ICAgICAgICAgIGVuZFRhZyA9ICc8Jztcblx0ICAgICAgICB9IGVsc2Uge1xuXHQgICAgICAgICAgZW5kVGFnID0gJyYnO1xuXHQgICAgICAgIH1cblx0ICAgICAgICB3aGlsZSAoY3VyU3RyaW5nLnN1YnN0cihjdXJTdHJQb3MgLSAxKS5jaGFyQXQoMCkgIT09IGVuZFRhZykge1xuXHQgICAgICAgICAgY3VyU3RyUG9zLS07XG5cdCAgICAgICAgICBpZiAoY3VyU3RyUG9zIDwgMCkge1xuXHQgICAgICAgICAgICBicmVhaztcblx0ICAgICAgICAgIH1cblx0ICAgICAgICB9XG5cdCAgICAgICAgY3VyU3RyUG9zLS07XG5cdCAgICAgIH1cblx0ICAgICAgcmV0dXJuIGN1clN0clBvcztcblx0ICAgIH1cblx0ICB9XSk7XG5cdFxuXHQgIHJldHVybiBIVE1MUGFyc2VyO1xuXHR9KSgpO1xuXHRcblx0ZXhwb3J0c1snZGVmYXVsdCddID0gSFRNTFBhcnNlcjtcblx0dmFyIGh0bWxQYXJzZXIgPSBuZXcgSFRNTFBhcnNlcigpO1xuXHRleHBvcnRzLmh0bWxQYXJzZXIgPSBodG1sUGFyc2VyO1xuXG4vKioqLyB9KVxuLyoqKioqKi8gXSlcbn0pO1xuOyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./node_modules/typed.js/lib/typed.js\n");
 
 /***/ })
 
-/******/ });
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		if(__webpack_module_cache__[moduleId]) {
+/******/ 			return __webpack_module_cache__[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/******/ 	// the startup function
+/******/ 	// It's empty as some runtime module handles the default behavior
+/******/ 	__webpack_require__.x = x => {};
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// Promise = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/site": 0
+/******/ 		};
+/******/ 		
+/******/ 		var deferredModules = [
+/******/ 			["./resources/js/site.js"],
+/******/ 			["./resources/css/site.css"]
+/******/ 		];
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		var checkDeferredModules = x => {};
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime, executeModules] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0, resolves = [];
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					resolves.push(installedChunks[chunkId][0]);
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			for(moduleId in moreModules) {
+/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 				}
+/******/ 			}
+/******/ 			if(runtime) runtime(__webpack_require__);
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			while(resolves.length) {
+/******/ 				resolves.shift()();
+/******/ 			}
+/******/ 		
+/******/ 			// add entry modules from loaded chunk to deferred list
+/******/ 			if(executeModules) deferredModules.push.apply(deferredModules, executeModules);
+/******/ 		
+/******/ 			// run deferred modules when all chunks ready
+/******/ 			return checkDeferredModules();
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 		
+/******/ 		function checkDeferredModulesImpl() {
+/******/ 			var result;
+/******/ 			for(var i = 0; i < deferredModules.length; i++) {
+/******/ 				var deferredModule = deferredModules[i];
+/******/ 				var fulfilled = true;
+/******/ 				for(var j = 1; j < deferredModule.length; j++) {
+/******/ 					var depId = deferredModule[j];
+/******/ 					if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferredModules.splice(i--, 1);
+/******/ 					result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 				}
+/******/ 			}
+/******/ 			if(deferredModules.length === 0) {
+/******/ 				__webpack_require__.x();
+/******/ 				__webpack_require__.x = x => {};
+/******/ 			}
+/******/ 			return result;
+/******/ 		}
+/******/ 		var startup = __webpack_require__.x;
+/******/ 		__webpack_require__.x = () => {
+/******/ 			// reset startup function so it can be called again when more startup code is added
+/******/ 			__webpack_require__.x = startup || (x => {});
+/******/ 			return (checkDeferredModules = checkDeferredModulesImpl)();
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	// run startup
+/******/ 	__webpack_require__.x();
+/******/ })()
+;

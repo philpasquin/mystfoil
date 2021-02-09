@@ -1,15 +1,4 @@
-body {
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-[x-cloak] { display: none; }
-
-.category--active {
-    &::after {
-         content: '';
-         @apply absolute block right-0 bottom-0 left-0 bg-accent mx-auto;
-         height: 2px;
-         width: 30px;
-         border-radius: 2px;
-    }
-}
+@import "tailwindcss/base";
+@import "custom";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

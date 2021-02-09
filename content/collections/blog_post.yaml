@@ -1,0 +1,8 @@
+title: 'Blog post'
+sites:
+  - english
+template: blog_post/show
+revisions: false
+date_behavior:
+  past: public
+  future: private
