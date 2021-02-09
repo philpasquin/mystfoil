@@ -6,5 +6,5 @@ Welcome to the Montreal Youth Sailing Team Page.
 
 This website is built on top of the [Statamic CMS](https://statamic.com) and the [Butik Addons](https://statamic.com/addons/jonassiewertsen/statamic-butik) developped by **Jonas Siewetsen**.
 
-![Montreal Youth Sailing Team](https://mystsailing.com/assets/MYST01.png =250x)
+![Montreal Youth Sailing Team](https://mystsailing.com/assets/MYST01.png | width=100)
 
