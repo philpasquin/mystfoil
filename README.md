@@ -1,24 +1,10 @@
-<p><a href="https://mystfoil.com"><img src="" width="450" alt="Statamic Logo" /></a></p>
+# Montreal Youth Sailing Team Webpage
 
-# Starter Kit
-
-A kick start for your new online shop!
-
-## Installation
-
-
-
-## About MYSTFOIL
-
-_**MYST**_ 
-
-## Important Links
-
-
-[docs]: https://statamic.dev/
-[discord]: https://statamic.com/discord
-[contribution]: https://github.com/statamic/cms/blob/master/CONTRIBUTING.md
-[cms-repo]: https://github.com/statamic/cms
-
-#
 ![Statamic 3.0+](https://img.shields.io/badge/Statamic-3.0+-FF269E?style=for-the-badge&link=https://statamic.com)
+
+Welcome to the Montreal Youth Sailing Team Page.
+
+This website is built on top of the [Statamic CMS](https://statamic.com) and the [Butik Addons](https://statamic.com/addons/jonassiewertsen/statamic-butik) developped by **Jonas Siewetsen**.
+
+![Montreal Youth Sailing Team](https://mystsailing.com/assets/MYST01.png)
+
